@@ -6,7 +6,8 @@ pushd "$(dirname "$0")"
 git ls-files |grep -v "$(basename "$0")" |xargs git rm -f
 
 wget $CODEGEN_URL -O swagger-codegen-cli.jar
-java -jar swagger-codegen-cli.jar generate --input-spec https://developers.strava.com/swagger/swagger.json --lang go --output .
+
+java -jar swagger-codegen-cli.jar generate -DpackageName=strava -DhideGenerationTimestamp=false --input-spec https://developers.strava.com/swagger/swagger.json --lang go --output .
 rm -f swagger-codegen-cli.jar
 
 git add .
