@@ -83,7 +83,6 @@ Class | Method | HTTP request | Description
  - [PolylineMap](docs/PolylineMap.md)
  - [PowerZoneRanges](docs/PowerZoneRanges.md)
  - [Route](docs/Route.md)
- - [RouteDirection](docs/RouteDirection.md)
  - [RunningRace](docs/RunningRace.md)
  - [SegmentLeaderboard](docs/SegmentLeaderboard.md)
  - [SegmentLeaderboardEntry](docs/SegmentLeaderboardEntry.md)

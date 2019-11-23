@@ -34,6 +34,4 @@ type Route struct {
 	SubType int32 `json:"sub_type,omitempty"`
 	// The segments traversed by this route
 	Segments []SummarySegment `json:"segments,omitempty"`
-	// The directions of this route
-	Directions []RouteDirection `json:"directions,omitempty"`
 }
