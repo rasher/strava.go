@@ -27,7 +27,8 @@ paths:
       tags:
       - "Athletes"
       summary: "Get Athlete Stats"
-      description: "Returns the activity stats of an athlete."
+      description: "Returns the activity stats of an athlete. Only includes data from\
+        \ activities set to Everyone visibilty."
       operationId: "getStats"
       parameters:
       - name: "id"
@@ -37,23 +38,8 @@ paths:
         required: true
         type: "integer"
         x-exportParamName: "Id"
-      - name: "page"
-        in: "query"
-        description: "Page number."
-        required: false
-        type: "integer"
-        x-exportParamName: "Page"
-        x-optionalDataType: "Int32"
-      - name: "per_page"
-        in: "query"
-        description: "Number of items per page. Defaults to 30."
-        required: false
-        type: "integer"
-        default: 30
-        x-exportParamName: "PerPage"
-        x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "Activity stats of the athlete."
           schema:
             $ref: "#/definitions/ActivityStats"
@@ -72,15 +58,15 @@ paths:
       operationId: "getLoggedInAthlete"
       parameters: []
       responses:
-        200:
+        "200":
           description: "Profile information for the authenticated athlete."
           examples:
             application/json:
               id: 1234567890987654321
-              username: "marianne_v"
+              username: "marianne_t"
               resource_state: 3
               firstname: "Marianne"
-              lastname: "V."
+              lastname: "Teutenberg"
               city: "San Francisco"
               state: "CA"
               country: "US"
@@ -133,7 +119,7 @@ paths:
         format: "float"
         x-exportParamName: "Weight"
       responses:
-        200:
+        "200":
           description: "Profile information for the authenticated athlete."
           examples:
             application/json:
@@ -188,7 +174,7 @@ paths:
       operationId: "getLoggedInAthleteZones"
       parameters: []
       responses:
-        200:
+        "200":
           description: "Heart rate and power zones."
           examples:
             application/json:
@@ -253,7 +239,7 @@ paths:
         format: "int64"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "Representation of a segment."
           examples:
             application/json:
@@ -330,7 +316,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "List of the authenticated athlete's starred segments."
           examples:
             application/json:
@@ -408,7 +394,7 @@ paths:
         default: false
         x-exportParamName: "Starred"
       responses:
-        200:
+        "200":
           description: "Representation of a segment."
           examples:
             application/json:
@@ -543,7 +529,7 @@ paths:
         x-optionalDataType: "Int64"
       - name: "date_range"
         in: "query"
-        description: "Filter by date range."
+        description: "Filter by date range, will be in the athlete's timezone"
         required: false
         type: "string"
         enum:
@@ -575,7 +561,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "Representation of a segment leaderboard."
           examples:
             application/json:
@@ -626,7 +612,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "List of segment efforts."
           examples:
             application/json:
@@ -735,7 +721,7 @@ paths:
         x-exportParamName: "MaxCat"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "List of matching segments."
           examples:
             application/json:
@@ -781,7 +767,7 @@ paths:
         format: "int64"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "Representation of a segment effort."
           examples:
             application/json:
@@ -854,7 +840,7 @@ paths:
         type: "integer"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "Representation of a running race."
           schema:
             $ref: "#/definitions/RunningRace"
@@ -878,7 +864,7 @@ paths:
         x-exportParamName: "Year"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "Representation of a list of running race."
           schema:
             type: "array"
@@ -950,7 +936,7 @@ paths:
         x-exportParamName: "Commute"
         x-optionalDataType: "Int32"
       responses:
-        201:
+        "201":
           description: "The activity's detailed representation."
           examples:
             application/json:
@@ -1027,7 +1013,7 @@ paths:
         x-exportParamName: "IncludeAllEfforts"
         x-optionalDataType: "Bool"
       responses:
-        200:
+        "200":
           description: "The activity's detailed representation."
           examples:
             application/json:
@@ -1196,8 +1182,8 @@ paths:
                 primary:
                   unique_id: "3FDGKL3-204E-4867-9E8D-89FC79EAAE17"
                   urls:
-                    100: "https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-128x96.jpg"
-                    600: "https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-768x576.jpg"
+                    "100": "https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-128x96.jpg"
+                    "600": "https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-768x576.jpg"
                   source: 1
                 use_primary_photo: true
                 count: 2
@@ -1239,7 +1225,7 @@ paths:
           $ref: "#/definitions/UpdatableActivity"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "The activity's detailed representation."
           examples:
             application/json:
@@ -1409,8 +1395,8 @@ paths:
                 primary:
                   unique_id: "3FDGKL3-204E-4867-9E8D-89FC79EAAE17"
                   urls:
-                    100: "https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-128x96.jpg"
-                    600: "https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-768x576.jpg"
+                    "100": "https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-128x96.jpg"
+                    "600": "https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-768x576.jpg"
                   source: 1
                 use_primary_photo: true
                 count: 2
@@ -1471,7 +1457,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "The authenticated athlete's activities"
           examples:
             application/json:
@@ -1597,7 +1583,7 @@ paths:
         format: "int64"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "Activity Laps."
           examples:
             application/json:
@@ -1650,7 +1636,7 @@ paths:
         type: "integer"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "Activity Zones."
           schema:
             type: "array"
@@ -1693,7 +1679,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "Comments."
           examples:
             application/json:
@@ -1728,6 +1714,7 @@ paths:
         description: "The identifier of the activity."
         required: true
         type: "integer"
+        format: "int64"
         x-exportParamName: "Id"
       - name: "page"
         in: "query"
@@ -1745,7 +1732,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "Comments."
           examples:
             application/json:
@@ -1774,7 +1761,7 @@ paths:
         type: "integer"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "The detailed representation of a club."
           examples:
             application/json:
@@ -1838,7 +1825,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "A list of summary athlete representations."
           examples:
             application/json:
@@ -1860,7 +1847,7 @@ paths:
     get:
       tags:
       - "Clubs"
-      summary: "List Club Administrators."
+      summary: "List Club Administrators"
       description: "Returns a list of the administrators of a given club."
       operationId: "getClubAdminsById"
       parameters:
@@ -1886,7 +1873,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "A list of summary athlete representations."
           examples:
             application/json:
@@ -1934,7 +1921,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "A list of activities."
           examples:
             application/json:
@@ -1982,7 +1969,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "A list of summary club representations."
           examples:
             application/json:
@@ -2025,7 +2012,7 @@ paths:
         type: "string"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "A representation of the gear."
           examples:
             application/json:
@@ -2059,7 +2046,7 @@ paths:
         type: "integer"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "A representation of the route."
           schema:
             $ref: "#/definitions/Route"
@@ -2099,7 +2086,7 @@ paths:
         x-exportParamName: "PerPage"
         x-optionalDataType: "Int32"
       responses:
-        200:
+        "200":
           description: "A representation of the route."
           schema:
             type: "array"
@@ -2125,7 +2112,7 @@ paths:
         type: "integer"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "A GPX file with the route."
         default:
           description: "Unexpected error."
@@ -2147,7 +2134,7 @@ paths:
         type: "integer"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "A TCX file with the route."
         default:
           description: "Unexpected error."
@@ -2221,7 +2208,7 @@ paths:
         x-exportParamName: "ExternalId"
         x-optionalDataType: "String"
       responses:
-        201:
+        "201":
           description: "A representation of the created upload."
           schema:
             $ref: "#/definitions/Upload"
@@ -2246,7 +2233,7 @@ paths:
         format: "int64"
         x-exportParamName: "UploadId"
       responses:
-        200:
+        "200":
           description: "Representation of the upload."
           schema:
             $ref: "#/definitions/Upload"
@@ -2300,7 +2287,7 @@ paths:
         default: true
         x-exportParamName: "KeyByType"
       responses:
-        200:
+        "200":
           description: "The set of requested streams."
           examples:
             application/json:
@@ -2373,7 +2360,7 @@ paths:
         default: true
         x-exportParamName: "KeyByType"
       responses:
-        200:
+        "200":
           description: "The set of requested streams."
           examples:
             application/json:
@@ -2440,7 +2427,7 @@ paths:
         default: true
         x-exportParamName: "KeyByType"
       responses:
-        200:
+        "200":
           description: "The set of requested streams."
           examples:
             application/json:
@@ -2490,7 +2477,7 @@ paths:
         format: "int64"
         x-exportParamName: "Id"
       responses:
-        200:
+        "200":
           description: "The set of requested streams."
           examples:
             application/json:
@@ -2708,10 +2695,6 @@ definitions:
         friend_count:
           type: "integer"
           description: "The athlete's friend count."
-        mutual_friend_count:
-          type: "integer"
-          description: "The number or athletes mutually followed by this athlete and\
-            \ the currently logged-in athlete."
         measurement_preference:
           type: "string"
           description: "The athlete's preferred unit system."
@@ -2775,20 +2758,6 @@ definitions:
           enum:
           - "M"
           - "F"
-        friend:
-          type: "string"
-          description: "Whether the currently logged-in athlete follows this athlete."
-          enum:
-          - "pending"
-          - "accepted"
-          - "blocked"
-        follower:
-          type: "string"
-          description: "Whether this athlete follows the currently logged-in athlete."
-          enum:
-          - "pending"
-          - "accepted"
-          - "blocked"
         premium:
           type: "boolean"
           description: "Deprecated.  Use summit field instead. Whether the athlete\
