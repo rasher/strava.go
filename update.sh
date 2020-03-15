@@ -14,8 +14,7 @@ wget $CODEGEN_URL -O $JAR
 java -jar $JAR generate \
     --input-spec https://developers.strava.com/swagger/swagger.json \
     --generator-name go \
-    --additional-properties=packageName=strava \
-    --additional-properties=hideGenerationTimestamp=false \
+    --additional-properties=packageName=strava,hideGenerationTimestamp=false \
     --skip-validate-spec \
     --output .
 rm -f $JAR
