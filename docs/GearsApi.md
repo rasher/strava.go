@@ -7,18 +7,22 @@ Method | HTTP request | Description
 [**GetGearById**](GearsApi.md#GetGearById) | **Get** /gear/{id} | Get Equipment
 
 
-# **GetGearById**
+
+## GetGearById
+
 > DetailedGear GetGearById(ctx, id)
+
 Get Equipment
 
 Returns an equipment using its identifier.
 
 ### Required Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **string**| The identifier of the gear. | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string**| The identifier of the gear. | 
 
 ### Return type
 
@@ -30,8 +34,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
