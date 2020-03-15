@@ -1,5 +1,6 @@
 #!/bin/bash
-CODEGEN_URL=http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.4.12/swagger-codegen-cli-2.4.12.jar
+set -e
+CODEGEN_URL=https://repo.maven.apache.org/maven2/io/swagger/swagger-codegen-cli/2.4.12/swagger-codegen-cli-2.4.12.jar
 
 pushd "$(dirname "$0")"
 
