@@ -15,6 +15,7 @@ import (
 	_nethttp "net/http"
 	_neturl "net/url"
 	"strings"
+	"time"
 	"github.com/antihax/optional"
 )
 
@@ -49,7 +50,7 @@ Creates a manual activity for an athlete, requires activity:write scope.
  * @param "Commute" (optional.Int32) -  Set to 1 to mark as commute.
 @return DetailedActivity
 */
-func (a *ActivitiesApiService) CreateActivity(ctx _context.Context, name string, type_ string, startDateLocal map[string]interface{}, elapsedTime int32, localVarOptionals *CreateActivityOpts) (DetailedActivity, *_nethttp.Response, error) {
+func (a *ActivitiesApiService) CreateActivity(ctx _context.Context, name string, type_ string, startDateLocal time.Time, elapsedTime int32, localVarOptionals *CreateActivityOpts) (DetailedActivity, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
@@ -268,7 +269,7 @@ Returns the comments on the given activity. Requires activity:read for Everyone 
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id The identifier of the activity.
  * @param optional nil or *GetCommentsByActivityIdOpts - Optional Parameters:
- * @param "Page" (optional.Int32) -  Page number.
+ * @param "Page" (optional.Int32) -  Page number. Defaults to 1.
  * @param "PerPage" (optional.Int32) -  Number of items per page. Defaults to 30.
 @return []Comment
 */
@@ -378,7 +379,7 @@ Returns the athletes who kudoed an activity identified by an identifier. Require
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id The identifier of the activity.
  * @param optional nil or *GetKudoersByActivityIdOpts - Optional Parameters:
- * @param "Page" (optional.Int32) -  Page number.
+ * @param "Page" (optional.Int32) -  Page number. Defaults to 1.
  * @param "PerPage" (optional.Int32) -  Number of items per page. Defaults to 30.
 @return []SummaryAthlete
 */
@@ -586,7 +587,7 @@ Returns the activities of an athlete for a specific identifier. Requires activit
  * @param optional nil or *GetLoggedInAthleteActivitiesOpts - Optional Parameters:
  * @param "Before" (optional.Int32) -  An epoch timestamp to use for filtering activities that have taken place before a certain time.
  * @param "After" (optional.Int32) -  An epoch timestamp to use for filtering activities that have taken place after a certain time.
- * @param "Page" (optional.Int32) -  Page number.
+ * @param "Page" (optional.Int32) -  Page number. Defaults to 1.
  * @param "PerPage" (optional.Int32) -  Number of items per page. Defaults to 30.
 @return []SummaryActivity
 */
@@ -695,7 +696,7 @@ Summit Feature. Returns the zones of a given activity. Requires activity:read fo
  * @param id The identifier of the activity.
 @return []ActivityZone
 */
-func (a *ActivitiesApiService) GetZonesByActivityId(ctx _context.Context, id int32) ([]ActivityZone, *_nethttp.Response, error) {
+func (a *ActivitiesApiService) GetZonesByActivityId(ctx _context.Context, id int64) ([]ActivityZone, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}

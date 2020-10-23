@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** | The club&#39;s unique identifier. | [optional] 
+**Id** | **int64** | The club&#39;s unique identifier. | [optional] 
 **ResourceState** | **int32** | Resource state, indicates level of detail. Possible values: 1 -&gt; \&quot;meta\&quot;, 2 -&gt; \&quot;summary\&quot;, 3 -&gt; \&quot;detail\&quot; | [optional] 
 **Name** | **string** | The club&#39;s name. | [optional] 
 

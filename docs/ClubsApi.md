@@ -26,7 +26,7 @@ Retrieve recent activities from members of a specific club. The authenticated at
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the club. | 
+**id** | **int64**| The identifier of the club. | 
  **optional** | ***GetClubActivitiesByIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -37,7 +37,7 @@ Optional parameters are passed through a pointer to a GetClubActivitiesByIdOpts 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. | 
+ **page** | **optional.Int32**| Page number. Defaults to 1. | 
  **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
@@ -72,7 +72,7 @@ Returns a list of the administrators of a given club.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the club. | 
+**id** | **int64**| The identifier of the club. | 
  **optional** | ***GetClubAdminsByIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -83,7 +83,7 @@ Optional parameters are passed through a pointer to a GetClubAdminsByIdOpts stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. | 
+ **page** | **optional.Int32**| Page number. Defaults to 1. | 
  **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
@@ -118,7 +118,7 @@ Returns a given club using its identifier.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the club. | 
+**id** | **int64**| The identifier of the club. | 
 
 ### Return type
 
@@ -152,7 +152,7 @@ Returns a list of the athletes who are members of a given club.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the club. | 
+**id** | **int64**| The identifier of the club. | 
  **optional** | ***GetClubMembersByIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -163,7 +163,7 @@ Optional parameters are passed through a pointer to a GetClubMembersByIdOpts str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. | 
+ **page** | **optional.Int32**| Page number. Defaults to 1. | 
  **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
@@ -207,7 +207,7 @@ Optional parameters are passed through a pointer to a GetLoggedInAthleteClubsOpt
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Page number. | 
+ **page** | **optional.Int32**| Page number. Defaults to 1. | 
  **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type

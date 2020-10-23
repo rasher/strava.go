@@ -8,6 +8,9 @@
  */
 
 package strava
+import (
+	"time"
+)
 // Route struct for Route
 type Route struct {
 	Athlete SummaryAthlete `json:"athlete,omitempty"`
@@ -18,7 +21,9 @@ type Route struct {
 	// The route's elevation gain.
 	ElevationGain float32 `json:"elevation_gain,omitempty"`
 	// The unique identifier of this route
-	Id int32 `json:"id,omitempty"`
+	Id int64 `json:"id,omitempty"`
+	// The unique identifier of the route in string format
+	IdStr string `json:"id_str,omitempty"`
 	Map PolylineMap `json:"map,omitempty"`
 	// The name of this route
 	Name string `json:"name,omitempty"`
@@ -32,6 +37,12 @@ type Route struct {
 	Type int32 `json:"type,omitempty"`
 	// This route's sub-type (1 for road, 2 for mountain bike, 3 for cross, 4 for trail, 5 for mixed)
 	SubType int32 `json:"sub_type,omitempty"`
+	// The time at which the route was created
+	CreatedAt time.Time `json:"created_at,omitempty"`
+	// The time at which the route was last updated
+	UpdatedAt time.Time `json:"updated_at,omitempty"`
+	// Estimated time in seconds for the authenticated athlete to complete route
+	EstimatedMovingTime int32 `json:"estimated_moving_time,omitempty"`
 	// The segments traversed by this route
 	Segments []SummarySegment `json:"segments,omitempty"`
 }

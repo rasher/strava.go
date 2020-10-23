@@ -32,7 +32,7 @@ Returns a GPX file of the route. Requires read_all scope for private routes.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id The identifier of the route.
 */
-func (a *RoutesApiService) GetRouteAsGPX(ctx _context.Context, id int32) (*_nethttp.Response, error) {
+func (a *RoutesApiService) GetRouteAsGPX(ctx _context.Context, id int64) (*_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -106,7 +106,7 @@ Returns a TCX file of the route. Requires read_all scope for private routes.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id The identifier of the route.
 */
-func (a *RoutesApiService) GetRouteAsTCX(ctx _context.Context, id int32) (*_nethttp.Response, error) {
+func (a *RoutesApiService) GetRouteAsTCX(ctx _context.Context, id int64) (*_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -181,7 +181,7 @@ Returns a route using its identifier. Requires read_all scope for private routes
  * @param id The identifier of the route.
 @return Route
 */
-func (a *RoutesApiService) GetRouteById(ctx _context.Context, id int32) (Route, *_nethttp.Response, error) {
+func (a *RoutesApiService) GetRouteById(ctx _context.Context, id int64) (Route, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -277,15 +277,14 @@ type GetRoutesByAthleteIdOpts struct {
 
 /*
 GetRoutesByAthleteId List Athlete Routes
-Returns a list of the routes created by the authenticated athlete using their athlete ID. Private routes are filtered out unless requested by a token with read_all scope.
+Returns a list of the routes created by the authenticated athlete. Private routes are filtered out unless requested by a token with read_all scope.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id The identifier of the athlete.
  * @param optional nil or *GetRoutesByAthleteIdOpts - Optional Parameters:
- * @param "Page" (optional.Int32) -  Page number.
+ * @param "Page" (optional.Int32) -  Page number. Defaults to 1.
  * @param "PerPage" (optional.Int32) -  Number of items per page. Defaults to 30.
 @return []Route
 */
-func (a *RoutesApiService) GetRoutesByAthleteId(ctx _context.Context, id int32, localVarOptionals *GetRoutesByAthleteIdOpts) ([]Route, *_nethttp.Response, error) {
+func (a *RoutesApiService) GetRoutesByAthleteId(ctx _context.Context, localVarOptionals *GetRoutesByAthleteIdOpts) ([]Route, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -297,8 +296,6 @@ func (a *RoutesApiService) GetRoutesByAthleteId(ctx _context.Context, id int32, 
 
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/athletes/{id}/routes"
-	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", _neturl.QueryEscape(parameterToString(id, "")) , -1)
-
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}

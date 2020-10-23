@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** | The unique identifier of the athlete | [optional] 
+**Id** | **int64** | The unique identifier of the athlete | [optional] 
 **ResourceState** | **int32** | Resource state, indicates level of detail. Possible values: 1 -&gt; \&quot;meta\&quot;, 2 -&gt; \&quot;summary\&quot;, 3 -&gt; \&quot;detail\&quot; | [optional] 
 **Firstname** | **string** | The athlete&#39;s first name. | [optional] 
 **Lastname** | **string** | The athlete&#39;s last name. | [optional] 

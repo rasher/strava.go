@@ -31,7 +31,7 @@ Name | Type | Description  | Notes
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **name** | **string**| The name of the activity. | 
 **type_** | **string**| Type of activity. For example - Run, Ride etc. | 
-**startDateLocal** | [**map[string]interface{}**](map[string]interface{}.md)| ISO 8601 formatted date time. | 
+**startDateLocal** | **time.Time**| ISO 8601 formatted date time. | 
 **elapsedTime** | **int32**| In seconds. | 
  **optional** | ***CreateActivityOpts** | optional parameters | nil if no parameters
 
@@ -139,7 +139,7 @@ Optional parameters are passed through a pointer to a GetCommentsByActivityIdOpt
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. | 
+ **page** | **optional.Int32**| Page number. Defaults to 1. | 
  **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
@@ -185,7 +185,7 @@ Optional parameters are passed through a pointer to a GetKudoersByActivityIdOpts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. | 
+ **page** | **optional.Int32**| Page number. Defaults to 1. | 
  **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **before** | **optional.Int32**| An epoch timestamp to use for filtering activities that have taken place before a certain time. | 
  **after** | **optional.Int32**| An epoch timestamp to use for filtering activities that have taken place after a certain time. | 
- **page** | **optional.Int32**| Page number. | 
+ **page** | **optional.Int32**| Page number. Defaults to 1. | 
  **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
@@ -300,7 +300,7 @@ Summit Feature. Returns the zones of a given activity. Requires activity:read fo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the activity. | 
+**id** | **int64**| The identifier of the activity. | 
 
 ### Return type
 

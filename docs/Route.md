@@ -8,7 +8,8 @@ Name | Type | Description | Notes
 **Description** | **string** | The description of the route | [optional] 
 **Distance** | **float32** | The route&#39;s distance, in meters | [optional] 
 **ElevationGain** | **float32** | The route&#39;s elevation gain. | [optional] 
-**Id** | **int32** | The unique identifier of this route | [optional] 
+**Id** | **int64** | The unique identifier of this route | [optional] 
+**IdStr** | **string** | The unique identifier of the route in string format | [optional] 
 **Map** | [**PolylineMap**](PolylineMap.md) |  | [optional] 
 **Name** | **string** | The name of this route | [optional] 
 **Private** | **bool** | Whether this route is private | [optional] 
@@ -16,6 +17,9 @@ Name | Type | Description | Notes
 **Timestamp** | **int32** | An epoch timestamp of when the route was created | [optional] 
 **Type** | **int32** | This route&#39;s type (1 for ride, 2 for runs) | [optional] 
 **SubType** | **int32** | This route&#39;s sub-type (1 for road, 2 for mountain bike, 3 for cross, 4 for trail, 5 for mixed) | [optional] 
+**CreatedAt** | [**time.Time**](time.Time.md) | The time at which the route was created | [optional] 
+**UpdatedAt** | [**time.Time**](time.Time.md) | The time at which the route was last updated | [optional] 
+**EstimatedMovingTime** | **int32** | Estimated time in seconds for the authenticated athlete to complete route | [optional] 
 **Segments** | [**[]SummarySegment**](SummarySegment.md) | The segments traversed by this route | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

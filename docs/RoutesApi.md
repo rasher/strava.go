@@ -25,7 +25,7 @@ Returns a GPX file of the route. Requires read_all scope for private routes.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the route. | 
+**id** | **int64**| The identifier of the route. | 
 
 ### Return type
 
@@ -59,7 +59,7 @@ Returns a TCX file of the route. Requires read_all scope for private routes.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the route. | 
+**id** | **int64**| The identifier of the route. | 
 
 ### Return type
 
@@ -93,7 +93,7 @@ Returns a route using its identifier. Requires read_all scope for private routes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the route. | 
+**id** | **int64**| The identifier of the route. | 
 
 ### Return type
 
@@ -115,11 +115,11 @@ Name | Type | Description  | Notes
 
 ## GetRoutesByAthleteId
 
-> []Route GetRoutesByAthleteId(ctx, id, optional)
+> []Route GetRoutesByAthleteId(ctx, optional)
 
 List Athlete Routes
 
-Returns a list of the routes created by the authenticated athlete using their athlete ID. Private routes are filtered out unless requested by a token with read_all scope.
+Returns a list of the routes created by the authenticated athlete. Private routes are filtered out unless requested by a token with read_all scope.
 
 ### Required Parameters
 
@@ -127,7 +127,6 @@ Returns a list of the routes created by the authenticated athlete using their at
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32**| The identifier of the athlete. | 
  **optional** | ***GetRoutesByAthleteIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -137,8 +136,7 @@ Optional parameters are passed through a pointer to a GetRoutesByAthleteIdOpts s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
- **page** | **optional.Int32**| Page number. | 
+ **page** | **optional.Int32**| Page number. Defaults to 1. | 
  **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type

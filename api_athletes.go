@@ -216,7 +216,7 @@ Returns the activity stats of an athlete. Only includes data from activities set
  * @param id The identifier of the athlete. Must match the authenticated athlete.
 @return ActivityStats
 */
-func (a *AthletesApiService) GetStats(ctx _context.Context, id int32) (ActivityStats, *_nethttp.Response, error) {
+func (a *AthletesApiService) GetStats(ctx _context.Context, id int64) (ActivityStats, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}

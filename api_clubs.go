@@ -38,11 +38,11 @@ Retrieve recent activities from members of a specific club. The authenticated at
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id The identifier of the club.
  * @param optional nil or *GetClubActivitiesByIdOpts - Optional Parameters:
- * @param "Page" (optional.Int32) -  Page number.
+ * @param "Page" (optional.Int32) -  Page number. Defaults to 1.
  * @param "PerPage" (optional.Int32) -  Number of items per page. Defaults to 30.
 @return []SummaryActivity
 */
-func (a *ClubsApiService) GetClubActivitiesById(ctx _context.Context, id int32, localVarOptionals *GetClubActivitiesByIdOpts) ([]SummaryActivity, *_nethttp.Response, error) {
+func (a *ClubsApiService) GetClubActivitiesById(ctx _context.Context, id int64, localVarOptionals *GetClubActivitiesByIdOpts) ([]SummaryActivity, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -148,11 +148,11 @@ Returns a list of the administrators of a given club.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id The identifier of the club.
  * @param optional nil or *GetClubAdminsByIdOpts - Optional Parameters:
- * @param "Page" (optional.Int32) -  Page number.
+ * @param "Page" (optional.Int32) -  Page number. Defaults to 1.
  * @param "PerPage" (optional.Int32) -  Number of items per page. Defaults to 30.
 @return []SummaryAthlete
 */
-func (a *ClubsApiService) GetClubAdminsById(ctx _context.Context, id int32, localVarOptionals *GetClubAdminsByIdOpts) ([]SummaryAthlete, *_nethttp.Response, error) {
+func (a *ClubsApiService) GetClubAdminsById(ctx _context.Context, id int64, localVarOptionals *GetClubAdminsByIdOpts) ([]SummaryAthlete, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -253,7 +253,7 @@ Returns a given club using its identifier.
  * @param id The identifier of the club.
 @return DetailedClub
 */
-func (a *ClubsApiService) GetClubById(ctx _context.Context, id int32) (DetailedClub, *_nethttp.Response, error) {
+func (a *ClubsApiService) GetClubById(ctx _context.Context, id int64) (DetailedClub, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -353,11 +353,11 @@ Returns a list of the athletes who are members of a given club.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id The identifier of the club.
  * @param optional nil or *GetClubMembersByIdOpts - Optional Parameters:
- * @param "Page" (optional.Int32) -  Page number.
+ * @param "Page" (optional.Int32) -  Page number. Defaults to 1.
  * @param "PerPage" (optional.Int32) -  Number of items per page. Defaults to 30.
 @return []SummaryAthlete
 */
-func (a *ClubsApiService) GetClubMembersById(ctx _context.Context, id int32, localVarOptionals *GetClubMembersByIdOpts) ([]SummaryAthlete, *_nethttp.Response, error) {
+func (a *ClubsApiService) GetClubMembersById(ctx _context.Context, id int64, localVarOptionals *GetClubMembersByIdOpts) ([]SummaryAthlete, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -462,7 +462,7 @@ GetLoggedInAthleteClubs List Athlete Clubs
 Returns a list of the clubs whose membership includes the authenticated athlete.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetLoggedInAthleteClubsOpts - Optional Parameters:
- * @param "Page" (optional.Int32) -  Page number.
+ * @param "Page" (optional.Int32) -  Page number. Defaults to 1.
  * @param "PerPage" (optional.Int32) -  Number of items per page. Defaults to 30.
 @return []SummaryClub
 */

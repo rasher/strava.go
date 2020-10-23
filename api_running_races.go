@@ -33,7 +33,7 @@ Returns a running race for a given identifier.
  * @param id The identifier of the running race.
 @return RunningRace
 */
-func (a *RunningRacesApiService) GetRunningRaceById(ctx _context.Context, id int32) (RunningRace, *_nethttp.Response, error) {
+func (a *RunningRacesApiService) GetRunningRaceById(ctx _context.Context, id int64) (RunningRace, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
