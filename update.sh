@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-CODEGEN_URL=https://repo.maven.apache.org/maven2/org/openapitools/openapi-generator-cli/4.2.3/openapi-generator-cli-4.2.3.jar
+CODEGEN_URL=https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/6.1.0/openapi-generator-cli-6.1.0.jar
 JAR=openapi-generator-cli.jar
 
 pushd "$(dirname "$0")"
@@ -22,3 +22,4 @@ rm -f $JAR
 git add .
 
 popd
+TZ=UTC printf "Strava API as of %s\n" "$(date +%Y-%m-%d\ %H:%M:%S\ %Z)"
