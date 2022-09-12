@@ -13,21 +13,59 @@ Method | HTTP request | Description
 
 ## GetActivityStreams
 
-> StreamSet GetActivityStreams(ctx, id, keys, keyByType)
+> StreamSet GetActivityStreams(ctx, id).Keys(keys).KeyByType(keyByType).Execute()
 
 Get Activity Streams
 
-Returns the given activity's streams. Requires activity:read scope. Requires activity:read_all scope for Only Me activities.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the activity.
+    keys := []string{"Keys_example"} // []string | Desired stream types.
+    keyByType := true // bool | Must be true. (default to true)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.StreamsApi.GetActivityStreams(context.Background(), id).Keys(keys).KeyByType(keyByType).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `StreamsApi.GetActivityStreams``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetActivityStreams`: StreamSet
+    fmt.Fprintf(os.Stdout, "Response from `StreamsApi.GetActivityStreams`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the activity. | 
-**keys** | [**[]string**](string.md)| Desired stream types. | 
-**keyByType** | **bool**| Must be true. | [default to true]
+**id** | **int64** | The identifier of the activity. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetActivityStreamsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **keys** | **[]string** | Desired stream types. | 
+ **keyByType** | **bool** | Must be true. | [default to true]
 
 ### Return type
 
@@ -49,19 +87,55 @@ Name | Type | Description  | Notes
 
 ## GetRouteStreams
 
-> StreamSet GetRouteStreams(ctx, id)
+> StreamSet GetRouteStreams(ctx, id).Execute()
 
 Get Route Streams
 
-Returns the given route's streams. Requires read_all scope for private routes.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the route.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.StreamsApi.GetRouteStreams(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `StreamsApi.GetRouteStreams``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetRouteStreams`: StreamSet
+    fmt.Fprintf(os.Stdout, "Response from `StreamsApi.GetRouteStreams`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the route. | 
+**id** | **int64** | The identifier of the route. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetRouteStreamsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -83,21 +157,59 @@ Name | Type | Description  | Notes
 
 ## GetSegmentEffortStreams
 
-> StreamSet GetSegmentEffortStreams(ctx, id, keys, keyByType)
+> StreamSet GetSegmentEffortStreams(ctx, id).Keys(keys).KeyByType(keyByType).Execute()
 
 Get Segment Effort Streams
 
-Returns a set of streams for a segment effort completed by the authenticated athlete. Requires read_all scope.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the segment effort.
+    keys := []string{"Keys_example"} // []string | The types of streams to return.
+    keyByType := true // bool | Must be true. (default to true)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.StreamsApi.GetSegmentEffortStreams(context.Background(), id).Keys(keys).KeyByType(keyByType).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `StreamsApi.GetSegmentEffortStreams``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetSegmentEffortStreams`: StreamSet
+    fmt.Fprintf(os.Stdout, "Response from `StreamsApi.GetSegmentEffortStreams`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the segment effort. | 
-**keys** | [**[]string**](string.md)| The types of streams to return. | 
-**keyByType** | **bool**| Must be true. | [default to true]
+**id** | **int64** | The identifier of the segment effort. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetSegmentEffortStreamsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **keys** | **[]string** | The types of streams to return. | 
+ **keyByType** | **bool** | Must be true. | [default to true]
 
 ### Return type
 
@@ -119,21 +231,59 @@ Name | Type | Description  | Notes
 
 ## GetSegmentStreams
 
-> StreamSet GetSegmentStreams(ctx, id, keys, keyByType)
+> StreamSet GetSegmentStreams(ctx, id).Keys(keys).KeyByType(keyByType).Execute()
 
 Get Segment Streams
 
-Returns the given segment's streams. Requires read_all scope for private segments.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the segment.
+    keys := []string{"Keys_example"} // []string | The types of streams to return.
+    keyByType := true // bool | Must be true. (default to true)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.StreamsApi.GetSegmentStreams(context.Background(), id).Keys(keys).KeyByType(keyByType).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `StreamsApi.GetSegmentStreams``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetSegmentStreams`: StreamSet
+    fmt.Fprintf(os.Stdout, "Response from `StreamsApi.GetSegmentStreams`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the segment. | 
-**keys** | [**[]string**](string.md)| The types of streams to return. | 
-**keyByType** | **bool**| Must be true. | [default to true]
+**id** | **int64** | The identifier of the segment. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetSegmentStreamsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **keys** | **[]string** | The types of streams to return. | 
+ **keyByType** | **bool** | Must be true. | [default to true]
 
 ### Return type
 

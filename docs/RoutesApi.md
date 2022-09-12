@@ -13,19 +13,53 @@ Method | HTTP request | Description
 
 ## GetRouteAsGPX
 
-> GetRouteAsGPX(ctx, id)
+> GetRouteAsGPX(ctx, id).Execute()
 
 Export Route GPX
 
-Returns a GPX file of the route. Requires read_all scope for private routes.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the route.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RoutesApi.GetRouteAsGPX(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `RoutesApi.GetRouteAsGPX``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the route. | 
+**id** | **int64** | The identifier of the route. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetRouteAsGPXRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -47,19 +81,53 @@ Name | Type | Description  | Notes
 
 ## GetRouteAsTCX
 
-> GetRouteAsTCX(ctx, id)
+> GetRouteAsTCX(ctx, id).Execute()
 
 Export Route TCX
 
-Returns a TCX file of the route. Requires read_all scope for private routes.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the route.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RoutesApi.GetRouteAsTCX(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `RoutesApi.GetRouteAsTCX``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the route. | 
+**id** | **int64** | The identifier of the route. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetRouteAsTCXRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -81,19 +149,55 @@ Name | Type | Description  | Notes
 
 ## GetRouteById
 
-> Route GetRouteById(ctx, id)
+> Route GetRouteById(ctx, id).Execute()
 
 Get Route
 
-Returns a route using its identifier. Requires read_all scope for private routes.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the route.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RoutesApi.GetRouteById(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `RoutesApi.GetRouteById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetRouteById`: Route
+    fmt.Fprintf(os.Stdout, "Response from `RoutesApi.GetRouteById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the route. | 
+**id** | **int64** | The identifier of the route. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetRouteByIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -115,29 +219,53 @@ Name | Type | Description  | Notes
 
 ## GetRoutesByAthleteId
 
-> []Route GetRoutesByAthleteId(ctx, optional)
+> []Route GetRoutesByAthleteId(ctx).Page(page).PerPage(perPage).Execute()
 
 List Athlete Routes
 
-Returns a list of the routes created by the authenticated athlete. Private routes are filtered out unless requested by a token with read_all scope.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RoutesApi.GetRoutesByAthleteId(context.Background()).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `RoutesApi.GetRoutesByAthleteId``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetRoutesByAthleteId`: []Route
+    fmt.Fprintf(os.Stdout, "Response from `RoutesApi.GetRoutesByAthleteId`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetRoutesByAthleteIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***GetRoutesByAthleteIdOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a GetRoutesByAthleteIdOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 

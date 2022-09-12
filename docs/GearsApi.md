@@ -10,19 +10,55 @@ Method | HTTP request | Description
 
 ## GetGearById
 
-> DetailedGear GetGearById(ctx, id)
+> DetailedGear GetGearById(ctx, id).Execute()
 
 Get Equipment
 
-Returns an equipment using its identifier.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := "id_example" // string | The identifier of the gear.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.GearsApi.GetGearById(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `GearsApi.GetGearById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetGearById`: DetailedGear
+    fmt.Fprintf(os.Stdout, "Response from `GearsApi.GetGearById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string**| The identifier of the gear. | 
+**id** | **string** | The identifier of the gear. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetGearByIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 

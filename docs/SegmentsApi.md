@@ -13,32 +13,57 @@ Method | HTTP request | Description
 
 ## ExploreSegments
 
-> ExplorerResponse ExploreSegments(ctx, bounds, optional)
+> ExplorerResponse ExploreSegments(ctx).Bounds(bounds).ActivityType(activityType).MinCat(minCat).MaxCat(maxCat).Execute()
 
 Explore segments
 
-Returns the top 10 segments matching a specified query.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    bounds := []float32{float32(123)} // []float32 | The latitude and longitude for two points describing a rectangular boundary for the search: [southwest corner latitutde, southwest corner longitude, northeast corner latitude, northeast corner longitude]
+    activityType := "activityType_example" // string | Desired activity type. (optional)
+    minCat := int32(56) // int32 | The minimum climbing category. (optional)
+    maxCat := int32(56) // int32 | The maximum climbing category. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SegmentsApi.ExploreSegments(context.Background()).Bounds(bounds).ActivityType(activityType).MinCat(minCat).MaxCat(maxCat).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SegmentsApi.ExploreSegments``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ExploreSegments`: ExplorerResponse
+    fmt.Fprintf(os.Stdout, "Response from `SegmentsApi.ExploreSegments`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiExploreSegmentsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**bounds** | [**[]float32**](float32.md)| The latitude and longitude for two points describing a rectangular boundary for the search: [southwest corner latitutde, southwest corner longitude, northeast corner latitude, northeast corner longitude] | 
- **optional** | ***ExploreSegmentsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a ExploreSegmentsOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **activityType** | **optional.String**| Desired activity type. | 
- **minCat** | **optional.Int32**| The minimum climbing category. | 
- **maxCat** | **optional.Int32**| The maximum climbing category. | 
+ **bounds** | **[]float32** | The latitude and longitude for two points describing a rectangular boundary for the search: [southwest corner latitutde, southwest corner longitude, northeast corner latitude, northeast corner longitude] | 
+ **activityType** | **string** | Desired activity type. | 
+ **minCat** | **int32** | The minimum climbing category. | 
+ **maxCat** | **int32** | The maximum climbing category. | 
 
 ### Return type
 
@@ -60,29 +85,53 @@ Name | Type | Description  | Notes
 
 ## GetLoggedInAthleteStarredSegments
 
-> []SummarySegment GetLoggedInAthleteStarredSegments(ctx, optional)
+> []SummarySegment GetLoggedInAthleteStarredSegments(ctx).Page(page).PerPage(perPage).Execute()
 
 List Starred Segments
 
-List of the authenticated athlete's starred segments. Private segments are filtered out unless requested by a token with read_all scope.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SegmentsApi.GetLoggedInAthleteStarredSegments(context.Background()).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SegmentsApi.GetLoggedInAthleteStarredSegments``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetLoggedInAthleteStarredSegments`: []SummarySegment
+    fmt.Fprintf(os.Stdout, "Response from `SegmentsApi.GetLoggedInAthleteStarredSegments`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetLoggedInAthleteStarredSegmentsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***GetLoggedInAthleteStarredSegmentsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a GetLoggedInAthleteStarredSegmentsOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 
@@ -104,19 +153,55 @@ Name | Type | Description  | Notes
 
 ## GetSegmentById
 
-> DetailedSegment GetSegmentById(ctx, id)
+> DetailedSegment GetSegmentById(ctx, id).Execute()
 
 Get Segment
 
-Returns the specified segment. read_all scope required in order to retrieve athlete-specific segment information, or to retrieve private segments.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the segment.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SegmentsApi.GetSegmentById(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SegmentsApi.GetSegmentById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetSegmentById`: DetailedSegment
+    fmt.Fprintf(os.Stdout, "Response from `SegmentsApi.GetSegmentById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the segment. | 
+**id** | **int64** | The identifier of the segment. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetSegmentByIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -138,20 +223,57 @@ Name | Type | Description  | Notes
 
 ## StarSegment
 
-> DetailedSegment StarSegment(ctx, id, starred)
+> DetailedSegment StarSegment(ctx, id).Starred(starred).Execute()
 
 Star Segment
 
-Stars/Unstars the given segment for the authenticated athlete. Requires profile:write scope.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the segment to star.
+    starred := true // bool | If true, star the segment; if false, unstar the segment. (default to false)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SegmentsApi.StarSegment(context.Background(), id).Starred(starred).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SegmentsApi.StarSegment``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `StarSegment`: DetailedSegment
+    fmt.Fprintf(os.Stdout, "Response from `SegmentsApi.StarSegment`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the segment to star. | 
-**starred** | **bool**| If true, star the segment; if false, unstar the segment. | [default to false]
+**id** | **int64** | The identifier of the segment to star. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiStarSegmentRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **starred** | **bool** | If true, star the segment; if false, unstar the segment. | [default to false]
 
 ### Return type
 

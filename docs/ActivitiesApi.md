@@ -17,39 +17,68 @@ Method | HTTP request | Description
 
 ## CreateActivity
 
-> DetailedActivity CreateActivity(ctx, name, type_, startDateLocal, elapsedTime, optional)
+> DetailedActivity CreateActivity(ctx).Name(name).SportType(sportType).StartDateLocal(startDateLocal).ElapsedTime(elapsedTime).Type_(type_).Description(description).Distance(distance).Trainer(trainer).Commute(commute).Execute()
 
 Create an Activity
 
-Creates a manual activity for an athlete, requires activity:write scope.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    name := "name_example" // string | The name of the activity.
+    sportType := "sportType_example" // string | Sport type of activity. For example - Run, MountainBikeRide, Ride, etc.
+    startDateLocal := time.Now() // time.Time | ISO 8601 formatted date time.
+    elapsedTime := int32(56) // int32 | In seconds.
+    type_ := "type__example" // string | Type of activity. For example - Run, Ride etc. (optional)
+    description := "description_example" // string | Description of the activity. (optional)
+    distance := float32(3.4) // float32 | In meters. (optional)
+    trainer := int32(56) // int32 | Set to 1 to mark as a trainer activity. (optional)
+    commute := int32(56) // int32 | Set to 1 to mark as commute. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ActivitiesApi.CreateActivity(context.Background()).Name(name).SportType(sportType).StartDateLocal(startDateLocal).ElapsedTime(elapsedTime).Type_(type_).Description(description).Distance(distance).Trainer(trainer).Commute(commute).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.CreateActivity``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateActivity`: DetailedActivity
+    fmt.Fprintf(os.Stdout, "Response from `ActivitiesApi.CreateActivity`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateActivityRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**name** | **string**| The name of the activity. | 
-**type_** | **string**| Type of activity. For example - Run, Ride etc. | 
-**startDateLocal** | **time.Time**| ISO 8601 formatted date time. | 
-**elapsedTime** | **int32**| In seconds. | 
- **optional** | ***CreateActivityOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a CreateActivityOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
-
- **description** | **optional.String**| Description of the activity. | 
- **distance** | **optional.Float32**| In meters. | 
- **trainer** | **optional.Int32**| Set to 1 to mark as a trainer activity. | 
- **commute** | **optional.Int32**| Set to 1 to mark as commute. | 
+ **name** | **string** | The name of the activity. | 
+ **sportType** | **string** | Sport type of activity. For example - Run, MountainBikeRide, Ride, etc. | 
+ **startDateLocal** | **time.Time** | ISO 8601 formatted date time. | 
+ **elapsedTime** | **int32** | In seconds. | 
+ **type_** | **string** | Type of activity. For example - Run, Ride etc. | 
+ **description** | **string** | Description of the activity. | 
+ **distance** | **float32** | In meters. | 
+ **trainer** | **int32** | Set to 1 to mark as a trainer activity. | 
+ **commute** | **int32** | Set to 1 to mark as commute. | 
 
 ### Return type
 
@@ -71,30 +100,57 @@ Name | Type | Description  | Notes
 
 ## GetActivityById
 
-> DetailedActivity GetActivityById(ctx, id, optional)
+> DetailedActivity GetActivityById(ctx, id).IncludeAllEfforts(includeAllEfforts).Execute()
 
 Get Activity
 
-Returns the given activity that is owned by the authenticated athlete. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the activity.
+    includeAllEfforts := true // bool | To include all segments efforts. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ActivitiesApi.GetActivityById(context.Background(), id).IncludeAllEfforts(includeAllEfforts).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.GetActivityById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetActivityById`: DetailedActivity
+    fmt.Fprintf(os.Stdout, "Response from `ActivitiesApi.GetActivityById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the activity. | 
- **optional** | ***GetActivityByIdOpts** | optional parameters | nil if no parameters
+**id** | **int64** | The identifier of the activity. | 
 
-### Optional Parameters
+### Other Parameters
 
-Optional parameters are passed through a pointer to a GetActivityByIdOpts struct
+Other parameters are passed through a pointer to a apiGetActivityByIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **includeAllEfforts** | **optional.Bool**| To include all segments efforts. | 
+ **includeAllEfforts** | **bool** | To include all segments efforts. | 
 
 ### Return type
 
@@ -116,31 +172,59 @@ Name | Type | Description  | Notes
 
 ## GetCommentsByActivityId
 
-> []Comment GetCommentsByActivityId(ctx, id, optional)
+> []Comment GetCommentsByActivityId(ctx, id).Page(page).PerPage(perPage).Execute()
 
 List Activity Comments
 
-Returns the comments on the given activity. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the activity.
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ActivitiesApi.GetCommentsByActivityId(context.Background(), id).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.GetCommentsByActivityId``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetCommentsByActivityId`: []Comment
+    fmt.Fprintf(os.Stdout, "Response from `ActivitiesApi.GetCommentsByActivityId`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the activity. | 
- **optional** | ***GetCommentsByActivityIdOpts** | optional parameters | nil if no parameters
+**id** | **int64** | The identifier of the activity. | 
 
-### Optional Parameters
+### Other Parameters
 
-Optional parameters are passed through a pointer to a GetCommentsByActivityIdOpts struct
+Other parameters are passed through a pointer to a apiGetCommentsByActivityIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 
@@ -162,31 +246,59 @@ Name | Type | Description  | Notes
 
 ## GetKudoersByActivityId
 
-> []SummaryAthlete GetKudoersByActivityId(ctx, id, optional)
+> []SummaryAthlete GetKudoersByActivityId(ctx, id).Page(page).PerPage(perPage).Execute()
 
 List Activity Kudoers
 
-Returns the athletes who kudoed an activity identified by an identifier. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the activity.
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ActivitiesApi.GetKudoersByActivityId(context.Background(), id).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.GetKudoersByActivityId``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetKudoersByActivityId`: []SummaryAthlete
+    fmt.Fprintf(os.Stdout, "Response from `ActivitiesApi.GetKudoersByActivityId`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the activity. | 
- **optional** | ***GetKudoersByActivityIdOpts** | optional parameters | nil if no parameters
+**id** | **int64** | The identifier of the activity. | 
 
-### Optional Parameters
+### Other Parameters
 
-Optional parameters are passed through a pointer to a GetKudoersByActivityIdOpts struct
+Other parameters are passed through a pointer to a apiGetKudoersByActivityIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 
@@ -208,19 +320,55 @@ Name | Type | Description  | Notes
 
 ## GetLapsByActivityId
 
-> []Lap GetLapsByActivityId(ctx, id)
+> []Lap GetLapsByActivityId(ctx, id).Execute()
 
 List Activity Laps
 
-Returns the laps of an activity identified by an identifier. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the activity.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ActivitiesApi.GetLapsByActivityId(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.GetLapsByActivityId``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetLapsByActivityId`: []Lap
+    fmt.Fprintf(os.Stdout, "Response from `ActivitiesApi.GetLapsByActivityId`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the activity. | 
+**id** | **int64** | The identifier of the activity. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetLapsByActivityIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -242,31 +390,57 @@ Name | Type | Description  | Notes
 
 ## GetLoggedInAthleteActivities
 
-> []SummaryActivity GetLoggedInAthleteActivities(ctx, optional)
+> []SummaryActivity GetLoggedInAthleteActivities(ctx).Before(before).After(after).Page(page).PerPage(perPage).Execute()
 
 List Athlete Activities
 
-Returns the activities of an athlete for a specific identifier. Requires activity:read. Only Me activities will be filtered out unless requested by a token with activity:read_all.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    before := int32(56) // int32 | An epoch timestamp to use for filtering activities that have taken place before a certain time. (optional)
+    after := int32(56) // int32 | An epoch timestamp to use for filtering activities that have taken place after a certain time. (optional)
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ActivitiesApi.GetLoggedInAthleteActivities(context.Background()).Before(before).After(after).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.GetLoggedInAthleteActivities``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetLoggedInAthleteActivities`: []SummaryActivity
+    fmt.Fprintf(os.Stdout, "Response from `ActivitiesApi.GetLoggedInAthleteActivities`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetLoggedInAthleteActivitiesRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***GetLoggedInAthleteActivitiesOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a GetLoggedInAthleteActivitiesOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **before** | **optional.Int32**| An epoch timestamp to use for filtering activities that have taken place before a certain time. | 
- **after** | **optional.Int32**| An epoch timestamp to use for filtering activities that have taken place after a certain time. | 
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **before** | **int32** | An epoch timestamp to use for filtering activities that have taken place before a certain time. | 
+ **after** | **int32** | An epoch timestamp to use for filtering activities that have taken place after a certain time. | 
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 
@@ -288,19 +462,55 @@ Name | Type | Description  | Notes
 
 ## GetZonesByActivityId
 
-> []ActivityZone GetZonesByActivityId(ctx, id)
+> []ActivityZone GetZonesByActivityId(ctx, id).Execute()
 
 Get Activity Zones
 
-Summit Feature. Returns the zones of a given activity. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the activity.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ActivitiesApi.GetZonesByActivityId(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.GetZonesByActivityId``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetZonesByActivityId`: []ActivityZone
+    fmt.Fprintf(os.Stdout, "Response from `ActivitiesApi.GetZonesByActivityId`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the activity. | 
+**id** | **int64** | The identifier of the activity. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetZonesByActivityIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -322,30 +532,57 @@ Name | Type | Description  | Notes
 
 ## UpdateActivityById
 
-> DetailedActivity UpdateActivityById(ctx, id, optional)
+> DetailedActivity UpdateActivityById(ctx, id).Body(body).Execute()
 
 Update Activity
 
-Updates the given activity that is owned by the authenticated athlete. Requires activity:write. Also requires activity:read_all in order to update Only Me activities
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the activity.
+    body := *openapiclient.NewUpdatableActivity() // UpdatableActivity |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ActivitiesApi.UpdateActivityById(context.Background(), id).Body(body).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.UpdateActivityById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateActivityById`: DetailedActivity
+    fmt.Fprintf(os.Stdout, "Response from `ActivitiesApi.UpdateActivityById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the activity. | 
- **optional** | ***UpdateActivityByIdOpts** | optional parameters | nil if no parameters
+**id** | **int64** | The identifier of the activity. | 
 
-### Optional Parameters
+### Other Parameters
 
-Optional parameters are passed through a pointer to a UpdateActivityByIdOpts struct
+Other parameters are passed through a pointer to a apiUpdateActivityByIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**optional.Interface of UpdatableActivity**](UpdatableActivity.md)|  | 
+ **body** | [**UpdatableActivity**](UpdatableActivity.md) |  | 
 
 ### Return type
 

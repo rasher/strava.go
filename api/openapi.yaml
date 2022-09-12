@@ -1,14 +1,14 @@
 openapi: 3.0.1
 info:
-  description: The [Swagger Playground](https://developers.strava.com/playground)
-    is the easiest way to familiarize yourself with the Strava API by submitting HTTP
-    requests and observing the responses before you write any client code. It will
-    show what a response will look like with different endpoints depending on the
-    authorization scope you receive from your athletes. To use the Playground, go
-    to https://www.strava.com/settings/api and change your “Authorization Callback
-    Domain” to developers.strava.com. Please note, we only support Swagger 2.0. There
-    is a known issue where you can only select one scope at a time. For more information,
-    please check the section “client code” at https://developers.strava.com/docs.
+  description: "The [Swagger Playground](https://developers.strava.com/playground)\
+    \ is the easiest way to familiarize yourself with the Strava API by submitting\
+    \ HTTP requests and observing the responses before you write any client code.\
+    \ It will show what a response will look like with different endpoints depending\
+    \ on the authorization scope you receive from your athletes. To use the Playground,\
+    \ go to https://www.strava.com/settings/api and change your “Authorization Callback\
+    \ Domain” to developers.strava.com. Please note, we only support Swagger 2.0.\
+    \ There is a known issue where you can only select one scope at a time. For more\
+    \ information, please check the section “client code” at https://developers.strava.com/docs."
   title: Strava API v3
   version: 3.0.0
 servers:
@@ -72,6 +72,8 @@ paths:
                 badge_type_id: 4
                 profile_medium: https://xxxxxx.cloudfront.net/pictures/athletes/123456789/123456789/2/medium.jpg
                 profile: https://xxxxx.cloudfront.net/pictures/athletes/123456789/123456789/2/large.jpg
+                friend: null
+                follower: null
                 follower_count: 5
                 friend_count: 5
                 mutual_friend_count: 0
@@ -79,6 +81,7 @@ paths:
                 date_preference: '%m/%d/%Y'
                 measurement_preference: feet
                 clubs: []
+                ftp: null
                 weight: 0
                 bikes:
                 - id: b12345678987655
@@ -136,6 +139,8 @@ paths:
                 badge_type_id: 4
                 profile_medium: https://xxxxxx.cloudfront.net/pictures/athletes/1234567898765509876/1234567898765509876/2/medium.jpg
                 profile: https://xxxxx.cloudfront.net/pictures/athletes/1234567898765509876/1234567898765509876/2/large.jpg
+                friend: null
+                follower: null
                 follower_count: 5
                 friend_count: 5
                 mutual_friend_count: 0
@@ -143,6 +148,7 @@ paths:
                 date_preference: '%m/%d/%Y'
                 measurement_preference: feet
                 clubs: []
+                ftp: null
                 weight: 0
                 bikes:
                 - id: b1234567898765509876
@@ -229,8 +235,9 @@ paths:
       - Athletes
   /segments/{id}:
     get:
-      description: Returns the specified segment. read_all scope required in order
-        to retrieve athlete-specific segment information, or to retrieve private segments.
+      description: "Returns the specified segment. read_all scope required in order\
+        \ to retrieve athlete-specific segment information, or to retrieve private\
+        \ segments."
       operationId: getSegmentById
       parameters:
       - description: The identifier of the segment.
@@ -272,7 +279,9 @@ paths:
                 total_elevation_gain: 155.733
                 map:
                   id: s229781
-                  polyline: '}g|eFnpqjVl@En@Md@HbAd@d@^h@Xx@VbARjBDh@OPQf@w@d@k@XKXDFPH\EbGT`AV`@v@|@NTNb@?XOb@cAxAWLuE@eAFMBoAv@eBt@q@b@}@tAeAt@i@dAC`AFZj@dB?~@[h@MbAVn@b@b@\d@Eh@Qb@_@d@eB|@c@h@WfBK|AMpA?VF\\t@f@t@h@j@|@b@hCb@b@XTd@Bl@GtA?jAL`ALp@Tr@RXd@Rx@Pn@^Zh@Tx@Zf@`@FTCzDy@f@Yx@m@n@Op@VJr@'
+                  polyline: "}g|eFnpqjVl@En@Md@HbAd@d@^h@Xx@VbARjBDh@OPQf@w@d@k@XKXDFPH\\\
+                    EbGT`AV`@v@|@NTNb@?XOb@cAxAWLuE@eAFMBoAv@eBt@q@b@}@tAeAt@i@dAC`AFZj@dB?~@[h@MbAVn@b@b@\\\
+                    d@Eh@Qb@_@d@eB|@c@h@WfBK|AMpA?VF\\\\t@f@t@h@j@|@b@hCb@b@XTd@Bl@GtA?jAL`ALp@Tr@RXd@Rx@Pn@^Zh@Tx@Zf@`@FTCzDy@f@Yx@m@n@Op@VJr@"
                   resource_state: 3
                 effort_count: 309974
                 athlete_count: 30623
@@ -342,7 +351,9 @@ paths:
                 total_elevation_gain: 155.733
                 map:
                   id: s229781
-                  polyline: '}g|eFnpqjVl@En@Md@HbAd@d@^h@Xx@VbARjBDh@OPQf@w@d@k@XKXDFPH\EbGT`AV`@v@|@NTNb@?XOb@cAxAWLuE@eAFMBoAv@eBt@q@b@}@tAeAt@i@dAC`AFZj@dB?~@[h@MbAVn@b@b@\d@Eh@Qb@_@d@eB|@c@h@WfBK|AMpA?VF\\t@f@t@h@j@|@b@hCb@b@XTd@Bl@GtA?jAL`ALp@Tr@RXd@Rx@Pn@^Zh@Tx@Zf@`@FTCzDy@f@Yx@m@n@Op@VJr@'
+                  polyline: "}g|eFnpqjVl@En@Md@HbAd@d@^h@Xx@VbARjBDh@OPQf@w@d@k@XKXDFPH\\\
+                    EbGT`AV`@v@|@NTNb@?XOb@cAxAWLuE@eAFMBoAv@eBt@q@b@}@tAeAt@i@dAC`AFZj@dB?~@[h@MbAVn@b@b@\\\
+                    d@Eh@Qb@_@d@eB|@c@h@WfBK|AMpA?VF\\\\t@f@t@h@j@|@b@hCb@b@XTd@Bl@GtA?jAL`ALp@Tr@RXd@Rx@Pn@^Zh@Tx@Zf@`@FTCzDy@f@Yx@m@n@Op@VJr@"
                   resource_state: 3
                 effort_count: 309974
                 athlete_count: 30623
@@ -382,13 +393,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              properties:
-                starred:
-                  default: false
-                  description: If true, star the segment; if false, unstar the segment.
-                  type: boolean
-              required:
-              - starred
+              $ref: '#/components/schemas/starSegment_request'
         required: true
       responses:
         "200":
@@ -422,7 +427,9 @@ paths:
                 total_elevation_gain: 155.733
                 map:
                   id: s229781
-                  polyline: '}g|eFnpqjVl@En@Md@HbAd@d@^h@Xx@VbARjBDh@OPQf@w@d@k@XKXDFPH\EbGT`AV`@v@|@NTNb@?XOb@cAxAWLuE@eAFMBoAv@eBt@q@b@}@tAeAt@i@dAC`AFZj@dB?~@[h@MbAVn@b@b@\d@Eh@Qb@_@d@eB|@c@h@WfBK|AMpA?VF\\t@f@t@h@j@|@b@hCb@b@XTd@Bl@GtA?jAL`ALp@Tr@RXd@Rx@Pn@^Zh@Tx@Zf@`@FTCzDy@f@Yx@m@n@Op@VJr@'
+                  polyline: "}g|eFnpqjVl@En@Md@HbAd@d@^h@Xx@VbARjBDh@OPQf@w@d@k@XKXDFPH\\\
+                    EbGT`AV`@v@|@NTNb@?XOb@cAxAWLuE@eAFMBoAv@eBt@q@b@}@tAeAt@i@dAC`AFZj@dB?~@[h@MbAVn@b@b@\\\
+                    d@Eh@Qb@_@d@eB|@c@h@WfBK|AMpA?VF\\\\t@f@t@h@j@|@b@hCb@b@XTd@Bl@GtA?jAL`ALp@Tr@RXd@Rx@Pn@^Zh@Tx@Zf@`@FTCzDy@f@Yx@m@n@Op@VJr@"
                   resource_state: 3
                 effort_count: 309974
                 athlete_count: 30623
@@ -519,6 +526,8 @@ paths:
                   private: false
                   hazardous: false
                   starred: false
+                kom_rank: null
+                pr_rank: null
                 achievements: []
               schema:
                 items:
@@ -539,9 +548,9 @@ paths:
       description: Returns the top 10 segments matching a specified query.
       operationId: exploreSegments
       parameters:
-      - description: 'The latitude and longitude for two points describing a rectangular
-          boundary for the search: [southwest corner latitutde, southwest corner longitude,
-          northeast corner latitude, northeast corner longitude]'
+      - description: "The latitude and longitude for two points describing a rectangular\
+          \ boundary for the search: [southwest corner latitutde, southwest corner\
+          \ longitude, northeast corner latitude, northeast corner longitude]"
         explode: false
         in: query
         name: bounds
@@ -596,7 +605,9 @@ paths:
                   - -122.4981393
                   elev_difference: 152.8
                   distance: 2684.8
-                  points: '}g|eFnpqjVl@En@Md@HbAd@d@^h@Xx@VbARjBDh@OPQf@w@d@k@XKXDFPH\EbGT`AV`@v@|@NTNb@?XOb@cAxAWLuE@eAFMBoAv@eBt@q@b@}@tAeAt@i@dAC`AFZj@dB?~@[h@MbAVn@b@b@\d@Eh@Qb@_@d@eB|@c@h@WfBK|AMpA?VF\\t@f@t@h@j@|@b@hCb@b@XTd@Bl@GtA?jAL`ALp@Tr@RXd@Rx@Pn@^Zh@Tx@Zf@`@FTCzDy@f@Yx@m@n@Op@VJr@'
+                  points: "}g|eFnpqjVl@En@Md@HbAd@d@^h@Xx@VbARjBDh@OPQf@w@d@k@XKXDFPH\\\
+                    EbGT`AV`@v@|@NTNb@?XOb@cAxAWLuE@eAFMBoAv@eBt@q@b@}@tAeAt@i@dAC`AFZj@dB?~@[h@MbAVn@b@b@\\\
+                    d@Eh@Qb@_@d@eB|@c@h@WfBK|AMpA?VF\\\\t@f@t@h@j@|@b@hCb@b@XTd@Bl@GtA?jAL`ALp@Tr@RXd@Rx@Pn@^Zh@Tx@Zf@`@FTCzDy@f@Yx@m@n@Op@VJr@"
                   starred: false
               schema:
                 $ref: '#/components/schemas/ExplorerResponse'
@@ -667,6 +678,8 @@ paths:
                   private: false
                   hazardous: false
                   starred: false
+                kom_rank: null
+                pr_rank: null
                 achievements: []
                 athlete_segment_stats:
                   pr_elapsed_time: 212
@@ -684,106 +697,16 @@ paths:
       summary: Get Segment Effort
       tags:
       - SegmentEfforts
-  /running_races/{id}:
-    get:
-      description: Returns a running race for a given identifier.
-      operationId: getRunningRaceById
-      parameters:
-      - description: The identifier of the running race.
-        in: path
-        name: id
-        required: true
-        schema:
-          format: int64
-          type: integer
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/RunningRace'
-          description: Representation of a running race.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Fault'
-          description: Unexpected error.
-      summary: Get Running Race
-      tags:
-      - RunningRaces
-  /running_races:
-    get:
-      description: Returns a list running races based on a set of search criteria.
-      operationId: getRunningRaces
-      parameters:
-      - description: Filters the list by a given year.
-        in: query
-        name: year
-        schema:
-          type: integer
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RunningRace'
-                type: array
-          description: Representation of a list of running race.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Fault'
-          description: Unexpected error.
-      summary: List Running Races
-      tags:
-      - RunningRaces
   /activities:
     post:
-      description: Creates a manual activity for an athlete, requires activity:write
-        scope.
+      description: "Creates a manual activity for an athlete, requires activity:write\
+        \ scope."
       operationId: createActivity
       requestBody:
         content:
           multipart/form-data:
             schema:
-              properties:
-                name:
-                  description: The name of the activity.
-                  type: string
-                type:
-                  description: Type of activity. For example - Run, Ride etc.
-                  type: string
-                start_date_local:
-                  description: ISO 8601 formatted date time.
-                  format: date-time
-                  type: string
-                elapsed_time:
-                  description: In seconds.
-                  format: int32
-                  type: integer
-                description:
-                  description: Description of the activity.
-                  type: string
-                distance:
-                  description: In meters.
-                  format: float
-                  type: number
-                trainer:
-                  description: Set to 1 to mark as a trainer activity.
-                  format: int32
-                  type: integer
-                commute:
-                  description: Set to 1 to mark as commute.
-                  format: int32
-                  type: integer
-              required:
-              - elapsed_time
-              - name
-              - start_date_local
-              - type
+              $ref: '#/components/schemas/createActivity_request'
         required: true
       responses:
         "201":
@@ -792,6 +715,8 @@ paths:
               example:
                 id: 123456778928065
                 resource_state: 3
+                external_id: null
+                upload_id: null
                 athlete:
                   id: 12343545645788
                   resource_state: 1
@@ -801,6 +726,7 @@ paths:
                 elapsed_time: 18373
                 total_elevation_gain: 0
                 type: Ride
+                sport_type: MountainBikeRide
                 start_date: 2018-02-20T18:02:13Z
                 start_date_local: 2018-02-20T10:02:13Z
                 timezone: (GMT-08:00) America/Los_Angeles
@@ -812,6 +738,7 @@ paths:
                 photo_count: 0
                 map:
                   id: a12345678908766
+                  polyline: null
                   resource_state: 3
                 trainer: false
                 commute: false
@@ -819,6 +746,7 @@ paths:
                 private: false
                 flagged: false
                 gear_id: b453542543
+                from_accepted_tag: null
                 average_speed: 0
                 max_speed: 0
                 device_watts: false
@@ -826,6 +754,8 @@ paths:
                 pr_count: 0
                 total_photo_count: 0
                 has_kudoed: false
+                workout_type: null
+                description: null
                 calories: 0
                 segment_efforts: []
               schema:
@@ -877,6 +807,7 @@ paths:
                 elapsed_time: 4410
                 total_elevation_gain: 516
                 type: Ride
+                sport_type: MountainBikeRide
                 start_date: 2018-02-16T14:52:54Z
                 start_date_local: 2018-02-16T06:52:54Z
                 timezone: (GMT-08:00) America/Los_Angeles
@@ -894,9 +825,22 @@ paths:
                 photo_count: 0
                 map:
                   id: a1410355832
-                  polyline: ki{eFvqfiVqAWQIGEEKAYJgBVqDJ{BHa@jAkNJw@Pw@V{APs@^aABQAOEQGKoJ_FuJkFqAo@{A}@sH{DiAs@Q]?WVy@`@oBt@_CB]KYMMkB{AQEI@WT{BlE{@zAQPI@ICsCqA_BcAeCmAaFmCqIoEcLeG}KcG}A}@cDaBiDsByAkAuBqBi@y@_@o@o@kB}BgIoA_EUkAMcACa@BeBBq@LaAJe@b@uA`@_AdBcD`@iAPq@RgALqAB{@EqAyAoOCy@AmCBmANqBLqAZkB\iCPiBJwCCsASiCq@iD]eA]y@[i@w@mAa@i@k@g@kAw@i@Ya@Q]EWFMLa@~BYpAFNpA`Aj@n@X`@V`AHh@JfB@xAMvAGZGHIDIAWOEQNcC@sACYK[MSOMe@QKKKYOs@UYQISCQ?Q@WNo@r@OHGAGCKOQ_BU}@MQGG]Io@@c@FYNg@d@s@d@ODQAMOMaASs@_@a@SESAQDqBn@a@RO?KK?UBU\kA@Y?WMo@Iy@GWQ_@WSSGg@AkABQB_Ap@_A^o@b@Q@o@IS@OHi@n@OFS?OI}@iAQMQGQC}@DOIIUK{@IUOMyBo@kASOKIQCa@L[|AgATWN[He@?QKw@FOPCh@Fx@l@TDLELKl@aAHIJEX@r@ZTDV@LENQVg@RkA@c@MeA?WFOPMf@Ej@Fj@@LGHKDM?_@_@iC?a@HKRIl@NT?FCHMFW?YEYGWQa@GYBiAIq@Gq@L_BHSHK|@WJETSLQZs@z@_A~@uA^U`@G\CRB\Tl@p@Th@JZ^bB`@lAHLXVLDP?LGFSKiDBo@d@wBVi@R]VYVE\@`@Lh@Fh@CzAk@RSDQA]GYe@eAGWSiBAWBWBIJORK`@KPOPSTg@h@}Ad@o@F[E_@EGMKUGmAEYGMIMYKs@?a@J}@@_BD_@HQJMx@e@LKHKHWAo@UoAAWFmAH}@?w@C[YwAAc@HSNM|Ao@rA}@zAq@`@a@j@eAxAuBXQj@MXSR[b@gAFg@?YISOGaAHi@Xw@v@_@d@WRSFqARUHQJc@d@m@`A[VSFUBcAEU@WFULUPa@v@Y~@UrBc@dBI~@?l@P~ABt@N`HEjA]zAEp@@p@TrBCl@CTQb@k@dAg@jAU^KJYLK@k@A[Js@d@a@b@]RgBl@[FMAw@[]G]?m@D_@F]P[Vu@t@[TMF_@Do@E_@@q@P]PWZUZw@vAkAlAGJOj@IlAMd@OR{@p@a@d@sBpD]v@a@`Aa@n@]TODgBVk@Pe@^cBfBc@Rs@La@RSPm@|@wCpDS^Wp@QZML{@l@qBbCYd@k@lAIVCZBZNTr@`@RRHZANIZQPKDW@e@CaASU?I@YTKRQx@@\VmALYRQLCL?v@P|@D\GJEFKDM@OCa@COOYIGm@YMUCM@]JYr@uAx@kAt@}@jAeAPWbAkBj@s@bAiAz@oAj@m@VQlAc@VQ~@aA`Au@p@Q`AIv@MZORUV_@p@iB|AoCh@q@dAaANUNWH[N{AJ[^m@t@_Av@wA\a@`@W`@In@Al@B^E`@Wl@u@\[VQ\K`@Eb@?R@dAZP@d@CRExAs@\Yt@{@LG\MjAATINOXo@d@kAl@_AHYBOCe@QiBCm@Fq@\wADo@AyGEeBWuB@YHu@Tu@Lk@VcCTo@d@aA\WJE`@G~@FP?VI\U~@sANO`@SfAMj@U\WjAsAXS`@UNENALBHFFL?^Ml@Uj@]b@q@RUJSPkChEc@XcAb@sA|@]PaA\OJKNER?TDTNj@Jn@?p@OfC@ZR`B@VCV_@n@{@l@WbACv@OlABnAPl@LNNHbBBNBLFFJ@^GLg@x@i@|AMP[X}@XOJKPET?l@LhAFXp@fBDRCd@S\_@Ps@PQ@}A]S?QDe@V]b@MR[fAKt@ErAF~CANILYDKGIKe@{@Yy@e@sB[gA[c@e@YUCU?WBUHUNQPq@`AiArAMV[^e@Zc@JQJKNMz@?r@Bb@PfAAfA@VVbADn@E`@KHSEe@SMAKDKFM\^dDCh@m@LoAQ_@@MFOZLfBEl@QbASd@KLQBOAaAc@QAQ@QHc@v@ONMJOBOCg@c@]O[EMBKFGL?RHv@ARERGNe@h@{@h@WVGNDt@JLNFPFz@LdBf@f@PJNHPF`ADPJJJDl@I`@B^Tp@bALJNDNALIf@i@PGPCt@DNE`@Uv@[dAw@RITGRCtAARBPJLPJRZxB?VEX_@vAAR?RDNHJJBh@UnBm@h@IRDRJNNJPNbBFRJLLBLCzAmAd@Uf@Gf@?P@PFJNHPFTH`BDTHNJJJ@LG`@m@^YPER@RDPHNNJRLn@HRLN^VNPHTFX@\UlDFb@FHh@NP@HKPsB?}ASkCQ{@[y@q@}@cA{@KOCQDa@t@{CFGJCf@Nl@ZtA~@r@p@`@h@rAxBd@rA\fARdAPjANrB?f@AtBCd@QfBkAjJOlBChA?rBFrBNlBdAfKFzAC~@Iz@Mz@Sv@s@jBmAxBi@hAWt@Sv@Qx@O`BA`@?dAPfBVpAd@`BfBlFf@fBdA~Cr@pAz@fApBhBjAt@H?IL?FBFJLx@^lHvDvh@~XnElCbAd@pGhDbAb@nAr@`Ad@`GhDnBbAxCbBrWhNJJDPARGP_@t@Qh@]pAUtAoA`Ny@jJApBBNFLJFJBv@Hb@HBF?\
+                  polyline: "ki{eFvqfiVqAWQIGEEKAYJgBVqDJ{BHa@jAkNJw@Pw@V{APs@^aABQAOEQGKoJ_FuJkFqAo@{A}@sH{DiAs@Q]?WVy@`@oBt@_CB]KYMMkB{AQEI@WT{BlE{@zAQPI@ICsCqA_BcAeCmAaFmCqIoEcLeG}KcG}A}@cDaBiDsByAkAuBqBi@y@_@o@o@kB}BgIoA_EUkAMcACa@BeBBq@LaAJe@b@uA`@_AdBcD`@iAPq@RgALqAB{@EqAyAoOCy@AmCBmANqBLqAZkB\\\
+                    iCPiBJwCCsASiCq@iD]eA]y@[i@w@mAa@i@k@g@kAw@i@Ya@Q]EWFMLa@~BYpAFNpA`Aj@n@X`@V`AHh@JfB@xAMvAGZGHIDIAWOEQNcC@sACYK[MSOMe@QKKKYOs@UYQISCQ?Q@WNo@r@OHGAGCKOQ_BU}@MQGG]Io@@c@FYNg@d@s@d@ODQAMOMaASs@_@a@SESAQDqBn@a@RO?KK?UBU\\\
+                    kA@Y?WMo@Iy@GWQ_@WSSGg@AkABQB_Ap@_A^o@b@Q@o@IS@OHi@n@OFS?OI}@iAQMQGQC}@DOIIUK{@IUOMyBo@kASOKIQCa@L[|AgATWN[He@?QKw@FOPCh@Fx@l@TDLELKl@aAHIJEX@r@ZTDV@LENQVg@RkA@c@MeA?WFOPMf@Ej@Fj@@LGHKDM?_@_@iC?a@HKRIl@NT?FCHMFW?YEYGWQa@GYBiAIq@Gq@L_BHSHK|@WJETSLQZs@z@_A~@uA^U`@G\\\
+                    CRB\\Tl@p@Th@JZ^bB`@lAHLXVLDP?LGFSKiDBo@d@wBVi@R]VYVE\\@`@Lh@Fh@CzAk@RSDQA]GYe@eAGWSiBAWBWBIJORK`@KPOPSTg@h@}Ad@o@F[E_@EGMKUGmAEYGMIMYKs@?a@J}@@_BD_@HQJMx@e@LKHKHWAo@UoAAWFmAH}@?w@C[YwAAc@HSNM|Ao@rA}@zAq@`@a@j@eAxAuBXQj@MXSR[b@gAFg@?YISOGaAHi@Xw@v@_@d@WRSFqARUHQJc@d@m@`A[VSFUBcAEU@WFULUPa@v@Y~@UrBc@dBI~@?l@P~ABt@N`HEjA]zAEp@@p@TrBCl@CTQb@k@dAg@jAU^KJYLK@k@A[Js@d@a@b@]RgBl@[FMAw@[]G]?m@D_@F]P[Vu@t@[TMF_@Do@E_@@q@P]PWZUZw@vAkAlAGJOj@IlAMd@OR{@p@a@d@sBpD]v@a@`Aa@n@]TODgBVk@Pe@^cBfBc@Rs@La@RSPm@|@wCpDS^Wp@QZML{@l@qBbCYd@k@lAIVCZBZNTr@`@RRHZANIZQPKDW@e@CaASU?I@YTKRQx@@\\\
+                    VmALYRQLCL?v@P|@D\\GJEFKDM@OCa@COOYIGm@YMUCM@]JYr@uAx@kAt@}@jAeAPWbAkBj@s@bAiAz@oAj@m@VQlAc@VQ~@aA`Au@p@Q`AIv@MZORUV_@p@iB|AoCh@q@dAaANUNWH[N{AJ[^m@t@_Av@wA\\\
+                    a@`@W`@In@Al@B^E`@Wl@u@\\[VQ\\K`@Eb@?R@dAZP@d@CRExAs@\\Yt@{@LG\\\
+                    MjAATINOXo@d@kAl@_AHYBOCe@QiBCm@Fq@\\wADo@AyGEeBWuB@YHu@Tu@Lk@VcCTo@d@aA\\\
+                    WJE`@G~@FP?VI\\U~@sANO`@SfAMj@U\\WjAsAXS`@UNENALBHFFL?^Ml@Uj@]b@q@RUJSPkChEc@XcAb@sA|@]PaA\\\
+                    OJKNER?TDTNj@Jn@?p@OfC@ZR`B@VCV_@n@{@l@WbACv@OlABnAPl@LNNHbBBNBLFFJ@^GLg@x@i@|AMP[X}@XOJKPET?l@LhAFXp@fBDRCd@S\\\
+                    _@Ps@PQ@}A]S?QDe@V]b@MR[fAKt@ErAF~CANILYDKGIKe@{@Yy@e@sB[gA[c@e@YUCU?WBUHUNQPq@`AiArAMV[^e@Zc@JQJKNMz@?r@Bb@PfAAfA@VVbADn@E`@KHSEe@SMAKDKFM\\\
+                    ^dDCh@m@LoAQ_@@MFOZLfBEl@QbASd@KLQBOAaAc@QAQ@QHc@v@ONMJOBOCg@c@]O[EMBKFGL?RHv@ARERGNe@h@{@h@WVGNDt@JLNFPFz@LdBf@f@PJNHPF`ADPJJJDl@I`@B^Tp@bALJNDNALIf@i@PGPCt@DNE`@Uv@[dAw@RITGRCtAARBPJLPJRZxB?VEX_@vAAR?RDNHJJBh@UnBm@h@IRDRJNNJPNbBFRJLLBLCzAmAd@Uf@Gf@?P@PFJNHPFTH`BDTHNJJJ@LG`@m@^YPER@RDPHNNJRLn@HRLN^VNPHTFX@\\\
+                    UlDFb@FHh@NP@HKPsB?}ASkCQ{@[y@q@}@cA{@KOCQDa@t@{CFGJCf@Nl@ZtA~@r@p@`@h@rAxBd@rA\\\
+                    fARdAPjANrB?f@AtBCd@QfBkAjJOlBChA?rBFrBNlBdAfKFzAC~@Iz@Mz@Sv@s@jBmAxBi@hAWt@Sv@Qx@O`BA`@?dAPfBVpAd@`BfBlFf@fBdA~Cr@pAz@fApBhBjAt@H?IL?FBFJLx@^lHvDvh@~XnElCbAd@pGhDbAb@nAr@`Ad@`GhDnBbAxCbBrWhNJJDPARGP_@t@Qh@]pAUtAoA`Ny@jJApBBNFLJFJBv@Hb@HBF?\\"
                   resource_state: 3
-                  summary_polyline: ki{eFvqfiVsBmA`Feh@qg@iX`B}JeCcCqGjIq~@kf@cM{KeHeX`@_GdGkSeBiXtB}YuEkPwFyDeAzAe@pC~DfGc@bIOsGmCcEiD~@oBuEkFhBcBmDiEfAVuDiAuD}NnDaNiIlCyDD_CtJKv@wGhD]YyEzBo@g@uKxGmHpCGtEtI~AuLrHkAcAaIvEgH_EaDR_FpBuBg@sNxHqEtHgLoTpIiCzKNr[sB|Es\`JyObYeMbGsMnPsAfDxAnD}DBu@bCx@{BbEEyAoD`AmChNoQzMoGhOwX|[yIzBeFKg[zAkIdU_LiHxK}HzEh@vM_BtBg@xGzDbCcF~GhArHaIfByAhLsDiJuC?_HbHd@nL_Cz@ZnEkDDy@hHwJLiCbIrNrIvN_EfAjDWlEnEiAfBxDlFkBfBtEfDaAzBvDKdFx@|@XgJmDsHhAgD`GfElEzOwBnYdBxXgGlSc@bGdHpW|HdJztBnhAgFxc@HnCvBdA
+                  summary_polyline: "ki{eFvqfiVsBmA`Feh@qg@iX`B}JeCcCqGjIq~@kf@cM{KeHeX`@_GdGkSeBiXtB}YuEkPwFyDeAzAe@pC~DfGc@bIOsGmCcEiD~@oBuEkFhBcBmDiEfAVuDiAuD}NnDaNiIlCyDD_CtJKv@wGhD]YyEzBo@g@uKxGmHpCGtEtI~AuLrHkAcAaIvEgH_EaDR_FpBuBg@sNxHqEtHgLoTpIiCzKNr[sB|Es\\\
+                    `JyObYeMbGsMnPsAfDxAnD}DBu@bCx@{BbEEyAoD`AmChNoQzMoGhOwX|[yIzBeFKg[zAkIdU_LiHxK}HzEh@vM_BtBg@xGzDbCcF~GhArHaIfByAhLsDiJuC?_HbHd@nL_Cz@ZnEkDDy@hHwJLiCbIrNrIvN_EfAjDWlEnEiAfBxDlFkBfBtEfDaAzBvDKdFx@|@XgJmDsHhAgD`GfElEzOwBnYdBxXgGlSc@bGdHpW|HdJztBnhAgFxc@HnCvBdA"
                 trainer: false
                 commute: false
                 manual: false
@@ -920,6 +864,7 @@ paths:
                 total_photo_count: 2
                 has_kudoed: false
                 workout_type: 10
+                suffer_score: null
                 description: ""
                 calories: 870.2
                 segment_efforts:
@@ -965,6 +910,8 @@ paths:
                     private: false
                     hazardous: false
                     starred: false
+                  kom_rank: null
+                  pr_rank: null
                   achievements: []
                   hidden: false
                 splits_metric:
@@ -1006,8 +953,10 @@ paths:
                   name: Tarmac
                   resource_state: 2
                   distance: 32547610
+                partner_brand_tag: null
                 photos:
                   primary:
+                    id: null
                     unique_id: 3FDGKL3-204E-4867-9E8D-89FC79EAAE17
                     urls:
                       "100": https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-128x96.jpg
@@ -1020,6 +969,7 @@ paths:
                   display_name: Marianne V.
                   avatar_url: https://dgalywyr863hv.cloudfront.net/pictures/athletes/12345678987654321/12345678987654321/3/medium.jpg
                   show_name: true
+                hide_from_home: false
                 device_name: Garmin Edge 1030
                 embed_token: 18e4615989b47dd4ff3dc711b0aa4502e4b311a9
                 segment_leaderboard_opt_out: false
@@ -1073,6 +1023,7 @@ paths:
                 elapsed_time: 4410
                 total_elevation_gain: 516
                 type: Ride
+                sport_type: MountainBikeRide
                 start_date: 2018-02-16T14:52:54Z
                 start_date_local: 2018-02-16T06:52:54Z
                 timezone: (GMT-08:00) America/Los_Angeles
@@ -1083,6 +1034,8 @@ paths:
                 end_latlng:
                 - 37.83
                 - -122.26
+                location_city: null
+                location_state: null
                 location_country: United States
                 achievement_count: 0
                 kudos_count: 19
@@ -1091,9 +1044,22 @@ paths:
                 photo_count: 0
                 map:
                   id: a1410355832
-                  polyline: ki{eFvqfiVqAWQIGEEKAYJgBVqDJ{BHa@jAkNJw@Pw@V{APs@^aABQAOEQGKoJ_FuJkFqAo@{A}@sH{DiAs@Q]?WVy@`@oBt@_CB]KYMMkB{AQEI@WT{BlE{@zAQPI@ICsCqA_BcAeCmAaFmCqIoEcLeG}KcG}A}@cDaBiDsByAkAuBqBi@y@_@o@o@kB}BgIoA_EUkAMcACa@BeBBq@LaAJe@b@uA`@_AdBcD`@iAPq@RgALqAB{@EqAyAoOCy@AmCBmANqBLqAZkB\iCPiBJwCCsASiCq@iD]eA]y@[i@w@mAa@i@k@g@kAw@i@Ya@Q]EWFMLa@~BYpAFNpA`Aj@n@X`@V`AHh@JfB@xAMvAGZGHIDIAWOEQNcC@sACYK[MSOMe@QKKKYOs@UYQISCQ?Q@WNo@r@OHGAGCKOQ_BU}@MQGG]Io@@c@FYNg@d@s@d@ODQAMOMaASs@_@a@SESAQDqBn@a@RO?KK?UBU\kA@Y?WMo@Iy@GWQ_@WSSGg@AkABQB_Ap@_A^o@b@Q@o@IS@OHi@n@OFS?OI}@iAQMQGQC}@DOIIUK{@IUOMyBo@kASOKIQCa@L[|AgATWN[He@?QKw@FOPCh@Fx@l@TDLELKl@aAHIJEX@r@ZTDV@LENQVg@RkA@c@MeA?WFOPMf@Ej@Fj@@LGHKDM?_@_@iC?a@HKRIl@NT?FCHMFW?YEYGWQa@GYBiAIq@Gq@L_BHSHK|@WJETSLQZs@z@_A~@uA^U`@G\CRB\Tl@p@Th@JZ^bB`@lAHLXVLDP?LGFSKiDBo@d@wBVi@R]VYVE\@`@Lh@Fh@CzAk@RSDQA]GYe@eAGWSiBAWBWBIJORK`@KPOPSTg@h@}Ad@o@F[E_@EGMKUGmAEYGMIMYKs@?a@J}@@_BD_@HQJMx@e@LKHKHWAo@UoAAWFmAH}@?w@C[YwAAc@HSNM|Ao@rA}@zAq@`@a@j@eAxAuBXQj@MXSR[b@gAFg@?YISOGaAHi@Xw@v@_@d@WRSFqARUHQJc@d@m@`A[VSFUBcAEU@WFULUPa@v@Y~@UrBc@dBI~@?l@P~ABt@N`HEjA]zAEp@@p@TrBCl@CTQb@k@dAg@jAU^KJYLK@k@A[Js@d@a@b@]RgBl@[FMAw@[]G]?m@D_@F]P[Vu@t@[TMF_@Do@E_@@q@P]PWZUZw@vAkAlAGJOj@IlAMd@OR{@p@a@d@sBpD]v@a@`Aa@n@]TODgBVk@Pe@^cBfBc@Rs@La@RSPm@|@wCpDS^Wp@QZML{@l@qBbCYd@k@lAIVCZBZNTr@`@RRHZANIZQPKDW@e@CaASU?I@YTKRQx@@\VmALYRQLCL?v@P|@D\GJEFKDM@OCa@COOYIGm@YMUCM@]JYr@uAx@kAt@}@jAeAPWbAkBj@s@bAiAz@oAj@m@VQlAc@VQ~@aA`Au@p@Q`AIv@MZORUV_@p@iB|AoCh@q@dAaANUNWH[N{AJ[^m@t@_Av@wA\a@`@W`@In@Al@B^E`@Wl@u@\[VQ\K`@Eb@?R@dAZP@d@CRExAs@\Yt@{@LG\MjAATINOXo@d@kAl@_AHYBOCe@QiBCm@Fq@\wADo@AyGEeBWuB@YHu@Tu@Lk@VcCTo@d@aA\WJE`@G~@FP?VI\U~@sANO`@SfAMj@U\WjAsAXS`@UNENALBHFFL?^Ml@Uj@]b@q@RUJSPkChEc@XcAb@sA|@]PaA\OJKNER?TDTNj@Jn@?p@OfC@ZR`B@VCV_@n@{@l@WbACv@OlABnAPl@LNNHbBBNBLFFJ@^GLg@x@i@|AMP[X}@XOJKPET?l@LhAFXp@fBDRCd@S\_@Ps@PQ@}A]S?QDe@V]b@MR[fAKt@ErAF~CANILYDKGIKe@{@Yy@e@sB[gA[c@e@YUCU?WBUHUNQPq@`AiArAMV[^e@Zc@JQJKNMz@?r@Bb@PfAAfA@VVbADn@E`@KHSEe@SMAKDKFM\^dDCh@m@LoAQ_@@MFOZLfBEl@QbASd@KLQBOAaAc@QAQ@QHc@v@ONMJOBOCg@c@]O[EMBKFGL?RHv@ARERGNe@h@{@h@WVGNDt@JLNFPFz@LdBf@f@PJNHPF`ADPJJJDl@I`@B^Tp@bALJNDNALIf@i@PGPCt@DNE`@Uv@[dAw@RITGRCtAARBPJLPJRZxB?VEX_@vAAR?RDNHJJBh@UnBm@h@IRDRJNNJPNbBFRJLLBLCzAmAd@Uf@Gf@?P@PFJNHPFTH`BDTHNJJJ@LG`@m@^YPER@RDPHNNJRLn@HRLN^VNPHTFX@\UlDFb@FHh@NP@HKPsB?}ASkCQ{@[y@q@}@cA{@KOCQDa@t@{CFGJCf@Nl@ZtA~@r@p@`@h@rAxBd@rA\fARdAPjANrB?f@AtBCd@QfBkAjJOlBChA?rBFrBNlBdAfKFzAC~@Iz@Mz@Sv@s@jBmAxBi@hAWt@Sv@Qx@O`BA`@?dAPfBVpAd@`BfBlFf@fBdA~Cr@pAz@fApBhBjAt@H?IL?FBFJLx@^lHvDvh@~XnElCbAd@pGhDbAb@nAr@`Ad@`GhDnBbAxCbBrWhNJJDPARGP_@t@Qh@]pAUtAoA`Ny@jJApBBNFLJFJBv@Hb@HBF?\
+                  polyline: "ki{eFvqfiVqAWQIGEEKAYJgBVqDJ{BHa@jAkNJw@Pw@V{APs@^aABQAOEQGKoJ_FuJkFqAo@{A}@sH{DiAs@Q]?WVy@`@oBt@_CB]KYMMkB{AQEI@WT{BlE{@zAQPI@ICsCqA_BcAeCmAaFmCqIoEcLeG}KcG}A}@cDaBiDsByAkAuBqBi@y@_@o@o@kB}BgIoA_EUkAMcACa@BeBBq@LaAJe@b@uA`@_AdBcD`@iAPq@RgALqAB{@EqAyAoOCy@AmCBmANqBLqAZkB\\\
+                    iCPiBJwCCsASiCq@iD]eA]y@[i@w@mAa@i@k@g@kAw@i@Ya@Q]EWFMLa@~BYpAFNpA`Aj@n@X`@V`AHh@JfB@xAMvAGZGHIDIAWOEQNcC@sACYK[MSOMe@QKKKYOs@UYQISCQ?Q@WNo@r@OHGAGCKOQ_BU}@MQGG]Io@@c@FYNg@d@s@d@ODQAMOMaASs@_@a@SESAQDqBn@a@RO?KK?UBU\\\
+                    kA@Y?WMo@Iy@GWQ_@WSSGg@AkABQB_Ap@_A^o@b@Q@o@IS@OHi@n@OFS?OI}@iAQMQGQC}@DOIIUK{@IUOMyBo@kASOKIQCa@L[|AgATWN[He@?QKw@FOPCh@Fx@l@TDLELKl@aAHIJEX@r@ZTDV@LENQVg@RkA@c@MeA?WFOPMf@Ej@Fj@@LGHKDM?_@_@iC?a@HKRIl@NT?FCHMFW?YEYGWQa@GYBiAIq@Gq@L_BHSHK|@WJETSLQZs@z@_A~@uA^U`@G\\\
+                    CRB\\Tl@p@Th@JZ^bB`@lAHLXVLDP?LGFSKiDBo@d@wBVi@R]VYVE\\@`@Lh@Fh@CzAk@RSDQA]GYe@eAGWSiBAWBWBIJORK`@KPOPSTg@h@}Ad@o@F[E_@EGMKUGmAEYGMIMYKs@?a@J}@@_BD_@HQJMx@e@LKHKHWAo@UoAAWFmAH}@?w@C[YwAAc@HSNM|Ao@rA}@zAq@`@a@j@eAxAuBXQj@MXSR[b@gAFg@?YISOGaAHi@Xw@v@_@d@WRSFqARUHQJc@d@m@`A[VSFUBcAEU@WFULUPa@v@Y~@UrBc@dBI~@?l@P~ABt@N`HEjA]zAEp@@p@TrBCl@CTQb@k@dAg@jAU^KJYLK@k@A[Js@d@a@b@]RgBl@[FMAw@[]G]?m@D_@F]P[Vu@t@[TMF_@Do@E_@@q@P]PWZUZw@vAkAlAGJOj@IlAMd@OR{@p@a@d@sBpD]v@a@`Aa@n@]TODgBVk@Pe@^cBfBc@Rs@La@RSPm@|@wCpDS^Wp@QZML{@l@qBbCYd@k@lAIVCZBZNTr@`@RRHZANIZQPKDW@e@CaASU?I@YTKRQx@@\\\
+                    VmALYRQLCL?v@P|@D\\GJEFKDM@OCa@COOYIGm@YMUCM@]JYr@uAx@kAt@}@jAeAPWbAkBj@s@bAiAz@oAj@m@VQlAc@VQ~@aA`Au@p@Q`AIv@MZORUV_@p@iB|AoCh@q@dAaANUNWH[N{AJ[^m@t@_Av@wA\\\
+                    a@`@W`@In@Al@B^E`@Wl@u@\\[VQ\\K`@Eb@?R@dAZP@d@CRExAs@\\Yt@{@LG\\\
+                    MjAATINOXo@d@kAl@_AHYBOCe@QiBCm@Fq@\\wADo@AyGEeBWuB@YHu@Tu@Lk@VcCTo@d@aA\\\
+                    WJE`@G~@FP?VI\\U~@sANO`@SfAMj@U\\WjAsAXS`@UNENALBHFFL?^Ml@Uj@]b@q@RUJSPkChEc@XcAb@sA|@]PaA\\\
+                    OJKNER?TDTNj@Jn@?p@OfC@ZR`B@VCV_@n@{@l@WbACv@OlABnAPl@LNNHbBBNBLFFJ@^GLg@x@i@|AMP[X}@XOJKPET?l@LhAFXp@fBDRCd@S\\\
+                    _@Ps@PQ@}A]S?QDe@V]b@MR[fAKt@ErAF~CANILYDKGIKe@{@Yy@e@sB[gA[c@e@YUCU?WBUHUNQPq@`AiArAMV[^e@Zc@JQJKNMz@?r@Bb@PfAAfA@VVbADn@E`@KHSEe@SMAKDKFM\\\
+                    ^dDCh@m@LoAQ_@@MFOZLfBEl@QbASd@KLQBOAaAc@QAQ@QHc@v@ONMJOBOCg@c@]O[EMBKFGL?RHv@ARERGNe@h@{@h@WVGNDt@JLNFPFz@LdBf@f@PJNHPF`ADPJJJDl@I`@B^Tp@bALJNDNALIf@i@PGPCt@DNE`@Uv@[dAw@RITGRCtAARBPJLPJRZxB?VEX_@vAAR?RDNHJJBh@UnBm@h@IRDRJNNJPNbBFRJLLBLCzAmAd@Uf@Gf@?P@PFJNHPFTH`BDTHNJJJ@LG`@m@^YPER@RDPHNNJRLn@HRLN^VNPHTFX@\\\
+                    UlDFb@FHh@NP@HKPsB?}ASkCQ{@[y@q@}@cA{@KOCQDa@t@{CFGJCf@Nl@ZtA~@r@p@`@h@rAxBd@rA\\\
+                    fARdAPjANrB?f@AtBCd@QfBkAjJOlBChA?rBFrBNlBdAfKFzAC~@Iz@Mz@Sv@s@jBmAxBi@hAWt@Sv@Qx@O`BA`@?dAPfBVpAd@`BfBlFf@fBdA~Cr@pAz@fApBhBjAt@H?IL?FBFJLx@^lHvDvh@~XnElCbAd@pGhDbAb@nAr@`Ad@`GhDnBbAxCbBrWhNJJDPARGP_@t@Qh@]pAUtAoA`Ny@jJApBBNFLJFJBv@Hb@HBF?\\"
                   resource_state: 3
-                  summary_polyline: ki{eFvqfiVsBmA`Feh@qg@iX`B}JeCcCqGjIq~@kf@cM{KeHeX`@_GdGkSeBiXtB}YuEkPwFyDeAzAe@pC~DfGc@bIOsGmCcEiD~@oBuEkFhBcBmDiEfAVuDiAuD}NnDaNiIlCyDD_CtJKv@wGhD]YyEzBo@g@uKxGmHpCGtEtI~AuLrHkAcAaIvEgH_EaDR_FpBuBg@sNxHqEtHgLoTpIiCzKNr[sB|Es\`JyObYeMbGsMnPsAfDxAnD}DBu@bCx@{BbEEyAoD`AmChNoQzMoGhOwX|[yIzBeFKg[zAkIdU_LiHxK}HzEh@vM_BtBg@xGzDbCcF~GhArHaIfByAhLsDiJuC?_HbHd@nL_Cz@ZnEkDDy@hHwJLiCbIrNrIvN_EfAjDWlEnEiAfBxDlFkBfBtEfDaAzBvDKdFx@|@XgJmDsHhAgD`GfElEzOwBnYdBxXgGlSc@bGdHpW|HdJztBnhAgFxc@HnCvBdA
+                  summary_polyline: "ki{eFvqfiVsBmA`Feh@qg@iX`B}JeCcCqGjIq~@kf@cM{KeHeX`@_GdGkSeBiXtB}YuEkPwFyDeAzAe@pC~DfGc@bIOsGmCcEiD~@oBuEkFhBcBmDiEfAVuDiAuD}NnDaNiIlCyDD_CtJKv@wGhD]YyEzBo@g@uKxGmHpCGtEtI~AuLrHkAcAaIvEgH_EaDR_FpBuBg@sNxHqEtHgLoTpIiCzKNr[sB|Es\\\
+                    `JyObYeMbGsMnPsAfDxAnD}DBu@bCx@{BbEEyAoD`AmChNoQzMoGhOwX|[yIzBeFKg[zAkIdU_LiHxK}HzEh@vM_BtBg@xGzDbCcF~GhArHaIfByAhLsDiJuC?_HbHd@nL_Cz@ZnEkDDy@hHwJLiCbIrNrIvN_EfAjDWlEnEiAfBxDlFkBfBtEfDaAzBvDKdFx@|@XgJmDsHhAgD`GfElEzOwBnYdBxXgGlSc@bGdHpW|HdJztBnhAgFxc@HnCvBdA"
                 trainer: false
                 commute: false
                 manual: false
@@ -1117,6 +1083,7 @@ paths:
                 total_photo_count: 2
                 has_kudoed: false
                 workout_type: 10
+                suffer_score: null
                 description: ""
                 calories: 870.2
                 segment_efforts:
@@ -1162,6 +1129,8 @@ paths:
                     private: false
                     hazardous: false
                     starred: false
+                  kom_rank: null
+                  pr_rank: null
                   achievements: []
                   hidden: false
                 splits_metric:
@@ -1203,8 +1172,10 @@ paths:
                   name: Tarmac
                   resource_state: 2
                   distance: 32547610
+                partner_brand_tag: null
                 photos:
                   primary:
+                    id: null
                     unique_id: 3FDGKL3-204E-4867-9E8D-89FC79EAAE17
                     urls:
                       "100": https://dgtzuqphqg23d.cloudfront.net/Bv93zv5t_mr57v0wXFbY_JyvtucgmU5Ym6N9z_bKeUI-128x96.jpg
@@ -1217,6 +1188,7 @@ paths:
                   display_name: Marianne V.
                   avatar_url: https://dgalywyr863hv.cloudfront.net/pictures/athletes/12345678987654321/12345678987654321/3/medium.jpg
                   show_name: true
+                hide_from_home: false
                 device_name: Garmin Edge 1030
                 embed_token: 18e4615989b47dd4ff3dc711b0aa4502e4b311a9
                 segment_leaderboard_opt_out: false
@@ -1279,6 +1251,8 @@ paths:
                 elapsed_time: 4500
                 total_elevation_gain: 0
                 type: Ride
+                sport_type: MountainBikeRide
+                workout_type: null
                 id: 154504250376823
                 external_id: garmin_push_12345678987654321
                 upload_id: 987654321234567891234
@@ -1286,6 +1260,10 @@ paths:
                 start_date_local: 2018-05-02T05:15:09Z
                 timezone: (GMT-08:00) America/Los_Angeles
                 utc_offset: -25200
+                start_latlng: null
+                end_latlng: null
+                location_city: null
+                location_state: null
                 location_country: United States
                 achievement_count: 0
                 kudos_count: 3
@@ -1294,6 +1272,7 @@ paths:
                 photo_count: 0
                 map:
                   id: a12345678987654321
+                  summary_polyline: null
                   resource_state: 2
                 trainer: true
                 commute: false
@@ -1327,6 +1306,8 @@ paths:
                 elapsed_time: 5400
                 total_elevation_gain: 0
                 type: Ride
+                sport_type: MountainBikeRide
+                workout_type: null
                 id: 1234567809
                 external_id: garmin_push_12345678987654321
                 upload_id: 1234567819
@@ -1334,6 +1315,10 @@ paths:
                 start_date_local: 2018-04-30T05:35:51Z
                 timezone: (GMT-08:00) America/Los_Angeles
                 utc_offset: -25200
+                start_latlng: null
+                end_latlng: null
+                location_city: null
+                location_state: null
                 location_country: United States
                 achievement_count: 0
                 kudos_count: 4
@@ -1342,6 +1327,7 @@ paths:
                 photo_count: 0
                 map:
                   id: a12345689
+                  summary_polyline: null
                   resource_state: 2
                 trainer: true
                 commute: false
@@ -1500,8 +1486,10 @@ paths:
               example:
               - id: 12345678987654321
                 activity_id: 12345678987654321
+                post_id: null
                 resource_state: 2
                 text: Good job and keep the cat pictures coming!
+                mentions_metadata: null
                 created_at: 2018-02-08T19:25:39Z
                 athlete:
                   firstname: Peter
@@ -1591,6 +1579,12 @@ paths:
                 cover_photo: https://dgalywyr863hv.cloudfront.net/pictures/clubs/1/4328276/1/large.jpg
                 cover_photo_small: https://dgalywyr863hv.cloudfront.net/pictures/clubs/1/4328276/1/small.jpg
                 sport_type: cycling
+                activity_types:
+                - Ride
+                - VirtualRide
+                - EBikeRide
+                - Velomobile
+                - Handcycle
                 city: San Francisco
                 state: California
                 country: United States
@@ -1754,6 +1748,8 @@ paths:
                 elapsed_time: 635
                 total_elevation_gain: 8.8
                 type: Ride
+                sport_type: MountainBikeRide
+                workout_type: null
               schema:
                 items:
                   $ref: '#/components/schemas/SummaryActivity'
@@ -1982,38 +1978,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              properties:
-                file:
-                  description: The uploaded file.
-                  format: binary
-                  type: string
-                name:
-                  description: The desired name of the resulting activity.
-                  type: string
-                description:
-                  description: The desired description of the resulting activity.
-                  type: string
-                trainer:
-                  description: Whether the resulting activity should be marked as
-                    having been performed on a trainer.
-                  type: string
-                commute:
-                  description: Whether the resulting activity should be tagged as
-                    a commute.
-                  type: string
-                data_type:
-                  description: The format of the uploaded file.
-                  enum:
-                  - fit
-                  - fit.gz
-                  - tcx
-                  - tcx.gz
-                  - gpx
-                  - gpx.gz
-                  type: string
-                external_id:
-                  description: The desired external identifier of the resulting activity.
-                  type: string
+              $ref: '#/components/schemas/createUpload_request'
       responses:
         "201":
           content:
@@ -2482,7 +2447,8 @@ components:
       description: Encapsulates the errors that may be returned from the API.
       properties:
         errors:
-          description: The set of specific errors associated with this fault, if any.
+          description: "The set of specific errors associated with this fault, if\
+            \ any."
           items:
             $ref: '#/components/schemas/Error'
           type: array
@@ -2531,21 +2497,65 @@ components:
           format: int64
           type: integer
         resource_state:
-          description: 'Resource state, indicates level of detail. Possible values:
-            1 -> "meta", 2 -> "summary", 3 -> "detail"'
+          description: "Resource state, indicates level of detail. Possible values:\
+            \ 1 -> \"meta\", 2 -> \"summary\", 3 -> \"detail\""
           type: integer
         name:
           description: The club's name.
           type: string
       type: object
+    ActivityType:
+      description: "An enumeration of the types an activity may have. Note that this\
+        \ enumeration does not include new sport types (e.g. MountainBikeRide, EMountainBikeRide),\
+        \ activities with these sport types will have the corresponding activity type\
+        \ (e.g. Ride for MountainBikeRide, EBikeRide for EMountainBikeRide)"
+      enum:
+      - AlpineSki
+      - BackcountrySki
+      - Canoeing
+      - Crossfit
+      - EBikeRide
+      - Elliptical
+      - Golf
+      - Handcycle
+      - Hike
+      - IceSkate
+      - InlineSkate
+      - Kayaking
+      - Kitesurf
+      - NordicSki
+      - Ride
+      - RockClimbing
+      - RollerSki
+      - Rowing
+      - Run
+      - Sail
+      - Skateboard
+      - Snowboard
+      - Snowshoe
+      - Soccer
+      - StairStepper
+      - StandUpPaddling
+      - Surfing
+      - Swim
+      - Velomobile
+      - VirtualRide
+      - VirtualRun
+      - Walk
+      - WeightTraining
+      - Wheelchair
+      - Windsurf
+      - Workout
+      - Yoga
+      type: string
     SummaryGear:
       properties:
         id:
           description: The gear's unique identifier.
           type: string
         resource_state:
-          description: 'Resource state, indicates level of detail. Possible values:
-            2 -> "summary", 3 -> "detail"'
+          description: "Resource state, indicates level of detail. Possible values:\
+            \ 2 -> \"summary\", 3 -> \"detail\""
           type: integer
         primary:
           description: Whether this gear's is the owner's default one.
@@ -2677,28 +2687,28 @@ components:
           - Run
           type: string
         distance:
-          description: The segment's distance, in meters
+          description: "The segment's distance, in meters"
           format: float
           type: number
         average_grade:
-          description: The segment's average grade, in percents
+          description: "The segment's average grade, in percents"
           format: float
           type: number
         maximum_grade:
-          description: The segments's maximum grade, in percents
+          description: "The segments's maximum grade, in percents"
           format: float
           type: number
         elevation_high:
-          description: The segments's highest elevation, in meters
+          description: "The segments's highest elevation, in meters"
           format: float
           type: number
         elevation_low:
-          description: The segments's lowest elevation, in meters
+          description: "The segments's lowest elevation, in meters"
           format: float
           type: number
         start_latlng:
-          description: A pair of latitude/longitude coordinates, represented as an
-            array of 2 floating point numbers.
+          description: "A pair of latitude/longitude coordinates, represented as an\
+            \ array of 2 floating point numbers."
           items:
             format: float
             type: number
@@ -2706,8 +2716,8 @@ components:
           minItems: 2
           type: array
         end_latlng:
-          description: A pair of latitude/longitude coordinates, represented as an
-            array of 2 floating point numbers.
+          description: "A pair of latitude/longitude coordinates, represented as an\
+            \ array of 2 floating point numbers."
           items:
             format: float
             type: number
@@ -2715,8 +2725,8 @@ components:
           minItems: 2
           type: array
         climb_category:
-          description: The category of the climb [0, 5]. Higher is harder ie. 5 is
-            Hors catégorie, 0 is uncategorized in climb_category.
+          description: "The category of the climb [0, 5]. Higher is harder ie. 5 is\
+            \ Hors catégorie, 0 is uncategorized in climb_category."
           type: integer
         city:
           description: The segments's city.
@@ -2736,8 +2746,8 @@ components:
           $ref: '#/components/schemas/SummaryPRSegmentEffort'
       type: object
     LatLng:
-      description: A pair of latitude/longitude coordinates, represented as an array
-        of 2 floating point numbers.
+      description: "A pair of latitude/longitude coordinates, represented as an array\
+        \ of 2 floating point numbers."
       items:
         format: float
         type: number
@@ -2813,8 +2823,8 @@ components:
           description: The identifier of the map
           type: string
         polyline:
-          description: The polyline of the map, only returned on detailed representation
-            of an object
+          description: "The polyline of the map, only returned on detailed representation\
+            \ of an object"
           type: string
         summary_polyline:
           description: The summary polyline of the map
@@ -2896,10 +2906,10 @@ components:
           description: The name of this segment
           type: string
         climb_category:
-          description: The category of the climb [0, 5]. Higher is harder ie. 5 is
-            Hors catégorie, 0 is uncategorized in climb_category. If climb_category
-            = 5, climb_category_desc = HC. If climb_category = 2, climb_category_desc
-            = 3.
+          description: "The category of the climb [0, 5]. Higher is harder ie. 5 is\
+            \ Hors catégorie, 0 is uncategorized in climb_category. If climb_category\
+            \ = 5, climb_category_desc = HC. If climb_category = 2, climb_category_desc\
+            \ = 3."
           maximum: 5
           minimum: 0
           type: integer
@@ -2914,12 +2924,12 @@ components:
           - HC
           type: string
         avg_grade:
-          description: The segment's average grade, in percents
+          description: "The segment's average grade, in percents"
           format: float
           type: number
         start_latlng:
-          description: A pair of latitude/longitude coordinates, represented as an
-            array of 2 floating point numbers.
+          description: "A pair of latitude/longitude coordinates, represented as an\
+            \ array of 2 floating point numbers."
           items:
             format: float
             type: number
@@ -2927,8 +2937,8 @@ components:
           minItems: 2
           type: array
         end_latlng:
-          description: A pair of latitude/longitude coordinates, represented as an
-            array of 2 floating point numbers.
+          description: "A pair of latitude/longitude coordinates, represented as an\
+            \ array of 2 floating point numbers."
           items:
             format: float
             type: number
@@ -2936,79 +2946,15 @@ components:
           minItems: 2
           type: array
         elev_difference:
-          description: The segments's evelation difference, in meters
+          description: "The segments's evelation difference, in meters"
           format: float
           type: number
         distance:
-          description: The segment's distance, in meters
+          description: "The segment's distance, in meters"
           format: float
           type: number
         points:
           description: The polyline of the segment
-          type: string
-      type: object
-    RunningRace:
-      example:
-        country: country
-        route_ids:
-        - 5
-        - 5
-        running_race_type: 6
-        distance: 1.4658129
-        website_url: website_url
-        city: city
-        start_date_local: 2000-01-23T04:56:07.000+00:00
-        name: name
-        measurement_preference: feet
-        id: 0
-        state: state
-        url: url
-      properties:
-        id:
-          description: The unique identifier of this race.
-          format: int64
-          type: integer
-        name:
-          description: The name of this race.
-          type: string
-        running_race_type:
-          description: The type of this race.
-          type: integer
-        distance:
-          description: The race's distance, in meters.
-          format: float
-          type: number
-        start_date_local:
-          description: The time at which the race begins started in the local timezone.
-          format: date-time
-          type: string
-        city:
-          description: The name of the city in which the race is taking place.
-          type: string
-        state:
-          description: The name of the state or geographical region in which the race
-            is taking place.
-          type: string
-        country:
-          description: The name of the country in which the race is taking place.
-          type: string
-        route_ids:
-          description: The set of routes that cover this race's course.
-          items:
-            format: int64
-            type: integer
-          type: array
-        measurement_preference:
-          description: The unit system in which the race should be displayed.
-          enum:
-          - feet
-          - meters
-          type: string
-        url:
-          description: The vanity URL of this race on Strava.
-          type: string
-        website_url:
-          description: The URL of this race's website.
           type: string
       type: object
     DetailedActivity:
@@ -3019,8 +2965,9 @@ components:
       allOf:
       - $ref: '#/components/schemas/MetaActivity'
       - $ref: '#/components/schemas/SummaryActivity_allOf'
-    ActivityType:
-      description: An enumeration of the types an activity may have.
+    SportType:
+      description: An enumeration of the sport types an activity may have. Distinct
+        from ActivityType in that it has new types (e.g. MountainBikeRide)
       enum:
       - AlpineSki
       - BackcountrySki
@@ -3028,13 +2975,16 @@ components:
       - Crossfit
       - EBikeRide
       - Elliptical
+      - EMountainBikeRide
       - Golf
+      - GravelRide
       - Handcycle
       - Hike
       - IceSkate
       - InlineSkate
       - Kayaking
       - Kitesurf
+      - MountainBikeRide
       - NordicSki
       - Ride
       - RockClimbing
@@ -3050,6 +3000,7 @@ components:
       - StandUpPaddling
       - Surfing
       - Swim
+      - TrailRun
       - Velomobile
       - VirtualRide
       - VirtualRun
@@ -3071,25 +3022,25 @@ components:
     Split:
       properties:
         average_speed:
-          description: The average speed of this split, in meters per second
+          description: "The average speed of this split, in meters per second"
           format: float
           type: number
         distance:
-          description: The distance of this split, in meters
+          description: "The distance of this split, in meters"
           format: float
           type: number
         elapsed_time:
-          description: The elapsed time of this split, in seconds
+          description: "The elapsed time of this split, in seconds"
           type: integer
         elevation_difference:
-          description: The elevation difference of this split, in meters
+          description: "The elevation difference of this split, in meters"
           format: float
           type: number
         pace_zone:
           description: The pacing zone of this split
           type: integer
         moving_time:
-          description: The moving time of this split, in seconds
+          description: "The moving time of this split, in seconds"
           type: integer
         split:
           description: N/A
@@ -3135,11 +3086,11 @@ components:
           format: float
           type: number
         distance:
-          description: The lap's distance, in meters
+          description: "The lap's distance, in meters"
           format: float
           type: number
         elapsed_time:
-          description: The lap's elapsed time, in seconds
+          description: "The lap's elapsed time, in seconds"
           type: integer
         start_index:
           description: The start index of this effort in its activity's stream
@@ -3151,11 +3102,11 @@ components:
           description: The index of this lap in the activity it belongs to
           type: integer
         max_speed:
-          description: The maximum speed of this lat, in meters per second
+          description: "The maximum speed of this lat, in meters per second"
           format: float
           type: number
         moving_time:
-          description: The lap's moving time, in seconds
+          description: "The lap's moving time, in seconds"
           type: integer
         name:
           description: The name of the lap
@@ -3174,23 +3125,29 @@ components:
           format: date-time
           type: string
         total_elevation_gain:
-          description: The elevation gain of this lap, in meters
+          description: "The elevation gain of this lap, in meters"
           format: float
           type: number
       type: object
     UpdatableActivity:
       example:
         trainer: true
+        hide_from_home: true
         name: name
         description: description
         commute: true
+        type: null
         gear_id: gear_id
+        sport_type: null
       properties:
         commute:
           description: Whether this activity is a commute
           type: boolean
         trainer:
           description: Whether this activity was recorded on a training machine
+          type: boolean
+        hide_from_home:
+          description: Whether this activity is muted
           type: boolean
         description:
           description: The description of the activity
@@ -3200,6 +3157,8 @@ components:
           type: string
         type:
           $ref: '#/components/schemas/ActivityType'
+        sport_type:
+          $ref: '#/components/schemas/SportType'
         gear_id:
           description: Identifier for the gear associated with the activity. ‘none’
             clears gear from activity
@@ -3252,6 +3211,7 @@ components:
       description: A union type representing the time spent in a given zone.
     Comment:
       example:
+        athlete: null
         activity_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
         id: 0
@@ -3287,6 +3247,7 @@ components:
       example:
         private: true
         distance: 0.8008282
+        athlete: null
         description: description
         created_at: 2000-01-23T04:56:07.000+00:00
         elevation_gain: 6.0274563
@@ -3375,7 +3336,7 @@ components:
           description: The description of the route
           type: string
         distance:
-          description: The route's distance, in meters
+          description: "The route's distance, in meters"
           format: float
           type: number
         elevation_gain:
@@ -3404,11 +3365,11 @@ components:
           description: An epoch timestamp of when the route was created
           type: integer
         type:
-          description: This route's type (1 for ride, 2 for runs)
+          description: "This route's type (1 for ride, 2 for runs)"
           type: integer
         sub_type:
-          description: This route's sub-type (1 for road, 2 for mountain bike, 3 for
-            cross, 4 for trail, 5 for mixed)
+          description: "This route's sub-type (1 for road, 2 for mountain bike, 3\
+            \ for cross, 4 for trail, 5 for mixed)"
           type: integer
         created_at:
           description: The time at which the route was created
@@ -3459,7 +3420,18 @@ components:
           type: integer
       type: object
     StreamSet:
-      example: {}
+      example:
+        altitude: null
+        temp: null
+        velocity_smooth: null
+        watts: null
+        distance: null
+        heartrate: null
+        time: null
+        moving: null
+        latlng: null
+        cadence: null
+        grade_smooth: null
       properties:
         time:
           $ref: '#/components/schemas/TimeStream'
@@ -3547,6 +3519,86 @@ components:
       allOf:
       - $ref: '#/components/schemas/BaseStream'
       - $ref: '#/components/schemas/SmoothGradeStream_allOf'
+    starSegment_request:
+      properties:
+        starred:
+          default: false
+          description: "If true, star the segment; if false, unstar the segment."
+          type: boolean
+      required:
+      - starred
+    createActivity_request:
+      properties:
+        name:
+          description: The name of the activity.
+          type: string
+        type:
+          description: "Type of activity. For example - Run, Ride etc."
+          type: string
+        sport_type:
+          description: "Sport type of activity. For example - Run, MountainBikeRide,\
+            \ Ride, etc."
+          type: string
+        start_date_local:
+          description: ISO 8601 formatted date time.
+          format: date-time
+          type: string
+        elapsed_time:
+          description: In seconds.
+          format: int32
+          type: integer
+        description:
+          description: Description of the activity.
+          type: string
+        distance:
+          description: In meters.
+          format: float
+          type: number
+        trainer:
+          description: Set to 1 to mark as a trainer activity.
+          format: int32
+          type: integer
+        commute:
+          description: Set to 1 to mark as commute.
+          format: int32
+          type: integer
+      required:
+      - elapsed_time
+      - name
+      - sport_type
+      - start_date_local
+    createUpload_request:
+      properties:
+        file:
+          description: The uploaded file.
+          format: binary
+          type: string
+        name:
+          description: The desired name of the resulting activity.
+          type: string
+        description:
+          description: The desired description of the resulting activity.
+          type: string
+        trainer:
+          description: Whether the resulting activity should be marked as having been
+            performed on a trainer.
+          type: string
+        commute:
+          description: Whether the resulting activity should be tagged as a commute.
+          type: string
+        data_type:
+          description: The format of the uploaded file.
+          enum:
+          - fit
+          - fit.gz
+          - tcx
+          - tcx.gz
+          - gpx
+          - gpx.gz
+          type: string
+        external_id:
+          description: The desired external identifier of the resulting activity.
+          type: string
     DetailedAthlete_allOf:
       properties:
         follower_count:
@@ -3583,11 +3635,12 @@ components:
           items:
             $ref: '#/components/schemas/SummaryGear'
           type: array
+      type: object
     SummaryAthlete_allOf:
       properties:
         resource_state:
-          description: 'Resource state, indicates level of detail. Possible values:
-            1 -> "meta", 2 -> "summary", 3 -> "detail"'
+          description: "Resource state, indicates level of detail. Possible values:\
+            \ 1 -> \"meta\", 2 -> \"summary\", 3 -> \"detail\""
           type: integer
         firstname:
           description: The athlete's first name.
@@ -3631,6 +3684,7 @@ components:
           description: The time at which the athlete was last updated.
           format: date-time
           type: string
+      type: object
     SummaryClub_allOf:
       properties:
         profile_medium:
@@ -3643,12 +3697,19 @@ components:
           description: URL to a ~360x176  pixel cover photo.
           type: string
         sport_type:
+          description: Deprecated. Prefer to use activity_types.
           enum:
           - cycling
           - running
           - triathlon
           - other
           type: string
+        activity_types:
+          description: The activity types that count for a club. This takes precedence
+            over sport_type.
+          items:
+            $ref: '#/components/schemas/ActivityType'
+          type: array
         city:
           description: The club's city.
           type: string
@@ -3673,6 +3734,7 @@ components:
         url:
           description: The club's vanity URL.
           type: string
+      type: object
     DetailedSegment_allOf:
       properties:
         created_at:
@@ -3701,6 +3763,7 @@ components:
         star_count:
           description: The number of stars for this segment
           type: integer
+      type: object
     DetailedSegmentEffort_allOf:
       properties:
         name:
@@ -3728,8 +3791,8 @@ components:
           format: float
           type: number
         device_watts:
-          description: For riding efforts, whether the wattage was reported by a dedicated
-            recording device
+          description: "For riding efforts, whether the wattage was reported by a\
+            \ dedicated recording device"
           type: boolean
         average_heartrate:
           description: The heart heart rate of the athlete during this effort
@@ -3744,7 +3807,7 @@ components:
         kom_rank:
           description: The rank of the effort on the global leaderboard if it belongs
             in the top 10 at the time of upload
-          maximum: 1E+1
+          maximum: 10
           minimum: 1
           type: integer
         pr_rank:
@@ -3757,6 +3820,7 @@ components:
           description: Whether this effort should be hidden when viewed within an
             activity
           type: boolean
+      type: object
     DetailedActivity_allOf:
       properties:
         description:
@@ -3798,6 +3862,7 @@ components:
           items:
             $ref: '#/components/schemas/DetailedSegmentEffort'
           type: array
+      type: object
     SummaryActivity_allOf:
       properties:
         external_id:
@@ -3813,29 +3878,31 @@ components:
           description: The name of the activity
           type: string
         distance:
-          description: The activity's distance, in meters
+          description: "The activity's distance, in meters"
           format: float
           type: number
         moving_time:
-          description: The activity's moving time, in seconds
+          description: "The activity's moving time, in seconds"
           type: integer
         elapsed_time:
-          description: The activity's elapsed time, in seconds
+          description: "The activity's elapsed time, in seconds"
           type: integer
         total_elevation_gain:
           description: The activity's total elevation gain.
           format: float
           type: number
         elev_high:
-          description: The activity's highest elevation, in meters
+          description: "The activity's highest elevation, in meters"
           format: float
           type: number
         elev_low:
-          description: The activity's lowest elevation, in meters
+          description: "The activity's lowest elevation, in meters"
           format: float
           type: number
         type:
           $ref: '#/components/schemas/ActivityType'
+        sport_type:
+          $ref: '#/components/schemas/SportType'
         start_date:
           description: The time at which the activity was started.
           format: date-time
@@ -3848,8 +3915,8 @@ components:
           description: The timezone of the activity
           type: string
         start_latlng:
-          description: A pair of latitude/longitude coordinates, represented as an
-            array of 2 floating point numbers.
+          description: "A pair of latitude/longitude coordinates, represented as an\
+            \ array of 2 floating point numbers."
           items:
             format: float
             type: number
@@ -3857,8 +3924,8 @@ components:
           minItems: 2
           type: array
         end_latlng:
-          description: A pair of latitude/longitude coordinates, represented as an
-            array of 2 floating point numbers.
+          description: "A pair of latitude/longitude coordinates, represented as an\
+            \ array of 2 floating point numbers."
           items:
             format: float
             type: number
@@ -3908,15 +3975,18 @@ components:
           description: The unique identifier of the upload in string format
           type: string
         average_speed:
-          description: The activity's average speed, in meters per second
+          description: "The activity's average speed, in meters per second"
           format: float
           type: number
         max_speed:
-          description: The activity's max speed, in meters per second
+          description: "The activity's max speed, in meters per second"
           format: float
           type: number
         has_kudoed:
           description: Whether the logged-in athlete has kudoed this activity
+          type: boolean
+        hide_from_home:
+          description: Whether the activity is muted
           type: boolean
         gear_id:
           description: The id of the gear for the activity
@@ -3931,7 +4001,7 @@ components:
           format: float
           type: number
         device_watts:
-          description: Whether the watts are from a power meter, false if estimated
+          description: "Whether the watts are from a power meter, false if estimated"
           type: boolean
         max_watts:
           description: Rides with power meter data only
@@ -3939,6 +4009,7 @@ components:
         weighted_average_watts:
           description: Similar to Normalized Power. Rides with power meter data only
           type: integer
+      type: object
     PhotosSummary_primary:
       properties:
         id:
@@ -3952,11 +4023,13 @@ components:
           additionalProperties:
             type: string
           type: object
+      type: object
     TimedZoneRange_allOf:
       properties:
         time:
           description: The number of seconds spent in this zone
           type: integer
+      type: object
     DetailedClub_allOf:
       properties:
         membership:
@@ -3977,6 +4050,7 @@ components:
           description: The number of athletes in the club that the logged-in athlete
             follows.
           type: integer
+      type: object
     DetailedGear_allOf:
       properties:
         brand_name:
@@ -3991,21 +4065,24 @@ components:
         description:
           description: The gear's description.
           type: string
+      type: object
     TimeStream_allOf:
       properties:
         data:
-          description: The sequence of time values for this stream, in seconds
+          description: "The sequence of time values for this stream, in seconds"
           items:
             type: integer
           type: array
+      type: object
     DistanceStream_allOf:
       properties:
         data:
-          description: The sequence of distance values for this stream, in meters
+          description: "The sequence of distance values for this stream, in meters"
           items:
             format: float
             type: number
           type: array
+      type: object
     LatLngStream_allOf:
       properties:
         data:
@@ -4013,91 +4090,102 @@ components:
           items:
             $ref: '#/components/schemas/LatLng'
           type: array
+      type: object
     AltitudeStream_allOf:
       properties:
         data:
-          description: The sequence of altitude values for this stream, in meters
+          description: "The sequence of altitude values for this stream, in meters"
           items:
             format: float
             type: number
           type: array
+      type: object
     SmoothVelocityStream_allOf:
       properties:
         data:
-          description: The sequence of velocity values for this stream, in meters
-            per second
+          description: "The sequence of velocity values for this stream, in meters\
+            \ per second"
           items:
             format: float
             type: number
           type: array
+      type: object
     HeartrateStream_allOf:
       properties:
         data:
-          description: The sequence of heart rate values for this stream, in beats
-            per minute
+          description: "The sequence of heart rate values for this stream, in beats\
+            \ per minute"
           items:
             type: integer
           type: array
+      type: object
     CadenceStream_allOf:
       properties:
         data:
-          description: The sequence of cadence values for this stream, in rotations
-            per minute
+          description: "The sequence of cadence values for this stream, in rotations\
+            \ per minute"
           items:
             type: integer
           type: array
+      type: object
     PowerStream_allOf:
       properties:
         data:
-          description: The sequence of power values for this stream, in watts
+          description: "The sequence of power values for this stream, in watts"
           items:
             type: integer
           type: array
+      type: object
     TemperatureStream_allOf:
       properties:
         data:
-          description: The sequence of temperature values for this stream, in celsius
-            degrees
+          description: "The sequence of temperature values for this stream, in celsius\
+            \ degrees"
           items:
             type: integer
           type: array
+      type: object
     MovingStream_allOf:
       properties:
         data:
-          description: The sequence of moving values for this stream, as boolean values
+          description: "The sequence of moving values for this stream, as boolean\
+            \ values"
           items:
             type: boolean
           type: array
+      type: object
     SmoothGradeStream_allOf:
       properties:
         data:
-          description: The sequence of grade values for this stream, as percents of
-            a grade
+          description: "The sequence of grade values for this stream, as percents\
+            \ of a grade"
           items:
             format: float
             type: number
           type: array
+      type: object
   securitySchemes:
     strava_oauth:
       flows:
         authorizationCode:
           authorizationUrl: https://www.strava.com/api/v3/oauth/authorize
           scopes:
-            read: Read public segments, public routes, public profile data, public
-              posts, public events, club feeds, and leaderboards
-            read_all: Read private routes, private segments, and private events for
-              the user
+            read: "Read public segments, public routes, public profile data, public\
+              \ posts, public events, club feeds, and leaderboards"
+            read_all: "Read private routes, private segments, and private events for\
+              \ the user"
             profile:read_all: Read all profile information even if the user has set
               their profile visibility to Followers or Only You
-            profile:write: Update the user's weight and Functional Threshold Power
-              (FTP), and access to star or unstar segments on their behalf
-            activity:read: Read the user's activity data for activities that are visible
-              to Everyone and Followers, excluding privacy zone data
-            activity:read_all: The same access as activity:read, plus privacy zone
-              data and access to read the user's activities with visibility set to
-              Only You
-            activity:write: Access to create manual activities and uploads, and access
-              to edit any activities that are visible to the app, based on activity
-              read access level
+            profile:write: "Update the user's weight and Functional Threshold Power\
+              \ (FTP), and access to star or unstar segments on their behalf"
+            activity:read: "Read the user's activity data for activities that are\
+              \ visible to Everyone and Followers, excluding privacy zone data"
+            activity:read_all: "The same access as activity:read, plus privacy zone\
+              \ data and access to read the user's activities with visibility set\
+              \ to Only You"
+            activity:write: "Access to create manual activities and uploads, and access\
+              \ to edit any activities that are visible to the app, based on activity\
+              \ read access level"
           tokenUrl: https://www.strava.com/api/v3/oauth/token
       type: oauth2
+x-original-swagger-version: "2.0"

@@ -1,4 +1,4 @@
-# ActivityType
+# SportType
 
 ## Enum
 
@@ -15,7 +15,11 @@
 
 * `ELLIPTICAL` (value: `"Elliptical"`)
 
+* `E_MOUNTAIN_BIKE_RIDE` (value: `"EMountainBikeRide"`)
+
 * `GOLF` (value: `"Golf"`)
+
+* `GRAVEL_RIDE` (value: `"GravelRide"`)
 
 * `HANDCYCLE` (value: `"Handcycle"`)
 
@@ -28,6 +32,8 @@
 * `KAYAKING` (value: `"Kayaking"`)
 
 * `KITESURF` (value: `"Kitesurf"`)
+
+* `MOUNTAIN_BIKE_RIDE` (value: `"MountainBikeRide"`)
 
 * `NORDIC_SKI` (value: `"NordicSki"`)
 
@@ -58,6 +64,8 @@
 * `SURFING` (value: `"Surfing"`)
 
 * `SWIM` (value: `"Swim"`)
+
+* `TRAIL_RUN` (value: `"TrailRun"`)
 
 * `VELOMOBILE` (value: `"Velomobile"`)
 

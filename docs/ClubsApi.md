@@ -14,31 +14,59 @@ Method | HTTP request | Description
 
 ## GetClubActivitiesById
 
-> []SummaryActivity GetClubActivitiesById(ctx, id, optional)
+> []SummaryActivity GetClubActivitiesById(ctx, id).Page(page).PerPage(perPage).Execute()
 
 List Club Activities
 
-Retrieve recent activities from members of a specific club. The authenticated athlete must belong to the requested club in order to hit this endpoint. Pagination is supported. Athlete profile visibility is respected for all activities.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the club.
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ClubsApi.GetClubActivitiesById(context.Background(), id).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ClubsApi.GetClubActivitiesById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetClubActivitiesById`: []SummaryActivity
+    fmt.Fprintf(os.Stdout, "Response from `ClubsApi.GetClubActivitiesById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the club. | 
- **optional** | ***GetClubActivitiesByIdOpts** | optional parameters | nil if no parameters
+**id** | **int64** | The identifier of the club. | 
 
-### Optional Parameters
+### Other Parameters
 
-Optional parameters are passed through a pointer to a GetClubActivitiesByIdOpts struct
+Other parameters are passed through a pointer to a apiGetClubActivitiesByIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 
@@ -60,31 +88,59 @@ Name | Type | Description  | Notes
 
 ## GetClubAdminsById
 
-> []SummaryAthlete GetClubAdminsById(ctx, id, optional)
+> []SummaryAthlete GetClubAdminsById(ctx, id).Page(page).PerPage(perPage).Execute()
 
 List Club Administrators
 
-Returns a list of the administrators of a given club.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the club.
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ClubsApi.GetClubAdminsById(context.Background(), id).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ClubsApi.GetClubAdminsById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetClubAdminsById`: []SummaryAthlete
+    fmt.Fprintf(os.Stdout, "Response from `ClubsApi.GetClubAdminsById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the club. | 
- **optional** | ***GetClubAdminsByIdOpts** | optional parameters | nil if no parameters
+**id** | **int64** | The identifier of the club. | 
 
-### Optional Parameters
+### Other Parameters
 
-Optional parameters are passed through a pointer to a GetClubAdminsByIdOpts struct
+Other parameters are passed through a pointer to a apiGetClubAdminsByIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 
@@ -106,19 +162,55 @@ Name | Type | Description  | Notes
 
 ## GetClubById
 
-> DetailedClub GetClubById(ctx, id)
+> DetailedClub GetClubById(ctx, id).Execute()
 
 Get Club
 
-Returns a given club using its identifier.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the club.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ClubsApi.GetClubById(context.Background(), id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ClubsApi.GetClubById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetClubById`: DetailedClub
+    fmt.Fprintf(os.Stdout, "Response from `ClubsApi.GetClubById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the club. | 
+**id** | **int64** | The identifier of the club. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetClubByIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -140,31 +232,59 @@ Name | Type | Description  | Notes
 
 ## GetClubMembersById
 
-> []SummaryAthlete GetClubMembersById(ctx, id, optional)
+> []SummaryAthlete GetClubMembersById(ctx, id).Page(page).PerPage(perPage).Execute()
 
 List Club Members
 
-Returns a list of the athletes who are members of a given club.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    id := int64(789) // int64 | The identifier of the club.
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ClubsApi.GetClubMembersById(context.Background(), id).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ClubsApi.GetClubMembersById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetClubMembersById`: []SummaryAthlete
+    fmt.Fprintf(os.Stdout, "Response from `ClubsApi.GetClubMembersById`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int64**| The identifier of the club. | 
- **optional** | ***GetClubMembersByIdOpts** | optional parameters | nil if no parameters
+**id** | **int64** | The identifier of the club. | 
 
-### Optional Parameters
+### Other Parameters
 
-Optional parameters are passed through a pointer to a GetClubMembersByIdOpts struct
+Other parameters are passed through a pointer to a apiGetClubMembersByIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 
@@ -186,29 +306,53 @@ Name | Type | Description  | Notes
 
 ## GetLoggedInAthleteClubs
 
-> []SummaryClub GetLoggedInAthleteClubs(ctx, optional)
+> []SummaryClub GetLoggedInAthleteClubs(ctx).Page(page).PerPage(perPage).Execute()
 
 List Athlete Clubs
 
-Returns a list of the clubs whose membership includes the authenticated athlete.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
+    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ClubsApi.GetLoggedInAthleteClubs(context.Background()).Page(page).PerPage(perPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ClubsApi.GetLoggedInAthleteClubs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetLoggedInAthleteClubs`: []SummaryClub
+    fmt.Fprintf(os.Stdout, "Response from `ClubsApi.GetLoggedInAthleteClubs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetLoggedInAthleteClubsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***GetLoggedInAthleteClubsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a GetLoggedInAthleteClubsOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Page number. Defaults to 1. | 
- **perPage** | **optional.Int32**| Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Page number. Defaults to 1. | 
+ **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
 
 ### Return type
 
