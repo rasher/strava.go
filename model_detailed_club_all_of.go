@@ -45,7 +45,7 @@ func NewDetailedClubAllOfWithDefaults() *DetailedClubAllOf {
 
 // GetMembership returns the Membership field value if set, zero value otherwise.
 func (o *DetailedClubAllOf) GetMembership() string {
-	if o == nil || o.Membership == nil {
+	if o == nil || isNil(o.Membership) {
 		var ret string
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *DetailedClubAllOf) GetMembership() string {
 // GetMembershipOk returns a tuple with the Membership field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedClubAllOf) GetMembershipOk() (*string, bool) {
-	if o == nil || o.Membership == nil {
-		return nil, false
+	if o == nil || isNil(o.Membership) {
+    return nil, false
 	}
 	return o.Membership, true
 }
 
 // HasMembership returns a boolean if a field has been set.
 func (o *DetailedClubAllOf) HasMembership() bool {
-	if o != nil && o.Membership != nil {
+	if o != nil && !isNil(o.Membership) {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *DetailedClubAllOf) SetMembership(v string) {
 
 // GetAdmin returns the Admin field value if set, zero value otherwise.
 func (o *DetailedClubAllOf) GetAdmin() bool {
-	if o == nil || o.Admin == nil {
+	if o == nil || isNil(o.Admin) {
 		var ret bool
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *DetailedClubAllOf) GetAdmin() bool {
 // GetAdminOk returns a tuple with the Admin field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedClubAllOf) GetAdminOk() (*bool, bool) {
-	if o == nil || o.Admin == nil {
-		return nil, false
+	if o == nil || isNil(o.Admin) {
+    return nil, false
 	}
 	return o.Admin, true
 }
 
 // HasAdmin returns a boolean if a field has been set.
 func (o *DetailedClubAllOf) HasAdmin() bool {
-	if o != nil && o.Admin != nil {
+	if o != nil && !isNil(o.Admin) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *DetailedClubAllOf) SetAdmin(v bool) {
 
 // GetOwner returns the Owner field value if set, zero value otherwise.
 func (o *DetailedClubAllOf) GetOwner() bool {
-	if o == nil || o.Owner == nil {
+	if o == nil || isNil(o.Owner) {
 		var ret bool
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *DetailedClubAllOf) GetOwner() bool {
 // GetOwnerOk returns a tuple with the Owner field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedClubAllOf) GetOwnerOk() (*bool, bool) {
-	if o == nil || o.Owner == nil {
-		return nil, false
+	if o == nil || isNil(o.Owner) {
+    return nil, false
 	}
 	return o.Owner, true
 }
 
 // HasOwner returns a boolean if a field has been set.
 func (o *DetailedClubAllOf) HasOwner() bool {
-	if o != nil && o.Owner != nil {
+	if o != nil && !isNil(o.Owner) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *DetailedClubAllOf) SetOwner(v bool) {
 
 // GetFollowingCount returns the FollowingCount field value if set, zero value otherwise.
 func (o *DetailedClubAllOf) GetFollowingCount() int32 {
-	if o == nil || o.FollowingCount == nil {
+	if o == nil || isNil(o.FollowingCount) {
 		var ret int32
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *DetailedClubAllOf) GetFollowingCount() int32 {
 // GetFollowingCountOk returns a tuple with the FollowingCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedClubAllOf) GetFollowingCountOk() (*int32, bool) {
-	if o == nil || o.FollowingCount == nil {
-		return nil, false
+	if o == nil || isNil(o.FollowingCount) {
+    return nil, false
 	}
 	return o.FollowingCount, true
 }
 
 // HasFollowingCount returns a boolean if a field has been set.
 func (o *DetailedClubAllOf) HasFollowingCount() bool {
-	if o != nil && o.FollowingCount != nil {
+	if o != nil && !isNil(o.FollowingCount) {
 		return true
 	}
 
@@ -173,16 +173,16 @@ func (o *DetailedClubAllOf) SetFollowingCount(v int32) {
 
 func (o DetailedClubAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Membership != nil {
+	if !isNil(o.Membership) {
 		toSerialize["membership"] = o.Membership
 	}
-	if o.Admin != nil {
+	if !isNil(o.Admin) {
 		toSerialize["admin"] = o.Admin
 	}
-	if o.Owner != nil {
+	if !isNil(o.Owner) {
 		toSerialize["owner"] = o.Owner
 	}
-	if o.FollowingCount != nil {
+	if !isNil(o.FollowingCount) {
 		toSerialize["following_count"] = o.FollowingCount
 	}
 	return json.Marshal(toSerialize)

@@ -45,7 +45,7 @@ func NewActivityZoneWithDefaults() *ActivityZone {
 
 // GetScore returns the Score field value if set, zero value otherwise.
 func (o *ActivityZone) GetScore() int32 {
-	if o == nil || o.Score == nil {
+	if o == nil || isNil(o.Score) {
 		var ret int32
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *ActivityZone) GetScore() int32 {
 // GetScoreOk returns a tuple with the Score field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityZone) GetScoreOk() (*int32, bool) {
-	if o == nil || o.Score == nil {
-		return nil, false
+	if o == nil || isNil(o.Score) {
+    return nil, false
 	}
 	return o.Score, true
 }
 
 // HasScore returns a boolean if a field has been set.
 func (o *ActivityZone) HasScore() bool {
-	if o != nil && o.Score != nil {
+	if o != nil && !isNil(o.Score) {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *ActivityZone) SetScore(v int32) {
 
 // GetDistributionBuckets returns the DistributionBuckets field value if set, zero value otherwise.
 func (o *ActivityZone) GetDistributionBuckets() []TimedZoneRange {
-	if o == nil || o.DistributionBuckets == nil {
+	if o == nil || isNil(o.DistributionBuckets) {
 		var ret []TimedZoneRange
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *ActivityZone) GetDistributionBuckets() []TimedZoneRange {
 // GetDistributionBucketsOk returns a tuple with the DistributionBuckets field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityZone) GetDistributionBucketsOk() ([]TimedZoneRange, bool) {
-	if o == nil || o.DistributionBuckets == nil {
-		return nil, false
+	if o == nil || isNil(o.DistributionBuckets) {
+    return nil, false
 	}
 	return o.DistributionBuckets, true
 }
 
 // HasDistributionBuckets returns a boolean if a field has been set.
 func (o *ActivityZone) HasDistributionBuckets() bool {
-	if o != nil && o.DistributionBuckets != nil {
+	if o != nil && !isNil(o.DistributionBuckets) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *ActivityZone) SetDistributionBuckets(v []TimedZoneRange) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *ActivityZone) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *ActivityZone) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityZone) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *ActivityZone) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *ActivityZone) SetType(v string) {
 
 // GetSensorBased returns the SensorBased field value if set, zero value otherwise.
 func (o *ActivityZone) GetSensorBased() bool {
-	if o == nil || o.SensorBased == nil {
+	if o == nil || isNil(o.SensorBased) {
 		var ret bool
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *ActivityZone) GetSensorBased() bool {
 // GetSensorBasedOk returns a tuple with the SensorBased field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityZone) GetSensorBasedOk() (*bool, bool) {
-	if o == nil || o.SensorBased == nil {
-		return nil, false
+	if o == nil || isNil(o.SensorBased) {
+    return nil, false
 	}
 	return o.SensorBased, true
 }
 
 // HasSensorBased returns a boolean if a field has been set.
 func (o *ActivityZone) HasSensorBased() bool {
-	if o != nil && o.SensorBased != nil {
+	if o != nil && !isNil(o.SensorBased) {
 		return true
 	}
 
@@ -173,7 +173,7 @@ func (o *ActivityZone) SetSensorBased(v bool) {
 
 // GetPoints returns the Points field value if set, zero value otherwise.
 func (o *ActivityZone) GetPoints() int32 {
-	if o == nil || o.Points == nil {
+	if o == nil || isNil(o.Points) {
 		var ret int32
 		return ret
 	}
@@ -183,15 +183,15 @@ func (o *ActivityZone) GetPoints() int32 {
 // GetPointsOk returns a tuple with the Points field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityZone) GetPointsOk() (*int32, bool) {
-	if o == nil || o.Points == nil {
-		return nil, false
+	if o == nil || isNil(o.Points) {
+    return nil, false
 	}
 	return o.Points, true
 }
 
 // HasPoints returns a boolean if a field has been set.
 func (o *ActivityZone) HasPoints() bool {
-	if o != nil && o.Points != nil {
+	if o != nil && !isNil(o.Points) {
 		return true
 	}
 
@@ -205,7 +205,7 @@ func (o *ActivityZone) SetPoints(v int32) {
 
 // GetCustomZones returns the CustomZones field value if set, zero value otherwise.
 func (o *ActivityZone) GetCustomZones() bool {
-	if o == nil || o.CustomZones == nil {
+	if o == nil || isNil(o.CustomZones) {
 		var ret bool
 		return ret
 	}
@@ -215,15 +215,15 @@ func (o *ActivityZone) GetCustomZones() bool {
 // GetCustomZonesOk returns a tuple with the CustomZones field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityZone) GetCustomZonesOk() (*bool, bool) {
-	if o == nil || o.CustomZones == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomZones) {
+    return nil, false
 	}
 	return o.CustomZones, true
 }
 
 // HasCustomZones returns a boolean if a field has been set.
 func (o *ActivityZone) HasCustomZones() bool {
-	if o != nil && o.CustomZones != nil {
+	if o != nil && !isNil(o.CustomZones) {
 		return true
 	}
 
@@ -237,7 +237,7 @@ func (o *ActivityZone) SetCustomZones(v bool) {
 
 // GetMax returns the Max field value if set, zero value otherwise.
 func (o *ActivityZone) GetMax() int32 {
-	if o == nil || o.Max == nil {
+	if o == nil || isNil(o.Max) {
 		var ret int32
 		return ret
 	}
@@ -247,15 +247,15 @@ func (o *ActivityZone) GetMax() int32 {
 // GetMaxOk returns a tuple with the Max field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityZone) GetMaxOk() (*int32, bool) {
-	if o == nil || o.Max == nil {
-		return nil, false
+	if o == nil || isNil(o.Max) {
+    return nil, false
 	}
 	return o.Max, true
 }
 
 // HasMax returns a boolean if a field has been set.
 func (o *ActivityZone) HasMax() bool {
-	if o != nil && o.Max != nil {
+	if o != nil && !isNil(o.Max) {
 		return true
 	}
 
@@ -269,25 +269,25 @@ func (o *ActivityZone) SetMax(v int32) {
 
 func (o ActivityZone) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Score != nil {
+	if !isNil(o.Score) {
 		toSerialize["score"] = o.Score
 	}
-	if o.DistributionBuckets != nil {
+	if !isNil(o.DistributionBuckets) {
 		toSerialize["distribution_buckets"] = o.DistributionBuckets
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
-	if o.SensorBased != nil {
+	if !isNil(o.SensorBased) {
 		toSerialize["sensor_based"] = o.SensorBased
 	}
-	if o.Points != nil {
+	if !isNil(o.Points) {
 		toSerialize["points"] = o.Points
 	}
-	if o.CustomZones != nil {
+	if !isNil(o.CustomZones) {
 		toSerialize["custom_zones"] = o.CustomZones
 	}
-	if o.Max != nil {
+	if !isNil(o.Max) {
 		toSerialize["max"] = o.Max
 	}
 	return json.Marshal(toSerialize)

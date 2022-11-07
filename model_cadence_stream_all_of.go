@@ -39,7 +39,7 @@ func NewCadenceStreamAllOfWithDefaults() *CadenceStreamAllOf {
 
 // GetData returns the Data field value if set, zero value otherwise.
 func (o *CadenceStreamAllOf) GetData() []int32 {
-	if o == nil || o.Data == nil {
+	if o == nil || isNil(o.Data) {
 		var ret []int32
 		return ret
 	}
@@ -49,15 +49,15 @@ func (o *CadenceStreamAllOf) GetData() []int32 {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CadenceStreamAllOf) GetDataOk() ([]int32, bool) {
-	if o == nil || o.Data == nil {
-		return nil, false
+	if o == nil || isNil(o.Data) {
+    return nil, false
 	}
 	return o.Data, true
 }
 
 // HasData returns a boolean if a field has been set.
 func (o *CadenceStreamAllOf) HasData() bool {
-	if o != nil && o.Data != nil {
+	if o != nil && !isNil(o.Data) {
 		return true
 	}
 
@@ -71,7 +71,7 @@ func (o *CadenceStreamAllOf) SetData(v []int32) {
 
 func (o CadenceStreamAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Data != nil {
+	if !isNil(o.Data) {
 		toSerialize["data"] = o.Data
 	}
 	return json.Marshal(toSerialize)

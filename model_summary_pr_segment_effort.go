@@ -46,7 +46,7 @@ func NewSummaryPRSegmentEffortWithDefaults() *SummaryPRSegmentEffort {
 
 // GetPrActivityId returns the PrActivityId field value if set, zero value otherwise.
 func (o *SummaryPRSegmentEffort) GetPrActivityId() int64 {
-	if o == nil || o.PrActivityId == nil {
+	if o == nil || isNil(o.PrActivityId) {
 		var ret int64
 		return ret
 	}
@@ -56,15 +56,15 @@ func (o *SummaryPRSegmentEffort) GetPrActivityId() int64 {
 // GetPrActivityIdOk returns a tuple with the PrActivityId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryPRSegmentEffort) GetPrActivityIdOk() (*int64, bool) {
-	if o == nil || o.PrActivityId == nil {
-		return nil, false
+	if o == nil || isNil(o.PrActivityId) {
+    return nil, false
 	}
 	return o.PrActivityId, true
 }
 
 // HasPrActivityId returns a boolean if a field has been set.
 func (o *SummaryPRSegmentEffort) HasPrActivityId() bool {
-	if o != nil && o.PrActivityId != nil {
+	if o != nil && !isNil(o.PrActivityId) {
 		return true
 	}
 
@@ -78,7 +78,7 @@ func (o *SummaryPRSegmentEffort) SetPrActivityId(v int64) {
 
 // GetPrElapsedTime returns the PrElapsedTime field value if set, zero value otherwise.
 func (o *SummaryPRSegmentEffort) GetPrElapsedTime() int32 {
-	if o == nil || o.PrElapsedTime == nil {
+	if o == nil || isNil(o.PrElapsedTime) {
 		var ret int32
 		return ret
 	}
@@ -88,15 +88,15 @@ func (o *SummaryPRSegmentEffort) GetPrElapsedTime() int32 {
 // GetPrElapsedTimeOk returns a tuple with the PrElapsedTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryPRSegmentEffort) GetPrElapsedTimeOk() (*int32, bool) {
-	if o == nil || o.PrElapsedTime == nil {
-		return nil, false
+	if o == nil || isNil(o.PrElapsedTime) {
+    return nil, false
 	}
 	return o.PrElapsedTime, true
 }
 
 // HasPrElapsedTime returns a boolean if a field has been set.
 func (o *SummaryPRSegmentEffort) HasPrElapsedTime() bool {
-	if o != nil && o.PrElapsedTime != nil {
+	if o != nil && !isNil(o.PrElapsedTime) {
 		return true
 	}
 
@@ -110,7 +110,7 @@ func (o *SummaryPRSegmentEffort) SetPrElapsedTime(v int32) {
 
 // GetPrDate returns the PrDate field value if set, zero value otherwise.
 func (o *SummaryPRSegmentEffort) GetPrDate() time.Time {
-	if o == nil || o.PrDate == nil {
+	if o == nil || isNil(o.PrDate) {
 		var ret time.Time
 		return ret
 	}
@@ -120,15 +120,15 @@ func (o *SummaryPRSegmentEffort) GetPrDate() time.Time {
 // GetPrDateOk returns a tuple with the PrDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryPRSegmentEffort) GetPrDateOk() (*time.Time, bool) {
-	if o == nil || o.PrDate == nil {
-		return nil, false
+	if o == nil || isNil(o.PrDate) {
+    return nil, false
 	}
 	return o.PrDate, true
 }
 
 // HasPrDate returns a boolean if a field has been set.
 func (o *SummaryPRSegmentEffort) HasPrDate() bool {
-	if o != nil && o.PrDate != nil {
+	if o != nil && !isNil(o.PrDate) {
 		return true
 	}
 
@@ -142,7 +142,7 @@ func (o *SummaryPRSegmentEffort) SetPrDate(v time.Time) {
 
 // GetEffortCount returns the EffortCount field value if set, zero value otherwise.
 func (o *SummaryPRSegmentEffort) GetEffortCount() int32 {
-	if o == nil || o.EffortCount == nil {
+	if o == nil || isNil(o.EffortCount) {
 		var ret int32
 		return ret
 	}
@@ -152,15 +152,15 @@ func (o *SummaryPRSegmentEffort) GetEffortCount() int32 {
 // GetEffortCountOk returns a tuple with the EffortCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryPRSegmentEffort) GetEffortCountOk() (*int32, bool) {
-	if o == nil || o.EffortCount == nil {
-		return nil, false
+	if o == nil || isNil(o.EffortCount) {
+    return nil, false
 	}
 	return o.EffortCount, true
 }
 
 // HasEffortCount returns a boolean if a field has been set.
 func (o *SummaryPRSegmentEffort) HasEffortCount() bool {
-	if o != nil && o.EffortCount != nil {
+	if o != nil && !isNil(o.EffortCount) {
 		return true
 	}
 
@@ -174,16 +174,16 @@ func (o *SummaryPRSegmentEffort) SetEffortCount(v int32) {
 
 func (o SummaryPRSegmentEffort) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.PrActivityId != nil {
+	if !isNil(o.PrActivityId) {
 		toSerialize["pr_activity_id"] = o.PrActivityId
 	}
-	if o.PrElapsedTime != nil {
+	if !isNil(o.PrElapsedTime) {
 		toSerialize["pr_elapsed_time"] = o.PrElapsedTime
 	}
-	if o.PrDate != nil {
+	if !isNil(o.PrDate) {
 		toSerialize["pr_date"] = o.PrDate
 	}
-	if o.EffortCount != nil {
+	if !isNil(o.EffortCount) {
 		toSerialize["effort_count"] = o.EffortCount
 	}
 	return json.Marshal(toSerialize)

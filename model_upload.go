@@ -49,7 +49,7 @@ func NewUploadWithDefaults() *Upload {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Upload) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -59,15 +59,15 @@ func (o *Upload) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Upload) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Upload) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -81,7 +81,7 @@ func (o *Upload) SetId(v int64) {
 
 // GetIdStr returns the IdStr field value if set, zero value otherwise.
 func (o *Upload) GetIdStr() string {
-	if o == nil || o.IdStr == nil {
+	if o == nil || isNil(o.IdStr) {
 		var ret string
 		return ret
 	}
@@ -91,15 +91,15 @@ func (o *Upload) GetIdStr() string {
 // GetIdStrOk returns a tuple with the IdStr field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Upload) GetIdStrOk() (*string, bool) {
-	if o == nil || o.IdStr == nil {
-		return nil, false
+	if o == nil || isNil(o.IdStr) {
+    return nil, false
 	}
 	return o.IdStr, true
 }
 
 // HasIdStr returns a boolean if a field has been set.
 func (o *Upload) HasIdStr() bool {
-	if o != nil && o.IdStr != nil {
+	if o != nil && !isNil(o.IdStr) {
 		return true
 	}
 
@@ -113,7 +113,7 @@ func (o *Upload) SetIdStr(v string) {
 
 // GetExternalId returns the ExternalId field value if set, zero value otherwise.
 func (o *Upload) GetExternalId() string {
-	if o == nil || o.ExternalId == nil {
+	if o == nil || isNil(o.ExternalId) {
 		var ret string
 		return ret
 	}
@@ -123,15 +123,15 @@ func (o *Upload) GetExternalId() string {
 // GetExternalIdOk returns a tuple with the ExternalId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Upload) GetExternalIdOk() (*string, bool) {
-	if o == nil || o.ExternalId == nil {
-		return nil, false
+	if o == nil || isNil(o.ExternalId) {
+    return nil, false
 	}
 	return o.ExternalId, true
 }
 
 // HasExternalId returns a boolean if a field has been set.
 func (o *Upload) HasExternalId() bool {
-	if o != nil && o.ExternalId != nil {
+	if o != nil && !isNil(o.ExternalId) {
 		return true
 	}
 
@@ -145,7 +145,7 @@ func (o *Upload) SetExternalId(v string) {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *Upload) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -155,15 +155,15 @@ func (o *Upload) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Upload) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *Upload) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -177,7 +177,7 @@ func (o *Upload) SetError(v string) {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *Upload) GetStatus() string {
-	if o == nil || o.Status == nil {
+	if o == nil || isNil(o.Status) {
 		var ret string
 		return ret
 	}
@@ -187,15 +187,15 @@ func (o *Upload) GetStatus() string {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Upload) GetStatusOk() (*string, bool) {
-	if o == nil || o.Status == nil {
-		return nil, false
+	if o == nil || isNil(o.Status) {
+    return nil, false
 	}
 	return o.Status, true
 }
 
 // HasStatus returns a boolean if a field has been set.
 func (o *Upload) HasStatus() bool {
-	if o != nil && o.Status != nil {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -209,7 +209,7 @@ func (o *Upload) SetStatus(v string) {
 
 // GetActivityId returns the ActivityId field value if set, zero value otherwise.
 func (o *Upload) GetActivityId() int64 {
-	if o == nil || o.ActivityId == nil {
+	if o == nil || isNil(o.ActivityId) {
 		var ret int64
 		return ret
 	}
@@ -219,15 +219,15 @@ func (o *Upload) GetActivityId() int64 {
 // GetActivityIdOk returns a tuple with the ActivityId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Upload) GetActivityIdOk() (*int64, bool) {
-	if o == nil || o.ActivityId == nil {
-		return nil, false
+	if o == nil || isNil(o.ActivityId) {
+    return nil, false
 	}
 	return o.ActivityId, true
 }
 
 // HasActivityId returns a boolean if a field has been set.
 func (o *Upload) HasActivityId() bool {
-	if o != nil && o.ActivityId != nil {
+	if o != nil && !isNil(o.ActivityId) {
 		return true
 	}
 
@@ -241,22 +241,22 @@ func (o *Upload) SetActivityId(v int64) {
 
 func (o Upload) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdStr != nil {
+	if !isNil(o.IdStr) {
 		toSerialize["id_str"] = o.IdStr
 	}
-	if o.ExternalId != nil {
+	if !isNil(o.ExternalId) {
 		toSerialize["external_id"] = o.ExternalId
 	}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Status != nil {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if o.ActivityId != nil {
+	if !isNil(o.ActivityId) {
 		toSerialize["activity_id"] = o.ActivityId
 	}
 	return json.Marshal(toSerialize)

@@ -39,7 +39,7 @@ func NewZonesWithDefaults() *Zones {
 
 // GetHeartRate returns the HeartRate field value if set, zero value otherwise.
 func (o *Zones) GetHeartRate() HeartRateZoneRanges {
-	if o == nil || o.HeartRate == nil {
+	if o == nil || isNil(o.HeartRate) {
 		var ret HeartRateZoneRanges
 		return ret
 	}
@@ -49,15 +49,15 @@ func (o *Zones) GetHeartRate() HeartRateZoneRanges {
 // GetHeartRateOk returns a tuple with the HeartRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Zones) GetHeartRateOk() (*HeartRateZoneRanges, bool) {
-	if o == nil || o.HeartRate == nil {
-		return nil, false
+	if o == nil || isNil(o.HeartRate) {
+    return nil, false
 	}
 	return o.HeartRate, true
 }
 
 // HasHeartRate returns a boolean if a field has been set.
 func (o *Zones) HasHeartRate() bool {
-	if o != nil && o.HeartRate != nil {
+	if o != nil && !isNil(o.HeartRate) {
 		return true
 	}
 
@@ -71,7 +71,7 @@ func (o *Zones) SetHeartRate(v HeartRateZoneRanges) {
 
 // GetPower returns the Power field value if set, zero value otherwise.
 func (o *Zones) GetPower() PowerZoneRanges {
-	if o == nil || o.Power == nil {
+	if o == nil || isNil(o.Power) {
 		var ret PowerZoneRanges
 		return ret
 	}
@@ -81,15 +81,15 @@ func (o *Zones) GetPower() PowerZoneRanges {
 // GetPowerOk returns a tuple with the Power field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Zones) GetPowerOk() (*PowerZoneRanges, bool) {
-	if o == nil || o.Power == nil {
-		return nil, false
+	if o == nil || isNil(o.Power) {
+    return nil, false
 	}
 	return o.Power, true
 }
 
 // HasPower returns a boolean if a field has been set.
 func (o *Zones) HasPower() bool {
-	if o != nil && o.Power != nil {
+	if o != nil && !isNil(o.Power) {
 		return true
 	}
 
@@ -103,10 +103,10 @@ func (o *Zones) SetPower(v PowerZoneRanges) {
 
 func (o Zones) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.HeartRate != nil {
+	if !isNil(o.HeartRate) {
 		toSerialize["heart_rate"] = o.HeartRate
 	}
-	if o.Power != nil {
+	if !isNil(o.Power) {
 		toSerialize["power"] = o.Power
 	}
 	return json.Marshal(toSerialize)

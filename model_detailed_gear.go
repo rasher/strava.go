@@ -55,7 +55,7 @@ func NewDetailedGearWithDefaults() *DetailedGear {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *DetailedGear) GetId() string {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret string
 		return ret
 	}
@@ -65,15 +65,15 @@ func (o *DetailedGear) GetId() string {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetIdOk() (*string, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *DetailedGear) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -87,7 +87,7 @@ func (o *DetailedGear) SetId(v string) {
 
 // GetResourceState returns the ResourceState field value if set, zero value otherwise.
 func (o *DetailedGear) GetResourceState() int32 {
-	if o == nil || o.ResourceState == nil {
+	if o == nil || isNil(o.ResourceState) {
 		var ret int32
 		return ret
 	}
@@ -97,15 +97,15 @@ func (o *DetailedGear) GetResourceState() int32 {
 // GetResourceStateOk returns a tuple with the ResourceState field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetResourceStateOk() (*int32, bool) {
-	if o == nil || o.ResourceState == nil {
-		return nil, false
+	if o == nil || isNil(o.ResourceState) {
+    return nil, false
 	}
 	return o.ResourceState, true
 }
 
 // HasResourceState returns a boolean if a field has been set.
 func (o *DetailedGear) HasResourceState() bool {
-	if o != nil && o.ResourceState != nil {
+	if o != nil && !isNil(o.ResourceState) {
 		return true
 	}
 
@@ -119,7 +119,7 @@ func (o *DetailedGear) SetResourceState(v int32) {
 
 // GetPrimary returns the Primary field value if set, zero value otherwise.
 func (o *DetailedGear) GetPrimary() bool {
-	if o == nil || o.Primary == nil {
+	if o == nil || isNil(o.Primary) {
 		var ret bool
 		return ret
 	}
@@ -129,15 +129,15 @@ func (o *DetailedGear) GetPrimary() bool {
 // GetPrimaryOk returns a tuple with the Primary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetPrimaryOk() (*bool, bool) {
-	if o == nil || o.Primary == nil {
-		return nil, false
+	if o == nil || isNil(o.Primary) {
+    return nil, false
 	}
 	return o.Primary, true
 }
 
 // HasPrimary returns a boolean if a field has been set.
 func (o *DetailedGear) HasPrimary() bool {
-	if o != nil && o.Primary != nil {
+	if o != nil && !isNil(o.Primary) {
 		return true
 	}
 
@@ -151,7 +151,7 @@ func (o *DetailedGear) SetPrimary(v bool) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *DetailedGear) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -161,15 +161,15 @@ func (o *DetailedGear) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *DetailedGear) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -183,7 +183,7 @@ func (o *DetailedGear) SetName(v string) {
 
 // GetDistance returns the Distance field value if set, zero value otherwise.
 func (o *DetailedGear) GetDistance() float32 {
-	if o == nil || o.Distance == nil {
+	if o == nil || isNil(o.Distance) {
 		var ret float32
 		return ret
 	}
@@ -193,15 +193,15 @@ func (o *DetailedGear) GetDistance() float32 {
 // GetDistanceOk returns a tuple with the Distance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetDistanceOk() (*float32, bool) {
-	if o == nil || o.Distance == nil {
-		return nil, false
+	if o == nil || isNil(o.Distance) {
+    return nil, false
 	}
 	return o.Distance, true
 }
 
 // HasDistance returns a boolean if a field has been set.
 func (o *DetailedGear) HasDistance() bool {
-	if o != nil && o.Distance != nil {
+	if o != nil && !isNil(o.Distance) {
 		return true
 	}
 
@@ -215,7 +215,7 @@ func (o *DetailedGear) SetDistance(v float32) {
 
 // GetBrandName returns the BrandName field value if set, zero value otherwise.
 func (o *DetailedGear) GetBrandName() string {
-	if o == nil || o.BrandName == nil {
+	if o == nil || isNil(o.BrandName) {
 		var ret string
 		return ret
 	}
@@ -225,15 +225,15 @@ func (o *DetailedGear) GetBrandName() string {
 // GetBrandNameOk returns a tuple with the BrandName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetBrandNameOk() (*string, bool) {
-	if o == nil || o.BrandName == nil {
-		return nil, false
+	if o == nil || isNil(o.BrandName) {
+    return nil, false
 	}
 	return o.BrandName, true
 }
 
 // HasBrandName returns a boolean if a field has been set.
 func (o *DetailedGear) HasBrandName() bool {
-	if o != nil && o.BrandName != nil {
+	if o != nil && !isNil(o.BrandName) {
 		return true
 	}
 
@@ -247,7 +247,7 @@ func (o *DetailedGear) SetBrandName(v string) {
 
 // GetModelName returns the ModelName field value if set, zero value otherwise.
 func (o *DetailedGear) GetModelName() string {
-	if o == nil || o.ModelName == nil {
+	if o == nil || isNil(o.ModelName) {
 		var ret string
 		return ret
 	}
@@ -257,15 +257,15 @@ func (o *DetailedGear) GetModelName() string {
 // GetModelNameOk returns a tuple with the ModelName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetModelNameOk() (*string, bool) {
-	if o == nil || o.ModelName == nil {
-		return nil, false
+	if o == nil || isNil(o.ModelName) {
+    return nil, false
 	}
 	return o.ModelName, true
 }
 
 // HasModelName returns a boolean if a field has been set.
 func (o *DetailedGear) HasModelName() bool {
-	if o != nil && o.ModelName != nil {
+	if o != nil && !isNil(o.ModelName) {
 		return true
 	}
 
@@ -279,7 +279,7 @@ func (o *DetailedGear) SetModelName(v string) {
 
 // GetFrameType returns the FrameType field value if set, zero value otherwise.
 func (o *DetailedGear) GetFrameType() int32 {
-	if o == nil || o.FrameType == nil {
+	if o == nil || isNil(o.FrameType) {
 		var ret int32
 		return ret
 	}
@@ -289,15 +289,15 @@ func (o *DetailedGear) GetFrameType() int32 {
 // GetFrameTypeOk returns a tuple with the FrameType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetFrameTypeOk() (*int32, bool) {
-	if o == nil || o.FrameType == nil {
-		return nil, false
+	if o == nil || isNil(o.FrameType) {
+    return nil, false
 	}
 	return o.FrameType, true
 }
 
 // HasFrameType returns a boolean if a field has been set.
 func (o *DetailedGear) HasFrameType() bool {
-	if o != nil && o.FrameType != nil {
+	if o != nil && !isNil(o.FrameType) {
 		return true
 	}
 
@@ -311,7 +311,7 @@ func (o *DetailedGear) SetFrameType(v int32) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *DetailedGear) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -321,15 +321,15 @@ func (o *DetailedGear) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGear) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *DetailedGear) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -343,31 +343,31 @@ func (o *DetailedGear) SetDescription(v string) {
 
 func (o DetailedGear) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.ResourceState != nil {
+	if !isNil(o.ResourceState) {
 		toSerialize["resource_state"] = o.ResourceState
 	}
-	if o.Primary != nil {
+	if !isNil(o.Primary) {
 		toSerialize["primary"] = o.Primary
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Distance != nil {
+	if !isNil(o.Distance) {
 		toSerialize["distance"] = o.Distance
 	}
-	if o.BrandName != nil {
+	if !isNil(o.BrandName) {
 		toSerialize["brand_name"] = o.BrandName
 	}
-	if o.ModelName != nil {
+	if !isNil(o.ModelName) {
 		toSerialize["model_name"] = o.ModelName
 	}
-	if o.FrameType != nil {
+	if !isNil(o.FrameType) {
 		toSerialize["frame_type"] = o.FrameType
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
 	return json.Marshal(toSerialize)

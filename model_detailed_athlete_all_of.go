@@ -53,7 +53,7 @@ func NewDetailedAthleteAllOfWithDefaults() *DetailedAthleteAllOf {
 
 // GetFollowerCount returns the FollowerCount field value if set, zero value otherwise.
 func (o *DetailedAthleteAllOf) GetFollowerCount() int32 {
-	if o == nil || o.FollowerCount == nil {
+	if o == nil || isNil(o.FollowerCount) {
 		var ret int32
 		return ret
 	}
@@ -63,15 +63,15 @@ func (o *DetailedAthleteAllOf) GetFollowerCount() int32 {
 // GetFollowerCountOk returns a tuple with the FollowerCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedAthleteAllOf) GetFollowerCountOk() (*int32, bool) {
-	if o == nil || o.FollowerCount == nil {
-		return nil, false
+	if o == nil || isNil(o.FollowerCount) {
+    return nil, false
 	}
 	return o.FollowerCount, true
 }
 
 // HasFollowerCount returns a boolean if a field has been set.
 func (o *DetailedAthleteAllOf) HasFollowerCount() bool {
-	if o != nil && o.FollowerCount != nil {
+	if o != nil && !isNil(o.FollowerCount) {
 		return true
 	}
 
@@ -85,7 +85,7 @@ func (o *DetailedAthleteAllOf) SetFollowerCount(v int32) {
 
 // GetFriendCount returns the FriendCount field value if set, zero value otherwise.
 func (o *DetailedAthleteAllOf) GetFriendCount() int32 {
-	if o == nil || o.FriendCount == nil {
+	if o == nil || isNil(o.FriendCount) {
 		var ret int32
 		return ret
 	}
@@ -95,15 +95,15 @@ func (o *DetailedAthleteAllOf) GetFriendCount() int32 {
 // GetFriendCountOk returns a tuple with the FriendCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedAthleteAllOf) GetFriendCountOk() (*int32, bool) {
-	if o == nil || o.FriendCount == nil {
-		return nil, false
+	if o == nil || isNil(o.FriendCount) {
+    return nil, false
 	}
 	return o.FriendCount, true
 }
 
 // HasFriendCount returns a boolean if a field has been set.
 func (o *DetailedAthleteAllOf) HasFriendCount() bool {
-	if o != nil && o.FriendCount != nil {
+	if o != nil && !isNil(o.FriendCount) {
 		return true
 	}
 
@@ -117,7 +117,7 @@ func (o *DetailedAthleteAllOf) SetFriendCount(v int32) {
 
 // GetMeasurementPreference returns the MeasurementPreference field value if set, zero value otherwise.
 func (o *DetailedAthleteAllOf) GetMeasurementPreference() string {
-	if o == nil || o.MeasurementPreference == nil {
+	if o == nil || isNil(o.MeasurementPreference) {
 		var ret string
 		return ret
 	}
@@ -127,15 +127,15 @@ func (o *DetailedAthleteAllOf) GetMeasurementPreference() string {
 // GetMeasurementPreferenceOk returns a tuple with the MeasurementPreference field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedAthleteAllOf) GetMeasurementPreferenceOk() (*string, bool) {
-	if o == nil || o.MeasurementPreference == nil {
-		return nil, false
+	if o == nil || isNil(o.MeasurementPreference) {
+    return nil, false
 	}
 	return o.MeasurementPreference, true
 }
 
 // HasMeasurementPreference returns a boolean if a field has been set.
 func (o *DetailedAthleteAllOf) HasMeasurementPreference() bool {
-	if o != nil && o.MeasurementPreference != nil {
+	if o != nil && !isNil(o.MeasurementPreference) {
 		return true
 	}
 
@@ -149,7 +149,7 @@ func (o *DetailedAthleteAllOf) SetMeasurementPreference(v string) {
 
 // GetFtp returns the Ftp field value if set, zero value otherwise.
 func (o *DetailedAthleteAllOf) GetFtp() int32 {
-	if o == nil || o.Ftp == nil {
+	if o == nil || isNil(o.Ftp) {
 		var ret int32
 		return ret
 	}
@@ -159,15 +159,15 @@ func (o *DetailedAthleteAllOf) GetFtp() int32 {
 // GetFtpOk returns a tuple with the Ftp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedAthleteAllOf) GetFtpOk() (*int32, bool) {
-	if o == nil || o.Ftp == nil {
-		return nil, false
+	if o == nil || isNil(o.Ftp) {
+    return nil, false
 	}
 	return o.Ftp, true
 }
 
 // HasFtp returns a boolean if a field has been set.
 func (o *DetailedAthleteAllOf) HasFtp() bool {
-	if o != nil && o.Ftp != nil {
+	if o != nil && !isNil(o.Ftp) {
 		return true
 	}
 
@@ -181,7 +181,7 @@ func (o *DetailedAthleteAllOf) SetFtp(v int32) {
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
 func (o *DetailedAthleteAllOf) GetWeight() float32 {
-	if o == nil || o.Weight == nil {
+	if o == nil || isNil(o.Weight) {
 		var ret float32
 		return ret
 	}
@@ -191,15 +191,15 @@ func (o *DetailedAthleteAllOf) GetWeight() float32 {
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedAthleteAllOf) GetWeightOk() (*float32, bool) {
-	if o == nil || o.Weight == nil {
-		return nil, false
+	if o == nil || isNil(o.Weight) {
+    return nil, false
 	}
 	return o.Weight, true
 }
 
 // HasWeight returns a boolean if a field has been set.
 func (o *DetailedAthleteAllOf) HasWeight() bool {
-	if o != nil && o.Weight != nil {
+	if o != nil && !isNil(o.Weight) {
 		return true
 	}
 
@@ -213,7 +213,7 @@ func (o *DetailedAthleteAllOf) SetWeight(v float32) {
 
 // GetClubs returns the Clubs field value if set, zero value otherwise.
 func (o *DetailedAthleteAllOf) GetClubs() []SummaryClub {
-	if o == nil || o.Clubs == nil {
+	if o == nil || isNil(o.Clubs) {
 		var ret []SummaryClub
 		return ret
 	}
@@ -223,15 +223,15 @@ func (o *DetailedAthleteAllOf) GetClubs() []SummaryClub {
 // GetClubsOk returns a tuple with the Clubs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedAthleteAllOf) GetClubsOk() ([]SummaryClub, bool) {
-	if o == nil || o.Clubs == nil {
-		return nil, false
+	if o == nil || isNil(o.Clubs) {
+    return nil, false
 	}
 	return o.Clubs, true
 }
 
 // HasClubs returns a boolean if a field has been set.
 func (o *DetailedAthleteAllOf) HasClubs() bool {
-	if o != nil && o.Clubs != nil {
+	if o != nil && !isNil(o.Clubs) {
 		return true
 	}
 
@@ -245,7 +245,7 @@ func (o *DetailedAthleteAllOf) SetClubs(v []SummaryClub) {
 
 // GetBikes returns the Bikes field value if set, zero value otherwise.
 func (o *DetailedAthleteAllOf) GetBikes() []SummaryGear {
-	if o == nil || o.Bikes == nil {
+	if o == nil || isNil(o.Bikes) {
 		var ret []SummaryGear
 		return ret
 	}
@@ -255,15 +255,15 @@ func (o *DetailedAthleteAllOf) GetBikes() []SummaryGear {
 // GetBikesOk returns a tuple with the Bikes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedAthleteAllOf) GetBikesOk() ([]SummaryGear, bool) {
-	if o == nil || o.Bikes == nil {
-		return nil, false
+	if o == nil || isNil(o.Bikes) {
+    return nil, false
 	}
 	return o.Bikes, true
 }
 
 // HasBikes returns a boolean if a field has been set.
 func (o *DetailedAthleteAllOf) HasBikes() bool {
-	if o != nil && o.Bikes != nil {
+	if o != nil && !isNil(o.Bikes) {
 		return true
 	}
 
@@ -277,7 +277,7 @@ func (o *DetailedAthleteAllOf) SetBikes(v []SummaryGear) {
 
 // GetShoes returns the Shoes field value if set, zero value otherwise.
 func (o *DetailedAthleteAllOf) GetShoes() []SummaryGear {
-	if o == nil || o.Shoes == nil {
+	if o == nil || isNil(o.Shoes) {
 		var ret []SummaryGear
 		return ret
 	}
@@ -287,15 +287,15 @@ func (o *DetailedAthleteAllOf) GetShoes() []SummaryGear {
 // GetShoesOk returns a tuple with the Shoes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedAthleteAllOf) GetShoesOk() ([]SummaryGear, bool) {
-	if o == nil || o.Shoes == nil {
-		return nil, false
+	if o == nil || isNil(o.Shoes) {
+    return nil, false
 	}
 	return o.Shoes, true
 }
 
 // HasShoes returns a boolean if a field has been set.
 func (o *DetailedAthleteAllOf) HasShoes() bool {
-	if o != nil && o.Shoes != nil {
+	if o != nil && !isNil(o.Shoes) {
 		return true
 	}
 
@@ -309,28 +309,28 @@ func (o *DetailedAthleteAllOf) SetShoes(v []SummaryGear) {
 
 func (o DetailedAthleteAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.FollowerCount != nil {
+	if !isNil(o.FollowerCount) {
 		toSerialize["follower_count"] = o.FollowerCount
 	}
-	if o.FriendCount != nil {
+	if !isNil(o.FriendCount) {
 		toSerialize["friend_count"] = o.FriendCount
 	}
-	if o.MeasurementPreference != nil {
+	if !isNil(o.MeasurementPreference) {
 		toSerialize["measurement_preference"] = o.MeasurementPreference
 	}
-	if o.Ftp != nil {
+	if !isNil(o.Ftp) {
 		toSerialize["ftp"] = o.Ftp
 	}
-	if o.Weight != nil {
+	if !isNil(o.Weight) {
 		toSerialize["weight"] = o.Weight
 	}
-	if o.Clubs != nil {
+	if !isNil(o.Clubs) {
 		toSerialize["clubs"] = o.Clubs
 	}
-	if o.Bikes != nil {
+	if !isNil(o.Bikes) {
 		toSerialize["bikes"] = o.Bikes
 	}
-	if o.Shoes != nil {
+	if !isNil(o.Shoes) {
 		toSerialize["shoes"] = o.Shoes
 	}
 	return json.Marshal(toSerialize)

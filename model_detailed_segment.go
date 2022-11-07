@@ -12,7 +12,6 @@ package strava
 
 import (
 	"encoding/json"
-	"time"
 )
 
 // DetailedSegment struct for DetailedSegment
@@ -84,7 +83,7 @@ func NewDetailedSegmentWithDefaults() *DetailedSegment {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *DetailedSegment) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -94,15 +93,15 @@ func (o *DetailedSegment) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *DetailedSegment) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -116,7 +115,7 @@ func (o *DetailedSegment) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *DetailedSegment) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -126,15 +125,15 @@ func (o *DetailedSegment) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *DetailedSegment) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -148,7 +147,7 @@ func (o *DetailedSegment) SetName(v string) {
 
 // GetActivityType returns the ActivityType field value if set, zero value otherwise.
 func (o *DetailedSegment) GetActivityType() string {
-	if o == nil || o.ActivityType == nil {
+	if o == nil || isNil(o.ActivityType) {
 		var ret string
 		return ret
 	}
@@ -158,15 +157,15 @@ func (o *DetailedSegment) GetActivityType() string {
 // GetActivityTypeOk returns a tuple with the ActivityType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetActivityTypeOk() (*string, bool) {
-	if o == nil || o.ActivityType == nil {
-		return nil, false
+	if o == nil || isNil(o.ActivityType) {
+    return nil, false
 	}
 	return o.ActivityType, true
 }
 
 // HasActivityType returns a boolean if a field has been set.
 func (o *DetailedSegment) HasActivityType() bool {
-	if o != nil && o.ActivityType != nil {
+	if o != nil && !isNil(o.ActivityType) {
 		return true
 	}
 
@@ -180,7 +179,7 @@ func (o *DetailedSegment) SetActivityType(v string) {
 
 // GetDistance returns the Distance field value if set, zero value otherwise.
 func (o *DetailedSegment) GetDistance() float32 {
-	if o == nil || o.Distance == nil {
+	if o == nil || isNil(o.Distance) {
 		var ret float32
 		return ret
 	}
@@ -190,15 +189,15 @@ func (o *DetailedSegment) GetDistance() float32 {
 // GetDistanceOk returns a tuple with the Distance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetDistanceOk() (*float32, bool) {
-	if o == nil || o.Distance == nil {
-		return nil, false
+	if o == nil || isNil(o.Distance) {
+    return nil, false
 	}
 	return o.Distance, true
 }
 
 // HasDistance returns a boolean if a field has been set.
 func (o *DetailedSegment) HasDistance() bool {
-	if o != nil && o.Distance != nil {
+	if o != nil && !isNil(o.Distance) {
 		return true
 	}
 
@@ -212,7 +211,7 @@ func (o *DetailedSegment) SetDistance(v float32) {
 
 // GetAverageGrade returns the AverageGrade field value if set, zero value otherwise.
 func (o *DetailedSegment) GetAverageGrade() float32 {
-	if o == nil || o.AverageGrade == nil {
+	if o == nil || isNil(o.AverageGrade) {
 		var ret float32
 		return ret
 	}
@@ -222,15 +221,15 @@ func (o *DetailedSegment) GetAverageGrade() float32 {
 // GetAverageGradeOk returns a tuple with the AverageGrade field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetAverageGradeOk() (*float32, bool) {
-	if o == nil || o.AverageGrade == nil {
-		return nil, false
+	if o == nil || isNil(o.AverageGrade) {
+    return nil, false
 	}
 	return o.AverageGrade, true
 }
 
 // HasAverageGrade returns a boolean if a field has been set.
 func (o *DetailedSegment) HasAverageGrade() bool {
-	if o != nil && o.AverageGrade != nil {
+	if o != nil && !isNil(o.AverageGrade) {
 		return true
 	}
 
@@ -244,7 +243,7 @@ func (o *DetailedSegment) SetAverageGrade(v float32) {
 
 // GetMaximumGrade returns the MaximumGrade field value if set, zero value otherwise.
 func (o *DetailedSegment) GetMaximumGrade() float32 {
-	if o == nil || o.MaximumGrade == nil {
+	if o == nil || isNil(o.MaximumGrade) {
 		var ret float32
 		return ret
 	}
@@ -254,15 +253,15 @@ func (o *DetailedSegment) GetMaximumGrade() float32 {
 // GetMaximumGradeOk returns a tuple with the MaximumGrade field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetMaximumGradeOk() (*float32, bool) {
-	if o == nil || o.MaximumGrade == nil {
-		return nil, false
+	if o == nil || isNil(o.MaximumGrade) {
+    return nil, false
 	}
 	return o.MaximumGrade, true
 }
 
 // HasMaximumGrade returns a boolean if a field has been set.
 func (o *DetailedSegment) HasMaximumGrade() bool {
-	if o != nil && o.MaximumGrade != nil {
+	if o != nil && !isNil(o.MaximumGrade) {
 		return true
 	}
 
@@ -276,7 +275,7 @@ func (o *DetailedSegment) SetMaximumGrade(v float32) {
 
 // GetElevationHigh returns the ElevationHigh field value if set, zero value otherwise.
 func (o *DetailedSegment) GetElevationHigh() float32 {
-	if o == nil || o.ElevationHigh == nil {
+	if o == nil || isNil(o.ElevationHigh) {
 		var ret float32
 		return ret
 	}
@@ -286,15 +285,15 @@ func (o *DetailedSegment) GetElevationHigh() float32 {
 // GetElevationHighOk returns a tuple with the ElevationHigh field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetElevationHighOk() (*float32, bool) {
-	if o == nil || o.ElevationHigh == nil {
-		return nil, false
+	if o == nil || isNil(o.ElevationHigh) {
+    return nil, false
 	}
 	return o.ElevationHigh, true
 }
 
 // HasElevationHigh returns a boolean if a field has been set.
 func (o *DetailedSegment) HasElevationHigh() bool {
-	if o != nil && o.ElevationHigh != nil {
+	if o != nil && !isNil(o.ElevationHigh) {
 		return true
 	}
 
@@ -308,7 +307,7 @@ func (o *DetailedSegment) SetElevationHigh(v float32) {
 
 // GetElevationLow returns the ElevationLow field value if set, zero value otherwise.
 func (o *DetailedSegment) GetElevationLow() float32 {
-	if o == nil || o.ElevationLow == nil {
+	if o == nil || isNil(o.ElevationLow) {
 		var ret float32
 		return ret
 	}
@@ -318,15 +317,15 @@ func (o *DetailedSegment) GetElevationLow() float32 {
 // GetElevationLowOk returns a tuple with the ElevationLow field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetElevationLowOk() (*float32, bool) {
-	if o == nil || o.ElevationLow == nil {
-		return nil, false
+	if o == nil || isNil(o.ElevationLow) {
+    return nil, false
 	}
 	return o.ElevationLow, true
 }
 
 // HasElevationLow returns a boolean if a field has been set.
 func (o *DetailedSegment) HasElevationLow() bool {
-	if o != nil && o.ElevationLow != nil {
+	if o != nil && !isNil(o.ElevationLow) {
 		return true
 	}
 
@@ -340,7 +339,7 @@ func (o *DetailedSegment) SetElevationLow(v float32) {
 
 // GetStartLatlng returns the StartLatlng field value if set, zero value otherwise.
 func (o *DetailedSegment) GetStartLatlng() []float32 {
-	if o == nil || o.StartLatlng == nil {
+	if o == nil || isNil(o.StartLatlng) {
 		var ret []float32
 		return ret
 	}
@@ -350,15 +349,15 @@ func (o *DetailedSegment) GetStartLatlng() []float32 {
 // GetStartLatlngOk returns a tuple with the StartLatlng field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetStartLatlngOk() ([]float32, bool) {
-	if o == nil || o.StartLatlng == nil {
-		return nil, false
+	if o == nil || isNil(o.StartLatlng) {
+    return nil, false
 	}
 	return o.StartLatlng, true
 }
 
 // HasStartLatlng returns a boolean if a field has been set.
 func (o *DetailedSegment) HasStartLatlng() bool {
-	if o != nil && o.StartLatlng != nil {
+	if o != nil && !isNil(o.StartLatlng) {
 		return true
 	}
 
@@ -372,7 +371,7 @@ func (o *DetailedSegment) SetStartLatlng(v []float32) {
 
 // GetEndLatlng returns the EndLatlng field value if set, zero value otherwise.
 func (o *DetailedSegment) GetEndLatlng() []float32 {
-	if o == nil || o.EndLatlng == nil {
+	if o == nil || isNil(o.EndLatlng) {
 		var ret []float32
 		return ret
 	}
@@ -382,15 +381,15 @@ func (o *DetailedSegment) GetEndLatlng() []float32 {
 // GetEndLatlngOk returns a tuple with the EndLatlng field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetEndLatlngOk() ([]float32, bool) {
-	if o == nil || o.EndLatlng == nil {
-		return nil, false
+	if o == nil || isNil(o.EndLatlng) {
+    return nil, false
 	}
 	return o.EndLatlng, true
 }
 
 // HasEndLatlng returns a boolean if a field has been set.
 func (o *DetailedSegment) HasEndLatlng() bool {
-	if o != nil && o.EndLatlng != nil {
+	if o != nil && !isNil(o.EndLatlng) {
 		return true
 	}
 
@@ -404,7 +403,7 @@ func (o *DetailedSegment) SetEndLatlng(v []float32) {
 
 // GetClimbCategory returns the ClimbCategory field value if set, zero value otherwise.
 func (o *DetailedSegment) GetClimbCategory() int32 {
-	if o == nil || o.ClimbCategory == nil {
+	if o == nil || isNil(o.ClimbCategory) {
 		var ret int32
 		return ret
 	}
@@ -414,15 +413,15 @@ func (o *DetailedSegment) GetClimbCategory() int32 {
 // GetClimbCategoryOk returns a tuple with the ClimbCategory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetClimbCategoryOk() (*int32, bool) {
-	if o == nil || o.ClimbCategory == nil {
-		return nil, false
+	if o == nil || isNil(o.ClimbCategory) {
+    return nil, false
 	}
 	return o.ClimbCategory, true
 }
 
 // HasClimbCategory returns a boolean if a field has been set.
 func (o *DetailedSegment) HasClimbCategory() bool {
-	if o != nil && o.ClimbCategory != nil {
+	if o != nil && !isNil(o.ClimbCategory) {
 		return true
 	}
 
@@ -436,7 +435,7 @@ func (o *DetailedSegment) SetClimbCategory(v int32) {
 
 // GetCity returns the City field value if set, zero value otherwise.
 func (o *DetailedSegment) GetCity() string {
-	if o == nil || o.City == nil {
+	if o == nil || isNil(o.City) {
 		var ret string
 		return ret
 	}
@@ -446,15 +445,15 @@ func (o *DetailedSegment) GetCity() string {
 // GetCityOk returns a tuple with the City field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetCityOk() (*string, bool) {
-	if o == nil || o.City == nil {
-		return nil, false
+	if o == nil || isNil(o.City) {
+    return nil, false
 	}
 	return o.City, true
 }
 
 // HasCity returns a boolean if a field has been set.
 func (o *DetailedSegment) HasCity() bool {
-	if o != nil && o.City != nil {
+	if o != nil && !isNil(o.City) {
 		return true
 	}
 
@@ -468,7 +467,7 @@ func (o *DetailedSegment) SetCity(v string) {
 
 // GetState returns the State field value if set, zero value otherwise.
 func (o *DetailedSegment) GetState() string {
-	if o == nil || o.State == nil {
+	if o == nil || isNil(o.State) {
 		var ret string
 		return ret
 	}
@@ -478,15 +477,15 @@ func (o *DetailedSegment) GetState() string {
 // GetStateOk returns a tuple with the State field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetStateOk() (*string, bool) {
-	if o == nil || o.State == nil {
-		return nil, false
+	if o == nil || isNil(o.State) {
+    return nil, false
 	}
 	return o.State, true
 }
 
 // HasState returns a boolean if a field has been set.
 func (o *DetailedSegment) HasState() bool {
-	if o != nil && o.State != nil {
+	if o != nil && !isNil(o.State) {
 		return true
 	}
 
@@ -500,7 +499,7 @@ func (o *DetailedSegment) SetState(v string) {
 
 // GetCountry returns the Country field value if set, zero value otherwise.
 func (o *DetailedSegment) GetCountry() string {
-	if o == nil || o.Country == nil {
+	if o == nil || isNil(o.Country) {
 		var ret string
 		return ret
 	}
@@ -510,15 +509,15 @@ func (o *DetailedSegment) GetCountry() string {
 // GetCountryOk returns a tuple with the Country field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetCountryOk() (*string, bool) {
-	if o == nil || o.Country == nil {
-		return nil, false
+	if o == nil || isNil(o.Country) {
+    return nil, false
 	}
 	return o.Country, true
 }
 
 // HasCountry returns a boolean if a field has been set.
 func (o *DetailedSegment) HasCountry() bool {
-	if o != nil && o.Country != nil {
+	if o != nil && !isNil(o.Country) {
 		return true
 	}
 
@@ -532,7 +531,7 @@ func (o *DetailedSegment) SetCountry(v string) {
 
 // GetPrivate returns the Private field value if set, zero value otherwise.
 func (o *DetailedSegment) GetPrivate() bool {
-	if o == nil || o.Private == nil {
+	if o == nil || isNil(o.Private) {
 		var ret bool
 		return ret
 	}
@@ -542,15 +541,15 @@ func (o *DetailedSegment) GetPrivate() bool {
 // GetPrivateOk returns a tuple with the Private field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetPrivateOk() (*bool, bool) {
-	if o == nil || o.Private == nil {
-		return nil, false
+	if o == nil || isNil(o.Private) {
+    return nil, false
 	}
 	return o.Private, true
 }
 
 // HasPrivate returns a boolean if a field has been set.
 func (o *DetailedSegment) HasPrivate() bool {
-	if o != nil && o.Private != nil {
+	if o != nil && !isNil(o.Private) {
 		return true
 	}
 
@@ -564,7 +563,7 @@ func (o *DetailedSegment) SetPrivate(v bool) {
 
 // GetAthletePrEffort returns the AthletePrEffort field value if set, zero value otherwise.
 func (o *DetailedSegment) GetAthletePrEffort() SummarySegmentEffort {
-	if o == nil || o.AthletePrEffort == nil {
+	if o == nil || isNil(o.AthletePrEffort) {
 		var ret SummarySegmentEffort
 		return ret
 	}
@@ -574,15 +573,15 @@ func (o *DetailedSegment) GetAthletePrEffort() SummarySegmentEffort {
 // GetAthletePrEffortOk returns a tuple with the AthletePrEffort field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetAthletePrEffortOk() (*SummarySegmentEffort, bool) {
-	if o == nil || o.AthletePrEffort == nil {
-		return nil, false
+	if o == nil || isNil(o.AthletePrEffort) {
+    return nil, false
 	}
 	return o.AthletePrEffort, true
 }
 
 // HasAthletePrEffort returns a boolean if a field has been set.
 func (o *DetailedSegment) HasAthletePrEffort() bool {
-	if o != nil && o.AthletePrEffort != nil {
+	if o != nil && !isNil(o.AthletePrEffort) {
 		return true
 	}
 
@@ -596,7 +595,7 @@ func (o *DetailedSegment) SetAthletePrEffort(v SummarySegmentEffort) {
 
 // GetAthleteSegmentStats returns the AthleteSegmentStats field value if set, zero value otherwise.
 func (o *DetailedSegment) GetAthleteSegmentStats() SummaryPRSegmentEffort {
-	if o == nil || o.AthleteSegmentStats == nil {
+	if o == nil || isNil(o.AthleteSegmentStats) {
 		var ret SummaryPRSegmentEffort
 		return ret
 	}
@@ -606,15 +605,15 @@ func (o *DetailedSegment) GetAthleteSegmentStats() SummaryPRSegmentEffort {
 // GetAthleteSegmentStatsOk returns a tuple with the AthleteSegmentStats field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetAthleteSegmentStatsOk() (*SummaryPRSegmentEffort, bool) {
-	if o == nil || o.AthleteSegmentStats == nil {
-		return nil, false
+	if o == nil || isNil(o.AthleteSegmentStats) {
+    return nil, false
 	}
 	return o.AthleteSegmentStats, true
 }
 
 // HasAthleteSegmentStats returns a boolean if a field has been set.
 func (o *DetailedSegment) HasAthleteSegmentStats() bool {
-	if o != nil && o.AthleteSegmentStats != nil {
+	if o != nil && !isNil(o.AthleteSegmentStats) {
 		return true
 	}
 
@@ -628,7 +627,7 @@ func (o *DetailedSegment) SetAthleteSegmentStats(v SummaryPRSegmentEffort) {
 
 // GetCreatedAt returns the CreatedAt field value if set, zero value otherwise.
 func (o *DetailedSegment) GetCreatedAt() time.Time {
-	if o == nil || o.CreatedAt == nil {
+	if o == nil || isNil(o.CreatedAt) {
 		var ret time.Time
 		return ret
 	}
@@ -638,15 +637,15 @@ func (o *DetailedSegment) GetCreatedAt() time.Time {
 // GetCreatedAtOk returns a tuple with the CreatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetCreatedAtOk() (*time.Time, bool) {
-	if o == nil || o.CreatedAt == nil {
-		return nil, false
+	if o == nil || isNil(o.CreatedAt) {
+    return nil, false
 	}
 	return o.CreatedAt, true
 }
 
 // HasCreatedAt returns a boolean if a field has been set.
 func (o *DetailedSegment) HasCreatedAt() bool {
-	if o != nil && o.CreatedAt != nil {
+	if o != nil && !isNil(o.CreatedAt) {
 		return true
 	}
 
@@ -660,7 +659,7 @@ func (o *DetailedSegment) SetCreatedAt(v time.Time) {
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
 func (o *DetailedSegment) GetUpdatedAt() time.Time {
-	if o == nil || o.UpdatedAt == nil {
+	if o == nil || isNil(o.UpdatedAt) {
 		var ret time.Time
 		return ret
 	}
@@ -670,15 +669,15 @@ func (o *DetailedSegment) GetUpdatedAt() time.Time {
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetUpdatedAtOk() (*time.Time, bool) {
-	if o == nil || o.UpdatedAt == nil {
-		return nil, false
+	if o == nil || isNil(o.UpdatedAt) {
+    return nil, false
 	}
 	return o.UpdatedAt, true
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
 func (o *DetailedSegment) HasUpdatedAt() bool {
-	if o != nil && o.UpdatedAt != nil {
+	if o != nil && !isNil(o.UpdatedAt) {
 		return true
 	}
 
@@ -692,7 +691,7 @@ func (o *DetailedSegment) SetUpdatedAt(v time.Time) {
 
 // GetTotalElevationGain returns the TotalElevationGain field value if set, zero value otherwise.
 func (o *DetailedSegment) GetTotalElevationGain() float32 {
-	if o == nil || o.TotalElevationGain == nil {
+	if o == nil || isNil(o.TotalElevationGain) {
 		var ret float32
 		return ret
 	}
@@ -702,15 +701,15 @@ func (o *DetailedSegment) GetTotalElevationGain() float32 {
 // GetTotalElevationGainOk returns a tuple with the TotalElevationGain field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetTotalElevationGainOk() (*float32, bool) {
-	if o == nil || o.TotalElevationGain == nil {
-		return nil, false
+	if o == nil || isNil(o.TotalElevationGain) {
+    return nil, false
 	}
 	return o.TotalElevationGain, true
 }
 
 // HasTotalElevationGain returns a boolean if a field has been set.
 func (o *DetailedSegment) HasTotalElevationGain() bool {
-	if o != nil && o.TotalElevationGain != nil {
+	if o != nil && !isNil(o.TotalElevationGain) {
 		return true
 	}
 
@@ -724,7 +723,7 @@ func (o *DetailedSegment) SetTotalElevationGain(v float32) {
 
 // GetMap returns the Map field value if set, zero value otherwise.
 func (o *DetailedSegment) GetMap() PolylineMap {
-	if o == nil || o.Map == nil {
+	if o == nil || isNil(o.Map) {
 		var ret PolylineMap
 		return ret
 	}
@@ -734,15 +733,15 @@ func (o *DetailedSegment) GetMap() PolylineMap {
 // GetMapOk returns a tuple with the Map field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetMapOk() (*PolylineMap, bool) {
-	if o == nil || o.Map == nil {
-		return nil, false
+	if o == nil || isNil(o.Map) {
+    return nil, false
 	}
 	return o.Map, true
 }
 
 // HasMap returns a boolean if a field has been set.
 func (o *DetailedSegment) HasMap() bool {
-	if o != nil && o.Map != nil {
+	if o != nil && !isNil(o.Map) {
 		return true
 	}
 
@@ -756,7 +755,7 @@ func (o *DetailedSegment) SetMap(v PolylineMap) {
 
 // GetEffortCount returns the EffortCount field value if set, zero value otherwise.
 func (o *DetailedSegment) GetEffortCount() int32 {
-	if o == nil || o.EffortCount == nil {
+	if o == nil || isNil(o.EffortCount) {
 		var ret int32
 		return ret
 	}
@@ -766,15 +765,15 @@ func (o *DetailedSegment) GetEffortCount() int32 {
 // GetEffortCountOk returns a tuple with the EffortCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetEffortCountOk() (*int32, bool) {
-	if o == nil || o.EffortCount == nil {
-		return nil, false
+	if o == nil || isNil(o.EffortCount) {
+    return nil, false
 	}
 	return o.EffortCount, true
 }
 
 // HasEffortCount returns a boolean if a field has been set.
 func (o *DetailedSegment) HasEffortCount() bool {
-	if o != nil && o.EffortCount != nil {
+	if o != nil && !isNil(o.EffortCount) {
 		return true
 	}
 
@@ -788,7 +787,7 @@ func (o *DetailedSegment) SetEffortCount(v int32) {
 
 // GetAthleteCount returns the AthleteCount field value if set, zero value otherwise.
 func (o *DetailedSegment) GetAthleteCount() int32 {
-	if o == nil || o.AthleteCount == nil {
+	if o == nil || isNil(o.AthleteCount) {
 		var ret int32
 		return ret
 	}
@@ -798,15 +797,15 @@ func (o *DetailedSegment) GetAthleteCount() int32 {
 // GetAthleteCountOk returns a tuple with the AthleteCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetAthleteCountOk() (*int32, bool) {
-	if o == nil || o.AthleteCount == nil {
-		return nil, false
+	if o == nil || isNil(o.AthleteCount) {
+    return nil, false
 	}
 	return o.AthleteCount, true
 }
 
 // HasAthleteCount returns a boolean if a field has been set.
 func (o *DetailedSegment) HasAthleteCount() bool {
-	if o != nil && o.AthleteCount != nil {
+	if o != nil && !isNil(o.AthleteCount) {
 		return true
 	}
 
@@ -820,7 +819,7 @@ func (o *DetailedSegment) SetAthleteCount(v int32) {
 
 // GetHazardous returns the Hazardous field value if set, zero value otherwise.
 func (o *DetailedSegment) GetHazardous() bool {
-	if o == nil || o.Hazardous == nil {
+	if o == nil || isNil(o.Hazardous) {
 		var ret bool
 		return ret
 	}
@@ -830,15 +829,15 @@ func (o *DetailedSegment) GetHazardous() bool {
 // GetHazardousOk returns a tuple with the Hazardous field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetHazardousOk() (*bool, bool) {
-	if o == nil || o.Hazardous == nil {
-		return nil, false
+	if o == nil || isNil(o.Hazardous) {
+    return nil, false
 	}
 	return o.Hazardous, true
 }
 
 // HasHazardous returns a boolean if a field has been set.
 func (o *DetailedSegment) HasHazardous() bool {
-	if o != nil && o.Hazardous != nil {
+	if o != nil && !isNil(o.Hazardous) {
 		return true
 	}
 
@@ -852,7 +851,7 @@ func (o *DetailedSegment) SetHazardous(v bool) {
 
 // GetStarCount returns the StarCount field value if set, zero value otherwise.
 func (o *DetailedSegment) GetStarCount() int32 {
-	if o == nil || o.StarCount == nil {
+	if o == nil || isNil(o.StarCount) {
 		var ret int32
 		return ret
 	}
@@ -862,15 +861,15 @@ func (o *DetailedSegment) GetStarCount() int32 {
 // GetStarCountOk returns a tuple with the StarCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegment) GetStarCountOk() (*int32, bool) {
-	if o == nil || o.StarCount == nil {
-		return nil, false
+	if o == nil || isNil(o.StarCount) {
+    return nil, false
 	}
 	return o.StarCount, true
 }
 
 // HasStarCount returns a boolean if a field has been set.
 func (o *DetailedSegment) HasStarCount() bool {
-	if o != nil && o.StarCount != nil {
+	if o != nil && !isNil(o.StarCount) {
 		return true
 	}
 
@@ -884,79 +883,79 @@ func (o *DetailedSegment) SetStarCount(v int32) {
 
 func (o DetailedSegment) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.ActivityType != nil {
+	if !isNil(o.ActivityType) {
 		toSerialize["activity_type"] = o.ActivityType
 	}
-	if o.Distance != nil {
+	if !isNil(o.Distance) {
 		toSerialize["distance"] = o.Distance
 	}
-	if o.AverageGrade != nil {
+	if !isNil(o.AverageGrade) {
 		toSerialize["average_grade"] = o.AverageGrade
 	}
-	if o.MaximumGrade != nil {
+	if !isNil(o.MaximumGrade) {
 		toSerialize["maximum_grade"] = o.MaximumGrade
 	}
-	if o.ElevationHigh != nil {
+	if !isNil(o.ElevationHigh) {
 		toSerialize["elevation_high"] = o.ElevationHigh
 	}
-	if o.ElevationLow != nil {
+	if !isNil(o.ElevationLow) {
 		toSerialize["elevation_low"] = o.ElevationLow
 	}
-	if o.StartLatlng != nil {
+	if !isNil(o.StartLatlng) {
 		toSerialize["start_latlng"] = o.StartLatlng
 	}
-	if o.EndLatlng != nil {
+	if !isNil(o.EndLatlng) {
 		toSerialize["end_latlng"] = o.EndLatlng
 	}
-	if o.ClimbCategory != nil {
+	if !isNil(o.ClimbCategory) {
 		toSerialize["climb_category"] = o.ClimbCategory
 	}
-	if o.City != nil {
+	if !isNil(o.City) {
 		toSerialize["city"] = o.City
 	}
-	if o.State != nil {
+	if !isNil(o.State) {
 		toSerialize["state"] = o.State
 	}
-	if o.Country != nil {
+	if !isNil(o.Country) {
 		toSerialize["country"] = o.Country
 	}
-	if o.Private != nil {
+	if !isNil(o.Private) {
 		toSerialize["private"] = o.Private
 	}
-	if o.AthletePrEffort != nil {
+	if !isNil(o.AthletePrEffort) {
 		toSerialize["athlete_pr_effort"] = o.AthletePrEffort
 	}
-	if o.AthleteSegmentStats != nil {
+	if !isNil(o.AthleteSegmentStats) {
 		toSerialize["athlete_segment_stats"] = o.AthleteSegmentStats
 	}
-	if o.CreatedAt != nil {
+	if !isNil(o.CreatedAt) {
 		toSerialize["created_at"] = o.CreatedAt
 	}
-	if o.UpdatedAt != nil {
+	if !isNil(o.UpdatedAt) {
 		toSerialize["updated_at"] = o.UpdatedAt
 	}
-	if o.TotalElevationGain != nil {
+	if !isNil(o.TotalElevationGain) {
 		toSerialize["total_elevation_gain"] = o.TotalElevationGain
 	}
-	if o.Map != nil {
+	if !isNil(o.Map) {
 		toSerialize["map"] = o.Map
 	}
-	if o.EffortCount != nil {
+	if !isNil(o.EffortCount) {
 		toSerialize["effort_count"] = o.EffortCount
 	}
-	if o.AthleteCount != nil {
+	if !isNil(o.AthleteCount) {
 		toSerialize["athlete_count"] = o.AthleteCount
 	}
-	if o.Hazardous != nil {
+	if !isNil(o.Hazardous) {
 		toSerialize["hazardous"] = o.Hazardous
 	}
-	if o.StarCount != nil {
+	if !isNil(o.StarCount) {
 		toSerialize["star_count"] = o.StarCount
 	}
 	return json.Marshal(toSerialize)

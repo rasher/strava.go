@@ -41,7 +41,7 @@ func NewFaultWithDefaults() *Fault {
 
 // GetErrors returns the Errors field value if set, zero value otherwise.
 func (o *Fault) GetErrors() []Error {
-	if o == nil || o.Errors == nil {
+	if o == nil || isNil(o.Errors) {
 		var ret []Error
 		return ret
 	}
@@ -51,15 +51,15 @@ func (o *Fault) GetErrors() []Error {
 // GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fault) GetErrorsOk() ([]Error, bool) {
-	if o == nil || o.Errors == nil {
-		return nil, false
+	if o == nil || isNil(o.Errors) {
+    return nil, false
 	}
 	return o.Errors, true
 }
 
 // HasErrors returns a boolean if a field has been set.
 func (o *Fault) HasErrors() bool {
-	if o != nil && o.Errors != nil {
+	if o != nil && !isNil(o.Errors) {
 		return true
 	}
 
@@ -73,7 +73,7 @@ func (o *Fault) SetErrors(v []Error) {
 
 // GetMessage returns the Message field value if set, zero value otherwise.
 func (o *Fault) GetMessage() string {
-	if o == nil || o.Message == nil {
+	if o == nil || isNil(o.Message) {
 		var ret string
 		return ret
 	}
@@ -83,15 +83,15 @@ func (o *Fault) GetMessage() string {
 // GetMessageOk returns a tuple with the Message field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Fault) GetMessageOk() (*string, bool) {
-	if o == nil || o.Message == nil {
-		return nil, false
+	if o == nil || isNil(o.Message) {
+    return nil, false
 	}
 	return o.Message, true
 }
 
 // HasMessage returns a boolean if a field has been set.
 func (o *Fault) HasMessage() bool {
-	if o != nil && o.Message != nil {
+	if o != nil && !isNil(o.Message) {
 		return true
 	}
 
@@ -105,10 +105,10 @@ func (o *Fault) SetMessage(v string) {
 
 func (o Fault) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Errors != nil {
+	if !isNil(o.Errors) {
 		toSerialize["errors"] = o.Errors
 	}
-	if o.Message != nil {
+	if !isNil(o.Message) {
 		toSerialize["message"] = o.Message
 	}
 	return json.Marshal(toSerialize)

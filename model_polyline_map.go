@@ -43,7 +43,7 @@ func NewPolylineMapWithDefaults() *PolylineMap {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *PolylineMap) GetId() string {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *PolylineMap) GetId() string {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PolylineMap) GetIdOk() (*string, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *PolylineMap) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *PolylineMap) SetId(v string) {
 
 // GetPolyline returns the Polyline field value if set, zero value otherwise.
 func (o *PolylineMap) GetPolyline() string {
-	if o == nil || o.Polyline == nil {
+	if o == nil || isNil(o.Polyline) {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *PolylineMap) GetPolyline() string {
 // GetPolylineOk returns a tuple with the Polyline field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PolylineMap) GetPolylineOk() (*string, bool) {
-	if o == nil || o.Polyline == nil {
-		return nil, false
+	if o == nil || isNil(o.Polyline) {
+    return nil, false
 	}
 	return o.Polyline, true
 }
 
 // HasPolyline returns a boolean if a field has been set.
 func (o *PolylineMap) HasPolyline() bool {
-	if o != nil && o.Polyline != nil {
+	if o != nil && !isNil(o.Polyline) {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *PolylineMap) SetPolyline(v string) {
 
 // GetSummaryPolyline returns the SummaryPolyline field value if set, zero value otherwise.
 func (o *PolylineMap) GetSummaryPolyline() string {
-	if o == nil || o.SummaryPolyline == nil {
+	if o == nil || isNil(o.SummaryPolyline) {
 		var ret string
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *PolylineMap) GetSummaryPolyline() string {
 // GetSummaryPolylineOk returns a tuple with the SummaryPolyline field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PolylineMap) GetSummaryPolylineOk() (*string, bool) {
-	if o == nil || o.SummaryPolyline == nil {
-		return nil, false
+	if o == nil || isNil(o.SummaryPolyline) {
+    return nil, false
 	}
 	return o.SummaryPolyline, true
 }
 
 // HasSummaryPolyline returns a boolean if a field has been set.
 func (o *PolylineMap) HasSummaryPolyline() bool {
-	if o != nil && o.SummaryPolyline != nil {
+	if o != nil && !isNil(o.SummaryPolyline) {
 		return true
 	}
 
@@ -139,13 +139,13 @@ func (o *PolylineMap) SetSummaryPolyline(v string) {
 
 func (o PolylineMap) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Polyline != nil {
+	if !isNil(o.Polyline) {
 		toSerialize["polyline"] = o.Polyline
 	}
-	if o.SummaryPolyline != nil {
+	if !isNil(o.SummaryPolyline) {
 		toSerialize["summary_polyline"] = o.SummaryPolyline
 	}
 	return json.Marshal(toSerialize)

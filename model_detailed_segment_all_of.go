@@ -53,7 +53,7 @@ func NewDetailedSegmentAllOfWithDefaults() *DetailedSegmentAllOf {
 
 // GetCreatedAt returns the CreatedAt field value if set, zero value otherwise.
 func (o *DetailedSegmentAllOf) GetCreatedAt() time.Time {
-	if o == nil || o.CreatedAt == nil {
+	if o == nil || isNil(o.CreatedAt) {
 		var ret time.Time
 		return ret
 	}
@@ -63,15 +63,15 @@ func (o *DetailedSegmentAllOf) GetCreatedAt() time.Time {
 // GetCreatedAtOk returns a tuple with the CreatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentAllOf) GetCreatedAtOk() (*time.Time, bool) {
-	if o == nil || o.CreatedAt == nil {
-		return nil, false
+	if o == nil || isNil(o.CreatedAt) {
+    return nil, false
 	}
 	return o.CreatedAt, true
 }
 
 // HasCreatedAt returns a boolean if a field has been set.
 func (o *DetailedSegmentAllOf) HasCreatedAt() bool {
-	if o != nil && o.CreatedAt != nil {
+	if o != nil && !isNil(o.CreatedAt) {
 		return true
 	}
 
@@ -85,7 +85,7 @@ func (o *DetailedSegmentAllOf) SetCreatedAt(v time.Time) {
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
 func (o *DetailedSegmentAllOf) GetUpdatedAt() time.Time {
-	if o == nil || o.UpdatedAt == nil {
+	if o == nil || isNil(o.UpdatedAt) {
 		var ret time.Time
 		return ret
 	}
@@ -95,15 +95,15 @@ func (o *DetailedSegmentAllOf) GetUpdatedAt() time.Time {
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentAllOf) GetUpdatedAtOk() (*time.Time, bool) {
-	if o == nil || o.UpdatedAt == nil {
-		return nil, false
+	if o == nil || isNil(o.UpdatedAt) {
+    return nil, false
 	}
 	return o.UpdatedAt, true
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
 func (o *DetailedSegmentAllOf) HasUpdatedAt() bool {
-	if o != nil && o.UpdatedAt != nil {
+	if o != nil && !isNil(o.UpdatedAt) {
 		return true
 	}
 
@@ -117,7 +117,7 @@ func (o *DetailedSegmentAllOf) SetUpdatedAt(v time.Time) {
 
 // GetTotalElevationGain returns the TotalElevationGain field value if set, zero value otherwise.
 func (o *DetailedSegmentAllOf) GetTotalElevationGain() float32 {
-	if o == nil || o.TotalElevationGain == nil {
+	if o == nil || isNil(o.TotalElevationGain) {
 		var ret float32
 		return ret
 	}
@@ -127,15 +127,15 @@ func (o *DetailedSegmentAllOf) GetTotalElevationGain() float32 {
 // GetTotalElevationGainOk returns a tuple with the TotalElevationGain field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentAllOf) GetTotalElevationGainOk() (*float32, bool) {
-	if o == nil || o.TotalElevationGain == nil {
-		return nil, false
+	if o == nil || isNil(o.TotalElevationGain) {
+    return nil, false
 	}
 	return o.TotalElevationGain, true
 }
 
 // HasTotalElevationGain returns a boolean if a field has been set.
 func (o *DetailedSegmentAllOf) HasTotalElevationGain() bool {
-	if o != nil && o.TotalElevationGain != nil {
+	if o != nil && !isNil(o.TotalElevationGain) {
 		return true
 	}
 
@@ -149,7 +149,7 @@ func (o *DetailedSegmentAllOf) SetTotalElevationGain(v float32) {
 
 // GetMap returns the Map field value if set, zero value otherwise.
 func (o *DetailedSegmentAllOf) GetMap() PolylineMap {
-	if o == nil || o.Map == nil {
+	if o == nil || isNil(o.Map) {
 		var ret PolylineMap
 		return ret
 	}
@@ -159,15 +159,15 @@ func (o *DetailedSegmentAllOf) GetMap() PolylineMap {
 // GetMapOk returns a tuple with the Map field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentAllOf) GetMapOk() (*PolylineMap, bool) {
-	if o == nil || o.Map == nil {
-		return nil, false
+	if o == nil || isNil(o.Map) {
+    return nil, false
 	}
 	return o.Map, true
 }
 
 // HasMap returns a boolean if a field has been set.
 func (o *DetailedSegmentAllOf) HasMap() bool {
-	if o != nil && o.Map != nil {
+	if o != nil && !isNil(o.Map) {
 		return true
 	}
 
@@ -181,7 +181,7 @@ func (o *DetailedSegmentAllOf) SetMap(v PolylineMap) {
 
 // GetEffortCount returns the EffortCount field value if set, zero value otherwise.
 func (o *DetailedSegmentAllOf) GetEffortCount() int32 {
-	if o == nil || o.EffortCount == nil {
+	if o == nil || isNil(o.EffortCount) {
 		var ret int32
 		return ret
 	}
@@ -191,15 +191,15 @@ func (o *DetailedSegmentAllOf) GetEffortCount() int32 {
 // GetEffortCountOk returns a tuple with the EffortCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentAllOf) GetEffortCountOk() (*int32, bool) {
-	if o == nil || o.EffortCount == nil {
-		return nil, false
+	if o == nil || isNil(o.EffortCount) {
+    return nil, false
 	}
 	return o.EffortCount, true
 }
 
 // HasEffortCount returns a boolean if a field has been set.
 func (o *DetailedSegmentAllOf) HasEffortCount() bool {
-	if o != nil && o.EffortCount != nil {
+	if o != nil && !isNil(o.EffortCount) {
 		return true
 	}
 
@@ -213,7 +213,7 @@ func (o *DetailedSegmentAllOf) SetEffortCount(v int32) {
 
 // GetAthleteCount returns the AthleteCount field value if set, zero value otherwise.
 func (o *DetailedSegmentAllOf) GetAthleteCount() int32 {
-	if o == nil || o.AthleteCount == nil {
+	if o == nil || isNil(o.AthleteCount) {
 		var ret int32
 		return ret
 	}
@@ -223,15 +223,15 @@ func (o *DetailedSegmentAllOf) GetAthleteCount() int32 {
 // GetAthleteCountOk returns a tuple with the AthleteCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentAllOf) GetAthleteCountOk() (*int32, bool) {
-	if o == nil || o.AthleteCount == nil {
-		return nil, false
+	if o == nil || isNil(o.AthleteCount) {
+    return nil, false
 	}
 	return o.AthleteCount, true
 }
 
 // HasAthleteCount returns a boolean if a field has been set.
 func (o *DetailedSegmentAllOf) HasAthleteCount() bool {
-	if o != nil && o.AthleteCount != nil {
+	if o != nil && !isNil(o.AthleteCount) {
 		return true
 	}
 
@@ -245,7 +245,7 @@ func (o *DetailedSegmentAllOf) SetAthleteCount(v int32) {
 
 // GetHazardous returns the Hazardous field value if set, zero value otherwise.
 func (o *DetailedSegmentAllOf) GetHazardous() bool {
-	if o == nil || o.Hazardous == nil {
+	if o == nil || isNil(o.Hazardous) {
 		var ret bool
 		return ret
 	}
@@ -255,15 +255,15 @@ func (o *DetailedSegmentAllOf) GetHazardous() bool {
 // GetHazardousOk returns a tuple with the Hazardous field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentAllOf) GetHazardousOk() (*bool, bool) {
-	if o == nil || o.Hazardous == nil {
-		return nil, false
+	if o == nil || isNil(o.Hazardous) {
+    return nil, false
 	}
 	return o.Hazardous, true
 }
 
 // HasHazardous returns a boolean if a field has been set.
 func (o *DetailedSegmentAllOf) HasHazardous() bool {
-	if o != nil && o.Hazardous != nil {
+	if o != nil && !isNil(o.Hazardous) {
 		return true
 	}
 
@@ -277,7 +277,7 @@ func (o *DetailedSegmentAllOf) SetHazardous(v bool) {
 
 // GetStarCount returns the StarCount field value if set, zero value otherwise.
 func (o *DetailedSegmentAllOf) GetStarCount() int32 {
-	if o == nil || o.StarCount == nil {
+	if o == nil || isNil(o.StarCount) {
 		var ret int32
 		return ret
 	}
@@ -287,15 +287,15 @@ func (o *DetailedSegmentAllOf) GetStarCount() int32 {
 // GetStarCountOk returns a tuple with the StarCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentAllOf) GetStarCountOk() (*int32, bool) {
-	if o == nil || o.StarCount == nil {
-		return nil, false
+	if o == nil || isNil(o.StarCount) {
+    return nil, false
 	}
 	return o.StarCount, true
 }
 
 // HasStarCount returns a boolean if a field has been set.
 func (o *DetailedSegmentAllOf) HasStarCount() bool {
-	if o != nil && o.StarCount != nil {
+	if o != nil && !isNil(o.StarCount) {
 		return true
 	}
 
@@ -309,28 +309,28 @@ func (o *DetailedSegmentAllOf) SetStarCount(v int32) {
 
 func (o DetailedSegmentAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.CreatedAt != nil {
+	if !isNil(o.CreatedAt) {
 		toSerialize["created_at"] = o.CreatedAt
 	}
-	if o.UpdatedAt != nil {
+	if !isNil(o.UpdatedAt) {
 		toSerialize["updated_at"] = o.UpdatedAt
 	}
-	if o.TotalElevationGain != nil {
+	if !isNil(o.TotalElevationGain) {
 		toSerialize["total_elevation_gain"] = o.TotalElevationGain
 	}
-	if o.Map != nil {
+	if !isNil(o.Map) {
 		toSerialize["map"] = o.Map
 	}
-	if o.EffortCount != nil {
+	if !isNil(o.EffortCount) {
 		toSerialize["effort_count"] = o.EffortCount
 	}
-	if o.AthleteCount != nil {
+	if !isNil(o.AthleteCount) {
 		toSerialize["athlete_count"] = o.AthleteCount
 	}
-	if o.Hazardous != nil {
+	if !isNil(o.Hazardous) {
 		toSerialize["hazardous"] = o.Hazardous
 	}
-	if o.StarCount != nil {
+	if !isNil(o.StarCount) {
 		toSerialize["star_count"] = o.StarCount
 	}
 	return json.Marshal(toSerialize)

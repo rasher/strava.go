@@ -3541,6 +3541,7 @@ components:
           type: boolean
       required:
       - starred
+      type: object
     createActivity_request:
       properties:
         name:
@@ -3581,6 +3582,7 @@ components:
       - name
       - sport_type
       - start_date_local
+      type: object
     createUpload_request:
       properties:
         file:
@@ -3613,6 +3615,7 @@ components:
         external_id:
           description: The desired external identifier of the resulting activity.
           type: string
+      type: object
     DetailedAthlete_allOf:
       properties:
         follower_count:
@@ -3650,6 +3653,7 @@ components:
             $ref: '#/components/schemas/SummaryGear'
           type: array
       type: object
+      example: null
     SummaryAthlete_allOf:
       properties:
         resource_state:
@@ -3699,6 +3703,7 @@ components:
           format: date-time
           type: string
       type: object
+      example: null
     SummaryClub_allOf:
       properties:
         profile_medium:
@@ -3749,6 +3754,7 @@ components:
           description: The club's vanity URL.
           type: string
       type: object
+      example: null
     DetailedSegment_allOf:
       properties:
         created_at:
@@ -3778,6 +3784,7 @@ components:
           description: The number of stars for this segment
           type: integer
       type: object
+      example: null
     DetailedSegmentEffort_allOf:
       properties:
         name:
@@ -3835,6 +3842,7 @@ components:
             activity
           type: boolean
       type: object
+      example: null
     DetailedActivity_allOf:
       properties:
         description:
@@ -3877,6 +3885,7 @@ components:
             $ref: '#/components/schemas/DetailedSegmentEffort'
           type: array
       type: object
+      example: null
     SummaryActivity_allOf:
       properties:
         external_id:
@@ -4024,6 +4033,7 @@ components:
           description: Similar to Normalized Power. Rides with power meter data only
           type: integer
       type: object
+      example: null
     PhotosSummary_primary:
       properties:
         id:
@@ -4044,6 +4054,7 @@ components:
           description: The number of seconds spent in this zone
           type: integer
       type: object
+      example: null
     DetailedClub_allOf:
       properties:
         membership:
@@ -4065,6 +4076,7 @@ components:
             follows.
           type: integer
       type: object
+      example: null
     DetailedGear_allOf:
       properties:
         brand_name:
@@ -4080,6 +4092,7 @@ components:
           description: The gear's description.
           type: string
       type: object
+      example: null
     TimeStream_allOf:
       properties:
         data:
@@ -4088,6 +4101,7 @@ components:
             type: integer
           type: array
       type: object
+      example: null
     DistanceStream_allOf:
       properties:
         data:
@@ -4097,6 +4111,7 @@ components:
             type: number
           type: array
       type: object
+      example: null
     LatLngStream_allOf:
       properties:
         data:
@@ -4105,6 +4120,7 @@ components:
             $ref: '#/components/schemas/LatLng'
           type: array
       type: object
+      example: null
     AltitudeStream_allOf:
       properties:
         data:
@@ -4114,6 +4130,7 @@ components:
             type: number
           type: array
       type: object
+      example: null
     SmoothVelocityStream_allOf:
       properties:
         data:
@@ -4124,6 +4141,7 @@ components:
             type: number
           type: array
       type: object
+      example: null
     HeartrateStream_allOf:
       properties:
         data:
@@ -4133,6 +4151,7 @@ components:
             type: integer
           type: array
       type: object
+      example: null
     CadenceStream_allOf:
       properties:
         data:
@@ -4142,6 +4161,7 @@ components:
             type: integer
           type: array
       type: object
+      example: null
     PowerStream_allOf:
       properties:
         data:
@@ -4150,6 +4170,7 @@ components:
             type: integer
           type: array
       type: object
+      example: null
     TemperatureStream_allOf:
       properties:
         data:
@@ -4159,6 +4180,7 @@ components:
             type: integer
           type: array
       type: object
+      example: null
     MovingStream_allOf:
       properties:
         data:
@@ -4168,6 +4190,7 @@ components:
             type: boolean
           type: array
       type: object
+      example: null
     SmoothGradeStream_allOf:
       properties:
         data:
@@ -4178,6 +4201,7 @@ components:
             type: number
           type: array
       type: object
+      example: null
   securitySchemes:
     strava_oauth:
       flows:

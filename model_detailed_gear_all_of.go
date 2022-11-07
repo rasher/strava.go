@@ -45,7 +45,7 @@ func NewDetailedGearAllOfWithDefaults() *DetailedGearAllOf {
 
 // GetBrandName returns the BrandName field value if set, zero value otherwise.
 func (o *DetailedGearAllOf) GetBrandName() string {
-	if o == nil || o.BrandName == nil {
+	if o == nil || isNil(o.BrandName) {
 		var ret string
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *DetailedGearAllOf) GetBrandName() string {
 // GetBrandNameOk returns a tuple with the BrandName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGearAllOf) GetBrandNameOk() (*string, bool) {
-	if o == nil || o.BrandName == nil {
-		return nil, false
+	if o == nil || isNil(o.BrandName) {
+    return nil, false
 	}
 	return o.BrandName, true
 }
 
 // HasBrandName returns a boolean if a field has been set.
 func (o *DetailedGearAllOf) HasBrandName() bool {
-	if o != nil && o.BrandName != nil {
+	if o != nil && !isNil(o.BrandName) {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *DetailedGearAllOf) SetBrandName(v string) {
 
 // GetModelName returns the ModelName field value if set, zero value otherwise.
 func (o *DetailedGearAllOf) GetModelName() string {
-	if o == nil || o.ModelName == nil {
+	if o == nil || isNil(o.ModelName) {
 		var ret string
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *DetailedGearAllOf) GetModelName() string {
 // GetModelNameOk returns a tuple with the ModelName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGearAllOf) GetModelNameOk() (*string, bool) {
-	if o == nil || o.ModelName == nil {
-		return nil, false
+	if o == nil || isNil(o.ModelName) {
+    return nil, false
 	}
 	return o.ModelName, true
 }
 
 // HasModelName returns a boolean if a field has been set.
 func (o *DetailedGearAllOf) HasModelName() bool {
-	if o != nil && o.ModelName != nil {
+	if o != nil && !isNil(o.ModelName) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *DetailedGearAllOf) SetModelName(v string) {
 
 // GetFrameType returns the FrameType field value if set, zero value otherwise.
 func (o *DetailedGearAllOf) GetFrameType() int32 {
-	if o == nil || o.FrameType == nil {
+	if o == nil || isNil(o.FrameType) {
 		var ret int32
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *DetailedGearAllOf) GetFrameType() int32 {
 // GetFrameTypeOk returns a tuple with the FrameType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGearAllOf) GetFrameTypeOk() (*int32, bool) {
-	if o == nil || o.FrameType == nil {
-		return nil, false
+	if o == nil || isNil(o.FrameType) {
+    return nil, false
 	}
 	return o.FrameType, true
 }
 
 // HasFrameType returns a boolean if a field has been set.
 func (o *DetailedGearAllOf) HasFrameType() bool {
-	if o != nil && o.FrameType != nil {
+	if o != nil && !isNil(o.FrameType) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *DetailedGearAllOf) SetFrameType(v int32) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *DetailedGearAllOf) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *DetailedGearAllOf) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedGearAllOf) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *DetailedGearAllOf) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -173,16 +173,16 @@ func (o *DetailedGearAllOf) SetDescription(v string) {
 
 func (o DetailedGearAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.BrandName != nil {
+	if !isNil(o.BrandName) {
 		toSerialize["brand_name"] = o.BrandName
 	}
-	if o.ModelName != nil {
+	if !isNil(o.ModelName) {
 		toSerialize["model_name"] = o.ModelName
 	}
-	if o.FrameType != nil {
+	if !isNil(o.FrameType) {
 		toSerialize["frame_type"] = o.FrameType
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
 	return json.Marshal(toSerialize)

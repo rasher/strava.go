@@ -173,4 +173,13 @@ model_upload.go
 model_zone_range.go
 model_zones.go
 response.go
+test/api_activities_test.go
+test/api_athletes_test.go
+test/api_clubs_test.go
+test/api_gears_test.go
+test/api_routes_test.go
+test/api_segment_efforts_test.go
+test/api_segments_test.go
+test/api_streams_test.go
+test/api_uploads_test.go
 utils.go

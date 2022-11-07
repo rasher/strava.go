@@ -49,7 +49,7 @@ func NewActivityTotalWithDefaults() *ActivityTotal {
 
 // GetCount returns the Count field value if set, zero value otherwise.
 func (o *ActivityTotal) GetCount() int32 {
-	if o == nil || o.Count == nil {
+	if o == nil || isNil(o.Count) {
 		var ret int32
 		return ret
 	}
@@ -59,15 +59,15 @@ func (o *ActivityTotal) GetCount() int32 {
 // GetCountOk returns a tuple with the Count field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityTotal) GetCountOk() (*int32, bool) {
-	if o == nil || o.Count == nil {
-		return nil, false
+	if o == nil || isNil(o.Count) {
+    return nil, false
 	}
 	return o.Count, true
 }
 
 // HasCount returns a boolean if a field has been set.
 func (o *ActivityTotal) HasCount() bool {
-	if o != nil && o.Count != nil {
+	if o != nil && !isNil(o.Count) {
 		return true
 	}
 
@@ -81,7 +81,7 @@ func (o *ActivityTotal) SetCount(v int32) {
 
 // GetDistance returns the Distance field value if set, zero value otherwise.
 func (o *ActivityTotal) GetDistance() float32 {
-	if o == nil || o.Distance == nil {
+	if o == nil || isNil(o.Distance) {
 		var ret float32
 		return ret
 	}
@@ -91,15 +91,15 @@ func (o *ActivityTotal) GetDistance() float32 {
 // GetDistanceOk returns a tuple with the Distance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityTotal) GetDistanceOk() (*float32, bool) {
-	if o == nil || o.Distance == nil {
-		return nil, false
+	if o == nil || isNil(o.Distance) {
+    return nil, false
 	}
 	return o.Distance, true
 }
 
 // HasDistance returns a boolean if a field has been set.
 func (o *ActivityTotal) HasDistance() bool {
-	if o != nil && o.Distance != nil {
+	if o != nil && !isNil(o.Distance) {
 		return true
 	}
 
@@ -113,7 +113,7 @@ func (o *ActivityTotal) SetDistance(v float32) {
 
 // GetMovingTime returns the MovingTime field value if set, zero value otherwise.
 func (o *ActivityTotal) GetMovingTime() int32 {
-	if o == nil || o.MovingTime == nil {
+	if o == nil || isNil(o.MovingTime) {
 		var ret int32
 		return ret
 	}
@@ -123,15 +123,15 @@ func (o *ActivityTotal) GetMovingTime() int32 {
 // GetMovingTimeOk returns a tuple with the MovingTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityTotal) GetMovingTimeOk() (*int32, bool) {
-	if o == nil || o.MovingTime == nil {
-		return nil, false
+	if o == nil || isNil(o.MovingTime) {
+    return nil, false
 	}
 	return o.MovingTime, true
 }
 
 // HasMovingTime returns a boolean if a field has been set.
 func (o *ActivityTotal) HasMovingTime() bool {
-	if o != nil && o.MovingTime != nil {
+	if o != nil && !isNil(o.MovingTime) {
 		return true
 	}
 
@@ -145,7 +145,7 @@ func (o *ActivityTotal) SetMovingTime(v int32) {
 
 // GetElapsedTime returns the ElapsedTime field value if set, zero value otherwise.
 func (o *ActivityTotal) GetElapsedTime() int32 {
-	if o == nil || o.ElapsedTime == nil {
+	if o == nil || isNil(o.ElapsedTime) {
 		var ret int32
 		return ret
 	}
@@ -155,15 +155,15 @@ func (o *ActivityTotal) GetElapsedTime() int32 {
 // GetElapsedTimeOk returns a tuple with the ElapsedTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityTotal) GetElapsedTimeOk() (*int32, bool) {
-	if o == nil || o.ElapsedTime == nil {
-		return nil, false
+	if o == nil || isNil(o.ElapsedTime) {
+    return nil, false
 	}
 	return o.ElapsedTime, true
 }
 
 // HasElapsedTime returns a boolean if a field has been set.
 func (o *ActivityTotal) HasElapsedTime() bool {
-	if o != nil && o.ElapsedTime != nil {
+	if o != nil && !isNil(o.ElapsedTime) {
 		return true
 	}
 
@@ -177,7 +177,7 @@ func (o *ActivityTotal) SetElapsedTime(v int32) {
 
 // GetElevationGain returns the ElevationGain field value if set, zero value otherwise.
 func (o *ActivityTotal) GetElevationGain() float32 {
-	if o == nil || o.ElevationGain == nil {
+	if o == nil || isNil(o.ElevationGain) {
 		var ret float32
 		return ret
 	}
@@ -187,15 +187,15 @@ func (o *ActivityTotal) GetElevationGain() float32 {
 // GetElevationGainOk returns a tuple with the ElevationGain field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityTotal) GetElevationGainOk() (*float32, bool) {
-	if o == nil || o.ElevationGain == nil {
-		return nil, false
+	if o == nil || isNil(o.ElevationGain) {
+    return nil, false
 	}
 	return o.ElevationGain, true
 }
 
 // HasElevationGain returns a boolean if a field has been set.
 func (o *ActivityTotal) HasElevationGain() bool {
-	if o != nil && o.ElevationGain != nil {
+	if o != nil && !isNil(o.ElevationGain) {
 		return true
 	}
 
@@ -209,7 +209,7 @@ func (o *ActivityTotal) SetElevationGain(v float32) {
 
 // GetAchievementCount returns the AchievementCount field value if set, zero value otherwise.
 func (o *ActivityTotal) GetAchievementCount() int32 {
-	if o == nil || o.AchievementCount == nil {
+	if o == nil || isNil(o.AchievementCount) {
 		var ret int32
 		return ret
 	}
@@ -219,15 +219,15 @@ func (o *ActivityTotal) GetAchievementCount() int32 {
 // GetAchievementCountOk returns a tuple with the AchievementCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityTotal) GetAchievementCountOk() (*int32, bool) {
-	if o == nil || o.AchievementCount == nil {
-		return nil, false
+	if o == nil || isNil(o.AchievementCount) {
+    return nil, false
 	}
 	return o.AchievementCount, true
 }
 
 // HasAchievementCount returns a boolean if a field has been set.
 func (o *ActivityTotal) HasAchievementCount() bool {
-	if o != nil && o.AchievementCount != nil {
+	if o != nil && !isNil(o.AchievementCount) {
 		return true
 	}
 
@@ -241,22 +241,22 @@ func (o *ActivityTotal) SetAchievementCount(v int32) {
 
 func (o ActivityTotal) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Count != nil {
+	if !isNil(o.Count) {
 		toSerialize["count"] = o.Count
 	}
-	if o.Distance != nil {
+	if !isNil(o.Distance) {
 		toSerialize["distance"] = o.Distance
 	}
-	if o.MovingTime != nil {
+	if !isNil(o.MovingTime) {
 		toSerialize["moving_time"] = o.MovingTime
 	}
-	if o.ElapsedTime != nil {
+	if !isNil(o.ElapsedTime) {
 		toSerialize["elapsed_time"] = o.ElapsedTime
 	}
-	if o.ElevationGain != nil {
+	if !isNil(o.ElevationGain) {
 		toSerialize["elevation_gain"] = o.ElevationGain
 	}
-	if o.AchievementCount != nil {
+	if !isNil(o.AchievementCount) {
 		toSerialize["achievement_count"] = o.AchievementCount
 	}
 	return json.Marshal(toSerialize)

@@ -70,7 +70,7 @@ func NewRouteWithDefaults() *Route {
 
 // GetAthlete returns the Athlete field value if set, zero value otherwise.
 func (o *Route) GetAthlete() SummaryAthlete {
-	if o == nil || o.Athlete == nil {
+	if o == nil || isNil(o.Athlete) {
 		var ret SummaryAthlete
 		return ret
 	}
@@ -80,15 +80,15 @@ func (o *Route) GetAthlete() SummaryAthlete {
 // GetAthleteOk returns a tuple with the Athlete field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetAthleteOk() (*SummaryAthlete, bool) {
-	if o == nil || o.Athlete == nil {
-		return nil, false
+	if o == nil || isNil(o.Athlete) {
+    return nil, false
 	}
 	return o.Athlete, true
 }
 
 // HasAthlete returns a boolean if a field has been set.
 func (o *Route) HasAthlete() bool {
-	if o != nil && o.Athlete != nil {
+	if o != nil && !isNil(o.Athlete) {
 		return true
 	}
 
@@ -102,7 +102,7 @@ func (o *Route) SetAthlete(v SummaryAthlete) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *Route) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -112,15 +112,15 @@ func (o *Route) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *Route) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -134,7 +134,7 @@ func (o *Route) SetDescription(v string) {
 
 // GetDistance returns the Distance field value if set, zero value otherwise.
 func (o *Route) GetDistance() float32 {
-	if o == nil || o.Distance == nil {
+	if o == nil || isNil(o.Distance) {
 		var ret float32
 		return ret
 	}
@@ -144,15 +144,15 @@ func (o *Route) GetDistance() float32 {
 // GetDistanceOk returns a tuple with the Distance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetDistanceOk() (*float32, bool) {
-	if o == nil || o.Distance == nil {
-		return nil, false
+	if o == nil || isNil(o.Distance) {
+    return nil, false
 	}
 	return o.Distance, true
 }
 
 // HasDistance returns a boolean if a field has been set.
 func (o *Route) HasDistance() bool {
-	if o != nil && o.Distance != nil {
+	if o != nil && !isNil(o.Distance) {
 		return true
 	}
 
@@ -166,7 +166,7 @@ func (o *Route) SetDistance(v float32) {
 
 // GetElevationGain returns the ElevationGain field value if set, zero value otherwise.
 func (o *Route) GetElevationGain() float32 {
-	if o == nil || o.ElevationGain == nil {
+	if o == nil || isNil(o.ElevationGain) {
 		var ret float32
 		return ret
 	}
@@ -176,15 +176,15 @@ func (o *Route) GetElevationGain() float32 {
 // GetElevationGainOk returns a tuple with the ElevationGain field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetElevationGainOk() (*float32, bool) {
-	if o == nil || o.ElevationGain == nil {
-		return nil, false
+	if o == nil || isNil(o.ElevationGain) {
+    return nil, false
 	}
 	return o.ElevationGain, true
 }
 
 // HasElevationGain returns a boolean if a field has been set.
 func (o *Route) HasElevationGain() bool {
-	if o != nil && o.ElevationGain != nil {
+	if o != nil && !isNil(o.ElevationGain) {
 		return true
 	}
 
@@ -198,7 +198,7 @@ func (o *Route) SetElevationGain(v float32) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Route) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -208,15 +208,15 @@ func (o *Route) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Route) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -230,7 +230,7 @@ func (o *Route) SetId(v int64) {
 
 // GetIdStr returns the IdStr field value if set, zero value otherwise.
 func (o *Route) GetIdStr() string {
-	if o == nil || o.IdStr == nil {
+	if o == nil || isNil(o.IdStr) {
 		var ret string
 		return ret
 	}
@@ -240,15 +240,15 @@ func (o *Route) GetIdStr() string {
 // GetIdStrOk returns a tuple with the IdStr field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetIdStrOk() (*string, bool) {
-	if o == nil || o.IdStr == nil {
-		return nil, false
+	if o == nil || isNil(o.IdStr) {
+    return nil, false
 	}
 	return o.IdStr, true
 }
 
 // HasIdStr returns a boolean if a field has been set.
 func (o *Route) HasIdStr() bool {
-	if o != nil && o.IdStr != nil {
+	if o != nil && !isNil(o.IdStr) {
 		return true
 	}
 
@@ -262,7 +262,7 @@ func (o *Route) SetIdStr(v string) {
 
 // GetMap returns the Map field value if set, zero value otherwise.
 func (o *Route) GetMap() PolylineMap {
-	if o == nil || o.Map == nil {
+	if o == nil || isNil(o.Map) {
 		var ret PolylineMap
 		return ret
 	}
@@ -272,15 +272,15 @@ func (o *Route) GetMap() PolylineMap {
 // GetMapOk returns a tuple with the Map field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetMapOk() (*PolylineMap, bool) {
-	if o == nil || o.Map == nil {
-		return nil, false
+	if o == nil || isNil(o.Map) {
+    return nil, false
 	}
 	return o.Map, true
 }
 
 // HasMap returns a boolean if a field has been set.
 func (o *Route) HasMap() bool {
-	if o != nil && o.Map != nil {
+	if o != nil && !isNil(o.Map) {
 		return true
 	}
 
@@ -294,7 +294,7 @@ func (o *Route) SetMap(v PolylineMap) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Route) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -304,15 +304,15 @@ func (o *Route) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *Route) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -326,7 +326,7 @@ func (o *Route) SetName(v string) {
 
 // GetPrivate returns the Private field value if set, zero value otherwise.
 func (o *Route) GetPrivate() bool {
-	if o == nil || o.Private == nil {
+	if o == nil || isNil(o.Private) {
 		var ret bool
 		return ret
 	}
@@ -336,15 +336,15 @@ func (o *Route) GetPrivate() bool {
 // GetPrivateOk returns a tuple with the Private field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetPrivateOk() (*bool, bool) {
-	if o == nil || o.Private == nil {
-		return nil, false
+	if o == nil || isNil(o.Private) {
+    return nil, false
 	}
 	return o.Private, true
 }
 
 // HasPrivate returns a boolean if a field has been set.
 func (o *Route) HasPrivate() bool {
-	if o != nil && o.Private != nil {
+	if o != nil && !isNil(o.Private) {
 		return true
 	}
 
@@ -358,7 +358,7 @@ func (o *Route) SetPrivate(v bool) {
 
 // GetStarred returns the Starred field value if set, zero value otherwise.
 func (o *Route) GetStarred() bool {
-	if o == nil || o.Starred == nil {
+	if o == nil || isNil(o.Starred) {
 		var ret bool
 		return ret
 	}
@@ -368,15 +368,15 @@ func (o *Route) GetStarred() bool {
 // GetStarredOk returns a tuple with the Starred field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetStarredOk() (*bool, bool) {
-	if o == nil || o.Starred == nil {
-		return nil, false
+	if o == nil || isNil(o.Starred) {
+    return nil, false
 	}
 	return o.Starred, true
 }
 
 // HasStarred returns a boolean if a field has been set.
 func (o *Route) HasStarred() bool {
-	if o != nil && o.Starred != nil {
+	if o != nil && !isNil(o.Starred) {
 		return true
 	}
 
@@ -390,7 +390,7 @@ func (o *Route) SetStarred(v bool) {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise.
 func (o *Route) GetTimestamp() int32 {
-	if o == nil || o.Timestamp == nil {
+	if o == nil || isNil(o.Timestamp) {
 		var ret int32
 		return ret
 	}
@@ -400,15 +400,15 @@ func (o *Route) GetTimestamp() int32 {
 // GetTimestampOk returns a tuple with the Timestamp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetTimestampOk() (*int32, bool) {
-	if o == nil || o.Timestamp == nil {
-		return nil, false
+	if o == nil || isNil(o.Timestamp) {
+    return nil, false
 	}
 	return o.Timestamp, true
 }
 
 // HasTimestamp returns a boolean if a field has been set.
 func (o *Route) HasTimestamp() bool {
-	if o != nil && o.Timestamp != nil {
+	if o != nil && !isNil(o.Timestamp) {
 		return true
 	}
 
@@ -422,7 +422,7 @@ func (o *Route) SetTimestamp(v int32) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *Route) GetType() int32 {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret int32
 		return ret
 	}
@@ -432,15 +432,15 @@ func (o *Route) GetType() int32 {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetTypeOk() (*int32, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *Route) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -454,7 +454,7 @@ func (o *Route) SetType(v int32) {
 
 // GetSubType returns the SubType field value if set, zero value otherwise.
 func (o *Route) GetSubType() int32 {
-	if o == nil || o.SubType == nil {
+	if o == nil || isNil(o.SubType) {
 		var ret int32
 		return ret
 	}
@@ -464,15 +464,15 @@ func (o *Route) GetSubType() int32 {
 // GetSubTypeOk returns a tuple with the SubType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetSubTypeOk() (*int32, bool) {
-	if o == nil || o.SubType == nil {
-		return nil, false
+	if o == nil || isNil(o.SubType) {
+    return nil, false
 	}
 	return o.SubType, true
 }
 
 // HasSubType returns a boolean if a field has been set.
 func (o *Route) HasSubType() bool {
-	if o != nil && o.SubType != nil {
+	if o != nil && !isNil(o.SubType) {
 		return true
 	}
 
@@ -486,7 +486,7 @@ func (o *Route) SetSubType(v int32) {
 
 // GetCreatedAt returns the CreatedAt field value if set, zero value otherwise.
 func (o *Route) GetCreatedAt() time.Time {
-	if o == nil || o.CreatedAt == nil {
+	if o == nil || isNil(o.CreatedAt) {
 		var ret time.Time
 		return ret
 	}
@@ -496,15 +496,15 @@ func (o *Route) GetCreatedAt() time.Time {
 // GetCreatedAtOk returns a tuple with the CreatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetCreatedAtOk() (*time.Time, bool) {
-	if o == nil || o.CreatedAt == nil {
-		return nil, false
+	if o == nil || isNil(o.CreatedAt) {
+    return nil, false
 	}
 	return o.CreatedAt, true
 }
 
 // HasCreatedAt returns a boolean if a field has been set.
 func (o *Route) HasCreatedAt() bool {
-	if o != nil && o.CreatedAt != nil {
+	if o != nil && !isNil(o.CreatedAt) {
 		return true
 	}
 
@@ -518,7 +518,7 @@ func (o *Route) SetCreatedAt(v time.Time) {
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
 func (o *Route) GetUpdatedAt() time.Time {
-	if o == nil || o.UpdatedAt == nil {
+	if o == nil || isNil(o.UpdatedAt) {
 		var ret time.Time
 		return ret
 	}
@@ -528,15 +528,15 @@ func (o *Route) GetUpdatedAt() time.Time {
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetUpdatedAtOk() (*time.Time, bool) {
-	if o == nil || o.UpdatedAt == nil {
-		return nil, false
+	if o == nil || isNil(o.UpdatedAt) {
+    return nil, false
 	}
 	return o.UpdatedAt, true
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
 func (o *Route) HasUpdatedAt() bool {
-	if o != nil && o.UpdatedAt != nil {
+	if o != nil && !isNil(o.UpdatedAt) {
 		return true
 	}
 
@@ -550,7 +550,7 @@ func (o *Route) SetUpdatedAt(v time.Time) {
 
 // GetEstimatedMovingTime returns the EstimatedMovingTime field value if set, zero value otherwise.
 func (o *Route) GetEstimatedMovingTime() int32 {
-	if o == nil || o.EstimatedMovingTime == nil {
+	if o == nil || isNil(o.EstimatedMovingTime) {
 		var ret int32
 		return ret
 	}
@@ -560,15 +560,15 @@ func (o *Route) GetEstimatedMovingTime() int32 {
 // GetEstimatedMovingTimeOk returns a tuple with the EstimatedMovingTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetEstimatedMovingTimeOk() (*int32, bool) {
-	if o == nil || o.EstimatedMovingTime == nil {
-		return nil, false
+	if o == nil || isNil(o.EstimatedMovingTime) {
+    return nil, false
 	}
 	return o.EstimatedMovingTime, true
 }
 
 // HasEstimatedMovingTime returns a boolean if a field has been set.
 func (o *Route) HasEstimatedMovingTime() bool {
-	if o != nil && o.EstimatedMovingTime != nil {
+	if o != nil && !isNil(o.EstimatedMovingTime) {
 		return true
 	}
 
@@ -582,7 +582,7 @@ func (o *Route) SetEstimatedMovingTime(v int32) {
 
 // GetSegments returns the Segments field value if set, zero value otherwise.
 func (o *Route) GetSegments() []SummarySegment {
-	if o == nil || o.Segments == nil {
+	if o == nil || isNil(o.Segments) {
 		var ret []SummarySegment
 		return ret
 	}
@@ -592,15 +592,15 @@ func (o *Route) GetSegments() []SummarySegment {
 // GetSegmentsOk returns a tuple with the Segments field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Route) GetSegmentsOk() ([]SummarySegment, bool) {
-	if o == nil || o.Segments == nil {
-		return nil, false
+	if o == nil || isNil(o.Segments) {
+    return nil, false
 	}
 	return o.Segments, true
 }
 
 // HasSegments returns a boolean if a field has been set.
 func (o *Route) HasSegments() bool {
-	if o != nil && o.Segments != nil {
+	if o != nil && !isNil(o.Segments) {
 		return true
 	}
 
@@ -614,55 +614,55 @@ func (o *Route) SetSegments(v []SummarySegment) {
 
 func (o Route) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Athlete != nil {
+	if !isNil(o.Athlete) {
 		toSerialize["athlete"] = o.Athlete
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.Distance != nil {
+	if !isNil(o.Distance) {
 		toSerialize["distance"] = o.Distance
 	}
-	if o.ElevationGain != nil {
+	if !isNil(o.ElevationGain) {
 		toSerialize["elevation_gain"] = o.ElevationGain
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdStr != nil {
+	if !isNil(o.IdStr) {
 		toSerialize["id_str"] = o.IdStr
 	}
-	if o.Map != nil {
+	if !isNil(o.Map) {
 		toSerialize["map"] = o.Map
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Private != nil {
+	if !isNil(o.Private) {
 		toSerialize["private"] = o.Private
 	}
-	if o.Starred != nil {
+	if !isNil(o.Starred) {
 		toSerialize["starred"] = o.Starred
 	}
-	if o.Timestamp != nil {
+	if !isNil(o.Timestamp) {
 		toSerialize["timestamp"] = o.Timestamp
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
-	if o.SubType != nil {
+	if !isNil(o.SubType) {
 		toSerialize["sub_type"] = o.SubType
 	}
-	if o.CreatedAt != nil {
+	if !isNil(o.CreatedAt) {
 		toSerialize["created_at"] = o.CreatedAt
 	}
-	if o.UpdatedAt != nil {
+	if !isNil(o.UpdatedAt) {
 		toSerialize["updated_at"] = o.UpdatedAt
 	}
-	if o.EstimatedMovingTime != nil {
+	if !isNil(o.EstimatedMovingTime) {
 		toSerialize["estimated_moving_time"] = o.EstimatedMovingTime
 	}
-	if o.Segments != nil {
+	if !isNil(o.Segments) {
 		toSerialize["segments"] = o.Segments
 	}
 	return json.Marshal(toSerialize)

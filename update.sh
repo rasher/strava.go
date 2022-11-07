@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
-CODEGEN_URL=https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/6.1.0/openapi-generator-cli-6.1.0.jar
+CODEGEN_VERSION=6.2.1
+CODEGEN_URL=https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/${CODEGEN_VERSION}/openapi-generator-cli-${CODEGEN_VERSION}.jar
 JAR=openapi-generator-cli.jar
 
 pushd "$(dirname "$0")"

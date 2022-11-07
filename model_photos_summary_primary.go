@@ -41,7 +41,7 @@ func NewPhotosSummaryPrimaryWithDefaults() *PhotosSummaryPrimary {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *PhotosSummaryPrimary) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -51,15 +51,15 @@ func (o *PhotosSummaryPrimary) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PhotosSummaryPrimary) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *PhotosSummaryPrimary) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -73,7 +73,7 @@ func (o *PhotosSummaryPrimary) SetId(v int64) {
 
 // GetSource returns the Source field value if set, zero value otherwise.
 func (o *PhotosSummaryPrimary) GetSource() int32 {
-	if o == nil || o.Source == nil {
+	if o == nil || isNil(o.Source) {
 		var ret int32
 		return ret
 	}
@@ -83,15 +83,15 @@ func (o *PhotosSummaryPrimary) GetSource() int32 {
 // GetSourceOk returns a tuple with the Source field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PhotosSummaryPrimary) GetSourceOk() (*int32, bool) {
-	if o == nil || o.Source == nil {
-		return nil, false
+	if o == nil || isNil(o.Source) {
+    return nil, false
 	}
 	return o.Source, true
 }
 
 // HasSource returns a boolean if a field has been set.
 func (o *PhotosSummaryPrimary) HasSource() bool {
-	if o != nil && o.Source != nil {
+	if o != nil && !isNil(o.Source) {
 		return true
 	}
 
@@ -105,7 +105,7 @@ func (o *PhotosSummaryPrimary) SetSource(v int32) {
 
 // GetUniqueId returns the UniqueId field value if set, zero value otherwise.
 func (o *PhotosSummaryPrimary) GetUniqueId() string {
-	if o == nil || o.UniqueId == nil {
+	if o == nil || isNil(o.UniqueId) {
 		var ret string
 		return ret
 	}
@@ -115,15 +115,15 @@ func (o *PhotosSummaryPrimary) GetUniqueId() string {
 // GetUniqueIdOk returns a tuple with the UniqueId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PhotosSummaryPrimary) GetUniqueIdOk() (*string, bool) {
-	if o == nil || o.UniqueId == nil {
-		return nil, false
+	if o == nil || isNil(o.UniqueId) {
+    return nil, false
 	}
 	return o.UniqueId, true
 }
 
 // HasUniqueId returns a boolean if a field has been set.
 func (o *PhotosSummaryPrimary) HasUniqueId() bool {
-	if o != nil && o.UniqueId != nil {
+	if o != nil && !isNil(o.UniqueId) {
 		return true
 	}
 
@@ -137,7 +137,7 @@ func (o *PhotosSummaryPrimary) SetUniqueId(v string) {
 
 // GetUrls returns the Urls field value if set, zero value otherwise.
 func (o *PhotosSummaryPrimary) GetUrls() map[string]string {
-	if o == nil || o.Urls == nil {
+	if o == nil || isNil(o.Urls) {
 		var ret map[string]string
 		return ret
 	}
@@ -147,15 +147,15 @@ func (o *PhotosSummaryPrimary) GetUrls() map[string]string {
 // GetUrlsOk returns a tuple with the Urls field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PhotosSummaryPrimary) GetUrlsOk() (*map[string]string, bool) {
-	if o == nil || o.Urls == nil {
-		return nil, false
+	if o == nil || isNil(o.Urls) {
+    return nil, false
 	}
 	return o.Urls, true
 }
 
 // HasUrls returns a boolean if a field has been set.
 func (o *PhotosSummaryPrimary) HasUrls() bool {
-	if o != nil && o.Urls != nil {
+	if o != nil && !isNil(o.Urls) {
 		return true
 	}
 
@@ -169,16 +169,16 @@ func (o *PhotosSummaryPrimary) SetUrls(v map[string]string) {
 
 func (o PhotosSummaryPrimary) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Source != nil {
+	if !isNil(o.Source) {
 		toSerialize["source"] = o.Source
 	}
-	if o.UniqueId != nil {
+	if !isNil(o.UniqueId) {
 		toSerialize["unique_id"] = o.UniqueId
 	}
-	if o.Urls != nil {
+	if !isNil(o.Urls) {
 		toSerialize["urls"] = o.Urls
 	}
 	return json.Marshal(toSerialize)

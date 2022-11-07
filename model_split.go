@@ -51,7 +51,7 @@ func NewSplitWithDefaults() *Split {
 
 // GetAverageSpeed returns the AverageSpeed field value if set, zero value otherwise.
 func (o *Split) GetAverageSpeed() float32 {
-	if o == nil || o.AverageSpeed == nil {
+	if o == nil || isNil(o.AverageSpeed) {
 		var ret float32
 		return ret
 	}
@@ -61,15 +61,15 @@ func (o *Split) GetAverageSpeed() float32 {
 // GetAverageSpeedOk returns a tuple with the AverageSpeed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Split) GetAverageSpeedOk() (*float32, bool) {
-	if o == nil || o.AverageSpeed == nil {
-		return nil, false
+	if o == nil || isNil(o.AverageSpeed) {
+    return nil, false
 	}
 	return o.AverageSpeed, true
 }
 
 // HasAverageSpeed returns a boolean if a field has been set.
 func (o *Split) HasAverageSpeed() bool {
-	if o != nil && o.AverageSpeed != nil {
+	if o != nil && !isNil(o.AverageSpeed) {
 		return true
 	}
 
@@ -83,7 +83,7 @@ func (o *Split) SetAverageSpeed(v float32) {
 
 // GetDistance returns the Distance field value if set, zero value otherwise.
 func (o *Split) GetDistance() float32 {
-	if o == nil || o.Distance == nil {
+	if o == nil || isNil(o.Distance) {
 		var ret float32
 		return ret
 	}
@@ -93,15 +93,15 @@ func (o *Split) GetDistance() float32 {
 // GetDistanceOk returns a tuple with the Distance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Split) GetDistanceOk() (*float32, bool) {
-	if o == nil || o.Distance == nil {
-		return nil, false
+	if o == nil || isNil(o.Distance) {
+    return nil, false
 	}
 	return o.Distance, true
 }
 
 // HasDistance returns a boolean if a field has been set.
 func (o *Split) HasDistance() bool {
-	if o != nil && o.Distance != nil {
+	if o != nil && !isNil(o.Distance) {
 		return true
 	}
 
@@ -115,7 +115,7 @@ func (o *Split) SetDistance(v float32) {
 
 // GetElapsedTime returns the ElapsedTime field value if set, zero value otherwise.
 func (o *Split) GetElapsedTime() int32 {
-	if o == nil || o.ElapsedTime == nil {
+	if o == nil || isNil(o.ElapsedTime) {
 		var ret int32
 		return ret
 	}
@@ -125,15 +125,15 @@ func (o *Split) GetElapsedTime() int32 {
 // GetElapsedTimeOk returns a tuple with the ElapsedTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Split) GetElapsedTimeOk() (*int32, bool) {
-	if o == nil || o.ElapsedTime == nil {
-		return nil, false
+	if o == nil || isNil(o.ElapsedTime) {
+    return nil, false
 	}
 	return o.ElapsedTime, true
 }
 
 // HasElapsedTime returns a boolean if a field has been set.
 func (o *Split) HasElapsedTime() bool {
-	if o != nil && o.ElapsedTime != nil {
+	if o != nil && !isNil(o.ElapsedTime) {
 		return true
 	}
 
@@ -147,7 +147,7 @@ func (o *Split) SetElapsedTime(v int32) {
 
 // GetElevationDifference returns the ElevationDifference field value if set, zero value otherwise.
 func (o *Split) GetElevationDifference() float32 {
-	if o == nil || o.ElevationDifference == nil {
+	if o == nil || isNil(o.ElevationDifference) {
 		var ret float32
 		return ret
 	}
@@ -157,15 +157,15 @@ func (o *Split) GetElevationDifference() float32 {
 // GetElevationDifferenceOk returns a tuple with the ElevationDifference field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Split) GetElevationDifferenceOk() (*float32, bool) {
-	if o == nil || o.ElevationDifference == nil {
-		return nil, false
+	if o == nil || isNil(o.ElevationDifference) {
+    return nil, false
 	}
 	return o.ElevationDifference, true
 }
 
 // HasElevationDifference returns a boolean if a field has been set.
 func (o *Split) HasElevationDifference() bool {
-	if o != nil && o.ElevationDifference != nil {
+	if o != nil && !isNil(o.ElevationDifference) {
 		return true
 	}
 
@@ -179,7 +179,7 @@ func (o *Split) SetElevationDifference(v float32) {
 
 // GetPaceZone returns the PaceZone field value if set, zero value otherwise.
 func (o *Split) GetPaceZone() int32 {
-	if o == nil || o.PaceZone == nil {
+	if o == nil || isNil(o.PaceZone) {
 		var ret int32
 		return ret
 	}
@@ -189,15 +189,15 @@ func (o *Split) GetPaceZone() int32 {
 // GetPaceZoneOk returns a tuple with the PaceZone field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Split) GetPaceZoneOk() (*int32, bool) {
-	if o == nil || o.PaceZone == nil {
-		return nil, false
+	if o == nil || isNil(o.PaceZone) {
+    return nil, false
 	}
 	return o.PaceZone, true
 }
 
 // HasPaceZone returns a boolean if a field has been set.
 func (o *Split) HasPaceZone() bool {
-	if o != nil && o.PaceZone != nil {
+	if o != nil && !isNil(o.PaceZone) {
 		return true
 	}
 
@@ -211,7 +211,7 @@ func (o *Split) SetPaceZone(v int32) {
 
 // GetMovingTime returns the MovingTime field value if set, zero value otherwise.
 func (o *Split) GetMovingTime() int32 {
-	if o == nil || o.MovingTime == nil {
+	if o == nil || isNil(o.MovingTime) {
 		var ret int32
 		return ret
 	}
@@ -221,15 +221,15 @@ func (o *Split) GetMovingTime() int32 {
 // GetMovingTimeOk returns a tuple with the MovingTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Split) GetMovingTimeOk() (*int32, bool) {
-	if o == nil || o.MovingTime == nil {
-		return nil, false
+	if o == nil || isNil(o.MovingTime) {
+    return nil, false
 	}
 	return o.MovingTime, true
 }
 
 // HasMovingTime returns a boolean if a field has been set.
 func (o *Split) HasMovingTime() bool {
-	if o != nil && o.MovingTime != nil {
+	if o != nil && !isNil(o.MovingTime) {
 		return true
 	}
 
@@ -243,7 +243,7 @@ func (o *Split) SetMovingTime(v int32) {
 
 // GetSplit returns the Split field value if set, zero value otherwise.
 func (o *Split) GetSplit() int32 {
-	if o == nil || o.Split == nil {
+	if o == nil || isNil(o.Split) {
 		var ret int32
 		return ret
 	}
@@ -253,15 +253,15 @@ func (o *Split) GetSplit() int32 {
 // GetSplitOk returns a tuple with the Split field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Split) GetSplitOk() (*int32, bool) {
-	if o == nil || o.Split == nil {
-		return nil, false
+	if o == nil || isNil(o.Split) {
+    return nil, false
 	}
 	return o.Split, true
 }
 
 // HasSplit returns a boolean if a field has been set.
 func (o *Split) HasSplit() bool {
-	if o != nil && o.Split != nil {
+	if o != nil && !isNil(o.Split) {
 		return true
 	}
 
@@ -275,25 +275,25 @@ func (o *Split) SetSplit(v int32) {
 
 func (o Split) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AverageSpeed != nil {
+	if !isNil(o.AverageSpeed) {
 		toSerialize["average_speed"] = o.AverageSpeed
 	}
-	if o.Distance != nil {
+	if !isNil(o.Distance) {
 		toSerialize["distance"] = o.Distance
 	}
-	if o.ElapsedTime != nil {
+	if !isNil(o.ElapsedTime) {
 		toSerialize["elapsed_time"] = o.ElapsedTime
 	}
-	if o.ElevationDifference != nil {
+	if !isNil(o.ElevationDifference) {
 		toSerialize["elevation_difference"] = o.ElevationDifference
 	}
-	if o.PaceZone != nil {
+	if !isNil(o.PaceZone) {
 		toSerialize["pace_zone"] = o.PaceZone
 	}
-	if o.MovingTime != nil {
+	if !isNil(o.MovingTime) {
 		toSerialize["moving_time"] = o.MovingTime
 	}
-	if o.Split != nil {
+	if !isNil(o.Split) {
 		toSerialize["split"] = o.Split
 	}
 	return json.Marshal(toSerialize)
