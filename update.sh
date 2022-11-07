@@ -13,6 +13,9 @@ fi
 wget $CODEGEN_URL -O $JAR
 
 java -jar $JAR generate \
+    --git-host github.com \
+    --git-repo-id strava.go \
+    --git-user-id rasher \
     --input-spec https://developers.strava.com/swagger/swagger.json \
     --generator-name go \
     --additional-properties=packageName=strava,hideGenerationTimestamp=false \
