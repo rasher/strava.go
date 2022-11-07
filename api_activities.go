@@ -350,17 +350,31 @@ type ApiGetCommentsByActivityIdRequest struct {
 	id int64
 	page *int32
 	perPage *int32
+	pageSize *int32
+	afterCursor *string
 }
 
-// Page number. Defaults to 1.
+// Deprecated. Prefer to use after_cursor.
 func (r ApiGetCommentsByActivityIdRequest) Page(page int32) ApiGetCommentsByActivityIdRequest {
 	r.page = &page
 	return r
 }
 
-// Number of items per page. Defaults to 30.
+// Deprecated. Prefer to use page_size.
 func (r ApiGetCommentsByActivityIdRequest) PerPage(perPage int32) ApiGetCommentsByActivityIdRequest {
 	r.perPage = &perPage
+	return r
+}
+
+// Number of items per page. Defaults to 30.
+func (r ApiGetCommentsByActivityIdRequest) PageSize(pageSize int32) ApiGetCommentsByActivityIdRequest {
+	r.pageSize = &pageSize
+	return r
+}
+
+// Cursor of the last item in the previous page of results, used to request the subsequent page of results.  When omitted, the first page of results is fetched.
+func (r ApiGetCommentsByActivityIdRequest) AfterCursor(afterCursor string) ApiGetCommentsByActivityIdRequest {
+	r.afterCursor = &afterCursor
 	return r
 }
 
@@ -412,6 +426,12 @@ func (a *ActivitiesApiService) GetCommentsByActivityIdExecute(r ApiGetCommentsBy
 	}
 	if r.perPage != nil {
 		localVarQueryParams.Add("per_page", parameterToString(*r.perPage, ""))
+	}
+	if r.pageSize != nil {
+		localVarQueryParams.Add("page_size", parameterToString(*r.pageSize, ""))
+	}
+	if r.afterCursor != nil {
+		localVarQueryParams.Add("after_cursor", parameterToString(*r.afterCursor, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

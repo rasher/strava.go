@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ## GetCommentsByActivityId
 
-> []Comment GetCommentsByActivityId(ctx, id).Page(page).PerPage(perPage).Execute()
+> []Comment GetCommentsByActivityId(ctx, id).Page(page).PerPage(perPage).PageSize(pageSize).AfterCursor(afterCursor).Execute()
 
 List Activity Comments
 
@@ -192,12 +192,14 @@ import (
 
 func main() {
     id := int64(789) // int64 | The identifier of the activity.
-    page := int32(56) // int32 | Page number. Defaults to 1. (optional)
-    perPage := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+    page := int32(56) // int32 | Deprecated. Prefer to use after_cursor. (optional)
+    perPage := int32(56) // int32 | Deprecated. Prefer to use page_size. (optional) (default to 30)
+    pageSize := int32(56) // int32 | Number of items per page. Defaults to 30. (optional) (default to 30)
+    afterCursor := "afterCursor_example" // string | Cursor of the last item in the previous page of results, used to request the subsequent page of results.  When omitted, the first page of results is fetched. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ActivitiesApi.GetCommentsByActivityId(context.Background(), id).Page(page).PerPage(perPage).Execute()
+    resp, r, err := apiClient.ActivitiesApi.GetCommentsByActivityId(context.Background(), id).Page(page).PerPage(perPage).PageSize(pageSize).AfterCursor(afterCursor).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ActivitiesApi.GetCommentsByActivityId``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -223,8 +225,10 @@ Other parameters are passed through a pointer to a apiGetCommentsByActivityIdReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **int32** | Page number. Defaults to 1. | 
- **perPage** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
+ **page** | **int32** | Deprecated. Prefer to use after_cursor. | 
+ **perPage** | **int32** | Deprecated. Prefer to use page_size. | [default to 30]
+ **pageSize** | **int32** | Number of items per page. Defaults to 30. | [default to 30]
+ **afterCursor** | **string** | Cursor of the last item in the previous page of results, used to request the subsequent page of results.  When omitted, the first page of results is fetched. | 
 
 ### Return type
 

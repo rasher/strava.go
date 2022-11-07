@@ -1468,17 +1468,30 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Page number. Defaults to 1.
+      - description: Deprecated. Prefer to use after_cursor.
         in: query
         name: page
         schema:
           type: integer
-      - description: Number of items per page. Defaults to 30.
+      - description: Deprecated. Prefer to use page_size.
         in: query
         name: per_page
         schema:
           default: 30
           type: integer
+      - description: Number of items per page. Defaults to 30.
+        in: query
+        name: page_size
+        schema:
+          default: 30
+          type: integer
+      - description: "Cursor of the last item in the previous page of results, used\
+          \ to request the subsequent page of results.  When omitted, the first page\
+          \ of results is fetched."
+        in: query
+        name: after_cursor
+        schema:
+          type: string
       responses:
         "200":
           content:
@@ -1494,6 +1507,7 @@ paths:
                 athlete:
                   firstname: Peter
                   lastname: S
+                cursor: abc123%20
               schema:
                 items:
                   $ref: '#/components/schemas/Comment'
