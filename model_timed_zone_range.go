@@ -43,7 +43,7 @@ func NewTimedZoneRangeWithDefaults() *TimedZoneRange {
 
 // GetMin returns the Min field value if set, zero value otherwise.
 func (o *TimedZoneRange) GetMin() int32 {
-	if o == nil || isNil(o.Min) {
+	if o == nil || o.Min == nil {
 		var ret int32
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *TimedZoneRange) GetMin() int32 {
 // GetMinOk returns a tuple with the Min field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TimedZoneRange) GetMinOk() (*int32, bool) {
-	if o == nil || isNil(o.Min) {
-    return nil, false
+	if o == nil || o.Min == nil {
+		return nil, false
 	}
 	return o.Min, true
 }
 
 // HasMin returns a boolean if a field has been set.
 func (o *TimedZoneRange) HasMin() bool {
-	if o != nil && !isNil(o.Min) {
+	if o != nil && o.Min != nil {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *TimedZoneRange) SetMin(v int32) {
 
 // GetMax returns the Max field value if set, zero value otherwise.
 func (o *TimedZoneRange) GetMax() int32 {
-	if o == nil || isNil(o.Max) {
+	if o == nil || o.Max == nil {
 		var ret int32
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *TimedZoneRange) GetMax() int32 {
 // GetMaxOk returns a tuple with the Max field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TimedZoneRange) GetMaxOk() (*int32, bool) {
-	if o == nil || isNil(o.Max) {
-    return nil, false
+	if o == nil || o.Max == nil {
+		return nil, false
 	}
 	return o.Max, true
 }
 
 // HasMax returns a boolean if a field has been set.
 func (o *TimedZoneRange) HasMax() bool {
-	if o != nil && !isNil(o.Max) {
+	if o != nil && o.Max != nil {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *TimedZoneRange) SetMax(v int32) {
 
 // GetTime returns the Time field value if set, zero value otherwise.
 func (o *TimedZoneRange) GetTime() int32 {
-	if o == nil || isNil(o.Time) {
+	if o == nil || o.Time == nil {
 		var ret int32
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *TimedZoneRange) GetTime() int32 {
 // GetTimeOk returns a tuple with the Time field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TimedZoneRange) GetTimeOk() (*int32, bool) {
-	if o == nil || isNil(o.Time) {
-    return nil, false
+	if o == nil || o.Time == nil {
+		return nil, false
 	}
 	return o.Time, true
 }
 
 // HasTime returns a boolean if a field has been set.
 func (o *TimedZoneRange) HasTime() bool {
-	if o != nil && !isNil(o.Time) {
+	if o != nil && o.Time != nil {
 		return true
 	}
 
@@ -139,13 +139,13 @@ func (o *TimedZoneRange) SetTime(v int32) {
 
 func (o TimedZoneRange) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Min) {
+	if o.Min != nil {
 		toSerialize["min"] = o.Min
 	}
-	if !isNil(o.Max) {
+	if o.Max != nil {
 		toSerialize["max"] = o.Max
 	}
-	if !isNil(o.Time) {
+	if o.Time != nil {
 		toSerialize["time"] = o.Time
 	}
 	return json.Marshal(toSerialize)

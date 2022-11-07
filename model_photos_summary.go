@@ -40,7 +40,7 @@ func NewPhotosSummaryWithDefaults() *PhotosSummary {
 
 // GetCount returns the Count field value if set, zero value otherwise.
 func (o *PhotosSummary) GetCount() int32 {
-	if o == nil || isNil(o.Count) {
+	if o == nil || o.Count == nil {
 		var ret int32
 		return ret
 	}
@@ -50,15 +50,15 @@ func (o *PhotosSummary) GetCount() int32 {
 // GetCountOk returns a tuple with the Count field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PhotosSummary) GetCountOk() (*int32, bool) {
-	if o == nil || isNil(o.Count) {
-    return nil, false
+	if o == nil || o.Count == nil {
+		return nil, false
 	}
 	return o.Count, true
 }
 
 // HasCount returns a boolean if a field has been set.
 func (o *PhotosSummary) HasCount() bool {
-	if o != nil && !isNil(o.Count) {
+	if o != nil && o.Count != nil {
 		return true
 	}
 
@@ -72,7 +72,7 @@ func (o *PhotosSummary) SetCount(v int32) {
 
 // GetPrimary returns the Primary field value if set, zero value otherwise.
 func (o *PhotosSummary) GetPrimary() PhotosSummaryPrimary {
-	if o == nil || isNil(o.Primary) {
+	if o == nil || o.Primary == nil {
 		var ret PhotosSummaryPrimary
 		return ret
 	}
@@ -82,15 +82,15 @@ func (o *PhotosSummary) GetPrimary() PhotosSummaryPrimary {
 // GetPrimaryOk returns a tuple with the Primary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PhotosSummary) GetPrimaryOk() (*PhotosSummaryPrimary, bool) {
-	if o == nil || isNil(o.Primary) {
-    return nil, false
+	if o == nil || o.Primary == nil {
+		return nil, false
 	}
 	return o.Primary, true
 }
 
 // HasPrimary returns a boolean if a field has been set.
 func (o *PhotosSummary) HasPrimary() bool {
-	if o != nil && !isNil(o.Primary) {
+	if o != nil && o.Primary != nil {
 		return true
 	}
 
@@ -104,10 +104,10 @@ func (o *PhotosSummary) SetPrimary(v PhotosSummaryPrimary) {
 
 func (o PhotosSummary) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Count) {
+	if o.Count != nil {
 		toSerialize["count"] = o.Count
 	}
-	if !isNil(o.Primary) {
+	if o.Primary != nil {
 		toSerialize["primary"] = o.Primary
 	}
 	return json.Marshal(toSerialize)

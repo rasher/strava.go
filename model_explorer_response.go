@@ -39,7 +39,7 @@ func NewExplorerResponseWithDefaults() *ExplorerResponse {
 
 // GetSegments returns the Segments field value if set, zero value otherwise.
 func (o *ExplorerResponse) GetSegments() []ExplorerSegment {
-	if o == nil || isNil(o.Segments) {
+	if o == nil || o.Segments == nil {
 		var ret []ExplorerSegment
 		return ret
 	}
@@ -49,15 +49,15 @@ func (o *ExplorerResponse) GetSegments() []ExplorerSegment {
 // GetSegmentsOk returns a tuple with the Segments field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExplorerResponse) GetSegmentsOk() ([]ExplorerSegment, bool) {
-	if o == nil || isNil(o.Segments) {
-    return nil, false
+	if o == nil || o.Segments == nil {
+		return nil, false
 	}
 	return o.Segments, true
 }
 
 // HasSegments returns a boolean if a field has been set.
 func (o *ExplorerResponse) HasSegments() bool {
-	if o != nil && !isNil(o.Segments) {
+	if o != nil && o.Segments != nil {
 		return true
 	}
 
@@ -71,7 +71,7 @@ func (o *ExplorerResponse) SetSegments(v []ExplorerSegment) {
 
 func (o ExplorerResponse) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Segments) {
+	if o.Segments != nil {
 		toSerialize["segments"] = o.Segments
 	}
 	return json.Marshal(toSerialize)

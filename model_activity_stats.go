@@ -50,7 +50,7 @@ func NewActivityStatsWithDefaults() *ActivityStats {
 
 // GetBiggestRideDistance returns the BiggestRideDistance field value if set, zero value otherwise.
 func (o *ActivityStats) GetBiggestRideDistance() float64 {
-	if o == nil || isNil(o.BiggestRideDistance) {
+	if o == nil || o.BiggestRideDistance == nil {
 		var ret float64
 		return ret
 	}
@@ -60,15 +60,15 @@ func (o *ActivityStats) GetBiggestRideDistance() float64 {
 // GetBiggestRideDistanceOk returns a tuple with the BiggestRideDistance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetBiggestRideDistanceOk() (*float64, bool) {
-	if o == nil || isNil(o.BiggestRideDistance) {
-    return nil, false
+	if o == nil || o.BiggestRideDistance == nil {
+		return nil, false
 	}
 	return o.BiggestRideDistance, true
 }
 
 // HasBiggestRideDistance returns a boolean if a field has been set.
 func (o *ActivityStats) HasBiggestRideDistance() bool {
-	if o != nil && !isNil(o.BiggestRideDistance) {
+	if o != nil && o.BiggestRideDistance != nil {
 		return true
 	}
 
@@ -82,7 +82,7 @@ func (o *ActivityStats) SetBiggestRideDistance(v float64) {
 
 // GetBiggestClimbElevationGain returns the BiggestClimbElevationGain field value if set, zero value otherwise.
 func (o *ActivityStats) GetBiggestClimbElevationGain() float64 {
-	if o == nil || isNil(o.BiggestClimbElevationGain) {
+	if o == nil || o.BiggestClimbElevationGain == nil {
 		var ret float64
 		return ret
 	}
@@ -92,15 +92,15 @@ func (o *ActivityStats) GetBiggestClimbElevationGain() float64 {
 // GetBiggestClimbElevationGainOk returns a tuple with the BiggestClimbElevationGain field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetBiggestClimbElevationGainOk() (*float64, bool) {
-	if o == nil || isNil(o.BiggestClimbElevationGain) {
-    return nil, false
+	if o == nil || o.BiggestClimbElevationGain == nil {
+		return nil, false
 	}
 	return o.BiggestClimbElevationGain, true
 }
 
 // HasBiggestClimbElevationGain returns a boolean if a field has been set.
 func (o *ActivityStats) HasBiggestClimbElevationGain() bool {
-	if o != nil && !isNil(o.BiggestClimbElevationGain) {
+	if o != nil && o.BiggestClimbElevationGain != nil {
 		return true
 	}
 
@@ -114,7 +114,7 @@ func (o *ActivityStats) SetBiggestClimbElevationGain(v float64) {
 
 // GetRecentRideTotals returns the RecentRideTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetRecentRideTotals() ActivityTotal {
-	if o == nil || isNil(o.RecentRideTotals) {
+	if o == nil || o.RecentRideTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -124,15 +124,15 @@ func (o *ActivityStats) GetRecentRideTotals() ActivityTotal {
 // GetRecentRideTotalsOk returns a tuple with the RecentRideTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetRecentRideTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.RecentRideTotals) {
-    return nil, false
+	if o == nil || o.RecentRideTotals == nil {
+		return nil, false
 	}
 	return o.RecentRideTotals, true
 }
 
 // HasRecentRideTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasRecentRideTotals() bool {
-	if o != nil && !isNil(o.RecentRideTotals) {
+	if o != nil && o.RecentRideTotals != nil {
 		return true
 	}
 
@@ -146,7 +146,7 @@ func (o *ActivityStats) SetRecentRideTotals(v ActivityTotal) {
 
 // GetRecentRunTotals returns the RecentRunTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetRecentRunTotals() ActivityTotal {
-	if o == nil || isNil(o.RecentRunTotals) {
+	if o == nil || o.RecentRunTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -156,15 +156,15 @@ func (o *ActivityStats) GetRecentRunTotals() ActivityTotal {
 // GetRecentRunTotalsOk returns a tuple with the RecentRunTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetRecentRunTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.RecentRunTotals) {
-    return nil, false
+	if o == nil || o.RecentRunTotals == nil {
+		return nil, false
 	}
 	return o.RecentRunTotals, true
 }
 
 // HasRecentRunTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasRecentRunTotals() bool {
-	if o != nil && !isNil(o.RecentRunTotals) {
+	if o != nil && o.RecentRunTotals != nil {
 		return true
 	}
 
@@ -178,7 +178,7 @@ func (o *ActivityStats) SetRecentRunTotals(v ActivityTotal) {
 
 // GetRecentSwimTotals returns the RecentSwimTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetRecentSwimTotals() ActivityTotal {
-	if o == nil || isNil(o.RecentSwimTotals) {
+	if o == nil || o.RecentSwimTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -188,15 +188,15 @@ func (o *ActivityStats) GetRecentSwimTotals() ActivityTotal {
 // GetRecentSwimTotalsOk returns a tuple with the RecentSwimTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetRecentSwimTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.RecentSwimTotals) {
-    return nil, false
+	if o == nil || o.RecentSwimTotals == nil {
+		return nil, false
 	}
 	return o.RecentSwimTotals, true
 }
 
 // HasRecentSwimTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasRecentSwimTotals() bool {
-	if o != nil && !isNil(o.RecentSwimTotals) {
+	if o != nil && o.RecentSwimTotals != nil {
 		return true
 	}
 
@@ -210,7 +210,7 @@ func (o *ActivityStats) SetRecentSwimTotals(v ActivityTotal) {
 
 // GetYtdRideTotals returns the YtdRideTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetYtdRideTotals() ActivityTotal {
-	if o == nil || isNil(o.YtdRideTotals) {
+	if o == nil || o.YtdRideTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -220,15 +220,15 @@ func (o *ActivityStats) GetYtdRideTotals() ActivityTotal {
 // GetYtdRideTotalsOk returns a tuple with the YtdRideTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetYtdRideTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.YtdRideTotals) {
-    return nil, false
+	if o == nil || o.YtdRideTotals == nil {
+		return nil, false
 	}
 	return o.YtdRideTotals, true
 }
 
 // HasYtdRideTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasYtdRideTotals() bool {
-	if o != nil && !isNil(o.YtdRideTotals) {
+	if o != nil && o.YtdRideTotals != nil {
 		return true
 	}
 
@@ -242,7 +242,7 @@ func (o *ActivityStats) SetYtdRideTotals(v ActivityTotal) {
 
 // GetYtdRunTotals returns the YtdRunTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetYtdRunTotals() ActivityTotal {
-	if o == nil || isNil(o.YtdRunTotals) {
+	if o == nil || o.YtdRunTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -252,15 +252,15 @@ func (o *ActivityStats) GetYtdRunTotals() ActivityTotal {
 // GetYtdRunTotalsOk returns a tuple with the YtdRunTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetYtdRunTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.YtdRunTotals) {
-    return nil, false
+	if o == nil || o.YtdRunTotals == nil {
+		return nil, false
 	}
 	return o.YtdRunTotals, true
 }
 
 // HasYtdRunTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasYtdRunTotals() bool {
-	if o != nil && !isNil(o.YtdRunTotals) {
+	if o != nil && o.YtdRunTotals != nil {
 		return true
 	}
 
@@ -274,7 +274,7 @@ func (o *ActivityStats) SetYtdRunTotals(v ActivityTotal) {
 
 // GetYtdSwimTotals returns the YtdSwimTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetYtdSwimTotals() ActivityTotal {
-	if o == nil || isNil(o.YtdSwimTotals) {
+	if o == nil || o.YtdSwimTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -284,15 +284,15 @@ func (o *ActivityStats) GetYtdSwimTotals() ActivityTotal {
 // GetYtdSwimTotalsOk returns a tuple with the YtdSwimTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetYtdSwimTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.YtdSwimTotals) {
-    return nil, false
+	if o == nil || o.YtdSwimTotals == nil {
+		return nil, false
 	}
 	return o.YtdSwimTotals, true
 }
 
 // HasYtdSwimTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasYtdSwimTotals() bool {
-	if o != nil && !isNil(o.YtdSwimTotals) {
+	if o != nil && o.YtdSwimTotals != nil {
 		return true
 	}
 
@@ -306,7 +306,7 @@ func (o *ActivityStats) SetYtdSwimTotals(v ActivityTotal) {
 
 // GetAllRideTotals returns the AllRideTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetAllRideTotals() ActivityTotal {
-	if o == nil || isNil(o.AllRideTotals) {
+	if o == nil || o.AllRideTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -316,15 +316,15 @@ func (o *ActivityStats) GetAllRideTotals() ActivityTotal {
 // GetAllRideTotalsOk returns a tuple with the AllRideTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetAllRideTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.AllRideTotals) {
-    return nil, false
+	if o == nil || o.AllRideTotals == nil {
+		return nil, false
 	}
 	return o.AllRideTotals, true
 }
 
 // HasAllRideTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasAllRideTotals() bool {
-	if o != nil && !isNil(o.AllRideTotals) {
+	if o != nil && o.AllRideTotals != nil {
 		return true
 	}
 
@@ -338,7 +338,7 @@ func (o *ActivityStats) SetAllRideTotals(v ActivityTotal) {
 
 // GetAllRunTotals returns the AllRunTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetAllRunTotals() ActivityTotal {
-	if o == nil || isNil(o.AllRunTotals) {
+	if o == nil || o.AllRunTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -348,15 +348,15 @@ func (o *ActivityStats) GetAllRunTotals() ActivityTotal {
 // GetAllRunTotalsOk returns a tuple with the AllRunTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetAllRunTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.AllRunTotals) {
-    return nil, false
+	if o == nil || o.AllRunTotals == nil {
+		return nil, false
 	}
 	return o.AllRunTotals, true
 }
 
 // HasAllRunTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasAllRunTotals() bool {
-	if o != nil && !isNil(o.AllRunTotals) {
+	if o != nil && o.AllRunTotals != nil {
 		return true
 	}
 
@@ -370,7 +370,7 @@ func (o *ActivityStats) SetAllRunTotals(v ActivityTotal) {
 
 // GetAllSwimTotals returns the AllSwimTotals field value if set, zero value otherwise.
 func (o *ActivityStats) GetAllSwimTotals() ActivityTotal {
-	if o == nil || isNil(o.AllSwimTotals) {
+	if o == nil || o.AllSwimTotals == nil {
 		var ret ActivityTotal
 		return ret
 	}
@@ -380,15 +380,15 @@ func (o *ActivityStats) GetAllSwimTotals() ActivityTotal {
 // GetAllSwimTotalsOk returns a tuple with the AllSwimTotals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivityStats) GetAllSwimTotalsOk() (*ActivityTotal, bool) {
-	if o == nil || isNil(o.AllSwimTotals) {
-    return nil, false
+	if o == nil || o.AllSwimTotals == nil {
+		return nil, false
 	}
 	return o.AllSwimTotals, true
 }
 
 // HasAllSwimTotals returns a boolean if a field has been set.
 func (o *ActivityStats) HasAllSwimTotals() bool {
-	if o != nil && !isNil(o.AllSwimTotals) {
+	if o != nil && o.AllSwimTotals != nil {
 		return true
 	}
 
@@ -402,37 +402,37 @@ func (o *ActivityStats) SetAllSwimTotals(v ActivityTotal) {
 
 func (o ActivityStats) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.BiggestRideDistance) {
+	if o.BiggestRideDistance != nil {
 		toSerialize["biggest_ride_distance"] = o.BiggestRideDistance
 	}
-	if !isNil(o.BiggestClimbElevationGain) {
+	if o.BiggestClimbElevationGain != nil {
 		toSerialize["biggest_climb_elevation_gain"] = o.BiggestClimbElevationGain
 	}
-	if !isNil(o.RecentRideTotals) {
+	if o.RecentRideTotals != nil {
 		toSerialize["recent_ride_totals"] = o.RecentRideTotals
 	}
-	if !isNil(o.RecentRunTotals) {
+	if o.RecentRunTotals != nil {
 		toSerialize["recent_run_totals"] = o.RecentRunTotals
 	}
-	if !isNil(o.RecentSwimTotals) {
+	if o.RecentSwimTotals != nil {
 		toSerialize["recent_swim_totals"] = o.RecentSwimTotals
 	}
-	if !isNil(o.YtdRideTotals) {
+	if o.YtdRideTotals != nil {
 		toSerialize["ytd_ride_totals"] = o.YtdRideTotals
 	}
-	if !isNil(o.YtdRunTotals) {
+	if o.YtdRunTotals != nil {
 		toSerialize["ytd_run_totals"] = o.YtdRunTotals
 	}
-	if !isNil(o.YtdSwimTotals) {
+	if o.YtdSwimTotals != nil {
 		toSerialize["ytd_swim_totals"] = o.YtdSwimTotals
 	}
-	if !isNil(o.AllRideTotals) {
+	if o.AllRideTotals != nil {
 		toSerialize["all_ride_totals"] = o.AllRideTotals
 	}
-	if !isNil(o.AllRunTotals) {
+	if o.AllRunTotals != nil {
 		toSerialize["all_run_totals"] = o.AllRunTotals
 	}
-	if !isNil(o.AllSwimTotals) {
+	if o.AllSwimTotals != nil {
 		toSerialize["all_swim_totals"] = o.AllSwimTotals
 	}
 	return json.Marshal(toSerialize)

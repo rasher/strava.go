@@ -39,7 +39,7 @@ func NewSmoothGradeStreamAllOfWithDefaults() *SmoothGradeStreamAllOf {
 
 // GetData returns the Data field value if set, zero value otherwise.
 func (o *SmoothGradeStreamAllOf) GetData() []float32 {
-	if o == nil || isNil(o.Data) {
+	if o == nil || o.Data == nil {
 		var ret []float32
 		return ret
 	}
@@ -49,15 +49,15 @@ func (o *SmoothGradeStreamAllOf) GetData() []float32 {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SmoothGradeStreamAllOf) GetDataOk() ([]float32, bool) {
-	if o == nil || isNil(o.Data) {
-    return nil, false
+	if o == nil || o.Data == nil {
+		return nil, false
 	}
 	return o.Data, true
 }
 
 // HasData returns a boolean if a field has been set.
 func (o *SmoothGradeStreamAllOf) HasData() bool {
-	if o != nil && !isNil(o.Data) {
+	if o != nil && o.Data != nil {
 		return true
 	}
 
@@ -71,7 +71,7 @@ func (o *SmoothGradeStreamAllOf) SetData(v []float32) {
 
 func (o SmoothGradeStreamAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Data) {
+	if o.Data != nil {
 		toSerialize["data"] = o.Data
 	}
 	return json.Marshal(toSerialize)

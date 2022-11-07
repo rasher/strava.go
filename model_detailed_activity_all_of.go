@@ -54,7 +54,7 @@ func NewDetailedActivityAllOfWithDefaults() *DetailedActivityAllOf {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetDescription() string {
-	if o == nil || isNil(o.Description) {
+	if o == nil || o.Description == nil {
 		var ret string
 		return ret
 	}
@@ -64,15 +64,15 @@ func (o *DetailedActivityAllOf) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetDescriptionOk() (*string, bool) {
-	if o == nil || isNil(o.Description) {
-    return nil, false
+	if o == nil || o.Description == nil {
+		return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasDescription() bool {
-	if o != nil && !isNil(o.Description) {
+	if o != nil && o.Description != nil {
 		return true
 	}
 
@@ -86,7 +86,7 @@ func (o *DetailedActivityAllOf) SetDescription(v string) {
 
 // GetPhotos returns the Photos field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetPhotos() PhotosSummary {
-	if o == nil || isNil(o.Photos) {
+	if o == nil || o.Photos == nil {
 		var ret PhotosSummary
 		return ret
 	}
@@ -96,15 +96,15 @@ func (o *DetailedActivityAllOf) GetPhotos() PhotosSummary {
 // GetPhotosOk returns a tuple with the Photos field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetPhotosOk() (*PhotosSummary, bool) {
-	if o == nil || isNil(o.Photos) {
-    return nil, false
+	if o == nil || o.Photos == nil {
+		return nil, false
 	}
 	return o.Photos, true
 }
 
 // HasPhotos returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasPhotos() bool {
-	if o != nil && !isNil(o.Photos) {
+	if o != nil && o.Photos != nil {
 		return true
 	}
 
@@ -118,7 +118,7 @@ func (o *DetailedActivityAllOf) SetPhotos(v PhotosSummary) {
 
 // GetGear returns the Gear field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetGear() SummaryGear {
-	if o == nil || isNil(o.Gear) {
+	if o == nil || o.Gear == nil {
 		var ret SummaryGear
 		return ret
 	}
@@ -128,15 +128,15 @@ func (o *DetailedActivityAllOf) GetGear() SummaryGear {
 // GetGearOk returns a tuple with the Gear field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetGearOk() (*SummaryGear, bool) {
-	if o == nil || isNil(o.Gear) {
-    return nil, false
+	if o == nil || o.Gear == nil {
+		return nil, false
 	}
 	return o.Gear, true
 }
 
 // HasGear returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasGear() bool {
-	if o != nil && !isNil(o.Gear) {
+	if o != nil && o.Gear != nil {
 		return true
 	}
 
@@ -150,7 +150,7 @@ func (o *DetailedActivityAllOf) SetGear(v SummaryGear) {
 
 // GetCalories returns the Calories field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetCalories() float32 {
-	if o == nil || isNil(o.Calories) {
+	if o == nil || o.Calories == nil {
 		var ret float32
 		return ret
 	}
@@ -160,15 +160,15 @@ func (o *DetailedActivityAllOf) GetCalories() float32 {
 // GetCaloriesOk returns a tuple with the Calories field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetCaloriesOk() (*float32, bool) {
-	if o == nil || isNil(o.Calories) {
-    return nil, false
+	if o == nil || o.Calories == nil {
+		return nil, false
 	}
 	return o.Calories, true
 }
 
 // HasCalories returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasCalories() bool {
-	if o != nil && !isNil(o.Calories) {
+	if o != nil && o.Calories != nil {
 		return true
 	}
 
@@ -182,7 +182,7 @@ func (o *DetailedActivityAllOf) SetCalories(v float32) {
 
 // GetSegmentEfforts returns the SegmentEfforts field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetSegmentEfforts() []DetailedSegmentEffort {
-	if o == nil || isNil(o.SegmentEfforts) {
+	if o == nil || o.SegmentEfforts == nil {
 		var ret []DetailedSegmentEffort
 		return ret
 	}
@@ -192,15 +192,15 @@ func (o *DetailedActivityAllOf) GetSegmentEfforts() []DetailedSegmentEffort {
 // GetSegmentEffortsOk returns a tuple with the SegmentEfforts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetSegmentEffortsOk() ([]DetailedSegmentEffort, bool) {
-	if o == nil || isNil(o.SegmentEfforts) {
-    return nil, false
+	if o == nil || o.SegmentEfforts == nil {
+		return nil, false
 	}
 	return o.SegmentEfforts, true
 }
 
 // HasSegmentEfforts returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasSegmentEfforts() bool {
-	if o != nil && !isNil(o.SegmentEfforts) {
+	if o != nil && o.SegmentEfforts != nil {
 		return true
 	}
 
@@ -214,7 +214,7 @@ func (o *DetailedActivityAllOf) SetSegmentEfforts(v []DetailedSegmentEffort) {
 
 // GetDeviceName returns the DeviceName field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetDeviceName() string {
-	if o == nil || isNil(o.DeviceName) {
+	if o == nil || o.DeviceName == nil {
 		var ret string
 		return ret
 	}
@@ -224,15 +224,15 @@ func (o *DetailedActivityAllOf) GetDeviceName() string {
 // GetDeviceNameOk returns a tuple with the DeviceName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetDeviceNameOk() (*string, bool) {
-	if o == nil || isNil(o.DeviceName) {
-    return nil, false
+	if o == nil || o.DeviceName == nil {
+		return nil, false
 	}
 	return o.DeviceName, true
 }
 
 // HasDeviceName returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasDeviceName() bool {
-	if o != nil && !isNil(o.DeviceName) {
+	if o != nil && o.DeviceName != nil {
 		return true
 	}
 
@@ -246,7 +246,7 @@ func (o *DetailedActivityAllOf) SetDeviceName(v string) {
 
 // GetEmbedToken returns the EmbedToken field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetEmbedToken() string {
-	if o == nil || isNil(o.EmbedToken) {
+	if o == nil || o.EmbedToken == nil {
 		var ret string
 		return ret
 	}
@@ -256,15 +256,15 @@ func (o *DetailedActivityAllOf) GetEmbedToken() string {
 // GetEmbedTokenOk returns a tuple with the EmbedToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetEmbedTokenOk() (*string, bool) {
-	if o == nil || isNil(o.EmbedToken) {
-    return nil, false
+	if o == nil || o.EmbedToken == nil {
+		return nil, false
 	}
 	return o.EmbedToken, true
 }
 
 // HasEmbedToken returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasEmbedToken() bool {
-	if o != nil && !isNil(o.EmbedToken) {
+	if o != nil && o.EmbedToken != nil {
 		return true
 	}
 
@@ -278,7 +278,7 @@ func (o *DetailedActivityAllOf) SetEmbedToken(v string) {
 
 // GetSplitsMetric returns the SplitsMetric field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetSplitsMetric() []Split {
-	if o == nil || isNil(o.SplitsMetric) {
+	if o == nil || o.SplitsMetric == nil {
 		var ret []Split
 		return ret
 	}
@@ -288,15 +288,15 @@ func (o *DetailedActivityAllOf) GetSplitsMetric() []Split {
 // GetSplitsMetricOk returns a tuple with the SplitsMetric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetSplitsMetricOk() ([]Split, bool) {
-	if o == nil || isNil(o.SplitsMetric) {
-    return nil, false
+	if o == nil || o.SplitsMetric == nil {
+		return nil, false
 	}
 	return o.SplitsMetric, true
 }
 
 // HasSplitsMetric returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasSplitsMetric() bool {
-	if o != nil && !isNil(o.SplitsMetric) {
+	if o != nil && o.SplitsMetric != nil {
 		return true
 	}
 
@@ -310,7 +310,7 @@ func (o *DetailedActivityAllOf) SetSplitsMetric(v []Split) {
 
 // GetSplitsStandard returns the SplitsStandard field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetSplitsStandard() []Split {
-	if o == nil || isNil(o.SplitsStandard) {
+	if o == nil || o.SplitsStandard == nil {
 		var ret []Split
 		return ret
 	}
@@ -320,15 +320,15 @@ func (o *DetailedActivityAllOf) GetSplitsStandard() []Split {
 // GetSplitsStandardOk returns a tuple with the SplitsStandard field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetSplitsStandardOk() ([]Split, bool) {
-	if o == nil || isNil(o.SplitsStandard) {
-    return nil, false
+	if o == nil || o.SplitsStandard == nil {
+		return nil, false
 	}
 	return o.SplitsStandard, true
 }
 
 // HasSplitsStandard returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasSplitsStandard() bool {
-	if o != nil && !isNil(o.SplitsStandard) {
+	if o != nil && o.SplitsStandard != nil {
 		return true
 	}
 
@@ -342,7 +342,7 @@ func (o *DetailedActivityAllOf) SetSplitsStandard(v []Split) {
 
 // GetLaps returns the Laps field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetLaps() []Lap {
-	if o == nil || isNil(o.Laps) {
+	if o == nil || o.Laps == nil {
 		var ret []Lap
 		return ret
 	}
@@ -352,15 +352,15 @@ func (o *DetailedActivityAllOf) GetLaps() []Lap {
 // GetLapsOk returns a tuple with the Laps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetLapsOk() ([]Lap, bool) {
-	if o == nil || isNil(o.Laps) {
-    return nil, false
+	if o == nil || o.Laps == nil {
+		return nil, false
 	}
 	return o.Laps, true
 }
 
 // HasLaps returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasLaps() bool {
-	if o != nil && !isNil(o.Laps) {
+	if o != nil && o.Laps != nil {
 		return true
 	}
 
@@ -374,7 +374,7 @@ func (o *DetailedActivityAllOf) SetLaps(v []Lap) {
 
 // GetBestEfforts returns the BestEfforts field value if set, zero value otherwise.
 func (o *DetailedActivityAllOf) GetBestEfforts() []DetailedSegmentEffort {
-	if o == nil || isNil(o.BestEfforts) {
+	if o == nil || o.BestEfforts == nil {
 		var ret []DetailedSegmentEffort
 		return ret
 	}
@@ -384,15 +384,15 @@ func (o *DetailedActivityAllOf) GetBestEfforts() []DetailedSegmentEffort {
 // GetBestEffortsOk returns a tuple with the BestEfforts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedActivityAllOf) GetBestEffortsOk() ([]DetailedSegmentEffort, bool) {
-	if o == nil || isNil(o.BestEfforts) {
-    return nil, false
+	if o == nil || o.BestEfforts == nil {
+		return nil, false
 	}
 	return o.BestEfforts, true
 }
 
 // HasBestEfforts returns a boolean if a field has been set.
 func (o *DetailedActivityAllOf) HasBestEfforts() bool {
-	if o != nil && !isNil(o.BestEfforts) {
+	if o != nil && o.BestEfforts != nil {
 		return true
 	}
 
@@ -406,37 +406,37 @@ func (o *DetailedActivityAllOf) SetBestEfforts(v []DetailedSegmentEffort) {
 
 func (o DetailedActivityAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Description) {
+	if o.Description != nil {
 		toSerialize["description"] = o.Description
 	}
-	if !isNil(o.Photos) {
+	if o.Photos != nil {
 		toSerialize["photos"] = o.Photos
 	}
-	if !isNil(o.Gear) {
+	if o.Gear != nil {
 		toSerialize["gear"] = o.Gear
 	}
-	if !isNil(o.Calories) {
+	if o.Calories != nil {
 		toSerialize["calories"] = o.Calories
 	}
-	if !isNil(o.SegmentEfforts) {
+	if o.SegmentEfforts != nil {
 		toSerialize["segment_efforts"] = o.SegmentEfforts
 	}
-	if !isNil(o.DeviceName) {
+	if o.DeviceName != nil {
 		toSerialize["device_name"] = o.DeviceName
 	}
-	if !isNil(o.EmbedToken) {
+	if o.EmbedToken != nil {
 		toSerialize["embed_token"] = o.EmbedToken
 	}
-	if !isNil(o.SplitsMetric) {
+	if o.SplitsMetric != nil {
 		toSerialize["splits_metric"] = o.SplitsMetric
 	}
-	if !isNil(o.SplitsStandard) {
+	if o.SplitsStandard != nil {
 		toSerialize["splits_standard"] = o.SplitsStandard
 	}
-	if !isNil(o.Laps) {
+	if o.Laps != nil {
 		toSerialize["laps"] = o.Laps
 	}
-	if !isNil(o.BestEfforts) {
+	if o.BestEfforts != nil {
 		toSerialize["best_efforts"] = o.BestEfforts
 	}
 	return json.Marshal(toSerialize)

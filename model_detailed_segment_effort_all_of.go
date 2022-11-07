@@ -64,7 +64,7 @@ func NewDetailedSegmentEffortAllOfWithDefaults() *DetailedSegmentEffortAllOf {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || o.Name == nil {
 		var ret string
 		return ret
 	}
@@ -74,15 +74,15 @@ func (o *DetailedSegmentEffortAllOf) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
-    return nil, false
+	if o == nil || o.Name == nil {
+		return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && o.Name != nil {
 		return true
 	}
 
@@ -96,7 +96,7 @@ func (o *DetailedSegmentEffortAllOf) SetName(v string) {
 
 // GetActivity returns the Activity field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetActivity() MetaActivity {
-	if o == nil || isNil(o.Activity) {
+	if o == nil || o.Activity == nil {
 		var ret MetaActivity
 		return ret
 	}
@@ -106,15 +106,15 @@ func (o *DetailedSegmentEffortAllOf) GetActivity() MetaActivity {
 // GetActivityOk returns a tuple with the Activity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetActivityOk() (*MetaActivity, bool) {
-	if o == nil || isNil(o.Activity) {
-    return nil, false
+	if o == nil || o.Activity == nil {
+		return nil, false
 	}
 	return o.Activity, true
 }
 
 // HasActivity returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasActivity() bool {
-	if o != nil && !isNil(o.Activity) {
+	if o != nil && o.Activity != nil {
 		return true
 	}
 
@@ -128,7 +128,7 @@ func (o *DetailedSegmentEffortAllOf) SetActivity(v MetaActivity) {
 
 // GetAthlete returns the Athlete field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetAthlete() MetaAthlete {
-	if o == nil || isNil(o.Athlete) {
+	if o == nil || o.Athlete == nil {
 		var ret MetaAthlete
 		return ret
 	}
@@ -138,15 +138,15 @@ func (o *DetailedSegmentEffortAllOf) GetAthlete() MetaAthlete {
 // GetAthleteOk returns a tuple with the Athlete field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetAthleteOk() (*MetaAthlete, bool) {
-	if o == nil || isNil(o.Athlete) {
-    return nil, false
+	if o == nil || o.Athlete == nil {
+		return nil, false
 	}
 	return o.Athlete, true
 }
 
 // HasAthlete returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasAthlete() bool {
-	if o != nil && !isNil(o.Athlete) {
+	if o != nil && o.Athlete != nil {
 		return true
 	}
 
@@ -160,7 +160,7 @@ func (o *DetailedSegmentEffortAllOf) SetAthlete(v MetaAthlete) {
 
 // GetMovingTime returns the MovingTime field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetMovingTime() int32 {
-	if o == nil || isNil(o.MovingTime) {
+	if o == nil || o.MovingTime == nil {
 		var ret int32
 		return ret
 	}
@@ -170,15 +170,15 @@ func (o *DetailedSegmentEffortAllOf) GetMovingTime() int32 {
 // GetMovingTimeOk returns a tuple with the MovingTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetMovingTimeOk() (*int32, bool) {
-	if o == nil || isNil(o.MovingTime) {
-    return nil, false
+	if o == nil || o.MovingTime == nil {
+		return nil, false
 	}
 	return o.MovingTime, true
 }
 
 // HasMovingTime returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasMovingTime() bool {
-	if o != nil && !isNil(o.MovingTime) {
+	if o != nil && o.MovingTime != nil {
 		return true
 	}
 
@@ -192,7 +192,7 @@ func (o *DetailedSegmentEffortAllOf) SetMovingTime(v int32) {
 
 // GetStartIndex returns the StartIndex field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetStartIndex() int32 {
-	if o == nil || isNil(o.StartIndex) {
+	if o == nil || o.StartIndex == nil {
 		var ret int32
 		return ret
 	}
@@ -202,15 +202,15 @@ func (o *DetailedSegmentEffortAllOf) GetStartIndex() int32 {
 // GetStartIndexOk returns a tuple with the StartIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetStartIndexOk() (*int32, bool) {
-	if o == nil || isNil(o.StartIndex) {
-    return nil, false
+	if o == nil || o.StartIndex == nil {
+		return nil, false
 	}
 	return o.StartIndex, true
 }
 
 // HasStartIndex returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasStartIndex() bool {
-	if o != nil && !isNil(o.StartIndex) {
+	if o != nil && o.StartIndex != nil {
 		return true
 	}
 
@@ -224,7 +224,7 @@ func (o *DetailedSegmentEffortAllOf) SetStartIndex(v int32) {
 
 // GetEndIndex returns the EndIndex field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetEndIndex() int32 {
-	if o == nil || isNil(o.EndIndex) {
+	if o == nil || o.EndIndex == nil {
 		var ret int32
 		return ret
 	}
@@ -234,15 +234,15 @@ func (o *DetailedSegmentEffortAllOf) GetEndIndex() int32 {
 // GetEndIndexOk returns a tuple with the EndIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetEndIndexOk() (*int32, bool) {
-	if o == nil || isNil(o.EndIndex) {
-    return nil, false
+	if o == nil || o.EndIndex == nil {
+		return nil, false
 	}
 	return o.EndIndex, true
 }
 
 // HasEndIndex returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasEndIndex() bool {
-	if o != nil && !isNil(o.EndIndex) {
+	if o != nil && o.EndIndex != nil {
 		return true
 	}
 
@@ -256,7 +256,7 @@ func (o *DetailedSegmentEffortAllOf) SetEndIndex(v int32) {
 
 // GetAverageCadence returns the AverageCadence field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetAverageCadence() float32 {
-	if o == nil || isNil(o.AverageCadence) {
+	if o == nil || o.AverageCadence == nil {
 		var ret float32
 		return ret
 	}
@@ -266,15 +266,15 @@ func (o *DetailedSegmentEffortAllOf) GetAverageCadence() float32 {
 // GetAverageCadenceOk returns a tuple with the AverageCadence field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetAverageCadenceOk() (*float32, bool) {
-	if o == nil || isNil(o.AverageCadence) {
-    return nil, false
+	if o == nil || o.AverageCadence == nil {
+		return nil, false
 	}
 	return o.AverageCadence, true
 }
 
 // HasAverageCadence returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasAverageCadence() bool {
-	if o != nil && !isNil(o.AverageCadence) {
+	if o != nil && o.AverageCadence != nil {
 		return true
 	}
 
@@ -288,7 +288,7 @@ func (o *DetailedSegmentEffortAllOf) SetAverageCadence(v float32) {
 
 // GetAverageWatts returns the AverageWatts field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetAverageWatts() float32 {
-	if o == nil || isNil(o.AverageWatts) {
+	if o == nil || o.AverageWatts == nil {
 		var ret float32
 		return ret
 	}
@@ -298,15 +298,15 @@ func (o *DetailedSegmentEffortAllOf) GetAverageWatts() float32 {
 // GetAverageWattsOk returns a tuple with the AverageWatts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetAverageWattsOk() (*float32, bool) {
-	if o == nil || isNil(o.AverageWatts) {
-    return nil, false
+	if o == nil || o.AverageWatts == nil {
+		return nil, false
 	}
 	return o.AverageWatts, true
 }
 
 // HasAverageWatts returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasAverageWatts() bool {
-	if o != nil && !isNil(o.AverageWatts) {
+	if o != nil && o.AverageWatts != nil {
 		return true
 	}
 
@@ -320,7 +320,7 @@ func (o *DetailedSegmentEffortAllOf) SetAverageWatts(v float32) {
 
 // GetDeviceWatts returns the DeviceWatts field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetDeviceWatts() bool {
-	if o == nil || isNil(o.DeviceWatts) {
+	if o == nil || o.DeviceWatts == nil {
 		var ret bool
 		return ret
 	}
@@ -330,15 +330,15 @@ func (o *DetailedSegmentEffortAllOf) GetDeviceWatts() bool {
 // GetDeviceWattsOk returns a tuple with the DeviceWatts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetDeviceWattsOk() (*bool, bool) {
-	if o == nil || isNil(o.DeviceWatts) {
-    return nil, false
+	if o == nil || o.DeviceWatts == nil {
+		return nil, false
 	}
 	return o.DeviceWatts, true
 }
 
 // HasDeviceWatts returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasDeviceWatts() bool {
-	if o != nil && !isNil(o.DeviceWatts) {
+	if o != nil && o.DeviceWatts != nil {
 		return true
 	}
 
@@ -352,7 +352,7 @@ func (o *DetailedSegmentEffortAllOf) SetDeviceWatts(v bool) {
 
 // GetAverageHeartrate returns the AverageHeartrate field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetAverageHeartrate() float32 {
-	if o == nil || isNil(o.AverageHeartrate) {
+	if o == nil || o.AverageHeartrate == nil {
 		var ret float32
 		return ret
 	}
@@ -362,15 +362,15 @@ func (o *DetailedSegmentEffortAllOf) GetAverageHeartrate() float32 {
 // GetAverageHeartrateOk returns a tuple with the AverageHeartrate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetAverageHeartrateOk() (*float32, bool) {
-	if o == nil || isNil(o.AverageHeartrate) {
-    return nil, false
+	if o == nil || o.AverageHeartrate == nil {
+		return nil, false
 	}
 	return o.AverageHeartrate, true
 }
 
 // HasAverageHeartrate returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasAverageHeartrate() bool {
-	if o != nil && !isNil(o.AverageHeartrate) {
+	if o != nil && o.AverageHeartrate != nil {
 		return true
 	}
 
@@ -384,7 +384,7 @@ func (o *DetailedSegmentEffortAllOf) SetAverageHeartrate(v float32) {
 
 // GetMaxHeartrate returns the MaxHeartrate field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetMaxHeartrate() float32 {
-	if o == nil || isNil(o.MaxHeartrate) {
+	if o == nil || o.MaxHeartrate == nil {
 		var ret float32
 		return ret
 	}
@@ -394,15 +394,15 @@ func (o *DetailedSegmentEffortAllOf) GetMaxHeartrate() float32 {
 // GetMaxHeartrateOk returns a tuple with the MaxHeartrate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetMaxHeartrateOk() (*float32, bool) {
-	if o == nil || isNil(o.MaxHeartrate) {
-    return nil, false
+	if o == nil || o.MaxHeartrate == nil {
+		return nil, false
 	}
 	return o.MaxHeartrate, true
 }
 
 // HasMaxHeartrate returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasMaxHeartrate() bool {
-	if o != nil && !isNil(o.MaxHeartrate) {
+	if o != nil && o.MaxHeartrate != nil {
 		return true
 	}
 
@@ -416,7 +416,7 @@ func (o *DetailedSegmentEffortAllOf) SetMaxHeartrate(v float32) {
 
 // GetSegment returns the Segment field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetSegment() SummarySegment {
-	if o == nil || isNil(o.Segment) {
+	if o == nil || o.Segment == nil {
 		var ret SummarySegment
 		return ret
 	}
@@ -426,15 +426,15 @@ func (o *DetailedSegmentEffortAllOf) GetSegment() SummarySegment {
 // GetSegmentOk returns a tuple with the Segment field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetSegmentOk() (*SummarySegment, bool) {
-	if o == nil || isNil(o.Segment) {
-    return nil, false
+	if o == nil || o.Segment == nil {
+		return nil, false
 	}
 	return o.Segment, true
 }
 
 // HasSegment returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasSegment() bool {
-	if o != nil && !isNil(o.Segment) {
+	if o != nil && o.Segment != nil {
 		return true
 	}
 
@@ -448,7 +448,7 @@ func (o *DetailedSegmentEffortAllOf) SetSegment(v SummarySegment) {
 
 // GetKomRank returns the KomRank field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetKomRank() int32 {
-	if o == nil || isNil(o.KomRank) {
+	if o == nil || o.KomRank == nil {
 		var ret int32
 		return ret
 	}
@@ -458,15 +458,15 @@ func (o *DetailedSegmentEffortAllOf) GetKomRank() int32 {
 // GetKomRankOk returns a tuple with the KomRank field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetKomRankOk() (*int32, bool) {
-	if o == nil || isNil(o.KomRank) {
-    return nil, false
+	if o == nil || o.KomRank == nil {
+		return nil, false
 	}
 	return o.KomRank, true
 }
 
 // HasKomRank returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasKomRank() bool {
-	if o != nil && !isNil(o.KomRank) {
+	if o != nil && o.KomRank != nil {
 		return true
 	}
 
@@ -480,7 +480,7 @@ func (o *DetailedSegmentEffortAllOf) SetKomRank(v int32) {
 
 // GetPrRank returns the PrRank field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetPrRank() int32 {
-	if o == nil || isNil(o.PrRank) {
+	if o == nil || o.PrRank == nil {
 		var ret int32
 		return ret
 	}
@@ -490,15 +490,15 @@ func (o *DetailedSegmentEffortAllOf) GetPrRank() int32 {
 // GetPrRankOk returns a tuple with the PrRank field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetPrRankOk() (*int32, bool) {
-	if o == nil || isNil(o.PrRank) {
-    return nil, false
+	if o == nil || o.PrRank == nil {
+		return nil, false
 	}
 	return o.PrRank, true
 }
 
 // HasPrRank returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasPrRank() bool {
-	if o != nil && !isNil(o.PrRank) {
+	if o != nil && o.PrRank != nil {
 		return true
 	}
 
@@ -512,7 +512,7 @@ func (o *DetailedSegmentEffortAllOf) SetPrRank(v int32) {
 
 // GetHidden returns the Hidden field value if set, zero value otherwise.
 func (o *DetailedSegmentEffortAllOf) GetHidden() bool {
-	if o == nil || isNil(o.Hidden) {
+	if o == nil || o.Hidden == nil {
 		var ret bool
 		return ret
 	}
@@ -522,15 +522,15 @@ func (o *DetailedSegmentEffortAllOf) GetHidden() bool {
 // GetHiddenOk returns a tuple with the Hidden field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DetailedSegmentEffortAllOf) GetHiddenOk() (*bool, bool) {
-	if o == nil || isNil(o.Hidden) {
-    return nil, false
+	if o == nil || o.Hidden == nil {
+		return nil, false
 	}
 	return o.Hidden, true
 }
 
 // HasHidden returns a boolean if a field has been set.
 func (o *DetailedSegmentEffortAllOf) HasHidden() bool {
-	if o != nil && !isNil(o.Hidden) {
+	if o != nil && o.Hidden != nil {
 		return true
 	}
 
@@ -544,49 +544,49 @@ func (o *DetailedSegmentEffortAllOf) SetHidden(v bool) {
 
 func (o DetailedSegmentEffortAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Name) {
+	if o.Name != nil {
 		toSerialize["name"] = o.Name
 	}
-	if !isNil(o.Activity) {
+	if o.Activity != nil {
 		toSerialize["activity"] = o.Activity
 	}
-	if !isNil(o.Athlete) {
+	if o.Athlete != nil {
 		toSerialize["athlete"] = o.Athlete
 	}
-	if !isNil(o.MovingTime) {
+	if o.MovingTime != nil {
 		toSerialize["moving_time"] = o.MovingTime
 	}
-	if !isNil(o.StartIndex) {
+	if o.StartIndex != nil {
 		toSerialize["start_index"] = o.StartIndex
 	}
-	if !isNil(o.EndIndex) {
+	if o.EndIndex != nil {
 		toSerialize["end_index"] = o.EndIndex
 	}
-	if !isNil(o.AverageCadence) {
+	if o.AverageCadence != nil {
 		toSerialize["average_cadence"] = o.AverageCadence
 	}
-	if !isNil(o.AverageWatts) {
+	if o.AverageWatts != nil {
 		toSerialize["average_watts"] = o.AverageWatts
 	}
-	if !isNil(o.DeviceWatts) {
+	if o.DeviceWatts != nil {
 		toSerialize["device_watts"] = o.DeviceWatts
 	}
-	if !isNil(o.AverageHeartrate) {
+	if o.AverageHeartrate != nil {
 		toSerialize["average_heartrate"] = o.AverageHeartrate
 	}
-	if !isNil(o.MaxHeartrate) {
+	if o.MaxHeartrate != nil {
 		toSerialize["max_heartrate"] = o.MaxHeartrate
 	}
-	if !isNil(o.Segment) {
+	if o.Segment != nil {
 		toSerialize["segment"] = o.Segment
 	}
-	if !isNil(o.KomRank) {
+	if o.KomRank != nil {
 		toSerialize["kom_rank"] = o.KomRank
 	}
-	if !isNil(o.PrRank) {
+	if o.PrRank != nil {
 		toSerialize["pr_rank"] = o.PrRank
 	}
-	if !isNil(o.Hidden) {
+	if o.Hidden != nil {
 		toSerialize["hidden"] = o.Hidden
 	}
 	return json.Marshal(toSerialize)

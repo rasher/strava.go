@@ -69,7 +69,7 @@ func NewSummaryClubWithDefaults() *SummaryClub {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *SummaryClub) GetId() int64 {
-	if o == nil || isNil(o.Id) {
+	if o == nil || o.Id == nil {
 		var ret int64
 		return ret
 	}
@@ -79,15 +79,15 @@ func (o *SummaryClub) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetIdOk() (*int64, bool) {
-	if o == nil || isNil(o.Id) {
-    return nil, false
+	if o == nil || o.Id == nil {
+		return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *SummaryClub) HasId() bool {
-	if o != nil && !isNil(o.Id) {
+	if o != nil && o.Id != nil {
 		return true
 	}
 
@@ -101,7 +101,7 @@ func (o *SummaryClub) SetId(v int64) {
 
 // GetResourceState returns the ResourceState field value if set, zero value otherwise.
 func (o *SummaryClub) GetResourceState() int32 {
-	if o == nil || isNil(o.ResourceState) {
+	if o == nil || o.ResourceState == nil {
 		var ret int32
 		return ret
 	}
@@ -111,15 +111,15 @@ func (o *SummaryClub) GetResourceState() int32 {
 // GetResourceStateOk returns a tuple with the ResourceState field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetResourceStateOk() (*int32, bool) {
-	if o == nil || isNil(o.ResourceState) {
-    return nil, false
+	if o == nil || o.ResourceState == nil {
+		return nil, false
 	}
 	return o.ResourceState, true
 }
 
 // HasResourceState returns a boolean if a field has been set.
 func (o *SummaryClub) HasResourceState() bool {
-	if o != nil && !isNil(o.ResourceState) {
+	if o != nil && o.ResourceState != nil {
 		return true
 	}
 
@@ -133,7 +133,7 @@ func (o *SummaryClub) SetResourceState(v int32) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *SummaryClub) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || o.Name == nil {
 		var ret string
 		return ret
 	}
@@ -143,15 +143,15 @@ func (o *SummaryClub) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
-    return nil, false
+	if o == nil || o.Name == nil {
+		return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *SummaryClub) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && o.Name != nil {
 		return true
 	}
 
@@ -165,7 +165,7 @@ func (o *SummaryClub) SetName(v string) {
 
 // GetProfileMedium returns the ProfileMedium field value if set, zero value otherwise.
 func (o *SummaryClub) GetProfileMedium() string {
-	if o == nil || isNil(o.ProfileMedium) {
+	if o == nil || o.ProfileMedium == nil {
 		var ret string
 		return ret
 	}
@@ -175,15 +175,15 @@ func (o *SummaryClub) GetProfileMedium() string {
 // GetProfileMediumOk returns a tuple with the ProfileMedium field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetProfileMediumOk() (*string, bool) {
-	if o == nil || isNil(o.ProfileMedium) {
-    return nil, false
+	if o == nil || o.ProfileMedium == nil {
+		return nil, false
 	}
 	return o.ProfileMedium, true
 }
 
 // HasProfileMedium returns a boolean if a field has been set.
 func (o *SummaryClub) HasProfileMedium() bool {
-	if o != nil && !isNil(o.ProfileMedium) {
+	if o != nil && o.ProfileMedium != nil {
 		return true
 	}
 
@@ -197,7 +197,7 @@ func (o *SummaryClub) SetProfileMedium(v string) {
 
 // GetCoverPhoto returns the CoverPhoto field value if set, zero value otherwise.
 func (o *SummaryClub) GetCoverPhoto() string {
-	if o == nil || isNil(o.CoverPhoto) {
+	if o == nil || o.CoverPhoto == nil {
 		var ret string
 		return ret
 	}
@@ -207,15 +207,15 @@ func (o *SummaryClub) GetCoverPhoto() string {
 // GetCoverPhotoOk returns a tuple with the CoverPhoto field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetCoverPhotoOk() (*string, bool) {
-	if o == nil || isNil(o.CoverPhoto) {
-    return nil, false
+	if o == nil || o.CoverPhoto == nil {
+		return nil, false
 	}
 	return o.CoverPhoto, true
 }
 
 // HasCoverPhoto returns a boolean if a field has been set.
 func (o *SummaryClub) HasCoverPhoto() bool {
-	if o != nil && !isNil(o.CoverPhoto) {
+	if o != nil && o.CoverPhoto != nil {
 		return true
 	}
 
@@ -229,7 +229,7 @@ func (o *SummaryClub) SetCoverPhoto(v string) {
 
 // GetCoverPhotoSmall returns the CoverPhotoSmall field value if set, zero value otherwise.
 func (o *SummaryClub) GetCoverPhotoSmall() string {
-	if o == nil || isNil(o.CoverPhotoSmall) {
+	if o == nil || o.CoverPhotoSmall == nil {
 		var ret string
 		return ret
 	}
@@ -239,15 +239,15 @@ func (o *SummaryClub) GetCoverPhotoSmall() string {
 // GetCoverPhotoSmallOk returns a tuple with the CoverPhotoSmall field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetCoverPhotoSmallOk() (*string, bool) {
-	if o == nil || isNil(o.CoverPhotoSmall) {
-    return nil, false
+	if o == nil || o.CoverPhotoSmall == nil {
+		return nil, false
 	}
 	return o.CoverPhotoSmall, true
 }
 
 // HasCoverPhotoSmall returns a boolean if a field has been set.
 func (o *SummaryClub) HasCoverPhotoSmall() bool {
-	if o != nil && !isNil(o.CoverPhotoSmall) {
+	if o != nil && o.CoverPhotoSmall != nil {
 		return true
 	}
 
@@ -261,7 +261,7 @@ func (o *SummaryClub) SetCoverPhotoSmall(v string) {
 
 // GetSportType returns the SportType field value if set, zero value otherwise.
 func (o *SummaryClub) GetSportType() string {
-	if o == nil || isNil(o.SportType) {
+	if o == nil || o.SportType == nil {
 		var ret string
 		return ret
 	}
@@ -271,15 +271,15 @@ func (o *SummaryClub) GetSportType() string {
 // GetSportTypeOk returns a tuple with the SportType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetSportTypeOk() (*string, bool) {
-	if o == nil || isNil(o.SportType) {
-    return nil, false
+	if o == nil || o.SportType == nil {
+		return nil, false
 	}
 	return o.SportType, true
 }
 
 // HasSportType returns a boolean if a field has been set.
 func (o *SummaryClub) HasSportType() bool {
-	if o != nil && !isNil(o.SportType) {
+	if o != nil && o.SportType != nil {
 		return true
 	}
 
@@ -293,7 +293,7 @@ func (o *SummaryClub) SetSportType(v string) {
 
 // GetActivityTypes returns the ActivityTypes field value if set, zero value otherwise.
 func (o *SummaryClub) GetActivityTypes() []ActivityType {
-	if o == nil || isNil(o.ActivityTypes) {
+	if o == nil || o.ActivityTypes == nil {
 		var ret []ActivityType
 		return ret
 	}
@@ -303,15 +303,15 @@ func (o *SummaryClub) GetActivityTypes() []ActivityType {
 // GetActivityTypesOk returns a tuple with the ActivityTypes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetActivityTypesOk() ([]ActivityType, bool) {
-	if o == nil || isNil(o.ActivityTypes) {
-    return nil, false
+	if o == nil || o.ActivityTypes == nil {
+		return nil, false
 	}
 	return o.ActivityTypes, true
 }
 
 // HasActivityTypes returns a boolean if a field has been set.
 func (o *SummaryClub) HasActivityTypes() bool {
-	if o != nil && !isNil(o.ActivityTypes) {
+	if o != nil && o.ActivityTypes != nil {
 		return true
 	}
 
@@ -325,7 +325,7 @@ func (o *SummaryClub) SetActivityTypes(v []ActivityType) {
 
 // GetCity returns the City field value if set, zero value otherwise.
 func (o *SummaryClub) GetCity() string {
-	if o == nil || isNil(o.City) {
+	if o == nil || o.City == nil {
 		var ret string
 		return ret
 	}
@@ -335,15 +335,15 @@ func (o *SummaryClub) GetCity() string {
 // GetCityOk returns a tuple with the City field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetCityOk() (*string, bool) {
-	if o == nil || isNil(o.City) {
-    return nil, false
+	if o == nil || o.City == nil {
+		return nil, false
 	}
 	return o.City, true
 }
 
 // HasCity returns a boolean if a field has been set.
 func (o *SummaryClub) HasCity() bool {
-	if o != nil && !isNil(o.City) {
+	if o != nil && o.City != nil {
 		return true
 	}
 
@@ -357,7 +357,7 @@ func (o *SummaryClub) SetCity(v string) {
 
 // GetState returns the State field value if set, zero value otherwise.
 func (o *SummaryClub) GetState() string {
-	if o == nil || isNil(o.State) {
+	if o == nil || o.State == nil {
 		var ret string
 		return ret
 	}
@@ -367,15 +367,15 @@ func (o *SummaryClub) GetState() string {
 // GetStateOk returns a tuple with the State field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetStateOk() (*string, bool) {
-	if o == nil || isNil(o.State) {
-    return nil, false
+	if o == nil || o.State == nil {
+		return nil, false
 	}
 	return o.State, true
 }
 
 // HasState returns a boolean if a field has been set.
 func (o *SummaryClub) HasState() bool {
-	if o != nil && !isNil(o.State) {
+	if o != nil && o.State != nil {
 		return true
 	}
 
@@ -389,7 +389,7 @@ func (o *SummaryClub) SetState(v string) {
 
 // GetCountry returns the Country field value if set, zero value otherwise.
 func (o *SummaryClub) GetCountry() string {
-	if o == nil || isNil(o.Country) {
+	if o == nil || o.Country == nil {
 		var ret string
 		return ret
 	}
@@ -399,15 +399,15 @@ func (o *SummaryClub) GetCountry() string {
 // GetCountryOk returns a tuple with the Country field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetCountryOk() (*string, bool) {
-	if o == nil || isNil(o.Country) {
-    return nil, false
+	if o == nil || o.Country == nil {
+		return nil, false
 	}
 	return o.Country, true
 }
 
 // HasCountry returns a boolean if a field has been set.
 func (o *SummaryClub) HasCountry() bool {
-	if o != nil && !isNil(o.Country) {
+	if o != nil && o.Country != nil {
 		return true
 	}
 
@@ -421,7 +421,7 @@ func (o *SummaryClub) SetCountry(v string) {
 
 // GetPrivate returns the Private field value if set, zero value otherwise.
 func (o *SummaryClub) GetPrivate() bool {
-	if o == nil || isNil(o.Private) {
+	if o == nil || o.Private == nil {
 		var ret bool
 		return ret
 	}
@@ -431,15 +431,15 @@ func (o *SummaryClub) GetPrivate() bool {
 // GetPrivateOk returns a tuple with the Private field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetPrivateOk() (*bool, bool) {
-	if o == nil || isNil(o.Private) {
-    return nil, false
+	if o == nil || o.Private == nil {
+		return nil, false
 	}
 	return o.Private, true
 }
 
 // HasPrivate returns a boolean if a field has been set.
 func (o *SummaryClub) HasPrivate() bool {
-	if o != nil && !isNil(o.Private) {
+	if o != nil && o.Private != nil {
 		return true
 	}
 
@@ -453,7 +453,7 @@ func (o *SummaryClub) SetPrivate(v bool) {
 
 // GetMemberCount returns the MemberCount field value if set, zero value otherwise.
 func (o *SummaryClub) GetMemberCount() int32 {
-	if o == nil || isNil(o.MemberCount) {
+	if o == nil || o.MemberCount == nil {
 		var ret int32
 		return ret
 	}
@@ -463,15 +463,15 @@ func (o *SummaryClub) GetMemberCount() int32 {
 // GetMemberCountOk returns a tuple with the MemberCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetMemberCountOk() (*int32, bool) {
-	if o == nil || isNil(o.MemberCount) {
-    return nil, false
+	if o == nil || o.MemberCount == nil {
+		return nil, false
 	}
 	return o.MemberCount, true
 }
 
 // HasMemberCount returns a boolean if a field has been set.
 func (o *SummaryClub) HasMemberCount() bool {
-	if o != nil && !isNil(o.MemberCount) {
+	if o != nil && o.MemberCount != nil {
 		return true
 	}
 
@@ -485,7 +485,7 @@ func (o *SummaryClub) SetMemberCount(v int32) {
 
 // GetFeatured returns the Featured field value if set, zero value otherwise.
 func (o *SummaryClub) GetFeatured() bool {
-	if o == nil || isNil(o.Featured) {
+	if o == nil || o.Featured == nil {
 		var ret bool
 		return ret
 	}
@@ -495,15 +495,15 @@ func (o *SummaryClub) GetFeatured() bool {
 // GetFeaturedOk returns a tuple with the Featured field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetFeaturedOk() (*bool, bool) {
-	if o == nil || isNil(o.Featured) {
-    return nil, false
+	if o == nil || o.Featured == nil {
+		return nil, false
 	}
 	return o.Featured, true
 }
 
 // HasFeatured returns a boolean if a field has been set.
 func (o *SummaryClub) HasFeatured() bool {
-	if o != nil && !isNil(o.Featured) {
+	if o != nil && o.Featured != nil {
 		return true
 	}
 
@@ -517,7 +517,7 @@ func (o *SummaryClub) SetFeatured(v bool) {
 
 // GetVerified returns the Verified field value if set, zero value otherwise.
 func (o *SummaryClub) GetVerified() bool {
-	if o == nil || isNil(o.Verified) {
+	if o == nil || o.Verified == nil {
 		var ret bool
 		return ret
 	}
@@ -527,15 +527,15 @@ func (o *SummaryClub) GetVerified() bool {
 // GetVerifiedOk returns a tuple with the Verified field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetVerifiedOk() (*bool, bool) {
-	if o == nil || isNil(o.Verified) {
-    return nil, false
+	if o == nil || o.Verified == nil {
+		return nil, false
 	}
 	return o.Verified, true
 }
 
 // HasVerified returns a boolean if a field has been set.
 func (o *SummaryClub) HasVerified() bool {
-	if o != nil && !isNil(o.Verified) {
+	if o != nil && o.Verified != nil {
 		return true
 	}
 
@@ -549,7 +549,7 @@ func (o *SummaryClub) SetVerified(v bool) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *SummaryClub) GetUrl() string {
-	if o == nil || isNil(o.Url) {
+	if o == nil || o.Url == nil {
 		var ret string
 		return ret
 	}
@@ -559,15 +559,15 @@ func (o *SummaryClub) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryClub) GetUrlOk() (*string, bool) {
-	if o == nil || isNil(o.Url) {
-    return nil, false
+	if o == nil || o.Url == nil {
+		return nil, false
 	}
 	return o.Url, true
 }
 
 // HasUrl returns a boolean if a field has been set.
 func (o *SummaryClub) HasUrl() bool {
-	if o != nil && !isNil(o.Url) {
+	if o != nil && o.Url != nil {
 		return true
 	}
 
@@ -581,52 +581,52 @@ func (o *SummaryClub) SetUrl(v string) {
 
 func (o SummaryClub) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Id) {
+	if o.Id != nil {
 		toSerialize["id"] = o.Id
 	}
-	if !isNil(o.ResourceState) {
+	if o.ResourceState != nil {
 		toSerialize["resource_state"] = o.ResourceState
 	}
-	if !isNil(o.Name) {
+	if o.Name != nil {
 		toSerialize["name"] = o.Name
 	}
-	if !isNil(o.ProfileMedium) {
+	if o.ProfileMedium != nil {
 		toSerialize["profile_medium"] = o.ProfileMedium
 	}
-	if !isNil(o.CoverPhoto) {
+	if o.CoverPhoto != nil {
 		toSerialize["cover_photo"] = o.CoverPhoto
 	}
-	if !isNil(o.CoverPhotoSmall) {
+	if o.CoverPhotoSmall != nil {
 		toSerialize["cover_photo_small"] = o.CoverPhotoSmall
 	}
-	if !isNil(o.SportType) {
+	if o.SportType != nil {
 		toSerialize["sport_type"] = o.SportType
 	}
-	if !isNil(o.ActivityTypes) {
+	if o.ActivityTypes != nil {
 		toSerialize["activity_types"] = o.ActivityTypes
 	}
-	if !isNil(o.City) {
+	if o.City != nil {
 		toSerialize["city"] = o.City
 	}
-	if !isNil(o.State) {
+	if o.State != nil {
 		toSerialize["state"] = o.State
 	}
-	if !isNil(o.Country) {
+	if o.Country != nil {
 		toSerialize["country"] = o.Country
 	}
-	if !isNil(o.Private) {
+	if o.Private != nil {
 		toSerialize["private"] = o.Private
 	}
-	if !isNil(o.MemberCount) {
+	if o.MemberCount != nil {
 		toSerialize["member_count"] = o.MemberCount
 	}
-	if !isNil(o.Featured) {
+	if o.Featured != nil {
 		toSerialize["featured"] = o.Featured
 	}
-	if !isNil(o.Verified) {
+	if o.Verified != nil {
 		toSerialize["verified"] = o.Verified
 	}
-	if !isNil(o.Url) {
+	if o.Url != nil {
 		toSerialize["url"] = o.Url
 	}
 	return json.Marshal(toSerialize)

@@ -48,7 +48,7 @@ func NewStreamSetWithDefaults() *StreamSet {
 
 // GetTime returns the Time field value if set, zero value otherwise.
 func (o *StreamSet) GetTime() TimeStream {
-	if o == nil || isNil(o.Time) {
+	if o == nil || o.Time == nil {
 		var ret TimeStream
 		return ret
 	}
@@ -58,15 +58,15 @@ func (o *StreamSet) GetTime() TimeStream {
 // GetTimeOk returns a tuple with the Time field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetTimeOk() (*TimeStream, bool) {
-	if o == nil || isNil(o.Time) {
-    return nil, false
+	if o == nil || o.Time == nil {
+		return nil, false
 	}
 	return o.Time, true
 }
 
 // HasTime returns a boolean if a field has been set.
 func (o *StreamSet) HasTime() bool {
-	if o != nil && !isNil(o.Time) {
+	if o != nil && o.Time != nil {
 		return true
 	}
 
@@ -80,7 +80,7 @@ func (o *StreamSet) SetTime(v TimeStream) {
 
 // GetDistance returns the Distance field value if set, zero value otherwise.
 func (o *StreamSet) GetDistance() DistanceStream {
-	if o == nil || isNil(o.Distance) {
+	if o == nil || o.Distance == nil {
 		var ret DistanceStream
 		return ret
 	}
@@ -90,15 +90,15 @@ func (o *StreamSet) GetDistance() DistanceStream {
 // GetDistanceOk returns a tuple with the Distance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetDistanceOk() (*DistanceStream, bool) {
-	if o == nil || isNil(o.Distance) {
-    return nil, false
+	if o == nil || o.Distance == nil {
+		return nil, false
 	}
 	return o.Distance, true
 }
 
 // HasDistance returns a boolean if a field has been set.
 func (o *StreamSet) HasDistance() bool {
-	if o != nil && !isNil(o.Distance) {
+	if o != nil && o.Distance != nil {
 		return true
 	}
 
@@ -112,7 +112,7 @@ func (o *StreamSet) SetDistance(v DistanceStream) {
 
 // GetLatlng returns the Latlng field value if set, zero value otherwise.
 func (o *StreamSet) GetLatlng() LatLngStream {
-	if o == nil || isNil(o.Latlng) {
+	if o == nil || o.Latlng == nil {
 		var ret LatLngStream
 		return ret
 	}
@@ -122,15 +122,15 @@ func (o *StreamSet) GetLatlng() LatLngStream {
 // GetLatlngOk returns a tuple with the Latlng field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetLatlngOk() (*LatLngStream, bool) {
-	if o == nil || isNil(o.Latlng) {
-    return nil, false
+	if o == nil || o.Latlng == nil {
+		return nil, false
 	}
 	return o.Latlng, true
 }
 
 // HasLatlng returns a boolean if a field has been set.
 func (o *StreamSet) HasLatlng() bool {
-	if o != nil && !isNil(o.Latlng) {
+	if o != nil && o.Latlng != nil {
 		return true
 	}
 
@@ -144,7 +144,7 @@ func (o *StreamSet) SetLatlng(v LatLngStream) {
 
 // GetAltitude returns the Altitude field value if set, zero value otherwise.
 func (o *StreamSet) GetAltitude() AltitudeStream {
-	if o == nil || isNil(o.Altitude) {
+	if o == nil || o.Altitude == nil {
 		var ret AltitudeStream
 		return ret
 	}
@@ -154,15 +154,15 @@ func (o *StreamSet) GetAltitude() AltitudeStream {
 // GetAltitudeOk returns a tuple with the Altitude field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetAltitudeOk() (*AltitudeStream, bool) {
-	if o == nil || isNil(o.Altitude) {
-    return nil, false
+	if o == nil || o.Altitude == nil {
+		return nil, false
 	}
 	return o.Altitude, true
 }
 
 // HasAltitude returns a boolean if a field has been set.
 func (o *StreamSet) HasAltitude() bool {
-	if o != nil && !isNil(o.Altitude) {
+	if o != nil && o.Altitude != nil {
 		return true
 	}
 
@@ -176,7 +176,7 @@ func (o *StreamSet) SetAltitude(v AltitudeStream) {
 
 // GetVelocitySmooth returns the VelocitySmooth field value if set, zero value otherwise.
 func (o *StreamSet) GetVelocitySmooth() SmoothVelocityStream {
-	if o == nil || isNil(o.VelocitySmooth) {
+	if o == nil || o.VelocitySmooth == nil {
 		var ret SmoothVelocityStream
 		return ret
 	}
@@ -186,15 +186,15 @@ func (o *StreamSet) GetVelocitySmooth() SmoothVelocityStream {
 // GetVelocitySmoothOk returns a tuple with the VelocitySmooth field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetVelocitySmoothOk() (*SmoothVelocityStream, bool) {
-	if o == nil || isNil(o.VelocitySmooth) {
-    return nil, false
+	if o == nil || o.VelocitySmooth == nil {
+		return nil, false
 	}
 	return o.VelocitySmooth, true
 }
 
 // HasVelocitySmooth returns a boolean if a field has been set.
 func (o *StreamSet) HasVelocitySmooth() bool {
-	if o != nil && !isNil(o.VelocitySmooth) {
+	if o != nil && o.VelocitySmooth != nil {
 		return true
 	}
 
@@ -208,7 +208,7 @@ func (o *StreamSet) SetVelocitySmooth(v SmoothVelocityStream) {
 
 // GetHeartrate returns the Heartrate field value if set, zero value otherwise.
 func (o *StreamSet) GetHeartrate() HeartrateStream {
-	if o == nil || isNil(o.Heartrate) {
+	if o == nil || o.Heartrate == nil {
 		var ret HeartrateStream
 		return ret
 	}
@@ -218,15 +218,15 @@ func (o *StreamSet) GetHeartrate() HeartrateStream {
 // GetHeartrateOk returns a tuple with the Heartrate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetHeartrateOk() (*HeartrateStream, bool) {
-	if o == nil || isNil(o.Heartrate) {
-    return nil, false
+	if o == nil || o.Heartrate == nil {
+		return nil, false
 	}
 	return o.Heartrate, true
 }
 
 // HasHeartrate returns a boolean if a field has been set.
 func (o *StreamSet) HasHeartrate() bool {
-	if o != nil && !isNil(o.Heartrate) {
+	if o != nil && o.Heartrate != nil {
 		return true
 	}
 
@@ -240,7 +240,7 @@ func (o *StreamSet) SetHeartrate(v HeartrateStream) {
 
 // GetCadence returns the Cadence field value if set, zero value otherwise.
 func (o *StreamSet) GetCadence() CadenceStream {
-	if o == nil || isNil(o.Cadence) {
+	if o == nil || o.Cadence == nil {
 		var ret CadenceStream
 		return ret
 	}
@@ -250,15 +250,15 @@ func (o *StreamSet) GetCadence() CadenceStream {
 // GetCadenceOk returns a tuple with the Cadence field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetCadenceOk() (*CadenceStream, bool) {
-	if o == nil || isNil(o.Cadence) {
-    return nil, false
+	if o == nil || o.Cadence == nil {
+		return nil, false
 	}
 	return o.Cadence, true
 }
 
 // HasCadence returns a boolean if a field has been set.
 func (o *StreamSet) HasCadence() bool {
-	if o != nil && !isNil(o.Cadence) {
+	if o != nil && o.Cadence != nil {
 		return true
 	}
 
@@ -272,7 +272,7 @@ func (o *StreamSet) SetCadence(v CadenceStream) {
 
 // GetWatts returns the Watts field value if set, zero value otherwise.
 func (o *StreamSet) GetWatts() PowerStream {
-	if o == nil || isNil(o.Watts) {
+	if o == nil || o.Watts == nil {
 		var ret PowerStream
 		return ret
 	}
@@ -282,15 +282,15 @@ func (o *StreamSet) GetWatts() PowerStream {
 // GetWattsOk returns a tuple with the Watts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetWattsOk() (*PowerStream, bool) {
-	if o == nil || isNil(o.Watts) {
-    return nil, false
+	if o == nil || o.Watts == nil {
+		return nil, false
 	}
 	return o.Watts, true
 }
 
 // HasWatts returns a boolean if a field has been set.
 func (o *StreamSet) HasWatts() bool {
-	if o != nil && !isNil(o.Watts) {
+	if o != nil && o.Watts != nil {
 		return true
 	}
 
@@ -304,7 +304,7 @@ func (o *StreamSet) SetWatts(v PowerStream) {
 
 // GetTemp returns the Temp field value if set, zero value otherwise.
 func (o *StreamSet) GetTemp() TemperatureStream {
-	if o == nil || isNil(o.Temp) {
+	if o == nil || o.Temp == nil {
 		var ret TemperatureStream
 		return ret
 	}
@@ -314,15 +314,15 @@ func (o *StreamSet) GetTemp() TemperatureStream {
 // GetTempOk returns a tuple with the Temp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetTempOk() (*TemperatureStream, bool) {
-	if o == nil || isNil(o.Temp) {
-    return nil, false
+	if o == nil || o.Temp == nil {
+		return nil, false
 	}
 	return o.Temp, true
 }
 
 // HasTemp returns a boolean if a field has been set.
 func (o *StreamSet) HasTemp() bool {
-	if o != nil && !isNil(o.Temp) {
+	if o != nil && o.Temp != nil {
 		return true
 	}
 
@@ -336,7 +336,7 @@ func (o *StreamSet) SetTemp(v TemperatureStream) {
 
 // GetMoving returns the Moving field value if set, zero value otherwise.
 func (o *StreamSet) GetMoving() MovingStream {
-	if o == nil || isNil(o.Moving) {
+	if o == nil || o.Moving == nil {
 		var ret MovingStream
 		return ret
 	}
@@ -346,15 +346,15 @@ func (o *StreamSet) GetMoving() MovingStream {
 // GetMovingOk returns a tuple with the Moving field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetMovingOk() (*MovingStream, bool) {
-	if o == nil || isNil(o.Moving) {
-    return nil, false
+	if o == nil || o.Moving == nil {
+		return nil, false
 	}
 	return o.Moving, true
 }
 
 // HasMoving returns a boolean if a field has been set.
 func (o *StreamSet) HasMoving() bool {
-	if o != nil && !isNil(o.Moving) {
+	if o != nil && o.Moving != nil {
 		return true
 	}
 
@@ -368,7 +368,7 @@ func (o *StreamSet) SetMoving(v MovingStream) {
 
 // GetGradeSmooth returns the GradeSmooth field value if set, zero value otherwise.
 func (o *StreamSet) GetGradeSmooth() SmoothGradeStream {
-	if o == nil || isNil(o.GradeSmooth) {
+	if o == nil || o.GradeSmooth == nil {
 		var ret SmoothGradeStream
 		return ret
 	}
@@ -378,15 +378,15 @@ func (o *StreamSet) GetGradeSmooth() SmoothGradeStream {
 // GetGradeSmoothOk returns a tuple with the GradeSmooth field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StreamSet) GetGradeSmoothOk() (*SmoothGradeStream, bool) {
-	if o == nil || isNil(o.GradeSmooth) {
-    return nil, false
+	if o == nil || o.GradeSmooth == nil {
+		return nil, false
 	}
 	return o.GradeSmooth, true
 }
 
 // HasGradeSmooth returns a boolean if a field has been set.
 func (o *StreamSet) HasGradeSmooth() bool {
-	if o != nil && !isNil(o.GradeSmooth) {
+	if o != nil && o.GradeSmooth != nil {
 		return true
 	}
 
@@ -400,37 +400,37 @@ func (o *StreamSet) SetGradeSmooth(v SmoothGradeStream) {
 
 func (o StreamSet) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Time) {
+	if o.Time != nil {
 		toSerialize["time"] = o.Time
 	}
-	if !isNil(o.Distance) {
+	if o.Distance != nil {
 		toSerialize["distance"] = o.Distance
 	}
-	if !isNil(o.Latlng) {
+	if o.Latlng != nil {
 		toSerialize["latlng"] = o.Latlng
 	}
-	if !isNil(o.Altitude) {
+	if o.Altitude != nil {
 		toSerialize["altitude"] = o.Altitude
 	}
-	if !isNil(o.VelocitySmooth) {
+	if o.VelocitySmooth != nil {
 		toSerialize["velocity_smooth"] = o.VelocitySmooth
 	}
-	if !isNil(o.Heartrate) {
+	if o.Heartrate != nil {
 		toSerialize["heartrate"] = o.Heartrate
 	}
-	if !isNil(o.Cadence) {
+	if o.Cadence != nil {
 		toSerialize["cadence"] = o.Cadence
 	}
-	if !isNil(o.Watts) {
+	if o.Watts != nil {
 		toSerialize["watts"] = o.Watts
 	}
-	if !isNil(o.Temp) {
+	if o.Temp != nil {
 		toSerialize["temp"] = o.Temp
 	}
-	if !isNil(o.Moving) {
+	if o.Moving != nil {
 		toSerialize["moving"] = o.Moving
 	}
-	if !isNil(o.GradeSmooth) {
+	if o.GradeSmooth != nil {
 		toSerialize["grade_smooth"] = o.GradeSmooth
 	}
 	return json.Marshal(toSerialize)

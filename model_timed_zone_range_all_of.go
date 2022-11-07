@@ -39,7 +39,7 @@ func NewTimedZoneRangeAllOfWithDefaults() *TimedZoneRangeAllOf {
 
 // GetTime returns the Time field value if set, zero value otherwise.
 func (o *TimedZoneRangeAllOf) GetTime() int32 {
-	if o == nil || isNil(o.Time) {
+	if o == nil || o.Time == nil {
 		var ret int32
 		return ret
 	}
@@ -49,15 +49,15 @@ func (o *TimedZoneRangeAllOf) GetTime() int32 {
 // GetTimeOk returns a tuple with the Time field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TimedZoneRangeAllOf) GetTimeOk() (*int32, bool) {
-	if o == nil || isNil(o.Time) {
-    return nil, false
+	if o == nil || o.Time == nil {
+		return nil, false
 	}
 	return o.Time, true
 }
 
 // HasTime returns a boolean if a field has been set.
 func (o *TimedZoneRangeAllOf) HasTime() bool {
-	if o != nil && !isNil(o.Time) {
+	if o != nil && o.Time != nil {
 		return true
 	}
 
@@ -71,7 +71,7 @@ func (o *TimedZoneRangeAllOf) SetTime(v int32) {
 
 func (o TimedZoneRangeAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Time) {
+	if o.Time != nil {
 		toSerialize["time"] = o.Time
 	}
 	return json.Marshal(toSerialize)

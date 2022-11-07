@@ -51,7 +51,7 @@ func NewUpdatableActivityWithDefaults() *UpdatableActivity {
 
 // GetCommute returns the Commute field value if set, zero value otherwise.
 func (o *UpdatableActivity) GetCommute() bool {
-	if o == nil || isNil(o.Commute) {
+	if o == nil || o.Commute == nil {
 		var ret bool
 		return ret
 	}
@@ -61,15 +61,15 @@ func (o *UpdatableActivity) GetCommute() bool {
 // GetCommuteOk returns a tuple with the Commute field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UpdatableActivity) GetCommuteOk() (*bool, bool) {
-	if o == nil || isNil(o.Commute) {
-    return nil, false
+	if o == nil || o.Commute == nil {
+		return nil, false
 	}
 	return o.Commute, true
 }
 
 // HasCommute returns a boolean if a field has been set.
 func (o *UpdatableActivity) HasCommute() bool {
-	if o != nil && !isNil(o.Commute) {
+	if o != nil && o.Commute != nil {
 		return true
 	}
 
@@ -83,7 +83,7 @@ func (o *UpdatableActivity) SetCommute(v bool) {
 
 // GetTrainer returns the Trainer field value if set, zero value otherwise.
 func (o *UpdatableActivity) GetTrainer() bool {
-	if o == nil || isNil(o.Trainer) {
+	if o == nil || o.Trainer == nil {
 		var ret bool
 		return ret
 	}
@@ -93,15 +93,15 @@ func (o *UpdatableActivity) GetTrainer() bool {
 // GetTrainerOk returns a tuple with the Trainer field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UpdatableActivity) GetTrainerOk() (*bool, bool) {
-	if o == nil || isNil(o.Trainer) {
-    return nil, false
+	if o == nil || o.Trainer == nil {
+		return nil, false
 	}
 	return o.Trainer, true
 }
 
 // HasTrainer returns a boolean if a field has been set.
 func (o *UpdatableActivity) HasTrainer() bool {
-	if o != nil && !isNil(o.Trainer) {
+	if o != nil && o.Trainer != nil {
 		return true
 	}
 
@@ -115,7 +115,7 @@ func (o *UpdatableActivity) SetTrainer(v bool) {
 
 // GetHideFromHome returns the HideFromHome field value if set, zero value otherwise.
 func (o *UpdatableActivity) GetHideFromHome() bool {
-	if o == nil || isNil(o.HideFromHome) {
+	if o == nil || o.HideFromHome == nil {
 		var ret bool
 		return ret
 	}
@@ -125,15 +125,15 @@ func (o *UpdatableActivity) GetHideFromHome() bool {
 // GetHideFromHomeOk returns a tuple with the HideFromHome field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UpdatableActivity) GetHideFromHomeOk() (*bool, bool) {
-	if o == nil || isNil(o.HideFromHome) {
-    return nil, false
+	if o == nil || o.HideFromHome == nil {
+		return nil, false
 	}
 	return o.HideFromHome, true
 }
 
 // HasHideFromHome returns a boolean if a field has been set.
 func (o *UpdatableActivity) HasHideFromHome() bool {
-	if o != nil && !isNil(o.HideFromHome) {
+	if o != nil && o.HideFromHome != nil {
 		return true
 	}
 
@@ -147,7 +147,7 @@ func (o *UpdatableActivity) SetHideFromHome(v bool) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *UpdatableActivity) GetDescription() string {
-	if o == nil || isNil(o.Description) {
+	if o == nil || o.Description == nil {
 		var ret string
 		return ret
 	}
@@ -157,15 +157,15 @@ func (o *UpdatableActivity) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UpdatableActivity) GetDescriptionOk() (*string, bool) {
-	if o == nil || isNil(o.Description) {
-    return nil, false
+	if o == nil || o.Description == nil {
+		return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *UpdatableActivity) HasDescription() bool {
-	if o != nil && !isNil(o.Description) {
+	if o != nil && o.Description != nil {
 		return true
 	}
 
@@ -179,7 +179,7 @@ func (o *UpdatableActivity) SetDescription(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *UpdatableActivity) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || o.Name == nil {
 		var ret string
 		return ret
 	}
@@ -189,15 +189,15 @@ func (o *UpdatableActivity) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UpdatableActivity) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
-    return nil, false
+	if o == nil || o.Name == nil {
+		return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *UpdatableActivity) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && o.Name != nil {
 		return true
 	}
 
@@ -211,7 +211,7 @@ func (o *UpdatableActivity) SetName(v string) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *UpdatableActivity) GetType() ActivityType {
-	if o == nil || isNil(o.Type) {
+	if o == nil || o.Type == nil {
 		var ret ActivityType
 		return ret
 	}
@@ -221,15 +221,15 @@ func (o *UpdatableActivity) GetType() ActivityType {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UpdatableActivity) GetTypeOk() (*ActivityType, bool) {
-	if o == nil || isNil(o.Type) {
-    return nil, false
+	if o == nil || o.Type == nil {
+		return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *UpdatableActivity) HasType() bool {
-	if o != nil && !isNil(o.Type) {
+	if o != nil && o.Type != nil {
 		return true
 	}
 
@@ -243,7 +243,7 @@ func (o *UpdatableActivity) SetType(v ActivityType) {
 
 // GetSportType returns the SportType field value if set, zero value otherwise.
 func (o *UpdatableActivity) GetSportType() SportType {
-	if o == nil || isNil(o.SportType) {
+	if o == nil || o.SportType == nil {
 		var ret SportType
 		return ret
 	}
@@ -253,15 +253,15 @@ func (o *UpdatableActivity) GetSportType() SportType {
 // GetSportTypeOk returns a tuple with the SportType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UpdatableActivity) GetSportTypeOk() (*SportType, bool) {
-	if o == nil || isNil(o.SportType) {
-    return nil, false
+	if o == nil || o.SportType == nil {
+		return nil, false
 	}
 	return o.SportType, true
 }
 
 // HasSportType returns a boolean if a field has been set.
 func (o *UpdatableActivity) HasSportType() bool {
-	if o != nil && !isNil(o.SportType) {
+	if o != nil && o.SportType != nil {
 		return true
 	}
 
@@ -275,7 +275,7 @@ func (o *UpdatableActivity) SetSportType(v SportType) {
 
 // GetGearId returns the GearId field value if set, zero value otherwise.
 func (o *UpdatableActivity) GetGearId() string {
-	if o == nil || isNil(o.GearId) {
+	if o == nil || o.GearId == nil {
 		var ret string
 		return ret
 	}
@@ -285,15 +285,15 @@ func (o *UpdatableActivity) GetGearId() string {
 // GetGearIdOk returns a tuple with the GearId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UpdatableActivity) GetGearIdOk() (*string, bool) {
-	if o == nil || isNil(o.GearId) {
-    return nil, false
+	if o == nil || o.GearId == nil {
+		return nil, false
 	}
 	return o.GearId, true
 }
 
 // HasGearId returns a boolean if a field has been set.
 func (o *UpdatableActivity) HasGearId() bool {
-	if o != nil && !isNil(o.GearId) {
+	if o != nil && o.GearId != nil {
 		return true
 	}
 
@@ -307,28 +307,28 @@ func (o *UpdatableActivity) SetGearId(v string) {
 
 func (o UpdatableActivity) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Commute) {
+	if o.Commute != nil {
 		toSerialize["commute"] = o.Commute
 	}
-	if !isNil(o.Trainer) {
+	if o.Trainer != nil {
 		toSerialize["trainer"] = o.Trainer
 	}
-	if !isNil(o.HideFromHome) {
+	if o.HideFromHome != nil {
 		toSerialize["hide_from_home"] = o.HideFromHome
 	}
-	if !isNil(o.Description) {
+	if o.Description != nil {
 		toSerialize["description"] = o.Description
 	}
-	if !isNil(o.Name) {
+	if o.Name != nil {
 		toSerialize["name"] = o.Name
 	}
-	if !isNil(o.Type) {
+	if o.Type != nil {
 		toSerialize["type"] = o.Type
 	}
-	if !isNil(o.SportType) {
+	if o.SportType != nil {
 		toSerialize["sport_type"] = o.SportType
 	}
-	if !isNil(o.GearId) {
+	if o.GearId != nil {
 		toSerialize["gear_id"] = o.GearId
 	}
 	return json.Marshal(toSerialize)

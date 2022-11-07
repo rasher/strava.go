@@ -43,7 +43,7 @@ func NewMetaClubWithDefaults() *MetaClub {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *MetaClub) GetId() int64 {
-	if o == nil || isNil(o.Id) {
+	if o == nil || o.Id == nil {
 		var ret int64
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *MetaClub) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MetaClub) GetIdOk() (*int64, bool) {
-	if o == nil || isNil(o.Id) {
-    return nil, false
+	if o == nil || o.Id == nil {
+		return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *MetaClub) HasId() bool {
-	if o != nil && !isNil(o.Id) {
+	if o != nil && o.Id != nil {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *MetaClub) SetId(v int64) {
 
 // GetResourceState returns the ResourceState field value if set, zero value otherwise.
 func (o *MetaClub) GetResourceState() int32 {
-	if o == nil || isNil(o.ResourceState) {
+	if o == nil || o.ResourceState == nil {
 		var ret int32
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *MetaClub) GetResourceState() int32 {
 // GetResourceStateOk returns a tuple with the ResourceState field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MetaClub) GetResourceStateOk() (*int32, bool) {
-	if o == nil || isNil(o.ResourceState) {
-    return nil, false
+	if o == nil || o.ResourceState == nil {
+		return nil, false
 	}
 	return o.ResourceState, true
 }
 
 // HasResourceState returns a boolean if a field has been set.
 func (o *MetaClub) HasResourceState() bool {
-	if o != nil && !isNil(o.ResourceState) {
+	if o != nil && o.ResourceState != nil {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *MetaClub) SetResourceState(v int32) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *MetaClub) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || o.Name == nil {
 		var ret string
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *MetaClub) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MetaClub) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
-    return nil, false
+	if o == nil || o.Name == nil {
+		return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *MetaClub) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && o.Name != nil {
 		return true
 	}
 
@@ -139,13 +139,13 @@ func (o *MetaClub) SetName(v string) {
 
 func (o MetaClub) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Id) {
+	if o.Id != nil {
 		toSerialize["id"] = o.Id
 	}
-	if !isNil(o.ResourceState) {
+	if o.ResourceState != nil {
 		toSerialize["resource_state"] = o.ResourceState
 	}
-	if !isNil(o.Name) {
+	if o.Name != nil {
 		toSerialize["name"] = o.Name
 	}
 	return json.Marshal(toSerialize)

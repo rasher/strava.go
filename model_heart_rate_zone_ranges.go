@@ -40,7 +40,7 @@ func NewHeartRateZoneRangesWithDefaults() *HeartRateZoneRanges {
 
 // GetCustomZones returns the CustomZones field value if set, zero value otherwise.
 func (o *HeartRateZoneRanges) GetCustomZones() bool {
-	if o == nil || isNil(o.CustomZones) {
+	if o == nil || o.CustomZones == nil {
 		var ret bool
 		return ret
 	}
@@ -50,15 +50,15 @@ func (o *HeartRateZoneRanges) GetCustomZones() bool {
 // GetCustomZonesOk returns a tuple with the CustomZones field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HeartRateZoneRanges) GetCustomZonesOk() (*bool, bool) {
-	if o == nil || isNil(o.CustomZones) {
-    return nil, false
+	if o == nil || o.CustomZones == nil {
+		return nil, false
 	}
 	return o.CustomZones, true
 }
 
 // HasCustomZones returns a boolean if a field has been set.
 func (o *HeartRateZoneRanges) HasCustomZones() bool {
-	if o != nil && !isNil(o.CustomZones) {
+	if o != nil && o.CustomZones != nil {
 		return true
 	}
 
@@ -72,7 +72,7 @@ func (o *HeartRateZoneRanges) SetCustomZones(v bool) {
 
 // GetZones returns the Zones field value if set, zero value otherwise.
 func (o *HeartRateZoneRanges) GetZones() []ZoneRange {
-	if o == nil || isNil(o.Zones) {
+	if o == nil || o.Zones == nil {
 		var ret []ZoneRange
 		return ret
 	}
@@ -82,15 +82,15 @@ func (o *HeartRateZoneRanges) GetZones() []ZoneRange {
 // GetZonesOk returns a tuple with the Zones field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HeartRateZoneRanges) GetZonesOk() ([]ZoneRange, bool) {
-	if o == nil || isNil(o.Zones) {
-    return nil, false
+	if o == nil || o.Zones == nil {
+		return nil, false
 	}
 	return o.Zones, true
 }
 
 // HasZones returns a boolean if a field has been set.
 func (o *HeartRateZoneRanges) HasZones() bool {
-	if o != nil && !isNil(o.Zones) {
+	if o != nil && o.Zones != nil {
 		return true
 	}
 
@@ -104,10 +104,10 @@ func (o *HeartRateZoneRanges) SetZones(v []ZoneRange) {
 
 func (o HeartRateZoneRanges) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.CustomZones) {
+	if o.CustomZones != nil {
 		toSerialize["custom_zones"] = o.CustomZones
 	}
-	if !isNil(o.Zones) {
+	if o.Zones != nil {
 		toSerialize["zones"] = o.Zones
 	}
 	return json.Marshal(toSerialize)

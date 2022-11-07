@@ -43,7 +43,7 @@ func NewBaseStreamWithDefaults() *BaseStream {
 
 // GetOriginalSize returns the OriginalSize field value if set, zero value otherwise.
 func (o *BaseStream) GetOriginalSize() int32 {
-	if o == nil || isNil(o.OriginalSize) {
+	if o == nil || o.OriginalSize == nil {
 		var ret int32
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *BaseStream) GetOriginalSize() int32 {
 // GetOriginalSizeOk returns a tuple with the OriginalSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BaseStream) GetOriginalSizeOk() (*int32, bool) {
-	if o == nil || isNil(o.OriginalSize) {
-    return nil, false
+	if o == nil || o.OriginalSize == nil {
+		return nil, false
 	}
 	return o.OriginalSize, true
 }
 
 // HasOriginalSize returns a boolean if a field has been set.
 func (o *BaseStream) HasOriginalSize() bool {
-	if o != nil && !isNil(o.OriginalSize) {
+	if o != nil && o.OriginalSize != nil {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *BaseStream) SetOriginalSize(v int32) {
 
 // GetResolution returns the Resolution field value if set, zero value otherwise.
 func (o *BaseStream) GetResolution() string {
-	if o == nil || isNil(o.Resolution) {
+	if o == nil || o.Resolution == nil {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *BaseStream) GetResolution() string {
 // GetResolutionOk returns a tuple with the Resolution field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BaseStream) GetResolutionOk() (*string, bool) {
-	if o == nil || isNil(o.Resolution) {
-    return nil, false
+	if o == nil || o.Resolution == nil {
+		return nil, false
 	}
 	return o.Resolution, true
 }
 
 // HasResolution returns a boolean if a field has been set.
 func (o *BaseStream) HasResolution() bool {
-	if o != nil && !isNil(o.Resolution) {
+	if o != nil && o.Resolution != nil {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *BaseStream) SetResolution(v string) {
 
 // GetSeriesType returns the SeriesType field value if set, zero value otherwise.
 func (o *BaseStream) GetSeriesType() string {
-	if o == nil || isNil(o.SeriesType) {
+	if o == nil || o.SeriesType == nil {
 		var ret string
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *BaseStream) GetSeriesType() string {
 // GetSeriesTypeOk returns a tuple with the SeriesType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BaseStream) GetSeriesTypeOk() (*string, bool) {
-	if o == nil || isNil(o.SeriesType) {
-    return nil, false
+	if o == nil || o.SeriesType == nil {
+		return nil, false
 	}
 	return o.SeriesType, true
 }
 
 // HasSeriesType returns a boolean if a field has been set.
 func (o *BaseStream) HasSeriesType() bool {
-	if o != nil && !isNil(o.SeriesType) {
+	if o != nil && o.SeriesType != nil {
 		return true
 	}
 
@@ -139,13 +139,13 @@ func (o *BaseStream) SetSeriesType(v string) {
 
 func (o BaseStream) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.OriginalSize) {
+	if o.OriginalSize != nil {
 		toSerialize["original_size"] = o.OriginalSize
 	}
-	if !isNil(o.Resolution) {
+	if o.Resolution != nil {
 		toSerialize["resolution"] = o.Resolution
 	}
-	if !isNil(o.SeriesType) {
+	if o.SeriesType != nil {
 		toSerialize["series_type"] = o.SeriesType
 	}
 	return json.Marshal(toSerialize)

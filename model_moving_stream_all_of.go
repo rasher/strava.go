@@ -39,7 +39,7 @@ func NewMovingStreamAllOfWithDefaults() *MovingStreamAllOf {
 
 // GetData returns the Data field value if set, zero value otherwise.
 func (o *MovingStreamAllOf) GetData() []bool {
-	if o == nil || isNil(o.Data) {
+	if o == nil || o.Data == nil {
 		var ret []bool
 		return ret
 	}
@@ -49,15 +49,15 @@ func (o *MovingStreamAllOf) GetData() []bool {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MovingStreamAllOf) GetDataOk() ([]bool, bool) {
-	if o == nil || isNil(o.Data) {
-    return nil, false
+	if o == nil || o.Data == nil {
+		return nil, false
 	}
 	return o.Data, true
 }
 
 // HasData returns a boolean if a field has been set.
 func (o *MovingStreamAllOf) HasData() bool {
-	if o != nil && !isNil(o.Data) {
+	if o != nil && o.Data != nil {
 		return true
 	}
 
@@ -71,7 +71,7 @@ func (o *MovingStreamAllOf) SetData(v []bool) {
 
 func (o MovingStreamAllOf) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Data) {
+	if o.Data != nil {
 		toSerialize["data"] = o.Data
 	}
 	return json.Marshal(toSerialize)

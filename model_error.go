@@ -43,7 +43,7 @@ func NewErrorWithDefaults() *Error {
 
 // GetCode returns the Code field value if set, zero value otherwise.
 func (o *Error) GetCode() string {
-	if o == nil || isNil(o.Code) {
+	if o == nil || o.Code == nil {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *Error) GetCode() string {
 // GetCodeOk returns a tuple with the Code field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Error) GetCodeOk() (*string, bool) {
-	if o == nil || isNil(o.Code) {
-    return nil, false
+	if o == nil || o.Code == nil {
+		return nil, false
 	}
 	return o.Code, true
 }
 
 // HasCode returns a boolean if a field has been set.
 func (o *Error) HasCode() bool {
-	if o != nil && !isNil(o.Code) {
+	if o != nil && o.Code != nil {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *Error) SetCode(v string) {
 
 // GetField returns the Field field value if set, zero value otherwise.
 func (o *Error) GetField() string {
-	if o == nil || isNil(o.Field) {
+	if o == nil || o.Field == nil {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *Error) GetField() string {
 // GetFieldOk returns a tuple with the Field field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Error) GetFieldOk() (*string, bool) {
-	if o == nil || isNil(o.Field) {
-    return nil, false
+	if o == nil || o.Field == nil {
+		return nil, false
 	}
 	return o.Field, true
 }
 
 // HasField returns a boolean if a field has been set.
 func (o *Error) HasField() bool {
-	if o != nil && !isNil(o.Field) {
+	if o != nil && o.Field != nil {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *Error) SetField(v string) {
 
 // GetResource returns the Resource field value if set, zero value otherwise.
 func (o *Error) GetResource() string {
-	if o == nil || isNil(o.Resource) {
+	if o == nil || o.Resource == nil {
 		var ret string
 		return ret
 	}
@@ -117,15 +117,15 @@ func (o *Error) GetResource() string {
 // GetResourceOk returns a tuple with the Resource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Error) GetResourceOk() (*string, bool) {
-	if o == nil || isNil(o.Resource) {
-    return nil, false
+	if o == nil || o.Resource == nil {
+		return nil, false
 	}
 	return o.Resource, true
 }
 
 // HasResource returns a boolean if a field has been set.
 func (o *Error) HasResource() bool {
-	if o != nil && !isNil(o.Resource) {
+	if o != nil && o.Resource != nil {
 		return true
 	}
 
@@ -139,13 +139,13 @@ func (o *Error) SetResource(v string) {
 
 func (o Error) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Code) {
+	if o.Code != nil {
 		toSerialize["code"] = o.Code
 	}
-	if !isNil(o.Field) {
+	if o.Field != nil {
 		toSerialize["field"] = o.Field
 	}
-	if !isNil(o.Resource) {
+	if o.Resource != nil {
 		toSerialize["resource"] = o.Resource
 	}
 	return json.Marshal(toSerialize)

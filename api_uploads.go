@@ -198,8 +198,7 @@ func (a *UploadsApiService) CreateUploadExecute(r ApiCreateUploadRequest) (*Uplo
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+			newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -309,8 +308,7 @@ func (a *UploadsApiService) GetUploadByIdExecute(r ApiGetUploadByIdRequest) (*Up
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+			newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 

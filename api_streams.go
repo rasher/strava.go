@@ -142,8 +142,7 @@ func (a *StreamsApiService) GetActivityStreamsExecute(r ApiGetActivityStreamsReq
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+			newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -253,8 +252,7 @@ func (a *StreamsApiService) GetRouteStreamsExecute(r ApiGetRouteStreamsRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+			newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -389,8 +387,7 @@ func (a *StreamsApiService) GetSegmentEffortStreamsExecute(r ApiGetSegmentEffort
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+			newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -525,8 +522,7 @@ func (a *StreamsApiService) GetSegmentStreamsExecute(r ApiGetSegmentStreamsReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+			newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 

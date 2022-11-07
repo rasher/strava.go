@@ -47,7 +47,7 @@ func NewSummaryGearWithDefaults() *SummaryGear {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *SummaryGear) GetId() string {
-	if o == nil || isNil(o.Id) {
+	if o == nil || o.Id == nil {
 		var ret string
 		return ret
 	}
@@ -57,15 +57,15 @@ func (o *SummaryGear) GetId() string {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryGear) GetIdOk() (*string, bool) {
-	if o == nil || isNil(o.Id) {
-    return nil, false
+	if o == nil || o.Id == nil {
+		return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *SummaryGear) HasId() bool {
-	if o != nil && !isNil(o.Id) {
+	if o != nil && o.Id != nil {
 		return true
 	}
 
@@ -79,7 +79,7 @@ func (o *SummaryGear) SetId(v string) {
 
 // GetResourceState returns the ResourceState field value if set, zero value otherwise.
 func (o *SummaryGear) GetResourceState() int32 {
-	if o == nil || isNil(o.ResourceState) {
+	if o == nil || o.ResourceState == nil {
 		var ret int32
 		return ret
 	}
@@ -89,15 +89,15 @@ func (o *SummaryGear) GetResourceState() int32 {
 // GetResourceStateOk returns a tuple with the ResourceState field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryGear) GetResourceStateOk() (*int32, bool) {
-	if o == nil || isNil(o.ResourceState) {
-    return nil, false
+	if o == nil || o.ResourceState == nil {
+		return nil, false
 	}
 	return o.ResourceState, true
 }
 
 // HasResourceState returns a boolean if a field has been set.
 func (o *SummaryGear) HasResourceState() bool {
-	if o != nil && !isNil(o.ResourceState) {
+	if o != nil && o.ResourceState != nil {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *SummaryGear) SetResourceState(v int32) {
 
 // GetPrimary returns the Primary field value if set, zero value otherwise.
 func (o *SummaryGear) GetPrimary() bool {
-	if o == nil || isNil(o.Primary) {
+	if o == nil || o.Primary == nil {
 		var ret bool
 		return ret
 	}
@@ -121,15 +121,15 @@ func (o *SummaryGear) GetPrimary() bool {
 // GetPrimaryOk returns a tuple with the Primary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryGear) GetPrimaryOk() (*bool, bool) {
-	if o == nil || isNil(o.Primary) {
-    return nil, false
+	if o == nil || o.Primary == nil {
+		return nil, false
 	}
 	return o.Primary, true
 }
 
 // HasPrimary returns a boolean if a field has been set.
 func (o *SummaryGear) HasPrimary() bool {
-	if o != nil && !isNil(o.Primary) {
+	if o != nil && o.Primary != nil {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *SummaryGear) SetPrimary(v bool) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *SummaryGear) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || o.Name == nil {
 		var ret string
 		return ret
 	}
@@ -153,15 +153,15 @@ func (o *SummaryGear) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryGear) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
-    return nil, false
+	if o == nil || o.Name == nil {
+		return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *SummaryGear) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && o.Name != nil {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *SummaryGear) SetName(v string) {
 
 // GetDistance returns the Distance field value if set, zero value otherwise.
 func (o *SummaryGear) GetDistance() float32 {
-	if o == nil || isNil(o.Distance) {
+	if o == nil || o.Distance == nil {
 		var ret float32
 		return ret
 	}
@@ -185,15 +185,15 @@ func (o *SummaryGear) GetDistance() float32 {
 // GetDistanceOk returns a tuple with the Distance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SummaryGear) GetDistanceOk() (*float32, bool) {
-	if o == nil || isNil(o.Distance) {
-    return nil, false
+	if o == nil || o.Distance == nil {
+		return nil, false
 	}
 	return o.Distance, true
 }
 
 // HasDistance returns a boolean if a field has been set.
 func (o *SummaryGear) HasDistance() bool {
-	if o != nil && !isNil(o.Distance) {
+	if o != nil && o.Distance != nil {
 		return true
 	}
 
@@ -207,19 +207,19 @@ func (o *SummaryGear) SetDistance(v float32) {
 
 func (o SummaryGear) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Id) {
+	if o.Id != nil {
 		toSerialize["id"] = o.Id
 	}
-	if !isNil(o.ResourceState) {
+	if o.ResourceState != nil {
 		toSerialize["resource_state"] = o.ResourceState
 	}
-	if !isNil(o.Primary) {
+	if o.Primary != nil {
 		toSerialize["primary"] = o.Primary
 	}
-	if !isNil(o.Name) {
+	if o.Name != nil {
 		toSerialize["name"] = o.Name
 	}
-	if !isNil(o.Distance) {
+	if o.Distance != nil {
 		toSerialize["distance"] = o.Distance
 	}
 	return json.Marshal(toSerialize)

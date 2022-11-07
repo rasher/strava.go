@@ -39,7 +39,7 @@ func NewMetaAthleteWithDefaults() *MetaAthlete {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *MetaAthlete) GetId() int64 {
-	if o == nil || isNil(o.Id) {
+	if o == nil || o.Id == nil {
 		var ret int64
 		return ret
 	}
@@ -49,15 +49,15 @@ func (o *MetaAthlete) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MetaAthlete) GetIdOk() (*int64, bool) {
-	if o == nil || isNil(o.Id) {
-    return nil, false
+	if o == nil || o.Id == nil {
+		return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *MetaAthlete) HasId() bool {
-	if o != nil && !isNil(o.Id) {
+	if o != nil && o.Id != nil {
 		return true
 	}
 
@@ -71,7 +71,7 @@ func (o *MetaAthlete) SetId(v int64) {
 
 func (o MetaAthlete) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Id) {
+	if o.Id != nil {
 		toSerialize["id"] = o.Id
 	}
 	return json.Marshal(toSerialize)

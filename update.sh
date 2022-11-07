@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-CODEGEN_VERSION=6.2.1
+CODEGEN_VERSION=6.1.0
 CODEGEN_URL=https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/${CODEGEN_VERSION}/openapi-generator-cli-${CODEGEN_VERSION}.jar
 JAR=openapi-generator-cli.jar
 
@@ -18,7 +18,7 @@ java -jar $JAR generate \
     --git-user-id rasher \
     --input-spec https://developers.strava.com/swagger/swagger.json \
     --generator-name go \
-    --additional-properties=packageName=strava,hideGenerationTimestamp=false \
+    --additional-properties=packageName=strava,hideGenerationTimestamp=false,enumClassPrefix=true \
     --skip-validate-spec \
     --output .
 rm -f $JAR

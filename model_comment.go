@@ -47,7 +47,7 @@ func NewCommentWithDefaults() *Comment {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *Comment) GetId() int64 {
-	if o == nil || isNil(o.Id) {
+	if o == nil || o.Id == nil {
 		var ret int64
 		return ret
 	}
@@ -57,15 +57,15 @@ func (o *Comment) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Comment) GetIdOk() (*int64, bool) {
-	if o == nil || isNil(o.Id) {
-    return nil, false
+	if o == nil || o.Id == nil {
+		return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *Comment) HasId() bool {
-	if o != nil && !isNil(o.Id) {
+	if o != nil && o.Id != nil {
 		return true
 	}
 
@@ -79,7 +79,7 @@ func (o *Comment) SetId(v int64) {
 
 // GetActivityId returns the ActivityId field value if set, zero value otherwise.
 func (o *Comment) GetActivityId() int64 {
-	if o == nil || isNil(o.ActivityId) {
+	if o == nil || o.ActivityId == nil {
 		var ret int64
 		return ret
 	}
@@ -89,15 +89,15 @@ func (o *Comment) GetActivityId() int64 {
 // GetActivityIdOk returns a tuple with the ActivityId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Comment) GetActivityIdOk() (*int64, bool) {
-	if o == nil || isNil(o.ActivityId) {
-    return nil, false
+	if o == nil || o.ActivityId == nil {
+		return nil, false
 	}
 	return o.ActivityId, true
 }
 
 // HasActivityId returns a boolean if a field has been set.
 func (o *Comment) HasActivityId() bool {
-	if o != nil && !isNil(o.ActivityId) {
+	if o != nil && o.ActivityId != nil {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *Comment) SetActivityId(v int64) {
 
 // GetText returns the Text field value if set, zero value otherwise.
 func (o *Comment) GetText() string {
-	if o == nil || isNil(o.Text) {
+	if o == nil || o.Text == nil {
 		var ret string
 		return ret
 	}
@@ -121,15 +121,15 @@ func (o *Comment) GetText() string {
 // GetTextOk returns a tuple with the Text field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Comment) GetTextOk() (*string, bool) {
-	if o == nil || isNil(o.Text) {
-    return nil, false
+	if o == nil || o.Text == nil {
+		return nil, false
 	}
 	return o.Text, true
 }
 
 // HasText returns a boolean if a field has been set.
 func (o *Comment) HasText() bool {
-	if o != nil && !isNil(o.Text) {
+	if o != nil && o.Text != nil {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *Comment) SetText(v string) {
 
 // GetAthlete returns the Athlete field value if set, zero value otherwise.
 func (o *Comment) GetAthlete() SummaryAthlete {
-	if o == nil || isNil(o.Athlete) {
+	if o == nil || o.Athlete == nil {
 		var ret SummaryAthlete
 		return ret
 	}
@@ -153,15 +153,15 @@ func (o *Comment) GetAthlete() SummaryAthlete {
 // GetAthleteOk returns a tuple with the Athlete field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Comment) GetAthleteOk() (*SummaryAthlete, bool) {
-	if o == nil || isNil(o.Athlete) {
-    return nil, false
+	if o == nil || o.Athlete == nil {
+		return nil, false
 	}
 	return o.Athlete, true
 }
 
 // HasAthlete returns a boolean if a field has been set.
 func (o *Comment) HasAthlete() bool {
-	if o != nil && !isNil(o.Athlete) {
+	if o != nil && o.Athlete != nil {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *Comment) SetAthlete(v SummaryAthlete) {
 
 // GetCreatedAt returns the CreatedAt field value if set, zero value otherwise.
 func (o *Comment) GetCreatedAt() time.Time {
-	if o == nil || isNil(o.CreatedAt) {
+	if o == nil || o.CreatedAt == nil {
 		var ret time.Time
 		return ret
 	}
@@ -185,15 +185,15 @@ func (o *Comment) GetCreatedAt() time.Time {
 // GetCreatedAtOk returns a tuple with the CreatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Comment) GetCreatedAtOk() (*time.Time, bool) {
-	if o == nil || isNil(o.CreatedAt) {
-    return nil, false
+	if o == nil || o.CreatedAt == nil {
+		return nil, false
 	}
 	return o.CreatedAt, true
 }
 
 // HasCreatedAt returns a boolean if a field has been set.
 func (o *Comment) HasCreatedAt() bool {
-	if o != nil && !isNil(o.CreatedAt) {
+	if o != nil && o.CreatedAt != nil {
 		return true
 	}
 
@@ -207,19 +207,19 @@ func (o *Comment) SetCreatedAt(v time.Time) {
 
 func (o Comment) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Id) {
+	if o.Id != nil {
 		toSerialize["id"] = o.Id
 	}
-	if !isNil(o.ActivityId) {
+	if o.ActivityId != nil {
 		toSerialize["activity_id"] = o.ActivityId
 	}
-	if !isNil(o.Text) {
+	if o.Text != nil {
 		toSerialize["text"] = o.Text
 	}
-	if !isNil(o.Athlete) {
+	if o.Athlete != nil {
 		toSerialize["athlete"] = o.Athlete
 	}
-	if !isNil(o.CreatedAt) {
+	if o.CreatedAt != nil {
 		toSerialize["created_at"] = o.CreatedAt
 	}
 	return json.Marshal(toSerialize)

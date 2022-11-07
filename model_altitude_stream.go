@@ -45,7 +45,7 @@ func NewAltitudeStreamWithDefaults() *AltitudeStream {
 
 // GetOriginalSize returns the OriginalSize field value if set, zero value otherwise.
 func (o *AltitudeStream) GetOriginalSize() int32 {
-	if o == nil || isNil(o.OriginalSize) {
+	if o == nil || o.OriginalSize == nil {
 		var ret int32
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *AltitudeStream) GetOriginalSize() int32 {
 // GetOriginalSizeOk returns a tuple with the OriginalSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AltitudeStream) GetOriginalSizeOk() (*int32, bool) {
-	if o == nil || isNil(o.OriginalSize) {
-    return nil, false
+	if o == nil || o.OriginalSize == nil {
+		return nil, false
 	}
 	return o.OriginalSize, true
 }
 
 // HasOriginalSize returns a boolean if a field has been set.
 func (o *AltitudeStream) HasOriginalSize() bool {
-	if o != nil && !isNil(o.OriginalSize) {
+	if o != nil && o.OriginalSize != nil {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *AltitudeStream) SetOriginalSize(v int32) {
 
 // GetResolution returns the Resolution field value if set, zero value otherwise.
 func (o *AltitudeStream) GetResolution() string {
-	if o == nil || isNil(o.Resolution) {
+	if o == nil || o.Resolution == nil {
 		var ret string
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *AltitudeStream) GetResolution() string {
 // GetResolutionOk returns a tuple with the Resolution field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AltitudeStream) GetResolutionOk() (*string, bool) {
-	if o == nil || isNil(o.Resolution) {
-    return nil, false
+	if o == nil || o.Resolution == nil {
+		return nil, false
 	}
 	return o.Resolution, true
 }
 
 // HasResolution returns a boolean if a field has been set.
 func (o *AltitudeStream) HasResolution() bool {
-	if o != nil && !isNil(o.Resolution) {
+	if o != nil && o.Resolution != nil {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *AltitudeStream) SetResolution(v string) {
 
 // GetSeriesType returns the SeriesType field value if set, zero value otherwise.
 func (o *AltitudeStream) GetSeriesType() string {
-	if o == nil || isNil(o.SeriesType) {
+	if o == nil || o.SeriesType == nil {
 		var ret string
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *AltitudeStream) GetSeriesType() string {
 // GetSeriesTypeOk returns a tuple with the SeriesType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AltitudeStream) GetSeriesTypeOk() (*string, bool) {
-	if o == nil || isNil(o.SeriesType) {
-    return nil, false
+	if o == nil || o.SeriesType == nil {
+		return nil, false
 	}
 	return o.SeriesType, true
 }
 
 // HasSeriesType returns a boolean if a field has been set.
 func (o *AltitudeStream) HasSeriesType() bool {
-	if o != nil && !isNil(o.SeriesType) {
+	if o != nil && o.SeriesType != nil {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *AltitudeStream) SetSeriesType(v string) {
 
 // GetData returns the Data field value if set, zero value otherwise.
 func (o *AltitudeStream) GetData() []float32 {
-	if o == nil || isNil(o.Data) {
+	if o == nil || o.Data == nil {
 		var ret []float32
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *AltitudeStream) GetData() []float32 {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AltitudeStream) GetDataOk() ([]float32, bool) {
-	if o == nil || isNil(o.Data) {
-    return nil, false
+	if o == nil || o.Data == nil {
+		return nil, false
 	}
 	return o.Data, true
 }
 
 // HasData returns a boolean if a field has been set.
 func (o *AltitudeStream) HasData() bool {
-	if o != nil && !isNil(o.Data) {
+	if o != nil && o.Data != nil {
 		return true
 	}
 
@@ -173,16 +173,16 @@ func (o *AltitudeStream) SetData(v []float32) {
 
 func (o AltitudeStream) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.OriginalSize) {
+	if o.OriginalSize != nil {
 		toSerialize["original_size"] = o.OriginalSize
 	}
-	if !isNil(o.Resolution) {
+	if o.Resolution != nil {
 		toSerialize["resolution"] = o.Resolution
 	}
-	if !isNil(o.SeriesType) {
+	if o.SeriesType != nil {
 		toSerialize["series_type"] = o.SeriesType
 	}
-	if !isNil(o.Data) {
+	if o.Data != nil {
 		toSerialize["data"] = o.Data
 	}
 	return json.Marshal(toSerialize)
