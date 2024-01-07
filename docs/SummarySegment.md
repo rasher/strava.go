@@ -19,8 +19,8 @@ Name | Type | Description | Notes
 **State** | Pointer to **string** | The segments&#39;s state or geographical region. | [optional] 
 **Country** | Pointer to **string** | The segment&#39;s country. | [optional] 
 **Private** | Pointer to **bool** | Whether this segment is private. | [optional] 
-**AthletePrEffort** | Pointer to [**SummarySegmentEffort**](SummarySegmentEffort.md) |  | [optional] 
-**AthleteSegmentStats** | Pointer to [**SummaryPRSegmentEffort**](SummaryPRSegmentEffort.md) |  | [optional] 
+**AthletePrEffort** | Pointer to [**SummaryPRSegmentEffort**](SummaryPRSegmentEffort.md) |  | [optional] 
+**AthleteSegmentStats** | Pointer to [**SummarySegmentEffort**](SummarySegmentEffort.md) |  | [optional] 
 
 ## Methods
 
@@ -418,20 +418,20 @@ HasPrivate returns a boolean if a field has been set.
 
 ### GetAthletePrEffort
 
-`func (o *SummarySegment) GetAthletePrEffort() SummarySegmentEffort`
+`func (o *SummarySegment) GetAthletePrEffort() SummaryPRSegmentEffort`
 
 GetAthletePrEffort returns the AthletePrEffort field if non-nil, zero value otherwise.
 
 ### GetAthletePrEffortOk
 
-`func (o *SummarySegment) GetAthletePrEffortOk() (*SummarySegmentEffort, bool)`
+`func (o *SummarySegment) GetAthletePrEffortOk() (*SummaryPRSegmentEffort, bool)`
 
 GetAthletePrEffortOk returns a tuple with the AthletePrEffort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAthletePrEffort
 
-`func (o *SummarySegment) SetAthletePrEffort(v SummarySegmentEffort)`
+`func (o *SummarySegment) SetAthletePrEffort(v SummaryPRSegmentEffort)`
 
 SetAthletePrEffort sets AthletePrEffort field to given value.
 
@@ -443,20 +443,20 @@ HasAthletePrEffort returns a boolean if a field has been set.
 
 ### GetAthleteSegmentStats
 
-`func (o *SummarySegment) GetAthleteSegmentStats() SummaryPRSegmentEffort`
+`func (o *SummarySegment) GetAthleteSegmentStats() SummarySegmentEffort`
 
 GetAthleteSegmentStats returns the AthleteSegmentStats field if non-nil, zero value otherwise.
 
 ### GetAthleteSegmentStatsOk
 
-`func (o *SummarySegment) GetAthleteSegmentStatsOk() (*SummaryPRSegmentEffort, bool)`
+`func (o *SummarySegment) GetAthleteSegmentStatsOk() (*SummarySegmentEffort, bool)`
 
 GetAthleteSegmentStatsOk returns a tuple with the AthleteSegmentStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAthleteSegmentStats
 
-`func (o *SummarySegment) SetAthleteSegmentStats(v SummaryPRSegmentEffort)`
+`func (o *SummarySegment) SetAthleteSegmentStats(v SummarySegmentEffort)`
 
 SetAthleteSegmentStats sets AthleteSegmentStats field to given value.
 

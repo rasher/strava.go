@@ -46,8 +46,8 @@ type DetailedSegment struct {
 	Country *string `json:"country,omitempty"`
 	// Whether this segment is private.
 	Private *bool `json:"private,omitempty"`
-	AthletePrEffort *SummarySegmentEffort `json:"athlete_pr_effort,omitempty"`
-	AthleteSegmentStats *SummaryPRSegmentEffort `json:"athlete_segment_stats,omitempty"`
+	AthletePrEffort *SummaryPRSegmentEffort `json:"athlete_pr_effort,omitempty"`
+	AthleteSegmentStats *SummarySegmentEffort `json:"athlete_segment_stats,omitempty"`
 	// The time at which the segment was created.
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// The time at which the segment was last updated.
@@ -563,9 +563,9 @@ func (o *DetailedSegment) SetPrivate(v bool) {
 }
 
 // GetAthletePrEffort returns the AthletePrEffort field value if set, zero value otherwise.
-func (o *DetailedSegment) GetAthletePrEffort() SummarySegmentEffort {
+func (o *DetailedSegment) GetAthletePrEffort() SummaryPRSegmentEffort {
 	if o == nil || o.AthletePrEffort == nil {
-		var ret SummarySegmentEffort
+		var ret SummaryPRSegmentEffort
 		return ret
 	}
 	return *o.AthletePrEffort
@@ -573,7 +573,7 @@ func (o *DetailedSegment) GetAthletePrEffort() SummarySegmentEffort {
 
 // GetAthletePrEffortOk returns a tuple with the AthletePrEffort field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DetailedSegment) GetAthletePrEffortOk() (*SummarySegmentEffort, bool) {
+func (o *DetailedSegment) GetAthletePrEffortOk() (*SummaryPRSegmentEffort, bool) {
 	if o == nil || o.AthletePrEffort == nil {
 		return nil, false
 	}
@@ -589,15 +589,15 @@ func (o *DetailedSegment) HasAthletePrEffort() bool {
 	return false
 }
 
-// SetAthletePrEffort gets a reference to the given SummarySegmentEffort and assigns it to the AthletePrEffort field.
-func (o *DetailedSegment) SetAthletePrEffort(v SummarySegmentEffort) {
+// SetAthletePrEffort gets a reference to the given SummaryPRSegmentEffort and assigns it to the AthletePrEffort field.
+func (o *DetailedSegment) SetAthletePrEffort(v SummaryPRSegmentEffort) {
 	o.AthletePrEffort = &v
 }
 
 // GetAthleteSegmentStats returns the AthleteSegmentStats field value if set, zero value otherwise.
-func (o *DetailedSegment) GetAthleteSegmentStats() SummaryPRSegmentEffort {
+func (o *DetailedSegment) GetAthleteSegmentStats() SummarySegmentEffort {
 	if o == nil || o.AthleteSegmentStats == nil {
-		var ret SummaryPRSegmentEffort
+		var ret SummarySegmentEffort
 		return ret
 	}
 	return *o.AthleteSegmentStats
@@ -605,7 +605,7 @@ func (o *DetailedSegment) GetAthleteSegmentStats() SummaryPRSegmentEffort {
 
 // GetAthleteSegmentStatsOk returns a tuple with the AthleteSegmentStats field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DetailedSegment) GetAthleteSegmentStatsOk() (*SummaryPRSegmentEffort, bool) {
+func (o *DetailedSegment) GetAthleteSegmentStatsOk() (*SummarySegmentEffort, bool) {
 	if o == nil || o.AthleteSegmentStats == nil {
 		return nil, false
 	}
@@ -621,8 +621,8 @@ func (o *DetailedSegment) HasAthleteSegmentStats() bool {
 	return false
 }
 
-// SetAthleteSegmentStats gets a reference to the given SummaryPRSegmentEffort and assigns it to the AthleteSegmentStats field.
-func (o *DetailedSegment) SetAthleteSegmentStats(v SummaryPRSegmentEffort) {
+// SetAthleteSegmentStats gets a reference to the given SummarySegmentEffort and assigns it to the AthleteSegmentStats field.
+func (o *DetailedSegment) SetAthleteSegmentStats(v SummarySegmentEffort) {
 	o.AthleteSegmentStats = &v
 }
 

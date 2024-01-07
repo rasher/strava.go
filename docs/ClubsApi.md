@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetClubActivitiesById
 
-> []SummaryActivity GetClubActivitiesById(ctx, id).Page(page).PerPage(perPage).Execute()
+> []ClubActivity GetClubActivitiesById(ctx, id).Page(page).PerPage(perPage).Execute()
 
 List Club Activities
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClubsApi.GetClubActivitiesById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetClubActivitiesById`: []SummaryActivity
+    // response from `GetClubActivitiesById`: []ClubActivity
     fmt.Fprintf(os.Stdout, "Response from `ClubsApi.GetClubActivitiesById`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]SummaryActivity**](SummaryActivity.md)
+[**[]ClubActivity**](ClubActivity.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## GetClubMembersById
 
-> []SummaryAthlete GetClubMembersById(ctx, id).Page(page).PerPage(perPage).Execute()
+> []ClubAthlete GetClubMembersById(ctx, id).Page(page).PerPage(perPage).Execute()
 
 List Club Members
 
@@ -262,7 +262,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClubsApi.GetClubMembersById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetClubMembersById`: []SummaryAthlete
+    // response from `GetClubMembersById`: []ClubAthlete
     fmt.Fprintf(os.Stdout, "Response from `ClubsApi.GetClubMembersById`: %v\n", resp)
 }
 ```
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]SummaryAthlete**](SummaryAthlete.md)
+[**[]ClubAthlete**](ClubAthlete.md)
 
 ### Authorization
 

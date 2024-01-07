@@ -7,6 +7,8 @@
 
 * `BACKCOUNTRY_SKI` (value: `"BackcountrySki"`)
 
+* `BADMINTON` (value: `"Badminton"`)
+
 * `CANOEING` (value: `"Canoeing"`)
 
 * `CROSSFIT` (value: `"Crossfit"`)
@@ -23,6 +25,8 @@
 
 * `HANDCYCLE` (value: `"Handcycle"`)
 
+* `HIGH_INTENSITY_INTERVAL_TRAINING` (value: `"HighIntensityIntervalTraining"`)
+
 * `HIKE` (value: `"Hike"`)
 
 * `ICE_SKATE` (value: `"IceSkate"`)
@@ -36,6 +40,12 @@
 * `MOUNTAIN_BIKE_RIDE` (value: `"MountainBikeRide"`)
 
 * `NORDIC_SKI` (value: `"NordicSki"`)
+
+* `PICKLEBALL` (value: `"Pickleball"`)
+
+* `PILATES` (value: `"Pilates"`)
+
+* `RACQUETBALL` (value: `"Racquetball"`)
 
 * `RIDE` (value: `"Ride"`)
 
@@ -57,6 +67,8 @@
 
 * `SOCCER` (value: `"Soccer"`)
 
+* `SQUASH` (value: `"Squash"`)
+
 * `STAIR_STEPPER` (value: `"StairStepper"`)
 
 * `STAND_UP_PADDLING` (value: `"StandUpPaddling"`)
@@ -65,11 +77,17 @@
 
 * `SWIM` (value: `"Swim"`)
 
+* `TABLE_TENNIS` (value: `"TableTennis"`)
+
+* `TENNIS` (value: `"Tennis"`)
+
 * `TRAIL_RUN` (value: `"TrailRun"`)
 
 * `VELOMOBILE` (value: `"Velomobile"`)
 
 * `VIRTUAL_RIDE` (value: `"VirtualRide"`)
+
+* `VIRTUAL_ROW` (value: `"VirtualRow"`)
 
 * `VIRTUAL_RUN` (value: `"VirtualRun"`)
 

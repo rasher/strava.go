@@ -1663,9 +1663,9 @@ paths:
                 owner: false
               schema:
                 items:
-                  $ref: '#/components/schemas/SummaryAthlete'
+                  $ref: '#/components/schemas/ClubAthlete'
                 type: array
-          description: A list of summary athlete representations.
+          description: A list of club athlete representations.
         default:
           content:
             application/json:
@@ -1766,7 +1766,7 @@ paths:
                 workout_type: null
               schema:
                 items:
-                  $ref: '#/components/schemas/SummaryActivity'
+                  $ref: '#/components/schemas/ClubActivity'
                 type: array
           description: A list of activities.
         default:
@@ -2664,18 +2664,18 @@ components:
         city: city
         elevation_high: 5.637377
         athlete_pr_effort:
-          distance: 1.2315135
-          start_date_local: 2000-01-23T04:56:07.000+00:00
-          activity_id: 4
-          elapsed_time: 7
-          is_kom: true
-          id: 2
-          start_date: 2000-01-23T04:56:07.000+00:00
-        athlete_segment_stats:
-          pr_elapsed_time: 1
+          pr_elapsed_time: 4
           pr_date: 2000-01-23T04:56:07.000+00:00
-          effort_count: 6
-          pr_activity_id: 1
+          effort_count: 7
+          pr_activity_id: 2
+        athlete_segment_stats:
+          distance: 6.846853
+          start_date_local: 2000-01-23T04:56:07.000+00:00
+          activity_id: 1
+          elapsed_time: 1
+          is_kom: true
+          id: 1
+          start_date: 2000-01-23T04:56:07.000+00:00
         start_latlng:
         - 7.0614014
         - 7.0614014
@@ -2755,9 +2755,9 @@ components:
           description: Whether this segment is private.
           type: boolean
         athlete_pr_effort:
-          $ref: '#/components/schemas/SummarySegmentEffort'
-        athlete_segment_stats:
           $ref: '#/components/schemas/SummaryPRSegmentEffort'
+        athlete_segment_stats:
+          $ref: '#/components/schemas/SummarySegmentEffort'
       type: object
     LatLng:
       description: "A pair of latitude/longitude coordinates, represented as an array\
@@ -2768,14 +2768,36 @@ components:
       maxItems: 2
       minItems: 2
       type: array
+    SummaryPRSegmentEffort:
+      example:
+        pr_elapsed_time: 4
+        pr_date: 2000-01-23T04:56:07.000+00:00
+        effort_count: 7
+        pr_activity_id: 2
+      properties:
+        pr_activity_id:
+          description: The unique identifier of the activity related to the PR effort.
+          format: int64
+          type: integer
+        pr_elapsed_time:
+          description: The elapsed time ot the PR effort.
+          type: integer
+        pr_date:
+          description: The time at which the PR effort was started.
+          format: date-time
+          type: string
+        effort_count:
+          description: Number of efforts by the authenticated athlete on this segment.
+          type: integer
+      type: object
     SummarySegmentEffort:
       example:
-        distance: 1.2315135
+        distance: 6.846853
         start_date_local: 2000-01-23T04:56:07.000+00:00
-        activity_id: 4
-        elapsed_time: 7
+        activity_id: 1
+        elapsed_time: 1
         is_kom: true
-        id: 2
+        id: 1
         start_date: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
@@ -2804,28 +2826,6 @@ components:
         is_kom:
           description: Whether this effort is the current best on the leaderboard
           type: boolean
-      type: object
-    SummaryPRSegmentEffort:
-      example:
-        pr_elapsed_time: 1
-        pr_date: 2000-01-23T04:56:07.000+00:00
-        effort_count: 6
-        pr_activity_id: 1
-      properties:
-        pr_activity_id:
-          description: The unique identifier of the activity related to the PR effort.
-          format: int64
-          type: integer
-        pr_elapsed_time:
-          description: The elapsed time ot the PR effort.
-          type: integer
-        pr_date:
-          description: The time at which the PR effort was started.
-          format: date-time
-          type: string
-        effort_count:
-          description: Number of efforts by the authenticated athlete on this segment.
-          type: integer
       type: object
     PolylineMap:
       example:
@@ -2985,6 +2985,7 @@ components:
       enum:
       - AlpineSki
       - BackcountrySki
+      - Badminton
       - Canoeing
       - Crossfit
       - EBikeRide
@@ -2993,6 +2994,7 @@ components:
       - Golf
       - GravelRide
       - Handcycle
+      - HighIntensityIntervalTraining
       - Hike
       - IceSkate
       - InlineSkate
@@ -3000,6 +3002,9 @@ components:
       - Kitesurf
       - MountainBikeRide
       - NordicSki
+      - Pickleball
+      - Pilates
+      - Racquetball
       - Ride
       - RockClimbing
       - RollerSki
@@ -3010,13 +3015,17 @@ components:
       - Snowboard
       - Snowshoe
       - Soccer
+      - Squash
       - StairStepper
       - StandUpPaddling
       - Surfing
       - Swim
+      - TableTennis
+      - Tennis
       - TrailRun
       - Velomobile
       - VirtualRide
+      - VirtualRow
       - VirtualRun
       - Walk
       - WeightTraining
@@ -3253,6 +3262,75 @@ components:
       allOf:
       - $ref: '#/components/schemas/SummaryClub'
       - $ref: '#/components/schemas/DetailedClub_allOf'
+    ClubAthlete:
+      example:
+        owner: true
+        firstname: firstname
+        resource_state: 0
+        member: member
+        admin: true
+        lastname: lastname
+      properties:
+        resource_state:
+          description: "Resource state, indicates level of detail. Possible values:\
+            \ 1 -> \"meta\", 2 -> \"summary\", 3 -> \"detail\""
+          type: integer
+        firstname:
+          description: The athlete's first name.
+          type: string
+        lastname:
+          description: The athlete's last initial.
+          type: string
+        member:
+          description: The athlete's member status.
+          type: string
+        admin:
+          description: Whether the athlete is a club admin.
+          type: boolean
+        owner:
+          description: Whether the athlete is club owner.
+          type: boolean
+      type: object
+    ClubActivity:
+      example:
+        distance: 0.8008282
+        athlete:
+          id: 1
+        workout_type: 5
+        name: name
+        elapsed_time: 1
+        total_elevation_gain: 5.962134
+        type: null
+        moving_time: 6
+        sport_type: null
+      properties:
+        athlete:
+          $ref: '#/components/schemas/MetaAthlete'
+        name:
+          description: The name of the activity
+          type: string
+        distance:
+          description: "The activity's distance, in meters"
+          format: float
+          type: number
+        moving_time:
+          description: "The activity's moving time, in seconds"
+          type: integer
+        elapsed_time:
+          description: "The activity's elapsed time, in seconds"
+          type: integer
+        total_elevation_gain:
+          description: The activity's total elevation gain.
+          format: float
+          type: number
+        type:
+          $ref: '#/components/schemas/ActivityType'
+        sport_type:
+          $ref: '#/components/schemas/SportType'
+        workout_type:
+          description: The activity's workout type
+          type: integer
+      type: object
     DetailedGear:
       allOf:
       - $ref: '#/components/schemas/SummaryGear'
@@ -3277,18 +3355,18 @@ components:
           city: city
           elevation_high: 5.637377
           athlete_pr_effort:
-            distance: 1.2315135
-            start_date_local: 2000-01-23T04:56:07.000+00:00
-            activity_id: 4
-            elapsed_time: 7
-            is_kom: true
-            id: 2
-            start_date: 2000-01-23T04:56:07.000+00:00
-          athlete_segment_stats:
-            pr_elapsed_time: 1
+            pr_elapsed_time: 4
             pr_date: 2000-01-23T04:56:07.000+00:00
-            effort_count: 6
-            pr_activity_id: 1
+            effort_count: 7
+            pr_activity_id: 2
+          athlete_segment_stats:
+            distance: 6.846853
+            start_date_local: 2000-01-23T04:56:07.000+00:00
+            activity_id: 1
+            elapsed_time: 1
+            is_kom: true
+            id: 1
+            start_date: 2000-01-23T04:56:07.000+00:00
           start_latlng:
           - 7.0614014
           - 7.0614014
@@ -3309,18 +3387,18 @@ components:
           city: city
           elevation_high: 5.637377
           athlete_pr_effort:
-            distance: 1.2315135
-            start_date_local: 2000-01-23T04:56:07.000+00:00
-            activity_id: 4
-            elapsed_time: 7
-            is_kom: true
-            id: 2
-            start_date: 2000-01-23T04:56:07.000+00:00
-          athlete_segment_stats:
-            pr_elapsed_time: 1
+            pr_elapsed_time: 4
             pr_date: 2000-01-23T04:56:07.000+00:00
-            effort_count: 6
-            pr_activity_id: 1
+            effort_count: 7
+            pr_activity_id: 2
+          athlete_segment_stats:
+            distance: 6.846853
+            start_date_local: 2000-01-23T04:56:07.000+00:00
+            activity_id: 1
+            elapsed_time: 1
+            is_kom: true
+            id: 1
+            start_date: 2000-01-23T04:56:07.000+00:00
           start_latlng:
           - 7.0614014
           - 7.0614014

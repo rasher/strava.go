@@ -43,7 +43,7 @@ func (r ApiGetClubActivitiesByIdRequest) PerPage(perPage int32) ApiGetClubActivi
 	return r
 }
 
-func (r ApiGetClubActivitiesByIdRequest) Execute() ([]SummaryActivity, *http.Response, error) {
+func (r ApiGetClubActivitiesByIdRequest) Execute() ([]ClubActivity, *http.Response, error) {
 	return r.ApiService.GetClubActivitiesByIdExecute(r)
 }
 
@@ -65,13 +65,13 @@ func (a *ClubsApiService) GetClubActivitiesById(ctx context.Context, id int64) A
 }
 
 // Execute executes the request
-//  @return []SummaryActivity
-func (a *ClubsApiService) GetClubActivitiesByIdExecute(r ApiGetClubActivitiesByIdRequest) ([]SummaryActivity, *http.Response, error) {
+//  @return []ClubActivity
+func (a *ClubsApiService) GetClubActivitiesByIdExecute(r ApiGetClubActivitiesByIdRequest) ([]ClubActivity, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []SummaryActivity
+		localVarReturnValue  []ClubActivity
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ClubsApiService.GetClubActivitiesById")
@@ -413,7 +413,7 @@ func (r ApiGetClubMembersByIdRequest) PerPage(perPage int32) ApiGetClubMembersBy
 	return r
 }
 
-func (r ApiGetClubMembersByIdRequest) Execute() ([]SummaryAthlete, *http.Response, error) {
+func (r ApiGetClubMembersByIdRequest) Execute() ([]ClubAthlete, *http.Response, error) {
 	return r.ApiService.GetClubMembersByIdExecute(r)
 }
 
@@ -435,13 +435,13 @@ func (a *ClubsApiService) GetClubMembersById(ctx context.Context, id int64) ApiG
 }
 
 // Execute executes the request
-//  @return []SummaryAthlete
-func (a *ClubsApiService) GetClubMembersByIdExecute(r ApiGetClubMembersByIdRequest) ([]SummaryAthlete, *http.Response, error) {
+//  @return []ClubAthlete
+func (a *ClubsApiService) GetClubMembersByIdExecute(r ApiGetClubMembersByIdRequest) ([]ClubAthlete, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  []SummaryAthlete
+		localVarReturnValue  []ClubAthlete
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ClubsApiService.GetClubMembersById")

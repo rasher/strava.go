@@ -25,6 +25,8 @@ docs/AthletesApi.md
 docs/BaseStream.md
 docs/CadenceStream.md
 docs/CadenceStreamAllOf.md
+docs/ClubActivity.md
+docs/ClubAthlete.md
 docs/ClubsApi.md
 docs/Comment.md
 docs/DetailedActivity.md
@@ -108,6 +110,8 @@ model_altitude_stream_all_of.go
 model_base_stream.go
 model_cadence_stream.go
 model_cadence_stream_all_of.go
+model_club_activity.go
+model_club_athlete.go
 model_comment.go
 model_detailed_activity.go
 model_detailed_activity_all_of.go

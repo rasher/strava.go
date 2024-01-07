@@ -22,6 +22,7 @@ type SportType string
 const (
 	SPORTTYPE_ALPINE_SKI SportType = "AlpineSki"
 	SPORTTYPE_BACKCOUNTRY_SKI SportType = "BackcountrySki"
+	SPORTTYPE_BADMINTON SportType = "Badminton"
 	SPORTTYPE_CANOEING SportType = "Canoeing"
 	SPORTTYPE_CROSSFIT SportType = "Crossfit"
 	SPORTTYPE_E_BIKE_RIDE SportType = "EBikeRide"
@@ -30,6 +31,7 @@ const (
 	SPORTTYPE_GOLF SportType = "Golf"
 	SPORTTYPE_GRAVEL_RIDE SportType = "GravelRide"
 	SPORTTYPE_HANDCYCLE SportType = "Handcycle"
+	SPORTTYPE_HIGH_INTENSITY_INTERVAL_TRAINING SportType = "HighIntensityIntervalTraining"
 	SPORTTYPE_HIKE SportType = "Hike"
 	SPORTTYPE_ICE_SKATE SportType = "IceSkate"
 	SPORTTYPE_INLINE_SKATE SportType = "InlineSkate"
@@ -37,6 +39,9 @@ const (
 	SPORTTYPE_KITESURF SportType = "Kitesurf"
 	SPORTTYPE_MOUNTAIN_BIKE_RIDE SportType = "MountainBikeRide"
 	SPORTTYPE_NORDIC_SKI SportType = "NordicSki"
+	SPORTTYPE_PICKLEBALL SportType = "Pickleball"
+	SPORTTYPE_PILATES SportType = "Pilates"
+	SPORTTYPE_RACQUETBALL SportType = "Racquetball"
 	SPORTTYPE_RIDE SportType = "Ride"
 	SPORTTYPE_ROCK_CLIMBING SportType = "RockClimbing"
 	SPORTTYPE_ROLLER_SKI SportType = "RollerSki"
@@ -47,13 +52,17 @@ const (
 	SPORTTYPE_SNOWBOARD SportType = "Snowboard"
 	SPORTTYPE_SNOWSHOE SportType = "Snowshoe"
 	SPORTTYPE_SOCCER SportType = "Soccer"
+	SPORTTYPE_SQUASH SportType = "Squash"
 	SPORTTYPE_STAIR_STEPPER SportType = "StairStepper"
 	SPORTTYPE_STAND_UP_PADDLING SportType = "StandUpPaddling"
 	SPORTTYPE_SURFING SportType = "Surfing"
 	SPORTTYPE_SWIM SportType = "Swim"
+	SPORTTYPE_TABLE_TENNIS SportType = "TableTennis"
+	SPORTTYPE_TENNIS SportType = "Tennis"
 	SPORTTYPE_TRAIL_RUN SportType = "TrailRun"
 	SPORTTYPE_VELOMOBILE SportType = "Velomobile"
 	SPORTTYPE_VIRTUAL_RIDE SportType = "VirtualRide"
+	SPORTTYPE_VIRTUAL_ROW SportType = "VirtualRow"
 	SPORTTYPE_VIRTUAL_RUN SportType = "VirtualRun"
 	SPORTTYPE_WALK SportType = "Walk"
 	SPORTTYPE_WEIGHT_TRAINING SportType = "WeightTraining"
@@ -67,6 +76,7 @@ const (
 var AllowedSportTypeEnumValues = []SportType{
 	"AlpineSki",
 	"BackcountrySki",
+	"Badminton",
 	"Canoeing",
 	"Crossfit",
 	"EBikeRide",
@@ -75,6 +85,7 @@ var AllowedSportTypeEnumValues = []SportType{
 	"Golf",
 	"GravelRide",
 	"Handcycle",
+	"HighIntensityIntervalTraining",
 	"Hike",
 	"IceSkate",
 	"InlineSkate",
@@ -82,6 +93,9 @@ var AllowedSportTypeEnumValues = []SportType{
 	"Kitesurf",
 	"MountainBikeRide",
 	"NordicSki",
+	"Pickleball",
+	"Pilates",
+	"Racquetball",
 	"Ride",
 	"RockClimbing",
 	"RollerSki",
@@ -92,13 +106,17 @@ var AllowedSportTypeEnumValues = []SportType{
 	"Snowboard",
 	"Snowshoe",
 	"Soccer",
+	"Squash",
 	"StairStepper",
 	"StandUpPaddling",
 	"Surfing",
 	"Swim",
+	"TableTennis",
+	"Tennis",
 	"TrailRun",
 	"Velomobile",
 	"VirtualRide",
+	"VirtualRow",
 	"VirtualRun",
 	"Walk",
 	"WeightTraining",
